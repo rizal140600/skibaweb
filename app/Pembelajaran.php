@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Pembelajaran extends Model
 {
     protected $table = 'pembelajaran';
-    protected $fillable = ['nama_file', 'guru_id', 'link'];
+    protected $fillable = ['id', 'nama_file', 'guru_id', 'link'];
 }

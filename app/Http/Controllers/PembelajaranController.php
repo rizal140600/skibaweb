@@ -16,4 +16,21 @@ class PembelajaranController extends Controller
         \App\Pembelajaran::create($resquest->all());
         return redirect('pembelajaran')->with('success', 'Tambah data pembelajaran baru');
     }
+    public function edit($id)
+    {
+        $pembelajaran = \App\Pembelajaran::find($id);
+        return view(' backend/pembelajaran/edit', ['pembelajaran' => $pembelajaran]);
+    }
+    public function update(Request $resquest, $id)
+    {
+        $pembelajaran = \App\Pembelajaran::find($id);
+        $pembelajaran->update($resquest->all());
+        return redirect('/pembelajaran')->with('update', 'Data Berhasil di edit'); 
+    }
+    public function delete($id)
+    {
+        $pembelajaran = \App\Pembelajaran::find($id);
+        $pembelajaran->delete();
+        return redirect('/pembelajaran')->with('delete', 'Data Berhasil di hapus');
+    }
 }

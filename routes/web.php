@@ -18,6 +18,15 @@ Route::get('/', function () {
 Route::get('/dashboard','AdminController@dashboard');
 Route::get('/pembelajaran', 'PembelajaranController@index');
 Route::post('/pembelajaran/create', 'PembelajaranController@create');
+Route::get('/pembelajaran/{id}/edit', 'PembelajaranController@edit');
+Route::post('/pembelajaran/{id}/update', 'PembelajaranController@update');
+Route::get('/pembelajaran/{id}/delete', 'PembelajaranController@delete');
+
+Route::get('/guru', 'GuruController@index');
+Route::post('/guru/create', 'GuruController@create');
+Route::get('/guru/{id}/edit', 'GuruController@edit');
+Route::post('/guru/{id}/update', 'GuruController@update');
+Route::get('/guru/{id}/delete', 'GuruController@delete');
 
 Auth::routes();
 

@@ -1,5 +1,5 @@
 @extends('backend.layout.master')
-@section('title', 'Pembelajaran')
+@section('title', 'Guru')
 @section('content')
 <section class="content-header">
       <div class="container-fluid">
@@ -10,7 +10,7 @@
             {{session('success')}}
           </div>
           <div class="col-1">
-            <a class="ml-5 text-white" style="text-decoration:none" href="/pembelajaran">x</a>
+            <a class="ml-5 text-white" style="text-decoration:none" href="/guru">x</a>
           </div>
         </div>
       </div>
@@ -21,7 +21,7 @@
             {{session('update')}}
           </div>
           <div class="col-1">
-            <a class="ml-5 text-white" style="text-decoration:none" href="/pembelajaran">x</a>
+            <a class="ml-5 text-white" style="text-decoration:none" href="/guru">x</a>
           </div>
         </div>
       </div>
@@ -32,18 +32,18 @@
             {{session('delete')}}
           </div>
           <div class="col-1">
-            <a class="ml-5 text-white" style="text-decoration:none" href="/pembelajaran">x</a>
+            <a class="ml-5 text-white" style="text-decoration:none" href="/guru">x</a>
           </div>
         </div>
       </div>
       @endif
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Pembelajaran</h1>
+            <h1>Guru</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item active">Data Pembelajaran</li>
+              <li class="breadcrumb-item active">Data Guru</li>
             </ol>
           </div>
         </div>
@@ -57,7 +57,7 @@
         <div class="card">
               <div class="card-header">
                   <div class="row">
-                    <h3 class="col-11 card-title pt-2">Data Pembelajaran</h3>
+                    <h3 class="col-11 card-title pt-2">Data Guru</h3>
                     <button type="button" class="btn col-1 bg-success btn-default" data-toggle="modal" data-target="#modal-default">
                   Tambah
                     </button>
@@ -65,21 +65,21 @@
                         <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h4 class="modal-title">Tambah Pembelajaran</h4>
+                            <h4 class="modal-title">Tambah Guru</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
                             </div>
                             <div class="modal-body">
-                                <form action="/pembelajaran/create" method="post">
+                                <form action="/guru/create" method="post">
                                     {{csrf_field()}}
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Nama File</label>
-                                        <input name="nama_file" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nama File">
+                                        <label for="exampleInputEmail1">Nama</label>
+                                        <input name="nama_guru" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nama Guru...">
                                     </div>
                                     <div class="form-group">
-                                    <label>Nama Guru</label>
-                                    <select name="guru_id" class="form-control select2" style="width: 100%;">
+                                    <label>Jenis Kelamin</label>
+                                    <select name="kelamin_id" class="form-control select2" style="width: 100%;">
                                         <option selected="selected" value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -87,8 +87,29 @@
                                     </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Link</label>
-                                        <input type="text" name="link" class="form-control" id="exampleInputEmail1" placeholder="Link">
+                                        <label for="exampleInputEmail1">Bidang Studi</label>
+                                        <input type="text" name="bidang_studi" class="form-control" id="exampleInputEmail1" placeholder="Bidang Studi...">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Tempat, Tanggal Lahir</label>
+                                        <input type="text" name="tmpt_tgl_lahir" class="form-control" id="exampleInputEmail1" placeholder="Tempat, Tanggal Lahir...">
+                                    </div>
+                                    <div class="form-group">
+                                    <label>Pendidikan Terakhir</label>
+                                    <select name="pendidikan_id" class="form-control select2" style="width: 100%;">
+                                        <option selected="selected" value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Alamat</label>
+                                        <input type="text" name="alamat_guru" class="form-control" id="exampleInputEmail1" placeholder="Alamat...">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Nomor Telepon</label>
+                                        <input type="text" name="telepon_guru" class="form-control" id="exampleInputEmail1" placeholder="Nomor Telepon...">
                                     </div>
                                 </div>
                                 <div class="modal-footer justify-content-between">
@@ -109,26 +130,34 @@
                   <thead>
                     <tr>
                       <th>NO.</th>
-                      <th>Nama File</th>
-                      <th>Guru</th>
-                      <th>Bahan</th>
+                      <th>Nama</th>
+                      <th>Jenis Kelamin</th>
+                      <th>Bidang Studi</th>
+                      <th>Tempat, Tanggal Lahir</th>
+                      <th>Pendidikan Terakhir</th>
+                      <th>Alamat</th>
+                      <th>Telepon</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
-                      @foreach($data_pembelajaran as $pembelajaran)
+                      @foreach($data_guru as $guru)
                     <tr>
                       <td>1</td>
-                      <td>{{$pembelajaran->nama_file}}</td>
-                      <td>{{$pembelajaran->guru_id}}</td>
-                      <td><span class="tag tag-success">{{$pembelajaran->link}}</span></td>
+                      <td>{{$guru->nama_guru}}</td>
+                      <td>{{$guru->kelamin_id}}</td>
+                      <td>{{$guru->bidang_studi}}</td>
+                      <td>{{$guru->tmpt_tgl_lahir}}</td>
+                      <td>{{$guru->pendidikan_id}}</td>
+                      <td>{{$guru->alamat_guru}}</td>
+                      <td>{{$guru->telepon_guru}}</td>
                       <td>
-                      <a href="/pembelajaran/{{$pembelajaran->id}}/edit">
+                      <a href="/guru/{{$guru->id}}/edit">
                         <button type="button" class="btn btn-warning text-dark  btn-sm">
                           <i href="" class="far fa-edit"></i>
                         </button>
                       </a>
-                      <a href="/pembelajaran/{{$pembelajaran->id}}/delete">
+                      <a href="/guru/{{$guru->id}}/delete">
                         <button type="button" class="btn btn-danger text-dark  btn-sm" onclick="return confirm(
                           'apakah anda yakin mau menghapus file ini ?')">
                           Delete

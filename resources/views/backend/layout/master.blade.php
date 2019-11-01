@@ -61,11 +61,6 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -103,7 +98,6 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -112,7 +106,6 @@
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Pembelajaran
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -174,7 +167,6 @@
               <i class="nav-icon far fa-bookmark"></i>
               <p>
                 Pengumuman
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -183,7 +175,6 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Kegiatan
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -192,7 +183,6 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Galeri
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -201,7 +191,14 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Kontak
-                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/guru" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Guru
               </p>
             </a>
           </li>
