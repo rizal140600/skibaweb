@@ -131,10 +131,10 @@
                     <tr>
                       <th>NO.</th>
                       <th>Nama</th>
-                      <th>Jenis Kelamin</th>
+                      <th>Kelamin</th>
                       <th>Bidang Studi</th>
                       <th>Tempat, Tanggal Lahir</th>
-                      <th>Pendidikan Terakhir</th>
+                      <th>Pendidikan</th>
                       <th>Alamat</th>
                       <th>Telepon</th>
                       <th>Aksi</th>
@@ -153,14 +153,14 @@
                       <td>{{$guru->telepon_guru}}</td>
                       <td>
                       <a href="/guru/{{$guru->id}}/edit">
-                        <button type="button" class="btn btn-warning text-dark  btn-sm">
-                          <i href="" class="far fa-edit"></i>
+                        <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
+                        <i class="far fa-edit"></i>
                         </button>
                       </a>
-                      <a href="/guru/{{$guru->id}}/delete">
-                        <button type="button" class="btn btn-danger text-dark  btn-sm" onclick="return confirm(
+                      <a class="ml-2" href="/guru/{{$guru->id}}/delete">
+                        <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
                           'apakah anda yakin mau menghapus file ini ?')">
-                          Delete
+                          <i class="far fa-trash-alt"></i>
                         </button>
                       </a>
                       </td>

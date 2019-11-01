@@ -124,14 +124,14 @@
                       <td><span class="tag tag-success">{{$pembelajaran->link}}</span></td>
                       <td>
                       <a href="/pembelajaran/{{$pembelajaran->id}}/edit">
-                        <button type="button" class="btn btn-warning text-dark  btn-sm">
+                        <button type="button" title="Edit" class="btn btn-warning text-white  btn-sm">
                           <i href="" class="far fa-edit"></i>
                         </button>
                       </a>
-                      <a href="/pembelajaran/{{$pembelajaran->id}}/delete">
-                        <button type="button" class="btn btn-danger text-dark  btn-sm" onclick="return confirm(
+                      <a class="ml-2" href="/pembelajaran/{{$pembelajaran->id}}/delete">
+                        <button type="button" title="Delete" class="btn btn-danger text-white  btn-sm" onclick="return confirm(
                           'apakah anda yakin mau menghapus file ini ?')">
-                          Delete
+                         <i class="far fa-trash-alt"></i>
                         </button>
                       </a>
                       </td>
