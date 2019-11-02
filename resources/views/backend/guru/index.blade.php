@@ -4,35 +4,35 @@
 <section class="content-header">
       <div class="container-fluid">
         @if(session('success'))
-      <div class="alert alert-success" role="alert">
+      <div class="alert text-white alert-success" role="alert">
         <div class="row">
           <div class="col-11">
             {{session('success')}}
           </div>
           <div class="col-1">
-            <a class="ml-5 text-white" style="text-decoration:none" href="/guru">x</a>
+            <a class="ml-5 text-white pl-4" style="text-decoration:none" href="/guru">X</a>
           </div>
         </div>
       </div>
         @elseif(session('update'))
-        <div class="alert alert-warning" role="alert">
+        <div class="alert  alert-warning" role="alert">
         <div class="row">
-          <div class="col-11">
+          <div class=" text-white col-11">
             {{session('update')}}
           </div>
           <div class="col-1">
-            <a class="ml-5 text-white" style="text-decoration:none" href="/guru">x</a>
+            <a class="ml-5 text-white pl-4" style="text-decoration:none" href="/guru">X</a>
           </div>
         </div>
       </div>
       @elseif(session('delete'))
-      <div class="alert alert-danger" role="alert">
+      <div class="alert text-white alert-danger" role="alert">
         <div class="row">
           <div class="col-11">
             {{session('delete')}}
           </div>
           <div class="col-1">
-            <a class="ml-5 text-white" style="text-decoration:none" href="/guru">x</a>
+            <a class="ml-5 text-white pl-4" style="text-decoration:none" href="/guru">X</a>
           </div>
         </div>
       </div>
@@ -80,10 +80,9 @@
                                     <div class="form-group">
                                     <label>Jenis Kelamin</label>
                                     <select name="kelamin_id" class="form-control select2" style="width: 100%;">
-                                        <option selected="selected" value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
+                                      @foreach ($data_kelamin as $kelamin)
+                                    <option value="{{$kelamin->id}}">{{$kelamin->kelamin}}</option>
+                                      @endforeach  
                                     </select>
                                     </div>
                                     <div class="form-group">
@@ -141,11 +140,11 @@
                     </tr>
                   </thead>
                   <tbody>
-                      @foreach($data_guru as $guru)
+                      @foreach($data_guru as $index => $guru)
                     <tr>
-                      <td>1</td>
+                      <td>{{$index +1}}</td>
                       <td>{{$guru->nama_guru}}</td>
-                      <td>{{$guru->kelamin_id}}</td>
+                      <td>{{$guru->kelamin->kelamin}}</td>
                       <td>{{$guru->bidang_studi}}</td>
                       <td>{{$guru->tmpt_tgl_lahir}}</td>
                       <td>{{$guru->pendidikan_id}}</td>

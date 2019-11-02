@@ -10,18 +10,18 @@
             {{session('success')}}
           </div>
           <div class="col-1">
-            <a class="ml-5 text-white" style="text-decoration:none" href="/pembelajaran">x</a>
+            <a class="ml-5 text-white pl-4" style="text-decoration:none" href="/pembelajaran">X</a>
           </div>
         </div>
       </div>
         @elseif(session('update'))
         <div class="alert alert-warning" role="alert">
         <div class="row">
-          <div class="col-11">
+          <div class="col-11 text-white">
             {{session('update')}}
           </div>
           <div class="col-1">
-            <a class="ml-5 text-white" style="text-decoration:none" href="/pembelajaran">x</a>
+            <a class="ml-5 text-white pl-4" style="text-decoration:none" href="/pembelajaran">X</a>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
             {{session('delete')}}
           </div>
           <div class="col-1">
-            <a class="ml-5 text-white" style="text-decoration:none" href="/pembelajaran">x</a>
+            <a class="ml-5 text-white pl-4" style="text-decoration:none" href="/pembelajaran">X</a>
           </div>
         </div>
       </div>
@@ -80,10 +80,9 @@
                                     <div class="form-group">
                                     <label>Nama Guru</label>
                                     <select name="guru_id" class="form-control select2" style="width: 100%;">
-                                        <option selected="selected" value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
+                                      @foreach ($data_guru as $guru)
+                                    <option value="{{$guru->id}}">{{$guru->nama_guru}}</option>
+                                      @endforeach
                                     </select>
                                     </div>
                                     <div class="form-group">
@@ -116,12 +115,12 @@
                     </tr>
                   </thead>
                   <tbody>
-                      @foreach($data_pembelajaran as $pembelajaran)
+                      @foreach($data_pembelajaran as $index => $pembelajaran)
                     <tr>
-                      <td>1</td>
+                      <td>{{ $index +1}}</td>
                       <td>{{$pembelajaran->nama_file}}</td>
-                      <td>{{$pembelajaran->guru_id}}</td>
-                      <td><span class="tag tag-success">{{$pembelajaran->link}}</span></td>
+                      <td>{{$pembelajaran->guru->nama_guru}}</td>
+                      <td>{{$pembelajaran->link}}</td>
                       <td>
                       <a href="/pembelajaran/{{$pembelajaran->id}}/edit">
                         <button type="button" title="Edit" class="btn btn-warning text-white  btn-sm">

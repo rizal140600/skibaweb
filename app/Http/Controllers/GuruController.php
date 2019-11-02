@@ -9,7 +9,8 @@ class GuruController extends Controller
     public function index()
     {
         $data_guru = \App\Guru::all();
-        return view('backend.guru.index', ['data_guru' => $data_guru]);
+        $data_kelamin = \App\Kelamin::all();
+        return view('backend.guru.index', ['data_guru' => $data_guru, 'data_kelamin' => $data_kelamin]);
     }
     public function create(Request $resquest)
     {
@@ -25,7 +26,7 @@ class GuruController extends Controller
     {
         $guru = \App\Guru::find($id);
         $guru->update($resquest->all());
-        return redirect('/guru')->with('update', 'Data Berhasil di edit'); 
+        return redirect('/guru')->with('update', 'Data Berhasil di edit');
     }
     public function delete($id)
     {

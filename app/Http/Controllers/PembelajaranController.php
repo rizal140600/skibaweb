@@ -9,7 +9,8 @@ class PembelajaranController extends Controller
     public function index()
     {
         $data_pembelajaran = \App\Pembelajaran::all();
-        return view('backend.pembelajaran.index', ['data_pembelajaran' => $data_pembelajaran]);
+        $data_guru = \App\Guru::all();
+        return view('backend.pembelajaran.index', ['data_pembelajaran' => $data_pembelajaran, 'data_guru' => $data_guru]);
     }
     public function create(Request $resquest)
     {
@@ -19,13 +20,14 @@ class PembelajaranController extends Controller
     public function edit($id)
     {
         $pembelajaran = \App\Pembelajaran::find($id);
-        return view(' backend/pembelajaran/edit', ['pembelajaran' => $pembelajaran]);
+        $data_guru = \App\Guru::all();
+        return view(' backend/pembelajaran/edit', ['pembelajaran' => $pembelajaran, 'data_guru' => $data_guru]);
     }
     public function update(Request $resquest, $id)
     {
         $pembelajaran = \App\Pembelajaran::find($id);
         $pembelajaran->update($resquest->all());
-        return redirect('/pembelajaran')->with('update', 'Data Berhasil di edit'); 
+        return redirect('/pembelajaran')->with('update', 'Data Berhasil di edit');
     }
     public function delete($id)
     {

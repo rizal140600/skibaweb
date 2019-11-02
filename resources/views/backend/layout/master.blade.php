@@ -172,7 +172,7 @@
           </li>
           <li class="nav-item">
             <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-chart-line"></i>
               <p>
                 Kegiatan
               </p>
@@ -180,7 +180,7 @@
           </li>
           <li class="nav-item">
             <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-images"></i>
               <p>
                 Galeri
               </p>
@@ -188,7 +188,7 @@
           </li>
           <li class="nav-item">
             <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-address-book"></i>
               <p>
                 Kontak
               </p>
@@ -196,7 +196,7 @@
           </li>
           <li class="nav-item">
             <a href="/guru" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-chalkboard-teacher"></i>
               <p>
                 Guru
               </p>

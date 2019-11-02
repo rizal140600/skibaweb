@@ -38,10 +38,9 @@
                       <!-- textarea -->
                       <label>Nama Guru</label>
                       <select name="guru_id" class="form-control select2" style="width: 100%;">
-                            <option value="0" @if($pembelajaran->guru_id == 0) selected @endif >0</option>
-                            <option value="1" @if($pembelajaran->guru_id == 1) selected @endif >1</option>
-                            <option value="2" @if($pembelajaran->guru_id == 2) selected @endif >2</option>
-                            <option value="3" @if($pembelajaran->guru_id == 3) selected @endif >3</option>
+                        @foreach ($data_guru as $guru)
+                      <option value="{{$guru->id}}" @if($pembelajaran->guru_id == $guru->id) selected @endif >{{$guru->nama_guru}}</option>
+                        @endforeach
                         </select>
                     </div>
                   </div>
@@ -59,11 +58,9 @@
                     <a href="/pembelajaran">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </a>
-                <div class="text-white">
-                  <button type="submit" class="btn btn-warning">
+                  <button type="submit" class="btn text-white btn-warning">
                     Edit
                   </button>
-                </div>
             </form>
               <!-- /.card-body -->
             </div>

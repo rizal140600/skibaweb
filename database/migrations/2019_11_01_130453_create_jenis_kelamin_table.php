@@ -15,6 +15,7 @@ class CreateJenisKelaminTable extends Migration
     {
         Schema::create('jenis_kelamin', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('kelamin');
             $table->timestamps();
         });
     }
