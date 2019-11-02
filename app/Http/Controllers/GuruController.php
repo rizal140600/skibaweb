@@ -10,7 +10,8 @@ class GuruController extends Controller
     {
         $data_guru = \App\Guru::all();
         $data_kelamin = \App\Kelamin::all();
-        return view('backend.guru.index', ['data_guru' => $data_guru, 'data_kelamin' => $data_kelamin]);
+        $data_pendidikan = \App\Pendidikan::all();
+        return view('backend.guru.index', ['data_guru' => $data_guru, 'data_kelamin' => $data_kelamin, 'data_pendidikan' => $data_pendidikan ]);
     }
     public function create(Request $resquest)
     {
@@ -20,7 +21,9 @@ class GuruController extends Controller
     public function edit($id)
     {
         $guru = \App\Guru::find($id);
-        return view(' backend/guru/edit', ['guru' => $guru]);
+        $data_kelamin = \App\Kelamin::all();
+        $data_pendidikan = \App\Pendidikan::all();
+        return view(' backend/guru/edit', ['guru' => $guru,  'data_kelamin' => $data_kelamin, 'data_pendidikan' => $data_pendidikan]);
     }
     public function update(Request $resquest, $id)
     {

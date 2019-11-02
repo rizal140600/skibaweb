@@ -16,4 +16,8 @@ class Guru extends Model
     {
         return $this->belongsTo(Kelamin::class);
     }
+    public function pendidikan()
+    {
+        return $this->belongsTo(Pendidikan::class);
+    }
 }

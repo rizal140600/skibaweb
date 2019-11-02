@@ -96,10 +96,9 @@
                                     <div class="form-group">
                                     <label>Pendidikan Terakhir</label>
                                     <select name="pendidikan_id" class="form-control select2" style="width: 100%;">
-                                        <option selected="selected" value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
+                                      @foreach ($data_pendidikan as $pendidikan)
+                                    <option value="{{$pendidikan->id}}">{{$pendidikan->pendidikan}}</option>
+                                      @endforeach  
                                     </select>
                                     </div>
                                     <div class="form-group">
@@ -147,7 +146,7 @@
                       <td>{{$guru->kelamin->kelamin}}</td>
                       <td>{{$guru->bidang_studi}}</td>
                       <td>{{$guru->tmpt_tgl_lahir}}</td>
-                      <td>{{$guru->pendidikan_id}}</td>
+                      <td>{{$guru->pendidikan->pendidikan}}</td>
                       <td>{{$guru->alamat_guru}}</td>
                       <td>{{$guru->telepon_guru}}</td>
                       <td>

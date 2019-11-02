@@ -16,7 +16,6 @@ class CreateStatusGuruTable extends Migration
         Schema::create('status_guru', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('status');
-            $table->integer('status_jumlah');
             $table->timestamps();
         });
     }

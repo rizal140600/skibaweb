@@ -5,7 +5,7 @@
       <div class="container-fluid">
       <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>guru Edit</h1>
+            <h1>Guru Edit</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -38,10 +38,9 @@
                       <!-- textarea -->
                       <label>Jenis Kelamin</label>
                       <select name="kelamin_id" class="form-control select2" style="width: 100%;">
-                            <option value="0" @if($guru->kelamin_id == 0) selected @endif >0</option>
-                            <option value="1" @if($guru->kelamin_id == 1) selected @endif >1</option>
-                            <option value="2" @if($guru->kelamin_id == 2) selected @endif >2</option>
-                            <option value="3" @if($guru->kelamin_id == 3) selected @endif >3</option>
+                        @foreach ($data_kelamin as $kelamin)
+                      <option value="{{$kelamin->id}}" @if($guru->kelamin_id == $kelamin->id) selected @endif >{{$kelamin->kelamin}}</option>
+                        @endforeach
                         </select>
                     </div>
                   </div>
@@ -68,10 +67,9 @@
                       <!-- textarea -->
                       <label>Pendidikan Terakhir</label>
                       <select name="pendidikan_id" class="form-control select2" style="width: 100%;">
-                            <option value="0" @if($guru->pendidikan_id == 0) selected @endif >0</option>
-                            <option value="1" @if($guru->pendidikan_id == 1) selected @endif >1</option>
-                            <option value="2" @if($guru->pendidikan_id == 2) selected @endif >2</option>
-                            <option value="3" @if($guru->pendidikan_id == 3) selected @endif >3</option>
+                        @foreach ($data_pendidikan as $pendidikan)
+                      <option value="{{$pendidikan->id}}" @if($guru->pendidikan_id == $pendidikan->id) selected @endif >{{$pendidikan->pendidikan}}</option>
+                        @endforeach
                         </select>
                     </div>
                   </div>
