@@ -16,7 +16,7 @@ class KelaminTableSeeder extends Seeder
                 'kelamin'  => 'Pria',
             ],
             [
-                'nama_kendaraan'  => 'Wanita',
+                'kelamin'  => 'Wanita',
             ],
         ]);
     }

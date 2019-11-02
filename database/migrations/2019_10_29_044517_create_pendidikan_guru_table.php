@@ -15,7 +15,7 @@ class CreatePendidikanGuruTable extends Migration
     {
         Schema::create('pendidikan_guru', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('pendidikan_guru');
+            $table->string('pendidikan');
             $table->integer('pendidikan_jumlah');
             $table->timestamps();
         });
