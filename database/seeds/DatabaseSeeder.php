@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(KelaminTableSeeder::class);
         $this->call(PendidikanTableSeeder::class);
+        $this->call(StudiTableSeeder::class);
     }
 }

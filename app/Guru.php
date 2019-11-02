@@ -20,4 +20,8 @@ class Guru extends Model
     {
         return $this->belongsTo(Pendidikan::class);
     }
+    public function studi()
+    {
+        return $this->belongsTo(Studi::class);
+    }
 }

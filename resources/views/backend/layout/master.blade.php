@@ -200,6 +200,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="../widgets.html" class="nav-link">
+              <i class="nav-icon fas fa-graduation-cap"></i>
+              <p>
+                Bidang Studi
+              </p>
+            </a>
+          </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>

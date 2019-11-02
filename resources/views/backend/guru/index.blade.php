@@ -86,8 +86,12 @@
                                     </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Bidang Studi</label>
-                                        <input type="text" name="bidang_studi" class="form-control" id="exampleInputEmail1" placeholder="Bidang Studi...">
+                                    <label>Bidang Studi</label>
+                                    <select name="bidang_id" class="form-control select2" style="width: 100%;">
+                                      @foreach ($data_studi as $studi)
+                                    <option value="{{$studi->id}}">{{$studi->nama_bidang}}</option>
+                                      @endforeach  
+                                    </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Tempat, Tanggal Lahir</label>

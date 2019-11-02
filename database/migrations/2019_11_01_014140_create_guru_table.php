@@ -17,7 +17,7 @@ class CreateGuruTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_guru');
             $table->integer('kelamin_id');
-            $table->string('bidang_studi');
+            $table->integer('bidang_id');
             $table->string('tmpt_tgl_lahir');
             $table->integer('pendidikan_id');
             $table->string('alamat_guru');
