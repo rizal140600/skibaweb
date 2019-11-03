@@ -120,7 +120,7 @@
                       <td>{{ $index +1}}</td>
                       <td>{{$pembelajaran->nama_file}}</td>
                       <td>{{$pembelajaran->guru->nama_guru}}</td>
-                      <td>{{$pembelajaran->link}}</td>
+                      <td style="max-width:500px"><a href="{{$pembelajaran->link}}">{{$pembelajaran->link}}</a></td>
                       <td>
                       <a href="/pembelajaran/{{$pembelajaran->id}}/edit">
                         <button type="button" title="Edit" class="btn btn-warning text-white  btn-sm">
@@ -130,7 +130,7 @@
                       <a class="ml-2" href="/pembelajaran/{{$pembelajaran->id}}/delete">
                         <button type="button" title="Delete" class="btn btn-danger text-white  btn-sm" onclick="return confirm(
                           'apakah anda yakin mau menghapus file ini ?')">
-                         <i class="far fa-trash-alt"></i>
+                        <i class="far fa-trash-alt"></i>
                         </button>
                       </a>
                       </td>

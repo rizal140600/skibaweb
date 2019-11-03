@@ -22,13 +22,14 @@ class GuruController extends Controller
     public function create(Request $resquest)
     {
         \App\Guru::create($resquest->all());
-        return redirect('guru')->with('success', 'Tambah data guru baru');
+        return redirect('guru')->with('success', 'Tambah data berhasil');
     }
     public function edit($id)
     {
         $guru = \App\Guru::find($id);
         $data_kelamin = \App\Kelamin::all();
         $data_pendidikan = \App\Pendidikan::all();
+        $data_studi = \App\Studi::all();
         return view(' backend/guru/edit', [
             'guru' => $guru,
             'data_kelamin' => $data_kelamin,

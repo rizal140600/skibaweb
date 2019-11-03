@@ -34,6 +34,12 @@ Route::get('/guru/pendidikan/{id}/edit', 'PendidikanController@edit');
 Route::post('/guru/pendidikan/{id}/update', 'PendidikanController@update');
 Route::get('/guru/pendidikan/{id}/delete', 'PendidikanController@delete');
 
+Route::get('/studi', 'StudiController@index');
+Route::post('/studi/create', 'StudiController@create');
+Route::get('/studi/{id}/edit', 'StudiController@edit');
+Route::post('/studi/{id}/update', 'StudiController@update');
+Route::get('/studi/{id}/delete', 'StudiController@delete');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

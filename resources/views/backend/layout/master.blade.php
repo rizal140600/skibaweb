@@ -151,18 +151,6 @@
               <li class="nav-item">
                 <a href="../charts/inline.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Pendidikan Guru</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../charts/inline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Status Guru</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../charts/inline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
                   <p>Sarana Prasarana</p>
                 </a>
               </li>
@@ -201,7 +189,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="/studi" class="nav-link">
               <i class="nav-icon fas fa-graduation-cap"></i>
               <p>
                 Bidang Studi

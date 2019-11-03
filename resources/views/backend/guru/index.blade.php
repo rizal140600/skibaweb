@@ -94,10 +94,6 @@
                                     </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Tempat, Tanggal Lahir</label>
-                                        <input type="text" name="tmpt_tgl_lahir" class="form-control" id="exampleInputEmail1" placeholder="Tempat, Tanggal Lahir...">
-                                    </div>
-                                    <div class="form-group">
                                     <label>Pendidikan Terakhir</label>
                                     <select name="pendidikan_id" class="form-control select2" style="width: 100%;">
                                       @foreach ($data_pendidikan as $pendidikan)
@@ -107,7 +103,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Alamat</label>
-                                        <input type="text" name="alamat_guru" class="form-control" id="exampleInputEmail1" placeholder="Alamat...">
+                                        <textarea class="form-control" name="alamat_guru" rows="3" placeholder="Alamat ..."></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Nomor Telepon</label>
@@ -135,7 +131,6 @@
                       <th>Nama</th>
                       <th>Kelamin</th>
                       <th>Bidang Studi</th>
-                      <th>Tempat, Tanggal Lahir</th>
                       <th>Pendidikan</th>
                       <th>Alamat</th>
                       <th>Telepon</th>
@@ -148,8 +143,7 @@
                       <td>{{$index +1}}</td>
                       <td>{{$guru->nama_guru}}</td>
                       <td>{{$guru->kelamin->kelamin}}</td>
-                      <td>{{$guru->bidang_studi}}</td>
-                      <td>{{$guru->tmpt_tgl_lahir}}</td>
+                      <td>{{$guru->studi->nama_bidang}}</td>
                       <td>{{$guru->pendidikan->pendidikan}}</td>
                       <td>{{$guru->alamat_guru}}</td>
                       <td>{{$guru->telepon_guru}}</td>

@@ -15,7 +15,7 @@ class PembelajaranController extends Controller
     public function create(Request $resquest)
     {
         \App\Pembelajaran::create($resquest->all());
-        return redirect('pembelajaran')->with('success', 'Tambah data pembelajaran baru');
+        return redirect('pembelajaran')->with('success', 'Tambah data Berhasil');
     }
     public function edit($id)
     {

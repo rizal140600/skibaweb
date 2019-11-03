@@ -46,20 +46,13 @@
                   </div>
                   <div class="row">
                     <div class="col-sm-12">
-                      <!-- text input -->
-                      <div class="form-group">
-                        <label>Bidang Studi</label>
-                        <input type="text" name="bidang_studi" class="form-control" placeholder="Link..." value = "{{$guru->bidang_studi}}">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <!-- text input -->
-                      <div class="form-group">
-                        <label>Tempat, Tanggal Lahir</label>
-                        <input type="text" name="tmpt_tgl_lahir" class="form-control" placeholder="Link..." value = "{{$guru->tmpt_tgl_lahir}}">
-                      </div>
+                      <!-- textarea -->
+                      <label>Bidang Studi</label>
+                      <select name="Bidang_id" class="form-control select2" style="width: 100%;">
+                        @foreach ($data_studi as $studi)
+                      <option value="{{$studi->id}}" @if($guru->bidang_id == $studi->id) selected @endif >{{$studi->nama_bidang}}</option>
+                        @endforeach
+                        </select>
                     </div>
                   </div>
                   <div class="row">
@@ -78,7 +71,7 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>Alamat</label>
-                        <input type="text" name="alamat_guru" class="form-control" placeholder="Link..." value = "{{$guru->alamat_guru}}">
+                      <textarea class="form-control" name="alamat_guru" rows="3" placeholder="Alamat ...">{{$guru->alamat_guru}}</textarea>
                       </div>
                     </div>
                   </div>

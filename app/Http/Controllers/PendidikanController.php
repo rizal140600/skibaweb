@@ -14,7 +14,7 @@ class PendidikanController extends Controller
     public function create(Request $resquest)
     {
         \App\Pendidikan::create($resquest->all());
-        return redirect('guru/pendidikan')->with('success', 'Tambah data pemdidikan guru baru');
+        return redirect('guru/pendidikan')->with('success', 'Tambah data berhasil');
     }
     public function edit($id)
     {
