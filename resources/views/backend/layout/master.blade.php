@@ -20,6 +20,13 @@
   <!-- Theme style -->
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <script src="/admin/tiny/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+  tinymce.init({
+    selector: '#kepala',
+    height: '500px'
+  });
+  </script>
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -70,9 +77,9 @@
     <!-- Brand Logo -->
     <a href="/index3.html" class="brand-link">
       <img src="/admin/img/skiba.jpg"
-           alt="AdminLTE Logo"
-           class="brand-image img-circle elevation-3"
-           style="opacity: .8">
+          alt="AdminLTE Logo"
+          class="brand-image img-circle elevation-3"
+          style="opacity: .8">
       <span class="brand-text font-weight-light">SKIBA</span>
     </a>
 
@@ -119,7 +126,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../charts/chartjs.html" class="nav-link">
+                <a href="/profil/kepala" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Sambutan Kepala Sekolah</p>
                 </a>

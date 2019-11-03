@@ -40,6 +40,9 @@ Route::get('/studi/{id}/edit', 'StudiController@edit');
 Route::post('/studi/{id}/update', 'StudiController@update');
 Route::get('/studi/{id}/delete', 'StudiController@delete');
 
+Route::get('/profil/kepala', 'KepalaController@index');
+Route::post('/profil/kepala/{id}/update', 'KepalaController@update');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
