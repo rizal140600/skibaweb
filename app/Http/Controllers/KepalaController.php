@@ -6,9 +6,15 @@ use Illuminate\Http\Request;
 
 class KepalaController extends Controller
 {
-    public function index()
+    public function edit($id)
     {
-        $data_kepala = \App\Kepala::all();
-        return view('backend.studi.index', ['data_studi' => $data_kepala]);
+        $studi = \App\Studi::find($id);
+        return view(' backend/studi/edit', ['studi' => $studi]);
+    }
+    public function update(Request $resquest, $id)
+    {
+        $studi = \App\Studi::find($id);
+        $studi->update($resquest->all());
+        return redirect('/studi')->with('update', 'Data Berhasil di edit');
     }
 }
