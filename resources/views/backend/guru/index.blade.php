@@ -58,9 +58,11 @@
               <div class="card-header">
                   <div class="row">
                     <h3 class="col-11 card-title pt-2">Data Guru</h3>
-                    <button type="button" class="btn col-1 bg-success btn-default" data-toggle="modal" data-target="#modal-default">
-                    <i class="far fa-plus"></i>
-                    </button>
+                    <div class="col-1">
+                      <button type="button" class="btn btn-sm bg-success btn-default" data-toggle="modal" data-target="#modal-default">
+                      <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
                     <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
                         <div class="modal-dialog">
                         <div class="modal-content">
