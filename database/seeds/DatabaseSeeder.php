@@ -15,5 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PendidikanTableSeeder::class);
         $this->call(StudiTableSeeder::class);
         $this->call(KepalaTableSeeder::class);
+        $this->call(TentangTableSeeder::class);
+        $this->call(MisiTableSeeder::class);
     }
 }

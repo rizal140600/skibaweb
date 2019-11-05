@@ -23,7 +23,11 @@
   <script src="/admin/tiny/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
   <script>
   tinymce.init({
-    selector: '#kepala',
+    selector: '#panjang',
+    height: '500px'
+  });
+  tinymce.init({
+    selector: '#besar',
     height: '500px'
   });
   </script>
@@ -128,17 +132,17 @@
               <li class="nav-item">
                 <a href="/profil/kepala" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Sambutan Kepala Sekolah</p>
+                  <p>Kepala Sekolah</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../charts/flot.html" class="nav-link">
+                <a href="/profil/tentang" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tentang Sekolah</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../charts/inline.html" class="nav-link">
+                <a href="/profil/misi" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Visi Misi</p>
                 </a>

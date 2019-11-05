@@ -1,15 +1,15 @@
 @extends('backend.layout.master')
-@section('title', 'Kepala Sekolah')
+@section('title', 'Visi Misi')
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
     <div class="row mb-2">
         <div class="col-sm-6">
-        <h1>Kepala Sekolah</h1>
+        <h1>Visi Misi</h1>
         </div>
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item active">Kepala Sekolah</li>
+            <li class="breadcrumb-item active">Visi Misi</li>
         </ol>
         </div>
     </div>
@@ -22,23 +22,23 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-            <form role="form" action="/profil/kepala/{{$kepala->first()->id}}/update" method="POST">
+            <form role="form" action="/profil/misi/{{$misi->first()->id}}/update" method="POST">
             {{csrf_field()}}
                 <div class="row">
                 <div class="col-sm-12">
                     <!-- text input -->
                     <div class="form-group">
-                    <label>Kepala Sekolah</label>
-                    <input name="kepala" type="text" value="{{$kepala->first()->kepala}}" class="form-control" placeholder="Pendidikan...">
+                    <label>Visi</label>
+                    <textarea name="visi" id="panjang" class="form-control" cols="30" rows="10">{{$misi->first()->visi}}</textarea>
                     </div>
                     <div class="form-group">
-                    <label>Sambutan Kepala Sekolah</label>
-                    <textarea name="kepala_sambutan" id="panjang" class="form-control" cols="30" rows="10">{{$kepala->first()->kepala_sambutan}}</textarea>
+                    <label>Misi</label>
+                    <textarea name="misi" id="besar" class="form-control" cols="30" rows="10">{{$misi->first()->misi}}</textarea>
                     </div>
                 </div>
                 </div>
             <div class="modal-footer justify-content-between">
-                <a href="/profil/kepala">
+                <a href="/profil/misi">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </a>
                 <button type="submit" class="btn text-white btn-warning">

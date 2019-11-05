@@ -16,7 +16,7 @@ class CreateTentangSekolahTable extends Migration
         Schema::create('tentang_sekolah', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('sekolah_gambar');
-            $table->text('tentang_sekolah');
+            $table->text('tentang');
             $table->timestamps();
         });
     }

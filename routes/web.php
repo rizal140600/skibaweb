@@ -43,6 +43,12 @@ Route::get('/studi/{id}/delete', 'StudiController@delete');
 Route::get('/profil/kepala', 'KepalaController@index');
 Route::post('/profil/kepala/{id}/update', 'KepalaController@update');
 
+Route::get('/profil/tentang', 'TentangController@index');
+Route::post('/profil/tentang/{id}/update', 'TentangController@update');
+
+Route::get('/profil/misi', 'MisiController@index');
+Route::post('/profil/misi/{id}/update', 'MisiController@update');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

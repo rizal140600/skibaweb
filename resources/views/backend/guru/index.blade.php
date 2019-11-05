@@ -59,7 +59,7 @@
                   <div class="row">
                     <h3 class="col-11 card-title pt-2">Data Guru</h3>
                     <button type="button" class="btn col-1 bg-success btn-default" data-toggle="modal" data-target="#modal-default">
-                  Tambah
+                    <i class="far fa-plus"></i>
                     </button>
                     <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
                         <div class="modal-dialog">

@@ -1,15 +1,15 @@
 @extends('backend.layout.master')
-@section('title', 'Kepala Sekolah')
+@section('title', 'Tentang Sekolah')
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
     <div class="row mb-2">
         <div class="col-sm-6">
-        <h1>Kepala Sekolah</h1>
+        <h1>Tentang Sekolah</h1>
         </div>
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item active">Kepala Sekolah</li>
+            <li class="breadcrumb-item active">Tentang Sekolah</li>
         </ol>
         </div>
     </div>
@@ -22,23 +22,23 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-            <form role="form" action="/profil/kepala/{{$kepala->first()->id}}/update" method="POST">
+            <form role="form" action="/profil/tentang/{{$tentang->first()->id}}/update" method="POST">
             {{csrf_field()}}
                 <div class="row">
                 <div class="col-sm-12">
                     <!-- text input -->
                     <div class="form-group">
-                    <label>Kepala Sekolah</label>
-                    <input name="kepala" type="text" value="{{$kepala->first()->kepala}}" class="form-control" placeholder="Pendidikan...">
+                    <label>Gambar Sekolah</label>
+                    <input name="sekolah_gambar" type="text" value="{{$tentang->first()->sekolah_gambar}}" class="form-control" placeholder="Pendidikan...">
                     </div>
                     <div class="form-group">
-                    <label>Sambutan Kepala Sekolah</label>
-                    <textarea name="kepala_sambutan" id="panjang" class="form-control" cols="30" rows="10">{{$kepala->first()->kepala_sambutan}}</textarea>
+                    <label>Tentang Sekolah</label>
+                    <textarea name="tentang" id="panjang" class="form-control" cols="30" rows="10">{{$tentang->first()->tentang}}</textarea>
                     </div>
                 </div>
                 </div>
             <div class="modal-footer justify-content-between">
-                <a href="/profil/kepala">
+                <a href="/profil/tentang">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </a>
                 <button type="submit" class="btn text-white btn-warning">
