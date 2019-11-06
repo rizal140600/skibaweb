@@ -17,15 +17,15 @@ class CreateIdentitasTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_sekolah');
             $table->string('status');
-            $table->string('alamat');
+            $table->text('alamat');
             $table->integer('telepon_fax');
             $table->string('website_email');
-            $table->integer('guru_id');
+            $table->string('kepala_Sekolah');
             $table->integer('nomer_sekolah');
             $table->integer('npsn');
             $table->string('no_sk_pendirian');
             $table->string('tgl_sk_pendirian');
-            $table->integer('no_penyelenggaraan');
+            $table->string('no_penyelenggaraan');
             $table->string('penyelenggara');
             $table->text('akreditasi');
             $table->timestamps();

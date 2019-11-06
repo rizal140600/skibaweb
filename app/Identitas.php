@@ -14,6 +14,7 @@ class Identitas extends Model
         'alamat', 
         'telepon_fax', 
         'website_email', 
+        'kepala_sekolah',
         'nomer_sekolah',
         'npsn',
         'no_sk_pendirian',
