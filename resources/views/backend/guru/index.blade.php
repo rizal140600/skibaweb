@@ -71,8 +71,12 @@
                             </button>
                             </div>
                             <div class="modal-body">
-                                <form action="/guru/create" method="post">
+                                <form action="/guru/create" enctype="multipart/form-data"  method="post">
                                     {{csrf_field()}}
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Gambar</label>
+                                        <input name="gambar_guru" type="file" class="form-control" id="imageInput" placeholder="Nama Guru...">
+                                    </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Nama</label>
                                         <input name="nama_guru" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nama Guru...">
@@ -128,6 +132,7 @@
                   <thead>
                     <tr>
                       <th>NO.</th>
+                      <th>Gambar</th>
                       <th>Nama</th>
                       <th>Kelamin</th>
                       <th>Bidang Studi</th>
@@ -141,6 +146,9 @@
                       @foreach($data_guru as $index => $guru)
                     <tr>
                       <td>{{$index +1}}</td>
+                      <th>
+                        <img src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
+                      </th>
                       <td>{{$guru->nama_guru}}</td>
                       <td>{{$guru->kelamin->kelamin}}</td>
                     <td>{{$guru->studi->nama_bidang}}</td>
