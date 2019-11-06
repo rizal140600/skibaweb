@@ -46,10 +46,42 @@
                     <div class="form-group">
                         <label>Website Email</label>
                         <input name="website_email" type="text" value="{{$identitas->first()->website_email}}" class="form-control" placeholder="Pendidikan...">
+                    </div>
+                    <div class="form-group">
+                        <label>Kepala Sekolah</label>
+                        <input name="kepala_sekolah" type="text" value="{{$identitas->first()->kepala_sekolah}}" class="form-control" placeholder="Pendidikan...">
                         </div>
+                    <div class="form-group">
+                        <label>Nomer Sekolah</label>
+                        <input name="nomer_sekolah" type="text" value="{{$identitas->first()->nomer_sekolah}}" class="form-control" placeholder="Pendidikan...">
+                        </div>
+                        <div class="form-group">
+                        <label>NPSN</label>
+                        <input name="npsn" type="text" value="{{$identitas->first()->npsn}}" class="form-control" placeholder="Pendidikan...">
+                    </div>
+                    <div class="form-group">
+                        <label>Nomer SK Pendirian</label>
+                        <input name="no_sk_pendirian" type="text" value="{{$identitas->first()->no_sk_pendirian}}" class="form-control" placeholder="Pendidikan...">
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal SK Pendirian</label>
+                            <input name="tgl_sk_pendirian" type="text" value="{{$identitas->first()->tgl_sk_pendirian}}" class="form-control" placeholder="Pendidikan...">
+                        </div>
+                        <div class="form-group">
+                            <label>Nomer Penyelenggaraan</label>
+                            <input name="no_penyelenggaraan" type="text" value="{{$identitas->first()->no_penyelenggaraan}}" class="form-control" placeholder="Pendidikan...">
+                        </div>
+                        <div class="form-group">
+                            <label>Penyelenggara</label>
+                        <input name="penyelenggara" type="text" value="{{$identitas->first()->penyelenggara}}" class="form-control" placeholder="Pendidikan...">
+                    </div>
+                    <div class="form-group">
+                        <label>Akreditasi</label>
+                        <textarea name="akreditasi" class="form-control" cols="30" rows="10">{{$identitas->first()->akreditasi}}</textarea>
+                    </div>
                 </div>
                 
-                </div>
+            </div>
             <div class="modal-footer justify-content-between">
                 <a href="/profil/identitas">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
