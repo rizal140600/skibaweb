@@ -147,7 +147,20 @@
                     <tr>
                       <td>{{$index +1}}</td>
                       <th>
-                        <img src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{$guru->nama_guru}}">
+                          Lihat
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="{{$guru->nama_guru}}" tabindex="-1" role="dialog" aria-labelledby="{{$guru->nama_guru}}Label" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <img src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
                       </th>
                       <td>{{$guru->nama_guru}}</td>
                       <td>{{$guru->kelamin->kelamin}}</td>
