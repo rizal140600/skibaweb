@@ -48,7 +48,7 @@
                     <div class="col-sm-12">
                       <!-- textarea -->
                       <label>Bidang Studi</label>
-                      <select name="Bidang_id" class="form-control select2" style="width: 100%;">
+                      <select name="bidang_id" class="form-control select2" style="width: 100%;">
                         @foreach ($data_studi as $studi)
                       <option value="{{$studi->id}}" @if($guru->bidang_id == $studi->id) selected @endif >{{$studi->nama_bidang}}</option>
                         @endforeach

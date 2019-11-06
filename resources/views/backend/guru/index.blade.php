@@ -58,11 +58,9 @@
               <div class="card-header">
                   <div class="row">
                     <h3 class="col-11 card-title pt-2">Data Guru</h3>
-                    <div class="col-1">
-                      <button type="button" class="btn btn-sm bg-success btn-default" data-toggle="modal" data-target="#modal-default">
+                      <button type="button" class="btn col-1 btn-sm bg-success btn-default" data-toggle="modal" data-target="#modal-default">
                       <i class="fas fa-plus"></i>
                       </button>
-                    </div>
                     <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
                         <div class="modal-dialog">
                         <div class="modal-content">
@@ -145,22 +143,34 @@
                       <td>{{$index +1}}</td>
                       <td>{{$guru->nama_guru}}</td>
                       <td>{{$guru->kelamin->kelamin}}</td>
-                      <td>{{$guru->studi->nama_bidang}}</td>
+                    <td>{{$guru->studi->nama_bidang}}</td>
                       <td>{{$guru->pendidikan->pendidikan}}</td>
                       <td>{{$guru->alamat_guru}}</td>
                       <td>{{$guru->telepon_guru}}</td>
                       <td>
-                      <a href="/guru/{{$guru->id}}/edit">
-                        <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
-                        <i class="far fa-edit"></i>
-                        </button>
-                      </a>
-                      <a class="ml-2" href="/guru/{{$guru->id}}/delete">
-                        <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
-                          'apakah anda yakin mau menghapus file ini ?')">
-                          <i class="far fa-trash-alt"></i>
-                        </button>
-                      </a>
+                        <div class="row">
+                          <a href="/guru/{{$guru->id}}/edit">
+                          <div class="col-1">
+                              <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
+                              <i class="far fa-edit"></i>
+                              </button>
+                            </div>
+                          </a>
+                          <div class="col-1">
+
+                          </div>
+                          <a class="ml-2" href="/guru/{{$guru->id}}/delete">
+                          <div class="col-1">
+                              <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
+                                'apakah anda yakin mau menghapus file ini ?')">
+                                <i class="far fa-trash-alt"></i>
+                              </button>
+                            </div>
+                          </a>
+                          <div class="col-9">
+                            
+                          </div>
+                        </div>
                       </td>
                     </tr>
                     @endforeach

@@ -22,7 +22,7 @@ class Guru extends Model
     }
     public function studi()
     {
-        return $this->belongsTo('\App\Studi', 'id');
+        return $this->belongsTo('\App\Studi', 'bidang_id');
     }
     public function kepala()
     {
