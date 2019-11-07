@@ -23,9 +23,31 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <form role="form" action="/guru/{{$guru->id}}/update" method="POST">
-                {{csrf_field()}}
+                  {{csrf_field()}}
                   <div class="row">
                     <div class="col-sm-12">
+                        <label>Gambar</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#{{$guru->nama_guru}}">
+                            <i class="far fa-eye"></i>
+                          </button>
+                          
+                          <!-- Modal -->
+                          <div class="modal fade" id="{{$guru->nama_guru}}" tabindex="-1" role="dialog" aria-labelledby="{{$guru->nama_guru}}Label" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <img class="img-fluid" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
+                                  <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                      </div>
                       <!-- text input -->
                       <div class="form-group">
                         <label>Nama Guru</label>
