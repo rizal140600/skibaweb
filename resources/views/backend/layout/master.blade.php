@@ -17,20 +17,10 @@
   <link rel="stylesheet" href="/admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="/admin/plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="/admin/plugins/summernote/summernote-bs4.css">
   <!-- Theme style -->
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <script src="/admin/tiny/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
-  <script>
-  tinymce.init({
-    selector: '#panjang',
-    height: '500px'
-  });
-  tinymce.init({
-    selector: '#besar',
-    height: '500px'
-  });
-  </script>
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -433,6 +423,13 @@
     });
   });
 
+</script>
+<script src="/admin/plugins/summernote/summernote-bs4.min.js"></script>
+<script>
+  $(function () {
+    // Summernote
+    $('.textarea').summernote()
+  })
 </script>
 </body>
 </html>

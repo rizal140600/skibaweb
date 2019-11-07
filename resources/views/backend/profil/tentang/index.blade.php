@@ -55,7 +55,7 @@
                     </div>
                     <div class="form-group">
                     <label>Tentang Sekolah</label>
-                    <textarea name="tentang" id="panjang" class="form-control" cols="30" rows="10">{{$tentang->first()->tentang}}</textarea>
+                    <textarea name="tentang" id="panjang" class="form-control textarea" cols="30" rows="10">{{$tentang->first()->tentang}}</textarea>
                     </div>
                 </div>
                 </div>

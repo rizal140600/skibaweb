@@ -55,7 +55,12 @@
                     </div>
                     <div class="form-group">
                     <label>Sambutan Kepala Sekolah</label>
-                    <textarea name="kepala_sambutan" id="panjang" class="form-control" cols="30" rows="10">{{$kepala->first()->kepala_sambutan}}</textarea>
+                    <div class="mb-3">
+                <textarea class="textarea" name="kepala_sambutan" placeholder="Place some text here"
+                style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                {{$kepala->first()->kepala_sambutan}}
+                </textarea>
+                </div>
                     </div>
                 </div>
                 </div>
