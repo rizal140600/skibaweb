@@ -4,37 +4,25 @@
 <section class="content-header">
     <div class="container-fluid">
     @if(session('success'))
-    <div class="alert text-white alert-success" role="alert">
-    <div class="row">
-        <div class="col-11">
-        {{session('success')}}
-        </div>
-        <div class="col-1">
-        <a class="ml-5 text-white pl-4" style="text-decoration:none" href="/studi">X</a>
-        </div>
-    </div>
+    <div class="alert text-white alert-success alert-dismissible fade show" role="alert">
+    {{session('success')}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
     </div>
     @elseif(session('update'))
-    <div class="alert  alert-warning" role="alert">
-    <div class="row">
-        <div class=" text-white col-11">
-        {{session('update')}}
-        </div>
-        <div class="col-1">
-        <a class="ml-5 text-white pl-4" style="text-decoration:none" href="/studi">X</a>
-        </div>
-    </div>
+    <div class="alert text-white alert-warning alert-dismissible fade show" role="alert">
+    {{session('update')}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
     </div>
     @elseif(session('delete'))
-    <div class="alert text-white alert-danger" role="alert">
-    <div class="row">
-        <div class="col-11">
-        {{session('delete')}}
-        </div>
-        <div class="col-1">
-        <a class="ml-5 text-white pl-4" style="text-decoration:none" href="/studi">X</a>
-        </div>
-    </div>
+    <div class="alert text-white alert-danger alert-dismissible fade show" role="alert">
+    {{session('delete')}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
     </div>
     @endif
     <div class="row mb-2">
