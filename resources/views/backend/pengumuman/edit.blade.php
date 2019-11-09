@@ -1,15 +1,15 @@
 @extends('backend.layout.master')
-@section('title', 'Sarana Prasarana Edit')
+@section('title', 'Pengumuman Edit')
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
     <div class="row mb-2">
         <div class="col-sm-6">
-        <h1>Sarana Prasarana Edit</h1>
+        <h1>Pengumuman Edit</h1>
         </div>
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item active">Sarana Prasarana</li>
+            <li class="breadcrumb-item active">Pengumuman</li>
         </ol>
         </div>
     </div>
@@ -22,27 +22,30 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-            <form role="form" action="/profil/sarana/{{$sarana->id}}/update" method="POST">
+            <form role="form" action="/pengumuman/{{$pengumuman->id}}/update" method="POST">
             {{csrf_field()}}
-                <div class="form-group">
-                        <label for="exampleInputEmail1">Ruang Area</label>
-                    <input name="ruang_area" type="text" value="{{$sarana->ruang_area}}" class="form-control" id="exampleInputEmail1" placeholder="Ruang Area...">
-                    </div>
+                <div class="row">
+                <div class="col-sm-12">
+                    <!-- text input -->
                     <div class="form-group">
-                    <label>Jumlah Ruang</label>
-                    <input name="jumlah_ruang" type="text" value="{{$sarana->jumlah_ruang}}" class="form-control" id="exampleInputEmail1" placeholder="Jumlah Ruang...">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Luas</label>
-                        <input type="text" name="luas" value="{{$sarana->luas}}" class="form-control" id="exampleInputEmail1" placeholder="luas...">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Total Luas</label>
-                    <input type="text" name="total_luas" value="{{$sarana->total_luas}}"  class="form-control" id="exampleInputEmail1" placeholder="total luas...">
+                    <label>Judul</label>
+                    <input name="judul_pengumuman" type="text" value="{{$pengumuman->judul_pengumuman}}" class="form-control" placeholder="Judul...">
                     </div>
                 </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-12">
+                    <!-- text input -->
+                    <div class="form-group">
+                    <label>Isi</label>
+                    <textarea class="textarea" name="isi_pengumuman" placeholder="Isi Pengumuman"
+                    style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$pengumuman->isi_pengumuman}}</textarea>
+                    </div>
+                </div>
+                </div>
+            </div>
             <div class="modal-footer justify-content-between">
-                <a href="/profil/sarana">
+                <a href="/pengumuman">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </a>
                 <button type="submit" class="btn text-white btn-warning">

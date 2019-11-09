@@ -16,11 +16,18 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard','AdminController@dashboard');
+
 Route::get('/pembelajaran', 'PembelajaranController@index');
 Route::post('/pembelajaran/create', 'PembelajaranController@create');
 Route::get('/pembelajaran/{id}/edit', 'PembelajaranController@edit');
 Route::post('/pembelajaran/{id}/update', 'PembelajaranController@update');
 Route::get('/pembelajaran/{id}/delete', 'PembelajaranController@delete');
+
+Route::get('/pengumuman', 'PengumumanController@index');
+Route::post('/pengumuman/create', 'PengumumanController@create');
+Route::get('/pengumuman/{id}/edit', 'PengumumanController@edit');
+Route::post('/pengumuman/{id}/update', 'PengumumanController@update');
+Route::get('/pengumuman/{id}/delete', 'PengumumanController@delete');
 
 Route::get('/profil/sarana', 'SaranaController@index');
 Route::post('/profil/sarana/create', 'SaranaController@create');

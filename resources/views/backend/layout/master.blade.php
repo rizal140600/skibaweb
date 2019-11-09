@@ -158,7 +158,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="/pengumuman" class="nav-link">
               <i class="nav-icon far fa-bookmark"></i>
               <p>
                 Pengumuman

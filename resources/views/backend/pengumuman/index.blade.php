@@ -1,5 +1,5 @@
 @extends('backend.layout.master')
-@section('title', 'Sarana Prasarana')
+@section('title', 'Pengumuman')
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
@@ -27,11 +27,11 @@
     @endif
     <div class="row mb-2">
         <div class="col-sm-6">
-        <h1>Sarana Prasarana</h1>
+        <h1>Pengumuman</h1>
         </div>
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item active">Data Sarana Prasarana</li>
+            <li class="breadcrumb-item active">Data Pengumuman</li>
         </ol>
         </div>
     </div>
@@ -45,7 +45,7 @@
     <div class="card">
             <div class="card-header">
                 <div class="row">
-                <h3 class="col-11 card-title pt-2">Data Sarana Prasarana</h3>
+                <h3 class="col-11 card-title pt-2">Data Pengumuman</h3>
                 <button type="button" class="btn col-1 btn-sm bg-success btn-default" data-toggle="modal" data-target="#modal-default">
                     <i class="fa fa-plus"></i>
                 </button>
@@ -53,29 +53,22 @@
                     <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                        <h4 class="modal-title">Tambah Sarana Prasarana</h4>
+                        <h4 class="modal-title">Tambah Pengumuman</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                         </div>
                         <div class="modal-body">
-                            <form action="/profil/sarana/create" method="post">
+                            <form action="/pengumuman/create" method="post">
                                 {{csrf_field()}}
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Ruang Area</label>
-                                    <input name="ruang_area" type="text" class="form-control" id="exampleInputEmail1" placeholder="Ruang Area...">
+                                    <label for="exampleInputEmail1">Judul</label>
+                                    <input name="judul_pengumuman" type="text" class="form-control" id="exampleInputEmail1" placeholder="Judul...">
                                 </div>
                                 <div class="form-group">
-                                <label>Jumlah Ruang</label>
-                                <input name="jumlah_ruang" type="text" class="form-control" id="exampleInputEmail1" placeholder="Jumlah Ruang...">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Luas</label>
-                                    <input type="text" name="luas" class="form-control" id="exampleInputEmail1" placeholder="luas...">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Total Luas</label>
-                                    <input type="text" name="total_luas" class="form-control" id="exampleInputEmail1" placeholder="total luas...">
+                                    <label for="exampleInputEmail1">Isi</label>
+                                    <textarea class="textarea" name="isi_pengumuman" placeholder="Isi Pengumuman"
+                                    style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                                 </div>
                             </div>
                             <div class="modal-footer justify-content-between">
@@ -96,28 +89,24 @@
                 <thead>
                 <tr>
                     <th>NO.</th>
-                    <th>Ruang Area</th>
-                    <th>Jumlah Ruang</th>
-                    <th>Luas</th>
-                    <th>Total Luas</th>
+                    <th>Judul</th>
+                    <th>Isi</th>
                     <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach($data_sarana as $index => $sarana)
+                    @foreach($data_pengumuman as $index => $Pengumuman)
                 <tr>
                     <td>{{ $index +1}}</td>
-                    <td>{{$sarana->ruang_area}}</td>
-                    <td>{{$sarana->jumlah_ruang}}</td>
-                    <td>{{$sarana->luas}}</td>
-                    <td>{{$sarana->total_luas}}</td>
+                    <td>{{$Pengumuman->judul_pengumuman}}</td>
+                    <td>{!!$Pengumuman->isi_pengumuman!!}</td>
                     <td style="min-width: 105px">
-                        <a class="" href="/profil/sarana/{{$sarana->id}}/edit">
+                        <a class="" href="/pengumuman/{{$Pengumuman->id}}/edit">
                             <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
                             <i class="far fa-edit"></i>
                             </button>
                         </a>
-                        <a class="" href="/profil/sarana/{{$sarana->id}}/delete">
+                        <a class="" href="/pengumuman/{{$Pengumuman->id}}/delete">
                             <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
                             'apakah anda yakin mau menghapus file ini ?')">
                             <i class="far fa-trash-alt"></i>
