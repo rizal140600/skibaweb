@@ -99,7 +99,12 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Nomor Telepon</label>
-                                        <input type="text" name="telepon_guru" class="form-control" id="exampleInputEmail1" placeholder="Nomor Telepon...">
+                                        <div class="input-group mb-3">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text">+62</span>
+                                          </div>
+                                          <input type="number" name="telepon_guru" class="form-control" placeholder="Telepon...">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer justify-content-between">

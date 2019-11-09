@@ -66,17 +66,21 @@ class GuruController extends Controller
         $guru = \App\Guru::find($id);
         $guru->delete($request->all());
         $cover = $request->file('gambar_guru');
-        $extension = $cover->getClientOriginalExtension();
-        Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
-
         $guru = new Guru();
+        if ($request->hasFile('gambar_guru')) {
+            $extension = $cover->getClientOriginalExtension();
+            Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+            $guru->gambar_guru = $cover->getFileName().'.'.$extension;
+        }else {
+            $guru->gambar_guru = $request->gambar_guru;
+        }
+
         $guru->nama_guru = $request->nama_guru;
         $guru->kelamin_id = $request->kelamin_id;
         $guru->bidang_id = $request->bidang_id;
         $guru->pendidikan_id = $request->pendidikan_id;
         $guru->alamat_guru = $request->alamat_guru;
         $guru->telepon_guru = $request->telepon_guru;
-        $guru->gambar_guru = $cover->getFileName().'.'.$extension;
         // $guru->author = $request->author;
         // $guru->mime = $cover->getClientMimeType();
         // $guru->original_filename = $cover->getClientOriginalName();
