@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
         $this->call(KelaminTableSeeder::class);
         $this->call(PendidikanTableSeeder::class);
         $this->call(StudiTableSeeder::class);
-        $this->call(TentangTableSeeder::class);
         $this->call(MisiTableSeeder::class);
         $this->call(IdentitasTableSeeder::class);
     }

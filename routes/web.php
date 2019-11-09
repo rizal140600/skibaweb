@@ -46,6 +46,7 @@ Route::post('/profil/kepala/create', 'KepalaController@create');
 
 Route::get('/profil/tentang', 'TentangController@index');
 Route::post('/profil/tentang/{id}/update', 'TentangController@update');
+Route::post('/profil/tentang/create', 'TentangController@create');
 
 Route::get('/profil/identitas', 'IdentitasController@index');
 Route::post('/profil/identitas/{id}/update', 'IdentitasController@update');

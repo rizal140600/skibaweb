@@ -37,41 +37,70 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-        <!-- general form elements disabled -->
-        <div class="card card-warning">
-            <div class="card-header text-white">
-            <h3 class="card-title">Form</h3>
-            </div>
-            <!-- /.card-header -->
+        @if ($tentang->isNotEmpty())
+            <div class="card card-warning">
+            @else
+            <div class="card card-success">
+            @endif
+                <div class="card-header text-white">
+                <h3 class="card-title">Form</h3>
+                </div>
+                <!-- /.card-header -->
             <div class="card-body">
-            <form role="form" action="/profil/tentang/{{$tentang->first()->id}}/update" method="POST">
-            {{csrf_field()}}
-                <div class="row">
-                <div class="col-sm-12">
-                    <!-- text input -->
-                    <div class="form-group">
-                    <label>Gambar Sekolah</label>
-                    <input name="sekolah_gambar" type="text" value="{{$tentang->first()->sekolah_gambar}}" class="form-control" placeholder="Pendidikan...">
+                    @if ($tentang->isNotEmpty())
+                        <form role="form" action="/profil/tentang/{{$tentang->first()->id}}/update" enctype="multipart/form-data" method="POST">
+                        {{csrf_field()}}
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/" . $tentang->first()->sekolah_gambar) }}" />
+                                <label>Gambar</label>
+                            <div class="input-group mb-3">
+                            <input type="hidden" name="sekolah_gambar" value="{{$tentang->first()->sekolah_gambar}}">
+                            <input class="note-image-input form-control-file note-form-control note-input" type="file" name="sekolah_gambar" >
+                            </div>
+                            <div class="form-group">
+                            <label>Tentang Sekolah</label>
+                            <div class="mb-3">
+                            <textarea class="textarea" name="tentang" placeholder="tentang sekolah..."
+                            style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                            {{$tentang->first()->tentang}}
+                            </textarea>
+                            </div>
+                                </div>
+                            </div>
+                            </div>
+                        <div class="modal-footer justify-content-between">
+                            <a href="/profil/tentang">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </a>
+                        <button type="submit" class="btn text-white btn-warning">
+                            Edit
+                        </button>
+                    </form>
+                    @else
+                        <form action="/profil/tentang/create" enctype="multipart/form-data"  method="post">
+                        {{csrf_field()}}
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Gambar</label>
+                            <input class="note-image-input form-control-file note-form-control note-input" type="file" name="sekolah_gambar" >
+                        </div>
+                        <div class="form-group">
+                        <label>Tentang Sekolah</label>
+                        <div class="mb-3">
+                        <textarea class="textarea" name="tentang" placeholder="Tentang Sekolah"
+                        style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                        </div>
+                            </div>
+                    <div class="modal-footer justify-content-between">
+                    <a href="/profil/tentang">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </a>
+                    <button type="submit" class="btn btn-success">Tambah</button>
                     </div>
-                    <div class="form-group">
-                    <label>Tentang Sekolah</label>
-                    <textarea name="tentang" id="panjang" class="form-control textarea" cols="30" rows="10">{{$tentang->first()->tentang}}</textarea>
-                    </div>
-                </div>
-                </div>
-            <div class="modal-footer justify-content-between">
-                <a href="/profil/tentang">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </a>
-                <button type="submit" class="btn text-white btn-warning">
-                Edit
-                </button>
-        </form>
-            <!-- /.card-body -->
-        </div>
-        <!-- /.card -->
-        <!-- general form elements disabled -->
-        <!-- /.card -->
+                    </form>
+                    @endif
+                <!-- /.card-body -->
+            </div>
         </div>
         <!--/.col (right) -->
     </div>

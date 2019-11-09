@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Tentang;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class TentangController extends Controller
 {
@@ -11,10 +14,45 @@ class TentangController extends Controller
         $tentang = \App\Tentang::all();
         return view(' backend/profil/tentang/index', ['tentang' => $tentang]);
     }
-    public function update(Request $resquest, $id)
+    public function create(Request $request)
+    {
+        
+        $cover = $request->file('sekolah_gambar');
+        $extension = $cover->getClientOriginalExtension();
+        Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+
+        $tentang = new Tentang();
+        $tentang->sekolah_gambar = $cover->getFileName().'.'.$extension;
+        $tentang->tentang = $request->tentang;
+        // $tentang->original_filename = $cover->getClientOriginalName();
+        // $tentang->filename = $cover->getFilename().'.'.$extension;
+        $tentang->save();
+        // \App\tentang::create(
+        //     $request->all()
+        // );
+        return redirect('/profil/tentang')->with('success', 'Tambah data berhasil');
+    }
+    public function update(Request $request, $id)
     {
         $tentang = \App\Tentang::find($id);
-        $tentang->update($resquest->all());
+        $tentang->delete();
+        $cover = $request->file('sekolah_gambar');
+        $tentang = new Tentang();
+        if ($request->hasFile('sekolah_gambar')) {
+            $extension = $cover->getClientOriginalExtension();
+            Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+            $tentang->sekolah_gambar = $cover->getFileName().'.'.$extension;
+        }else {
+            $tentang->sekolah_gambar = $request->sekolah_gambar;
+        }
+
+        $tentang->tentang = $request->tentang;
+        // $tentang->original_filename = $cover->getClientOriginalName();
+        // $tentang->filename = $cover->getFilename().'.'.$extension;
+        $tentang->save($request->all());
+        // \App\tentang::create(
+        //     $request->all()
+        // );
         return redirect('/profil/tentang')->with('update', 'Data Berhasil di edit');
     }
 }
