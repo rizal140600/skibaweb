@@ -42,6 +42,7 @@ Route::get('/studi/{id}/delete', 'StudiController@delete');
 
 Route::get('/profil/kepala', 'KepalaController@index');
 Route::post('/profil/kepala/{id}/update', 'KepalaController@update');
+Route::post('/profil/kepala/create', 'KepalaController@create');
 
 Route::get('/profil/tentang', 'TentangController@index');
 Route::post('/profil/tentang/{id}/update', 'TentangController@update');
@@ -51,6 +52,10 @@ Route::post('/profil/identitas/{id}/update', 'IdentitasController@update');
 
 Route::get('/profil/misi', 'MisiController@index');
 Route::post('/profil/misi/{id}/update', 'MisiController@update');
+
+Route::get('/profil/struktur', 'StrukturController@index');
+Route::post('/profil/struktur/{id}/update', 'StrukturController@update');
+Route::post('/profil/struktur/create', 'StrukturController@create');
 
 Auth::routes();
 
