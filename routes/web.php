@@ -50,6 +50,7 @@ Route::post('/profil/tentang/create', 'TentangController@create');
 
 Route::get('/profil/identitas', 'IdentitasController@index');
 Route::post('/profil/identitas/{id}/update', 'IdentitasController@update');
+Route::post('/profil/identitas/create', 'IdentitasController@create');
 
 Route::get('/profil/misi', 'MisiController@index');
 Route::post('/profil/misi/{id}/update', 'MisiController@update');

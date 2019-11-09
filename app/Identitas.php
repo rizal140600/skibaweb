@@ -18,6 +18,7 @@ class Identitas extends Model
         'nomer_sekolah',
         'npsn',
         'no_sk_pendirian',
+        'tgl_sk_pendirian',
         'no_penyelenggaraan',
         'penyelenggara',
         'akreditasi'
