@@ -31,9 +31,10 @@
                         {{csrf_field()}}
                         <div class="row">
                             <div class="col-sm-12">
-                                <img class="rounded mx-auto d-block" style="max-height: 250px" src="{{ asset("/storage/" . $kepala->first()->kepala_gambar) }}" />
+                                <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/" . $kepala->first()->kepala_gambar) }}" />
                                 <label>Gambar</label>
                             <div class="input-group mb-3">
+                            <input type="hidden" name="kepala_gambar" value="{{$kepala->first()->kepala_gambar}}">
                             <input class="note-image-input form-control-file note-form-control note-input" type="file" name="kepala_gambar" >
                             </div>
                             <div class="form-group">

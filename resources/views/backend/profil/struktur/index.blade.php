@@ -31,7 +31,7 @@
                         {{csrf_field()}}
                         <div class="row">
                             <div class="col-sm-12">
-                                <img class="rounded mx-auto d-block" style="max-height: 250px" src="{{ asset("/storage/" . $struktur->first()->struktur_organisasi) }}" />
+                                <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/" . $struktur->first()->struktur_organisasi) }}" />
                                 <label>Gambar</label>
                             <div class="input-group mb-3">
                             <input class="note-image-input form-control-file note-form-control note-input"  type="file" name="struktur_organisasi" >

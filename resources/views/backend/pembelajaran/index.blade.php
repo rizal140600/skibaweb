@@ -109,25 +109,18 @@
                       <td>{{$pembelajaran->nama_file}}</td>
                       <td>{{$pembelajaran->guru->nama_guru}}</td>
                       <td style="max-width:500px"><a href="{{$pembelajaran->link}}">{{$pembelajaran->link}}</a></td>
-                      <td>
-                        <div class="row">
-                          <div class="col-1">
-                            <a href="/pembelajaran/{{$pembelajaran->id}}/edit">
-                              <button type="button" title="Edit" class="btn btn-warning text-white  btn-sm">
-                                <i href="" class="far fa-edit"></i>
+                      <td style="min-width: 105px">
+                          <a class="" href="/pembelajaran/{{$pembelajaran->id}}/edit">
+                              <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
+                              <i class="far fa-edit"></i>
                               </button>
-                            </a>
-                          </div>
-                          <div class="col-1"></div>
-                          <div class="col-1">
-                            <a class="ml-2" href="/pembelajaran/{{$pembelajaran->id}}/delete">
-                              <button type="button" title="Delete" class="btn btn-danger text-white  btn-sm" onclick="return confirm(
+                          </a>
+                          <a class="" href="/pembelajaran/{{$pembelajaran->id}}/delete">
+                              <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
                                 'apakah anda yakin mau menghapus file ini ?')">
-                              <i class="far fa-trash-alt"></i>
+                                <i class="far fa-trash-alt"></i>
                               </button>
-                            </a>
-                          </div>
-                          <div class="col-9"></div>
+                          </a>
                         </div>
                       </td>
                     </tr>

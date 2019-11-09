@@ -100,9 +100,6 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Nomor Telepon</label>
                                         <div class="input-group mb-3">
-                                          <div class="input-group-prepend">
-                                            <span class="input-group-text">+62</span>
-                                          </div>
                                           <input type="text" name="telepon_guru" class="form-control" placeholder="Telepon...">
                                         </div>
                                     </div>
