@@ -53,6 +53,7 @@ Route::post('/profil/identitas/{id}/update', 'IdentitasController@update');
 
 Route::get('/profil/misi', 'MisiController@index');
 Route::post('/profil/misi/{id}/update', 'MisiController@update');
+Route::post('/profil/misi/create', 'MisiController@create');
 
 Route::get('/profil/struktur', 'StrukturController@index');
 Route::post('/profil/struktur/{id}/update', 'StrukturController@update');

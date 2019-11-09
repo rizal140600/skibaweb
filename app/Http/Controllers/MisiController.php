@@ -11,6 +11,11 @@ class MisiController extends Controller
         $misi = \App\Misi::all();
         return view(' backend/profil/misi/index', ['misi' => $misi]);
     }
+    public function create(Request $resquest)
+    {
+        \App\Misi::create($resquest->all());
+        return redirect('/profil/misi')->with('success', 'Tambah data Berhasil');
+    }
     public function update(Request $resquest, $id)
     {
         $misi = \App\Misi::find($id);

@@ -37,41 +37,76 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-        <!-- general form elements disabled -->
-        <div class="card card-warning">
-            <div class="card-header text-white">
-            <h3 class="card-title">Form</h3>
-            </div>
-            <!-- /.card-header -->
+        @if ($misi->isNotEmpty())
+            <div class="card card-warning">
+            @else
+            <div class="card card-success">
+            @endif
+                <div class="card-header text-white">
+                <h3 class="card-title">Form</h3>
+                </div>
+                <!-- /.card-header -->
             <div class="card-body">
-            <form role="form" action="/profil/misi/{{$misi->first()->id}}/update" method="POST">
-            {{csrf_field()}}
-                <div class="row">
-                <div class="col-sm-12">
-                    <!-- text input -->
-                    <div class="form-group">
-                    <label>Visi</label>
-                    <textarea name="visi" id="panjang" class="form-control" cols="30" rows="10">{{$misi->first()->visi}}</textarea>
+                    @if ($misi->isNotEmpty())
+                        <form role="form" action="/profil/misi/{{$misi->first()->id}}/update" enctype="multipart/form-data" method="POST">
+                        {{csrf_field()}}
+                        <div class="row">
+                            <div class="col-sm-12">
+                            <div class="form-group">
+                            <label>Visi</label>
+                            <div class="mb-3">
+                            <textarea class="textarea" name="visi" placeholder="tentang sekolah..."
+                            style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                            {{$misi->first()->visi}}
+                            </textarea>
+                            </div>
+                                </div>
+                            <div class="form-group">
+                            <label>Misi</label>
+                            <div class="mb-3">
+                            <textarea class="textarea" name="misi" placeholder="tentang sekolah..."
+                            style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                            {{$misi->first()->misi}}
+                            </textarea>
+                            </div>
+                                </div>
+                            </div>
+                            </div>
+                        <div class="modal-footer justify-content-between">
+                            <a href="/profil/misi">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </a>
+                        <button type="submit" class="btn text-white btn-warning">
+                            Edit
+                        </button>
+                    </form>
+                    @else
+                        <form action="/profil/misi/create" enctype="multipart/form-data"  method="post">
+                        {{csrf_field()}}
+                        <div class="form-group">
+                        <label>Visi</label>
+                        <div class="mb-3">
+                        <textarea class="textarea" name="visi" placeholder="Tentang Sekolah"
+                        style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                        </div>
+                            </div>
+                        <div class="form-group">
+                        <label>Misi</label>
+                        <div class="mb-3">
+                        <textarea class="textarea" name="misi" placeholder="Tentang Sekolah"
+                        style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                        </div>
+                            </div>
+                    <div class="modal-footer justify-content-between">
+                    <a href="/profil/misi">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </a>
+                    <button type="submit" class="btn btn-success">Tambah</button>
                     </div>
-                    <div class="form-group">
-                    <label>Misi</label>
-                    <textarea name="misi" id="besar" class="form-control " cols="30" rows="10">{{$misi->first()->misi}}</textarea>
-                    </div>
-                </div>
-                </div>
-            <div class="modal-footer justify-content-between">
-                <a href="/profil/misi">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </a>
-                <button type="submit" class="btn text-white btn-warning">
-                Edit
-                </button>
-        </form>
-            <!-- /.card-body -->
-        </div>
-        <!-- /.card -->
-        <!-- general form elements disabled -->
-        <!-- /.card -->
+                    </form>
+                    @endif
+                <!-- /.card-body -->
+            </div>
         </div>
         <!--/.col (right) -->
     </div>
