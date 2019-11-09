@@ -33,10 +33,24 @@ class KepalaController extends Controller
         // );
         return redirect('/profil/kepala')->with('success', 'Tambah data berhasil');
     }
-    public function update(Request $resquest, $id)
+    public function update(Request $request, $id)
     {
         $kepala = \App\Kepala::find($id);
-        $kepala->update($resquest->all());
+        $kepala->delete();
+        $cover = $request->file('kepala_gambar');
+        $extension = $cover->getClientOriginalExtension();
+        Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+
+        $kepala = new Kepala();
+        $kepala->kepala_gambar = $cover->getFileName().'.'.$extension;
+        $kepala->kepala = $request->kepala;
+        $kepala->kepala_sambutan = $request->kepala_sambutan;
+        // $kepala->original_filename = $cover->getClientOriginalName();
+        // $kepala->filename = $cover->getFilename().'.'.$extension;
+        $kepala->save($request->all());
+        // \App\kepala::create(
+        //     $request->all()
+        // );
         return redirect('/profil/kepala')->with('update', 'Data Berhasil di edit');
     }
 }

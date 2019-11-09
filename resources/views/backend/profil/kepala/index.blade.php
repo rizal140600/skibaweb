@@ -27,14 +27,14 @@
                 <!-- /.card-header -->
             <div class="card-body">
                     @if ($kepala->isNotEmpty())
-                        <form role="form" action="/profil/kepala/{{$kepala->first()->id}}/update" method="POST">
+                        <form role="form" action="/profil/kepala/{{$kepala->first()->id}}/update" enctype="multipart/form-data" method="POST">
                         {{csrf_field()}}
                         <div class="row">
                             <div class="col-sm-12">
                                 <img class="rounded mx-auto d-block" style="max-height: 250px" src="{{ asset("/storage/" . $kepala->first()->kepala_gambar) }}" />
                                 <label>Gambar</label>
                             <div class="input-group mb-3">
-                            <input class="note-image-input form-control-file note-form-control note-input" value="{{$kepala->first()->kepala_gambar}}" type="file" name="kepala_gambar" >
+                            <input class="note-image-input form-control-file note-form-control note-input" type="file" name="kepala_gambar" >
                             </div>
                             <div class="form-group">
                                 <label>Kepala Sekolah</label>
