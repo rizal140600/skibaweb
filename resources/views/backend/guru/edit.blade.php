@@ -26,7 +26,7 @@
                   {{csrf_field()}}
                   <div class="row">
                     <div class="col-sm-12">
-                          <img class="rounded mx-auto d-block" style="max-height: 250px" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
+                          <img class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
                         <label>Gambar</label>
                       <div class="input-group mb-3">
                       <input type="hidden" name="gambar_guru" value="{{$guru->gambar_guru}}">
@@ -86,7 +86,7 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>Telepon</label>
-                        <input type="number" name="telepon_guru" class="form-control" placeholder="Link..." value = "{{$guru->telepon_guru}}">
+                        <input type="text" name="telepon_guru" class="form-control" placeholder="Link..." value = "{{$guru->telepon_guru}}">
                       </div>
                     </div>
                   </div>

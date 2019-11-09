@@ -103,7 +103,7 @@
                                           <div class="input-group-prepend">
                                             <span class="input-group-text">+62</span>
                                           </div>
-                                          <input type="number" name="telepon_guru" class="form-control" placeholder="Telepon...">
+                                          <input type="text" name="telepon_guru" class="form-control" placeholder="Telepon...">
                                         </div>
                                     </div>
                                 </div>
