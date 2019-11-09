@@ -150,7 +150,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../charts/inline.html" class="nav-link">
+                <a href="/profil/sarana" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Sarana Prasarana</p>
                 </a>

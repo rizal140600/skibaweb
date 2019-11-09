@@ -22,6 +22,12 @@ Route::get('/pembelajaran/{id}/edit', 'PembelajaranController@edit');
 Route::post('/pembelajaran/{id}/update', 'PembelajaranController@update');
 Route::get('/pembelajaran/{id}/delete', 'PembelajaranController@delete');
 
+Route::get('/profil/sarana', 'SaranaController@index');
+Route::post('/profil/sarana/create', 'SaranaController@create');
+Route::get('/profil/sarana/{id}/edit', 'SaranaController@edit');
+Route::post('/profil/sarana/{id}/update', 'SaranaController@update');
+Route::get('/profil/sarana/{id}/delete', 'SaranaController@delete');
+
 Route::get('/guru', 'GuruController@index');
 Route::post('/guru/create', 'GuruController@create');
 Route::get('/guru/{id}/edit', 'GuruController@edit');
