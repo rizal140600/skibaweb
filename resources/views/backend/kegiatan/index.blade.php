@@ -142,7 +142,7 @@
                         
                         <!-- Modal -->
                         <div class="modal fade" id="isi{{$kegiatan->id}}" tabindex="-1" role="dialog" aria-labelledby="isi{{$kegiatan->id}}Label" aria-hidden="true">
-                          <div class="" role="document">
+                          <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <textarea class="textarea" name="kegiatan_isi" placeholder="isi kegiatan"
                             style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$kegiatan->kegiatan_isi}}</textarea>
