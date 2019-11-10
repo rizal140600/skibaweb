@@ -29,6 +29,12 @@ Route::get('/pengumuman/{id}/edit', 'PengumumanController@edit');
 Route::post('/pengumuman/{id}/update', 'PengumumanController@update');
 Route::get('/pengumuman/{id}/delete', 'PengumumanController@delete');
 
+Route::get('/kegiatan', 'KegiatanController@index');
+Route::post('/kegiatan/create', 'KegiatanController@create');
+Route::get('/kegiatan/{id}/edit', 'KegiatanController@edit');
+Route::post('/kegiatan/{id}/update', 'KegiatanController@update');
+Route::get('/kegiatan/{id}/delete', 'KegiatanController@delete');
+
 Route::get('/profil/sarana', 'SaranaController@index');
 Route::post('/profil/sarana/create', 'SaranaController@create');
 Route::get('/profil/sarana/{id}/edit', 'SaranaController@edit');
