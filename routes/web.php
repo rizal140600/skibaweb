@@ -35,6 +35,12 @@ Route::get('/kegiatan/{id}/edit', 'KegiatanController@edit');
 Route::post('/kegiatan/{id}/update', 'KegiatanController@update');
 Route::get('/kegiatan/{id}/delete', 'KegiatanController@delete');
 
+Route::get('/galeri', 'GaleriController@index');
+Route::post('/galeri/create', 'GaleriController@create');
+Route::get('/galeri/{id}/edit', 'GaleriController@edit');
+Route::post('/galeri/{id}/update', 'GaleriController@update');
+Route::get('/galeri/{id}/delete', 'GaleriController@delete');
+
 Route::get('/profil/sarana', 'SaranaController@index');
 Route::post('/profil/sarana/create', 'SaranaController@create');
 Route::get('/profil/sarana/{id}/edit', 'SaranaController@edit');

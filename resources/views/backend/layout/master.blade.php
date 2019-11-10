@@ -174,7 +174,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="/galeri" class="nav-link">
               <i class="nav-icon fas fa-images"></i>
               <p>
                 Galeri
