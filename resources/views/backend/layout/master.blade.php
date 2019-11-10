@@ -213,7 +213,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../charts/flot.html" class="nav-link">
+                <a href="/guru/status" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Status Guru</p>
                 </a>

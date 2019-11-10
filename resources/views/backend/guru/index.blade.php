@@ -94,6 +94,14 @@
                                     </select>
                                     </div>
                                     <div class="form-group">
+                                    <label>Status</label>
+                                    <select name="status_id" class="form-control select2" style="width: 100%;">
+                                      @foreach ($data_status as $status)
+                                    <option value="{{$status->id}}">{{$status->status}}</option>
+                                      @endforeach  
+                                    </select>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleInputEmail1">Alamat</label>
                                         <textarea class="form-control" name="alamat_guru" rows="3" placeholder="Alamat ..."></textarea>
                                     </div>
@@ -127,6 +135,7 @@
                       <th>Kelamin</th>
                       <th>Bidang Studi</th>
                       <th>Pendidikan</th>
+                      <th>Status</th>
                       <th>Alamat</th>
                       <th>Telepon</th>
                       <th>Aksi</th>
@@ -156,6 +165,7 @@
                       <td>{{$guru->kelamin->kelamin}}</td>
                       <td>{{$guru->studi->nama_bidang}}</td>
                       <td>{{$guru->pendidikan->pendidikan}}</td>
+                      <td>{{$guru->status->status}}</td>
                       <td>{{$guru->alamat_guru}}</td>
                       <td>{{$guru->telepon_guru}}</td>
                       <td style="min-width: 105px">

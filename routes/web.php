@@ -59,6 +59,12 @@ Route::get('/guru/pendidikan/{id}/edit', 'PendidikanController@edit');
 Route::post('/guru/pendidikan/{id}/update', 'PendidikanController@update');
 Route::get('/guru/pendidikan/{id}/delete', 'PendidikanController@delete');
 
+Route::get('/guru/status', 'StatusController@index');
+Route::post('/guru/status/create', 'StatusController@create');
+Route::get('/guru/status/{id}/edit', 'StatusController@edit');
+Route::post('/guru/status/{id}/update', 'StatusController@update');
+Route::get('/guru/status/{id}/delete', 'StatusController@delete');
+
 Route::get('/studi', 'StudiController@index');
 Route::post('/studi/create', 'StudiController@create');
 Route::get('/studi/{id}/edit', 'StudiController@edit');

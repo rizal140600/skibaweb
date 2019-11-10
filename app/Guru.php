@@ -37,4 +37,8 @@ class Guru extends Model
     {
         return $this->hasOne('App\Kepala', 'guru_id');
     }
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
 }

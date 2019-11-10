@@ -74,6 +74,17 @@
                   </div>
                   <div class="row">
                     <div class="col-sm-12">
+                      <!-- textarea -->
+                      <label>Status</label>
+                      <select name="status_id" class="form-control select2" style="width: 100%;">
+                        @foreach ($data_status as $status)
+                      <option value="{{$status->id}}" @if($guru->status_id == $status->id) selected @endif >{{$status->status}}</option>
+                        @endforeach
+                        </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
                       <!-- text input -->
                       <div class="form-group">
                         <label>Alamat</label>

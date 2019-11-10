@@ -14,12 +14,14 @@ class GuruController extends Controller
         $data_guru = \App\Guru::all();
         $data_kelamin = \App\Kelamin::all();
         $data_pendidikan = \App\Pendidikan::all();
+        $data_status = \App\Status::all();
         $data_studi = \App\Studi::all();
         
         return view('backend.guru.index', [
             'data_guru' => $data_guru, 
             'data_kelamin' => $data_kelamin, 
             'data_pendidikan' => $data_pendidikan,
+            'data_status' => $data_status,
             'data_studi' => $data_studi 
             ]);
     }
@@ -35,6 +37,7 @@ class GuruController extends Controller
         $guru->kelamin_id = $request->kelamin_id;
         $guru->bidang_id = $request->bidang_id;
         $guru->pendidikan_id = $request->pendidikan_id;
+        $guru->status_id = $request->status_id;
         $guru->alamat_guru = $request->alamat_guru;
         $guru->telepon_guru = $request->telepon_guru;
         $guru->gambar_guru = $cover->getFileName().'.'.$extension;
@@ -53,11 +56,13 @@ class GuruController extends Controller
         $guru = \App\Guru::find($id);
         $data_kelamin = \App\Kelamin::all();
         $data_pendidikan = \App\Pendidikan::all();
+        $data_status = \App\Status::all();
         $data_studi = \App\Studi::all();
         return view(' backend/guru/edit', [
             'guru' => $guru,
             'data_kelamin' => $data_kelamin,
             'data_pendidikan' => $data_pendidikan,
+            'data_status' => $data_status,
             'data_studi' => $data_studi
             ]);
     }
@@ -79,6 +84,7 @@ class GuruController extends Controller
         $guru->kelamin_id = $request->kelamin_id;
         $guru->bidang_id = $request->bidang_id;
         $guru->pendidikan_id = $request->pendidikan_id;
+        $guru->status_id = $request->status_id;
         $guru->alamat_guru = $request->alamat_guru;
         $guru->telepon_guru = $request->telepon_guru;
         // $guru->author = $request->author;

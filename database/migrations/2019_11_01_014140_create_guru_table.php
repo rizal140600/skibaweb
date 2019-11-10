@@ -20,6 +20,7 @@ class CreateGuruTable extends Migration
             $table->integer('kelamin_id');
             $table->integer('bidang_id');
             $table->integer('pendidikan_id');
+            $table->integer('status_id');
             $table->string('alamat_guru');
             $table->string('telepon_guru');
             $table->timestamps();
