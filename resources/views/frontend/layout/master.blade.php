@@ -4,7 +4,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="/frontend/img/skiba.jpg" type="image/png">
+        <link rel="icon" href="/frontend/img/skiba.png" type="image/png">
         <title>SMKN 1 Badegan</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="/frontend/css/bootstrap.css">
@@ -41,7 +41,7 @@
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand logo_h" href="index.html"><img src="/frontend/img/logo.png" alt=""></a>
+						<a class="navbar-brand logo_h" href="index.html"><img src="/frontend/img/skiba.png" style="max-width: 114px; max-height: 40px" alt=""> <span class="align-middle">SMKN 1 BADEGAN</span></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -188,13 +188,24 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script><a hre
         <script src="/frontend/js/theme.js"></script>
         <script src="/frontend/player/src/player.js"></script>
         <script>
-          var myVideo = document.getElementById('videoSMK');
-          function playPause() { 
-              if (myVideo.paused) 
-                  myVideo.play(); 
-              else 
-                  myVideo.pause(); 
-          }
+            function playPause() { 
+            var myVideo = document.getElementById('videoSMK');
+            var buttonPlay = document.getElementById('buttonPlay');
+                if (myVideo.paused) {
+                    myVideo.play();
+                    buttonPlay.style.display = "none"; 
+                }else {
+                    myVideo.pause();
+                    buttonPlay.style.display = "block";
+                }
+            }
+            // function play() {
+            // if (buttonPlay.style.display === "none") {
+            //     buttonPlay.style.display = "block";
+            // } else {
+            //     buttonPlay.style.display = "none";
+            // }
+            // }
         </script>
     </body>
 </html>

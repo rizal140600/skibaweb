@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+Route::get('/', 'Frontend\IndexController@index');
 
 Route::get('/dashboard','AdminController@dashboard');
 

@@ -2,9 +2,12 @@
 @section('content')
 <!--================Home Banner Area =================-->
         <section class="home_banner_area">
-            <div onclick="playPause()" class="banner_inner d-flex align-items-center">
-            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
-                 <video id="videoSMK"  class="video-js" controls preload="auto"  width="100%" height="100%" data-setup="{}">
+					<div onclick="playPause()" class="banner_inner d-flex align-items-center">
+							<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
+							<div class="position-absolute mid-center text-white" id="buttonPlay">
+								<i class="fa fa-play-circle fa-5x"></i>
+							</div>
+								<video id="videoSMK"  class="video-js" controls preload="auto"  width="100%" height="100%" data-setup="{}">
                     <source src="/frontend/video/VideoProfileSMKN1BadeganPonorogo.mp4" type='video/mp4'>
                 </video>
                 {{-- <iframe src="/frontend/video/VideoProfileSMKN1BadeganPonorogo.mp4" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe> --}}
@@ -13,386 +16,220 @@
         </section>
         <!--================End Home Banner Area =================-->
         
-        <!--================Finance Area =================-->
-        <section class="finance_area">
-        	<div class="container">
-        		<div class="finance_inner row">
-        			<div class="col-lg-3 col-sm-6">
-        				<div class="finance_item">
-        					<div class="media">
-        						<div class="d-flex">
-        							<i class="lnr lnr-rocket"></i>
-        						</div>
-        						<div class="media-body">
-        							<h5>Science & <br />Engineering</h5>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-3 col-sm-6">
-        				<div class="finance_item">
-        					<div class="media">
-        						<div class="d-flex">
-        							<i class="lnr lnr-earth"></i>
-        						</div>
-        						<div class="media-body">
-        							<h5>Science & <br />Engineering</h5>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-3 col-sm-6">
-        				<div class="finance_item">
-        					<div class="media">
-        						<div class="d-flex">
-        							<i class="lnr lnr-smile"></i>
-        						</div>
-        						<div class="media-body">
-        							<h5>Science & <br />Engineering</h5>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-3 col-sm-6">
-        				<div class="finance_item">
-        					<div class="media">
-        						<div class="d-flex">
-        							<i class="lnr lnr-tag"></i>
-        						</div>
-        						<div class="media-body">
-        							<h5>Science & <br />Engineering</h5>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Finance Area =================-->
-        
-        <!--================Courses Area =================-->
-        <section class="courses_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Popular Free Courses</h2>
-        			<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
-        		</div>
-        		<div class="row courses_inner">
-        			<div class="col-lg-9">
-						<div class="grid_inner">
-							<div class="grid_item wd55">
-								<div class="courses_item">
-									<img src="/frontend/img/courses/course-1.jpg" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
+				<!--================Finance Area =================-->
+				<div class="container">
+					<div class="section-top-border">
+						<h3 class="mb-30 title_color">Sambutan Kepala Sekolah</h3>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="{{ asset("/storage/" . $kepala_sekolah->first()->kepala_gambar) }}" alt="" class="img-fluid">
 							</div>
-							<div class="grid_item wd44">
-								<div class="courses_item">
-									<img src="/frontend/img/courses/course-2.jpg" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="grid_item wd44">
-								<div class="courses_item">
-									<img src="/frontend/img/courses/course-4.jpg" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="grid_item wd55">
-								<div class="courses_item">
-									<img src="/frontend/img/courses/course-5.jpg" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
+							<div class="col-md-9 mt-sm-20 left-align-p" style="font-family: -apple-system, BlinkMacSystemFont, 'Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important">
+								{!!$kepala_sekolah->first()->kepala_sambutan!!}
 							</div>
 						</div>
-        			</div>
-        			<div class="col-lg-3">
-        				<div class="course_item">
-							<img src="/frontend/img/courses/course-3.jpg" alt="">
-							<div class="hover_text">
-								<a class="cat" href="#">Free</a>
-								<a href="#"><h4>Japanease Language Class</h4></a>
-								<ul class="list">
-									<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-									<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-									<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-								</ul>
-							</div>
-						</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Courses Area =================-->
-        
-        <!--================Team Area =================-->
-        <section class="team_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Meet Our Faculty</h2>
-        			<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
-        		</div>
-        		<div class="row team_inner">
-        			<div class="col-lg-3 col-sm-6">
-        				<div class="team_item">
-        					<div class="team_img">
-        						<img class="rounded-circle" src="/frontend/img/team/team-1.jpg" alt="">
-        						<div class="hover">
-        							<a href="#"><i class="fa fa-facebook"></i></a>
-        							<a href="#"><i class="fa fa-twitter"></i></a>
-        							<a href="#"><i class="fa fa-linkedin"></i></a>
-        						</div>
-        					</div>
-        					<div class="team_name">
-        						<h4>Ethel Davis</h4>
-        						<p>Managing Director (Sales)</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-3 col-sm-6">
-        				<div class="team_item">
-        					<div class="team_img">
-        						<img class="rounded-circle" src="/frontend/img/team/team-2.jpg" alt="">
-        						<div class="hover">
-        							<a href="#"><i class="fa fa-facebook"></i></a>
-        							<a href="#"><i class="fa fa-twitter"></i></a>
-        							<a href="#"><i class="fa fa-linkedin"></i></a>
-        						</div>
-        					</div>
-        					<div class="team_name">
-        						<h4>Ethel Davis</h4>
-        						<p>Managing Director (Sales)</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-3 col-sm-6">
-        				<div class="team_item">
-        					<div class="team_img">
-        						<img class="rounded-circle" src="/frontend/img/team/team-3.jpg" alt="">
-        						<div class="hover">
-        							<a href="#"><i class="fa fa-facebook"></i></a>
-        							<a href="#"><i class="fa fa-twitter"></i></a>
-        							<a href="#"><i class="fa fa-linkedin"></i></a>
-        						</div>
-        					</div>
-        					<div class="team_name">
-        						<h4>Ethel Davis</h4>
-        						<p>Managing Director (Sales)</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-3 col-sm-6">
-        				<div class="team_item">
-        					<div class="team_img">
-        						<img class="rounded-circle" src="/frontend/img/team/team-4.jpg" alt="">
-        						<div class="hover">
-        							<a href="#"><i class="fa fa-facebook"></i></a>
-        							<a href="#"><i class="fa fa-twitter"></i></a>
-        							<a href="#"><i class="fa fa-linkedin"></i></a>
-        						</div>
-        					</div>
-        					<div class="team_name">
-        						<h4>Ethel Davis</h4>
-        						<p>Managing Director (Sales)</p>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Team Area =================-->
-        
-        <!--================Testimonials Area =================-->
-        <section class="testimonials_area p_120">
-        	<div class="container">
-        		<div class="testi_slider owl-carousel">
-        			<div class="item">
-        				<div class="testi_item">
-							<img src="/frontend/img/testimonials/testi-3.png" alt="">
-       						<h4>Fannie Rowe</h4>
-       						<ul class="list">
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       						</ul>
-       						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
-        				</div>
-        			</div>
-        			<div class="item">
-        				<div class="testi_item">
-							<img src="/frontend/img/testimonials/testi-3.png" alt="">
-       						<h4>Fannie Rowe</h4>
-       						<ul class="list">
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       						</ul>
-       						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
-        				</div>
-        			</div>
-        			<div class="item">
-        				<div class="testi_item">
-							<img src="/frontend/img/testimonials/testi-3.png" alt="">
-       						<h4>Fannie Rowe</h4>
-       						<ul class="list">
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       							<li><a href="#"><i class="fa fa-star"></i></a></li>
-       						</ul>
-       						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Testimonials Area =================-->
-        
-        <!--================Pagkages Area =================-->
-        <section class="packages_area p_120">
-        	<div class="container">
-        		<div class="row packages_inner">
-        			<div class="col-lg-4">
-        				<div class="packages_text">
-        					<h3>Choose <br />Course Packages</h3>
-        					<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4">
-        				<div class="packages_item">
-        					<div class="pack_head">
-        						<i class="lnr lnr-graduation-hat"></i>
-        						<h3>Premium</h3>
-        						<p>For the individuals</p>
-        					</div>
-        					<div class="pack_body">
-        						<ul class="list">
-        							<li><a href="#">Secure Online Transfer</a></li>
-        							<li><a href="#">Unlimited Styles for interface</a></li>
-        							<li><a href="#">Reliable Customer Service</a></li>
-        						</ul>
-        					</div>
-        					<div class="pack_footer">
-        						<h4>£399.00</h4>
-        						<a class="main_btn" href="#">Join Now</a>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4">
-        				<div class="packages_item">
-        					<div class="pack_head">
-        						<i class="lnr lnr-diamond"></i>
-        						<h3>Exclusive</h3>
-        						<p>For the individuals</p>
-        					</div>
-        					<div class="pack_body">
-        						<ul class="list">
-        							<li><a href="#">Secure Online Transfer</a></li>
-        							<li><a href="#">Unlimited Styles for interface</a></li>
-        							<li><a href="#">Reliable Customer Service</a></li>
-        						</ul>
-        					</div>
-        					<div class="pack_footer">
-        						<h4>£399.00</h4>
-        						<a class="main_btn" href="#">Join Now</a>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Pagkages Area =================-->
-        
-        <!--================Latest Blog Area =================-->
-        <section class="latest_blog_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Latest Posts From Blog</h2>
-        			<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
-        		</div>
-        		<div class="row latest_blog_inner">
-        			<div class="col-lg-3 col-md-6">
-        				<div class="l_blog_item">
-        					<img class="img-fluid" src="/frontend/img/latest-blog/l-blog-1.jpg" alt="">
-        					<a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
-        					<a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
-        					<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-3 col-md-6">
-        				<div class="l_blog_item">
-        					<img class="img-fluid" src="/frontend/img/latest-blog/l-blog-2.jpg" alt="">
-        					<a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
-        					<a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
-        					<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-3 col-md-6">
-        				<div class="l_blog_item">
-        					<img class="img-fluid" src="/frontend/img/latest-blog/l-blog-3.jpg" alt="">
-        					<a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
-        					<a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
-        					<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-3 col-md-6">
-        				<div class="l_blog_item">
-        					<img class="img-fluid" src="/frontend/img/latest-blog/l-blog-4.jpg" alt="">
-        					<a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
-        					<a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
-        					<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Latest Blog Area =================-->
-        
-        <!--================Impress Area =================-->
-        <section class="impress_area p_120">
-        	<div class="container">
-        		<div class="impress_inner text-center">
-					<h2>Become an instructor</h2>
-					<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck</p>
-					<a class="main_btn2" href="#">Apply for the post</a>
-        		</div>
-        	</div>
-        </section>    
+					</div>
+				</div>
+				<section class="blog_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="blog_left_sidebar">
+                            <article class="row blog_item">
+                               <div class="col-md-3">
+                                   <div class="blog_info text-right">
+                                        <div class="post_tag">
+                                            <a href="#">Food,</a>
+                                            <a class="active" href="#">Technology,</a>
+                                            <a href="#">Politics,</a>
+                                            <a href="#">Lifestyle</a>
+                                        </div>
+                                        <ul class="blog_meta list">
+                                            <li><a href="#">Mark wiens<i class="lnr lnr-user"></i></a></li>
+                                            <li><a href="#">12 Dec, 2017<i class="lnr lnr-calendar-full"></i></a></li>
+                                            <li><a href="#">1.2M Views<i class="lnr lnr-eye"></i></a></li>
+                                            <li><a href="#">06 Comments<i class="lnr lnr-bubble"></i></a></li>
+                                        </ul>
+                                    </div>
+                               </div>
+                                <div class="col-md-9">
+                                    <div class="blog_post">
+                                        <img src="/frontend/img/blog/main-blog/m-blog-1.jpg" alt="">
+                                        <div class="blog_details">
+                                            <a href="single-blog.html"><h2>Astronomy Binoculars A Great Alternative</h2></a>
+                                            <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</p>
+                                            <a href="single-blog.html" class="white_bg_btn">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="row blog_item">
+                               <div class="col-md-3">
+                                   <div class="blog_info text-right">
+                                        <div class="post_tag">
+                                            <a href="#">Food,</a>
+                                            <a class="active" href="#">Technology,</a>
+                                            <a href="#">Politics,</a>
+                                            <a href="#">Lifestyle</a>
+                                        </div>
+                                        <ul class="blog_meta list">
+                                            <li><a href="#">Mark wiens<i class="lnr lnr-user"></i></a></li>
+                                            <li><a href="#">12 Dec, 2017<i class="lnr lnr-calendar-full"></i></a></li>
+                                            <li><a href="#">1.2M Views<i class="lnr lnr-eye"></i></a></li>
+                                            <li><a href="#">06 Comments<i class="lnr lnr-bubble"></i></a></li>
+                                        </ul>
+                                    </div>
+                               </div>
+                                <div class="col-md-9">
+                                    <div class="blog_post">
+                                        <img src="/frontend/img/blog/main-blog/m-blog-2.jpg" alt="">
+                                        <div class="blog_details">
+                                            <a href="single-blog.html"><h2>The Basics Of Buying A Telescope</h2></a>
+                                            <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</p>
+                                            <a href="single-blog.html" class="white_bg_btn">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="row blog_item">
+                               <div class="col-md-3">
+                                   <div class="blog_info text-right">
+                                        <div class="post_tag">
+                                            <a href="#">Food,</a>
+                                            <a class="active" href="#">Technology,</a>
+                                            <a href="#">Politics,</a>
+                                            <a href="#">Lifestyle</a>
+                                        </div>
+                                        <ul class="blog_meta list">
+                                            <li><a href="#">Mark wiens<i class="lnr lnr-user"></i></a></li>
+                                            <li><a href="#">12 Dec, 2017<i class="lnr lnr-calendar-full"></i></a></li>
+                                            <li><a href="#">1.2M Views<i class="lnr lnr-eye"></i></a></li>
+                                            <li><a href="#">06 Comments<i class="lnr lnr-bubble"></i></a></li>
+                                        </ul>
+                                    </div>
+                               </div>
+                                <div class="col-md-9">
+                                    <div class="blog_post">
+                                        <img src="/frontend/img/blog/main-blog/m-blog-3.jpg" alt="">
+                                        <div class="blog_details">
+                                            <a href="single-blog.html"><h2>The Glossary Of Telescopes</h2></a>
+                                            <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</p>
+                                            <a href="single-blog.html" class="white_bg_btn">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="row blog_item">
+                               <div class="col-md-3">
+                                   <div class="blog_info text-right">
+                                        <div class="post_tag">
+                                            <a href="#">Food,</a>
+                                            <a class="active" href="#">Technology,</a>
+                                            <a href="#">Politics,</a>
+                                            <a href="#">Lifestyle</a>
+                                        </div>
+                                        <ul class="blog_meta list">
+                                            <li><a href="#">Mark wiens<i class="lnr lnr-user"></i></a></li>
+                                            <li><a href="#">12 Dec, 2017<i class="lnr lnr-calendar-full"></i></a></li>
+                                            <li><a href="#">1.2M Views<i class="lnr lnr-eye"></i></a></li>
+                                            <li><a href="#">06 Comments<i class="lnr lnr-bubble"></i></a></li>
+                                        </ul>
+                                    </div>
+                               </div>
+                                <div class="col-md-9">
+                                    <div class="blog_post">
+                                        <img src="/frontend/img/blog/main-blog/m-blog-4.jpg" alt="">
+                                        <div class="blog_details">
+                                            <a href="single-blog.html"><h2>The Night Sky</h2></a>
+                                            <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</p>
+                                            <a href="single-blog.html" class="white_bg_btn">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="row blog_item">
+                               <div class="col-md-3">
+                                   <div class="blog_info text-right">
+                                        <div class="post_tag">
+                                            <a href="#">Food,</a>
+                                            <a class="active" href="#">Technology,</a>
+                                            <a href="#">Politics,</a>
+                                            <a href="#">Lifestyle</a>
+                                        </div>
+                                        <ul class="blog_meta list">
+                                            <li><a href="#">Mark wiens<i class="lnr lnr-user"></i></a></li>
+                                            <li><a href="#">12 Dec, 2017<i class="lnr lnr-calendar-full"></i></a></li>
+                                            <li><a href="#">1.2M Views<i class="lnr lnr-eye"></i></a></li>
+                                            <li><a href="#">06 Comments<i class="lnr lnr-bubble"></i></a></li>
+                                        </ul>
+                                    </div>
+                               </div>
+                                <div class="col-md-9">
+                                    <div class="blog_post">
+                                        <img src="/frontend/img/blog/main-blog/m-blog-5.jpg" alt="">
+                                        <div class="blog_details">
+                                            <a href="single-blog.html"><h2>Telescopes 101</h2></a>
+                                            <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</p>
+                                            <a href="single-blog.html" class="white_bg_btn">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <nav class="blog-pagination justify-content-center d-flex">
+		                        <ul class="pagination">
+		                            <li class="page-item">
+		                                <a href="#" class="page-link" aria-label="Previous">
+		                                    <span aria-hidden="true">
+		                                        <span class="lnr lnr-chevron-left"></span>
+		                                    </span>
+		                                </a>
+		                            </li>
+		                            <li class="page-item"><a href="#" class="page-link">01</a></li>
+		                            <li class="page-item active"><a href="#" class="page-link">02</a></li>
+		                            <li class="page-item"><a href="#" class="page-link">03</a></li>
+		                            <li class="page-item"><a href="#" class="page-link">04</a></li>
+		                            <li class="page-item"><a href="#" class="page-link">09</a></li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link" aria-label="Next">
+		                                    <span aria-hidden="true">
+		                                        <span class="lnr lnr-chevron-right"></span>
+		                                    </span>
+		                                </a>
+		                            </li>
+		                        </ul>
+		                    </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog_right_sidebar">
+                            <aside class="single_sidebar_widget popular_post_widget">
+                                <h3 class="widget_title">Kegiatan</h3>
+                                @foreach ($data_kegiatan as $kegiatan)
+                                <div class="media post_item">
+                                    <img style="max-width:100px" src="{{ asset("/storage/" . $kegiatan->kegiatan_foto) }}" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog-details.html"><h3>{{$kegiatan->kegiatan_judul}}</h3></a>
+                                    </div>
+                                </div>
+                                @endforeach
+                                <div class="br"></div>
+                            </aside>
+                            <aside class="single_sidebar_widget post_category_widget">
+                                <h4 class="widget_title">Pengumuman</h4>
+                                <ul class="list cat-list">
+                                    @foreach ($data_pengumuman as $pengumuman)
+                                    <li>
+                                        <a href="#" class="d-flex justify-content-between">
+                                            <p>{{$pengumuman->judul_pengumuman}}</p>
+                                        </a>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                                <div class="br"></div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
 @endsection
