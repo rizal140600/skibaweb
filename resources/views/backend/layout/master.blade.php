@@ -95,7 +95,7 @@
           <!-- Add icons to the links using the .nav-icon class
               with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="/dashboard" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -146,7 +146,7 @@
               <li class="nav-item">
                 <a href="/profil/struktur" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Struktur</p>
+                  <p>Struktur Organisasi</p>
                 </a>
               </li>
               <li class="nav-item">

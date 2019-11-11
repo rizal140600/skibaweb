@@ -95,3 +95,5 @@ Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('home');
 
+
+Route::get('/guru', 'Frontend\GuruController@index');

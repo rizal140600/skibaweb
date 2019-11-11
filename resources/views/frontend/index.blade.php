@@ -1,820 +1,398 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Fox University - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/frontend/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="/frontend/css/animate.css">
-    
-    <link rel="stylesheet" href="/frontend/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/frontend/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/frontend/css/magnific-popup.css">
-
-    <link rel="stylesheet" href="/frontend/css/aos.css">
-
-    <link rel="stylesheet" href="/frontend/css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="/frontend/css/flaticon.css">
-    <link rel="stylesheet" href="/frontend/css/icomoon.css">
-    <link rel="stylesheet" href="/frontend/css/style.css">
-  </head>
-  <body>
-	  <div class="bg-top navbar-light">
-    	<div class="container">
-    		<div class="row no-gutters d-flex align-items-center align-items-stretch">
-    			<div class="col-md-4 d-flex align-items-center py-4">
-    				<a class="navbar-brand" href="index.html">Fox. <span>University</span></a>
-    			</div>
-	    		<div class="col-lg-8 d-block">
-		    		<div class="row d-flex">
-					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-					    	<div class="text">
-					    		<span>Email</span>
-						    	<span>youremail@email.com</span>
-						    </div>
-					    </div>
-					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-						    <div class="text">
-						    	<span>Call</span>
-						    	<span>Call Us: + 1235 2355 98</span>
-						    </div>
-					    </div>
-					    <div class="col-md topper d-flex align-items-center justify-content-end">
-					    	<p class="mb-0">
-					    		<a href="#" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
-					    			<span>Apply now</span>
-					    		</a>
-					    	</p>
-					    </div>
-				    </div>
-			    </div>
-		    </div>
-		  </div>
-    </div>
-	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container d-flex align-items-center px-4">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-	      <form action="#" class="searchform order-lg-last">
-          <div class="form-group d-flex">
-            <input type="text" class="form-control pl-3" placeholder="Search">
-            <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
-          </div>
-        </form>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item active"><a href="index.html" class="nav-link pl-0">Home</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
-	        	<li class="nav-item"><a href="teacher.html" class="nav-link">Staff</a></li>
-	        	<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
-    
-    <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image:url(/frontend/images/bg_1.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">Education Needs Complete Solution</h1>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <div class="slider-item" style="background-image:url(/frontend/images/bg_2.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">University, College School Education</h1>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-services ftco-no-pb">
-			<div class="container-wrap">
-				<div class="row no-gutters">
-          <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-primary">
-            <div class="media block-6 d-block text-center">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-teacher"></span>
+@extends('frontend.layout.master')
+@section('content')
+<!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+            <div onclick="playPause()" class="banner_inner d-flex align-items-center">
+            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
+                 <video id="videoSMK"  class="video-js" controls preload="auto"  width="100%" height="100%" data-setup="{}">
+                    <source src="/frontend/video/VideoProfileSMKN1BadeganPonorogo.mp4" type='video/mp4'>
+                </video>
+                {{-- <iframe src="/frontend/video/VideoProfileSMKN1BadeganPonorogo.mp4" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe> --}}
               </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">Certified Teachers</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-darken">
-            <div class="media block-6 d-block text-center">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-reading"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">Special Education</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-primary">
-            <div class="media block-6 d-block text-center">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-books"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">Book &amp; Library</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-darken">
-            <div class="media block-6 d-block text-center">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-diploma"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">Sport Clubs</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-			</div>
-		</section>
-		
-		<section class="ftco-section ftco-no-pt ftc-no-pb">
-			<div class="container">
-				<div class="row d-flex">
-					<div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
-						<div class="img" style="background-image: url(/frontend/images/about.jpg); border"></div>
-					</div>
-					<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
-          	<h2 class="mb-4">What We Offer</h2>
-						<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word.</p>
-						<div class="row mt-5">
-							<div class="col-lg-6">
-								<div class="services-2 d-flex">
-									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
-									<div class="text pl-3">
-										<h3>Safety First</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+        
+        <!--================Finance Area =================-->
+        <section class="finance_area">
+        	<div class="container">
+        		<div class="finance_inner row">
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="finance_item">
+        					<div class="media">
+        						<div class="d-flex">
+        							<i class="lnr lnr-rocket"></i>
+        						</div>
+        						<div class="media-body">
+        							<h5>Science & <br />Engineering</h5>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="finance_item">
+        					<div class="media">
+        						<div class="d-flex">
+        							<i class="lnr lnr-earth"></i>
+        						</div>
+        						<div class="media-body">
+        							<h5>Science & <br />Engineering</h5>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="finance_item">
+        					<div class="media">
+        						<div class="d-flex">
+        							<i class="lnr lnr-smile"></i>
+        						</div>
+        						<div class="media-body">
+        							<h5>Science & <br />Engineering</h5>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="finance_item">
+        					<div class="media">
+        						<div class="d-flex">
+        							<i class="lnr lnr-tag"></i>
+        						</div>
+        						<div class="media-body">
+        							<h5>Science & <br />Engineering</h5>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Finance Area =================-->
+        
+        <!--================Courses Area =================-->
+        <section class="courses_area p_120">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>Popular Free Courses</h2>
+        			<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+        		</div>
+        		<div class="row courses_inner">
+        			<div class="col-lg-9">
+						<div class="grid_inner">
+							<div class="grid_item wd55">
+								<div class="courses_item">
+									<img src="/frontend/img/courses/course-1.jpg" alt="">
+									<div class="hover_text">
+										<a class="cat" href="#">Free</a>
+										<a href="#"><h4>Japanease Language Class</h4></a>
+										<ul class="list">
+											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
+											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
+											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
+										</ul>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
-								<div class="services-2 d-flex">
-									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
-									<div class="text pl-3">
-										<h3>Regular Classes</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+							<div class="grid_item wd44">
+								<div class="courses_item">
+									<img src="/frontend/img/courses/course-2.jpg" alt="">
+									<div class="hover_text">
+										<a class="cat" href="#">Free</a>
+										<a href="#"><h4>Japanease Language Class</h4></a>
+										<ul class="list">
+											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
+											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
+											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
+										</ul>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
-								<div class="services-2 d-flex">
-									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
-									<div class="text pl-3">
-										<h3>Certified Teachers</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+							<div class="grid_item wd44">
+								<div class="courses_item">
+									<img src="/frontend/img/courses/course-4.jpg" alt="">
+									<div class="hover_text">
+										<a class="cat" href="#">Free</a>
+										<a href="#"><h4>Japanease Language Class</h4></a>
+										<ul class="list">
+											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
+											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
+											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
+										</ul>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
-								<div class="services-2 d-flex">
-									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
-									<div class="text pl-3">
-										<h3>Sufficient Classrooms</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="services-2 d-flex">
-									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-jigsaw"></span></div>
-									<div class="text pl-3">
-										<h3>Creative Lessons</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="services-2 d-flex">
-									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-kids"></span></div>
-									<div class="text pl-3">
-										<h3>Sports Facilities</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+							<div class="grid_item wd55">
+								<div class="courses_item">
+									<img src="/frontend/img/courses/course-5.jpg" alt="">
+									<div class="hover_text">
+										<a class="cat" href="#">Free</a>
+										<a href="#"><h4>Japanease Language Class</h4></a>
+										<ul class="list">
+											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
+											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
+											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
+										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-
-		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(/frontend/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-2 d-flex">
-    			<div class="col-md-6 align-items-stretch d-flex">
-    				<div class="img img-video d-flex align-items-center" style="background-image: url(/frontend/images/about-2.jpg);">
-    					<div class="video justify-content-center">
-								<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
-									<span class="ion-ios-play"></span>
-		  					</a>
-							</div>
-    				</div>
-    			</div>
-          <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
-            <h2 class="mb-4">Fox University</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-          </div>
-        </div>	
-    		<div class="row d-md-flex align-items-center justify-content-center">
-    			<div class="col-lg-12">
-    				<div class="row d-md-flex align-items-center">
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="18">0</strong>
-		                <span>Certified Teachers</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="401">0</strong>
-		                <span>Students</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="30">0</strong>
-		                <span>Courses</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="50">0</strong>
-		                <span>Awards Won</span>
-		              </div>
-		            </div>
-		          </div>
-	          </div>
-          </div>
-        </div>
-    	</div>
-    </section>
-
-
-		<section class="ftco-section">
-			<div class="container-fluid px-4">
-				<div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4"><span>Our</span> Courses</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-          </div>
-        </div>	
-				<div class="row">
-					<div class="col-md-3 course ftco-animate">
-						<div class="img" style="background-image: url(/frontend/images/course-1.jpg);"></div>
-						<div class="text pt-4">
-							<p class="meta d-flex">
-								<span><i class="icon-user mr-2"></i>Mr. Khan</span>
-								<span><i class="icon-table mr-2"></i>10 seats</span>
-								<span><i class="icon-calendar mr-2"></i>4 Years</span>
-							</p>
-							<h3><a href="#">Electric Engineering</a></h3>
-							<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-							<p><a href="#" class="btn btn-primary">Apply now</a></p>
-						</div>
-					</div>
-					<div class="col-md-3 course ftco-animate">
-						<div class="img" style="background-image: url(/frontend/images/course-2.jpg);"></div>
-						<div class="text pt-4">
-							<p class="meta d-flex">
-								<span><i class="icon-user mr-2"></i>Mr. Khan</span>
-								<span><i class="icon-table mr-2"></i>10 seats</span>
-								<span><i class="icon-calendar mr-2"></i>4 Years</span>
-							</p>
-							<h3><a href="#">Electric Engineering</a></h3>
-							<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-							<p><a href="#" class="btn btn-primary">Apply now</a></p>
-						</div>
-					</div>
-					<div class="col-md-3 course ftco-animate">
-						<div class="img" style="background-image: url(/frontend/images/course-3.jpg);"></div>
-						<div class="text pt-4">
-							<p class="meta d-flex">
-								<span><i class="icon-user mr-2"></i>Mr. Khan</span>
-								<span><i class="icon-table mr-2"></i>10 seats</span>
-								<span><i class="icon-calendar mr-2"></i>4 Years</span>
-							</p>
-							<h3><a href="#">Electric Engineering</a></h3>
-							<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-							<p><a href="#" class="btn btn-primary">Apply now</a></p>
-						</div>
-					</div>
-					<div class="col-md-3 course ftco-animate">
-						<div class="img" style="background-image: url(/frontend/images/course-4.jpg);"></div>
-						<div class="text pt-4">
-							<p class="meta d-flex">
-								<span><i class="icon-user mr-2"></i>Mr. Khan</span>
-								<span><i class="icon-table mr-2"></i>10 seats</span>
-								<span><i class="icon-calendar mr-2"></i>4 Years</span>
-							</p>
-							<h3><a href="#">Electric Engineering</a></h3>
-							<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-							<p><a href="#" class="btn btn-primary">Apply now</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="ftco-section bg-light">
-			<div class="container-fluid px-4">
-				<div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4">Certified Teachers</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-          </div>
-        </div>	
-				<div class="row">
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(/frontend/images/teacher-1.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Bianca Wilson</h3>
-								<span class="position mb-2">Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-		              </ul>
-	              </div>
+        			</div>
+        			<div class="col-lg-3">
+        				<div class="course_item">
+							<img src="/frontend/img/courses/course-3.jpg" alt="">
+							<div class="hover_text">
+								<a class="cat" href="#">Free</a>
+								<a href="#"><h4>Japanease Language Class</h4></a>
+								<ul class="list">
+									<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
+									<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
+									<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
+								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(/frontend/images/teacher-2.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Mitch Parker</h3>
-								<span class="position mb-2">English Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(/frontend/images/teacher-3.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Stella Smith</h3>
-								<span class="position mb-2">Art Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(/frontend/images/teacher-4.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Monshe Henderson</h3>
-								<span class="position mb-2">Science Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-    <section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(/frontend/images/bg_5.jpg);" data-stellar-background-ratio="0.5">
-    	<div class="overlay"></div>
-    	<div class="container">
-    		<div class="row justify-content-end">
-    			<div class="col-md-6 py-5 px-md-5">
-    				<div class="py-md-5">
-		          <div class="heading-section heading-section-white ftco-animate mb-5">
-		            <h2 class="mb-4">Request A Quote</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-		          </div>
-		          <form action="#" class="appointment-form ftco-animate">
-		    				<div class="d-md-flex">
-			    				<div class="form-group">
-			    					<input type="text" class="form-control" placeholder="First Name">
-			    				</div>
-			    				<div class="form-group ml-md-4">
-			    					<input type="text" class="form-control" placeholder="Last Name">
-			    				</div>
-		    				</div>
-		    				<div class="d-md-flex">
-		    					<div class="form-group">
-			    					<div class="form-field">
-		        					<div class="select-wrap">
-		                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-		                    <select name="" id="" class="form-control">
-		                    	<option value="">Select Your Course</option>
-		                      <option value="">Art Lesson</option>
-		                      <option value="">Language Lesson</option>
-		                      <option value="">Music Lesson</option>
-		                      <option value="">Sports</option>
-		                      <option value="">Other Services</option>
-		                    </select>
-		                  </div>
-			              </div>
-			    				</div>
-		    					<div class="form-group ml-md-4">
-			    					<input type="text" class="form-control" placeholder="Phone">
-			    				</div>
-		    				</div>
-		    				<div class="d-md-flex">
-		    					<div class="form-group">
-			              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
-			            </div>
-			            <div class="form-group ml-md-4">
-			              <input type="submit" value="Request A Quote" class="btn btn-primary py-3 px-4">
-			            </div>
-		    				</div>
-		    			</form>
-		    		</div>
-    			</div>
-        </div>
-    	</div>
-    </section>
-
-		<section class="ftco-section bg-light">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4"><span>Recent</span> Blog</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-          </div>
-        </div>
-				<div class="row">
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('/frontend/images/image_1.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">26</span>
-                  <span class="mos">June</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('/frontend/images/image_2.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">26</span>
-                  <span class="mos">June</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('/frontend/images/image_3.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">26</span>
-                  <span class="mos">June</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-			</div>
-		</section>
-
-		<section class="ftco-section testimony-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4">Student Says About Us</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-          </div>
-        </div>
-        <div class="row ftco-animate justify-content-center">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel">
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(/frontend/images/teacher-1.jpg)">
-                  </div>
-                  <div class="text ml-2">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Racky Henderson</p>
-                    <span class="position">Father</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(/frontend/images/teacher-2.jpg)">
-                  </div>
-                  <div class="text ml-2">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Henry Dee</p>
-                    <span class="position">Mother</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(/frontend/images/teacher-3.jpg)">
-                  </div>
-                  <div class="text ml-2">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Mark Huff</p>
-                    <span class="position">Mother</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(/frontend/images/teacher-4.jpg)">
-                  </div>
-                  <div class="text ml-2">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Rodel Golez</p>
-                    <span class="position">Mother</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(/frontend/images/teacher-1.jpg)">
-                  </div>
-                  <div class="text ml-2">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Ken Bosh</p>
-                    <span class="position">Mother</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-		<section class="ftco-gallery">
-    	<div class="container-wrap">
-    		<div class="row no-gutters">
-					<div class="col-md-3 ftco-animate">
-						<a href="/frontend/images/image_1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/frontend/images/course-1.jpg);">
-							<div class="icon mb-4 d-flex align-items-center justify-content-center">
-    						<span class="icon-instagram"></span>
-    					</div>
-						</a>
-					</div>
-					<div class="col-md-3 ftco-animate">
-						<a href="/frontend/images/image_2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/frontend/images/image_2.jpg);">
-							<div class="icon mb-4 d-flex align-items-center justify-content-center">
-    						<span class="icon-instagram"></span>
-    					</div>
-						</a>
-					</div>
-					<div class="col-md-3 ftco-animate">
-						<a href="/frontend/images/image_3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/frontend/images/image_3.jpg);">
-							<div class="icon mb-4 d-flex align-items-center justify-content-center">
-    						<span class="icon-instagram"></span>
-    					</div>
-						</a>
-					</div>
-					<div class="col-md-3 ftco-animate">
-						<a href="/frontend/images/image_4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/frontend/images/image_4.jpg);">
-							<div class="icon mb-4 d-flex align-items-center justify-content-center">
-    						<span class="icon-instagram"></span>
-    					</div>
-						</a>
-					</div>
-        </div>
-    	</div>
-    </section>
-
-		
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-6 col-lg-3">
-            <div class="ftco-footer-widget mb-5">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(/frontend/images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> June 27, 2019</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-5 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(/frontend/images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> June 27, 2019</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="ftco-footer-widget mb-5 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Deparments</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="ftco-footer-widget mb-5">
-            	<h2 class="ftco-heading-2">Subscribe Us!</h2>
-              <form action="#" class="subscribe-form">
-                <div class="form-group">
-                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
-                  <input type="submit" value="Subscribe" class="form-control submit px-3">
-                </div>
-              </form>
-            </div>
-            <div class="ftco-footer-widget mb-5">
-            	<h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
-            	<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-  
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="/frontend/js/jquery.min.js"></script>
-  <script src="/frontend/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="/frontend/js/popper.min.js"></script>
-  <script src="/frontend/js/bootstrap.min.js"></script>
-  <script src="/frontend/js/jquery.easing.1.3.js"></script>
-  <script src="/frontend/js/jquery.waypoints.min.js"></script>
-  <script src="/frontend/js/jquery.stellar.min.js"></script>
-  <script src="/frontend/js/owl.carousel.min.js"></script>
-  <script src="/frontend/js/jquery.magnific-popup.min.js"></script>
-  <script src="/frontend/js/aos.js"></script>
-  <script src="/frontend/js/jquery.animateNumber.min.js"></script>
-  <script src="/frontend/js/scrollax.min.js"></script>
-  <script src="/frontend/js/main.js"></script>
-    
-  </body>
-</html>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Courses Area =================-->
+        
+        <!--================Team Area =================-->
+        <section class="team_area p_120">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>Meet Our Faculty</h2>
+        			<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+        		</div>
+        		<div class="row team_inner">
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="rounded-circle" src="/frontend/img/team/team-1.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        						</div>
+        					</div>
+        					<div class="team_name">
+        						<h4>Ethel Davis</h4>
+        						<p>Managing Director (Sales)</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="rounded-circle" src="/frontend/img/team/team-2.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        						</div>
+        					</div>
+        					<div class="team_name">
+        						<h4>Ethel Davis</h4>
+        						<p>Managing Director (Sales)</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="rounded-circle" src="/frontend/img/team/team-3.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        						</div>
+        					</div>
+        					<div class="team_name">
+        						<h4>Ethel Davis</h4>
+        						<p>Managing Director (Sales)</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="rounded-circle" src="/frontend/img/team/team-4.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        						</div>
+        					</div>
+        					<div class="team_name">
+        						<h4>Ethel Davis</h4>
+        						<p>Managing Director (Sales)</p>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Team Area =================-->
+        
+        <!--================Testimonials Area =================-->
+        <section class="testimonials_area p_120">
+        	<div class="container">
+        		<div class="testi_slider owl-carousel">
+        			<div class="item">
+        				<div class="testi_item">
+							<img src="/frontend/img/testimonials/testi-3.png" alt="">
+       						<h4>Fannie Rowe</h4>
+       						<ul class="list">
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       						</ul>
+       						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+        				</div>
+        			</div>
+        			<div class="item">
+        				<div class="testi_item">
+							<img src="/frontend/img/testimonials/testi-3.png" alt="">
+       						<h4>Fannie Rowe</h4>
+       						<ul class="list">
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       						</ul>
+       						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+        				</div>
+        			</div>
+        			<div class="item">
+        				<div class="testi_item">
+							<img src="/frontend/img/testimonials/testi-3.png" alt="">
+       						<h4>Fannie Rowe</h4>
+       						<ul class="list">
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       							<li><a href="#"><i class="fa fa-star"></i></a></li>
+       						</ul>
+       						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Testimonials Area =================-->
+        
+        <!--================Pagkages Area =================-->
+        <section class="packages_area p_120">
+        	<div class="container">
+        		<div class="row packages_inner">
+        			<div class="col-lg-4">
+        				<div class="packages_text">
+        					<h3>Choose <br />Course Packages</h3>
+        					<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4">
+        				<div class="packages_item">
+        					<div class="pack_head">
+        						<i class="lnr lnr-graduation-hat"></i>
+        						<h3>Premium</h3>
+        						<p>For the individuals</p>
+        					</div>
+        					<div class="pack_body">
+        						<ul class="list">
+        							<li><a href="#">Secure Online Transfer</a></li>
+        							<li><a href="#">Unlimited Styles for interface</a></li>
+        							<li><a href="#">Reliable Customer Service</a></li>
+        						</ul>
+        					</div>
+        					<div class="pack_footer">
+        						<h4>£399.00</h4>
+        						<a class="main_btn" href="#">Join Now</a>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4">
+        				<div class="packages_item">
+        					<div class="pack_head">
+        						<i class="lnr lnr-diamond"></i>
+        						<h3>Exclusive</h3>
+        						<p>For the individuals</p>
+        					</div>
+        					<div class="pack_body">
+        						<ul class="list">
+        							<li><a href="#">Secure Online Transfer</a></li>
+        							<li><a href="#">Unlimited Styles for interface</a></li>
+        							<li><a href="#">Reliable Customer Service</a></li>
+        						</ul>
+        					</div>
+        					<div class="pack_footer">
+        						<h4>£399.00</h4>
+        						<a class="main_btn" href="#">Join Now</a>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Pagkages Area =================-->
+        
+        <!--================Latest Blog Area =================-->
+        <section class="latest_blog_area p_120">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>Latest Posts From Blog</h2>
+        			<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+        		</div>
+        		<div class="row latest_blog_inner">
+        			<div class="col-lg-3 col-md-6">
+        				<div class="l_blog_item">
+        					<img class="img-fluid" src="/frontend/img/latest-blog/l-blog-1.jpg" alt="">
+        					<a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
+        					<a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
+        					<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-md-6">
+        				<div class="l_blog_item">
+        					<img class="img-fluid" src="/frontend/img/latest-blog/l-blog-2.jpg" alt="">
+        					<a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
+        					<a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
+        					<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-md-6">
+        				<div class="l_blog_item">
+        					<img class="img-fluid" src="/frontend/img/latest-blog/l-blog-3.jpg" alt="">
+        					<a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
+        					<a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
+        					<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-md-6">
+        				<div class="l_blog_item">
+        					<img class="img-fluid" src="/frontend/img/latest-blog/l-blog-4.jpg" alt="">
+        					<a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
+        					<a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
+        					<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Latest Blog Area =================-->
+        
+        <!--================Impress Area =================-->
+        <section class="impress_area p_120">
+        	<div class="container">
+        		<div class="impress_inner text-center">
+					<h2>Become an instructor</h2>
+					<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck</p>
+					<a class="main_btn2" href="#">Apply for the post</a>
+        		</div>
+        	</div>
+        </section>    
+@endsection
