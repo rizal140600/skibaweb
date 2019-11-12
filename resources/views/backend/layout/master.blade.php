@@ -214,7 +214,7 @@
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
     </div>
-    <strong>Copyright &copy; 2019 <a href="https://www.facebook.com/rizal.a.ridho.3">Rizal Ali Ridho</a>.</strong>
+    <strong>Copyright &copy; 2019 <a href="">SMKN 1 BADEGAN</a>.</strong>
   </footer>
 
   <!-- Control Sidebar -->
