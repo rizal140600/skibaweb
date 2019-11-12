@@ -49,7 +49,7 @@ class GuruController extends Controller
         // \App\Guru::create(
         //     $request->all()
         // );
-        return redirect('guru')->with('success', 'Tambah data berhasil');
+        return redirect('/backend/guru')->with('success', 'Tambah data berhasil');
     }
     public function edit($id)
     {
@@ -58,7 +58,7 @@ class GuruController extends Controller
         $data_pendidikan = \App\Pendidikan::all();
         $data_status = \App\Status::all();
         $data_studi = \App\Studi::all();
-        return view(' backend/guru/edit', [
+        return view(' /backend/guru/edit', [
             'guru' => $guru,
             'data_kelamin' => $data_kelamin,
             'data_pendidikan' => $data_pendidikan,
@@ -95,12 +95,12 @@ class GuruController extends Controller
         // \App\Guru::create(
         //     $request->all()
         // );
-        return redirect('/guru')->with('update', 'Data Berhasil di edit');
+        return redirect('/backend/guru')->with('update', 'Data Berhasil di edit');
     }
     public function delete($id)
     {
         $guru = \App\Guru::find($id);
         $guru->delete();
-        return redirect('/guru')->with('delete', 'Data Berhasil di hapus');
+        return redirect('/backend/guru')->with('delete', 'Data Berhasil di hapus');
     }
 }

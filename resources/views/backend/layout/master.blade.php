@@ -74,7 +74,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/pembelajaran" class="nav-link">
+            <a href="/backend/pembelajaran" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Pembelajaran
@@ -91,37 +91,37 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/profil/kepala" class="nav-link">
+                <a href="/backend/profil/kepala" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kepala Sekolah</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/profil/tentang" class="nav-link">
+                <a href="/backend/profil/tentang" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tentang Sekolah</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/profil/misi" class="nav-link">
+                <a href="/backend/profil/misi" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Visi Misi</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/profil/identitas" class="nav-link">
+                <a href="/backend/profil/identitas" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Identitas Sekolah</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/profil/struktur" class="nav-link">
+                <a href="/backend/profil/struktur" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Struktur Organisasi</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/profil/sarana" class="nav-link">
+                <a href="/backend/profil/sarana" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Sarana Prasarana</p>
                 </a>
@@ -129,7 +129,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="/pengumuman" class="nav-link">
+            <a href="/backend/pengumuman" class="nav-link">
               <i class="nav-icon far fa-bookmark"></i>
               <p>
                 Pengumuman
@@ -137,7 +137,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/kegiatan" class="nav-link">
+            <a href="/backend/kegiatan" class="nav-link">
               <i class="nav-icon fas fa-chart-line"></i>
               <p>
                 Kegiatan
@@ -145,7 +145,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/galeri" class="nav-link">
+            <a href="/backend/galeri" class="nav-link">
               <i class="nav-icon fas fa-images"></i>
               <p>
                 Galeri
@@ -161,7 +161,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/studi" class="nav-link">
+            <a href="/backend/studi" class="nav-link">
               <i class="nav-icon fas fa-graduation-cap"></i>
               <p>
                 Bidang Studi
@@ -178,19 +178,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/guru" class="nav-link">
+                <a href="/backend/guru" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Guru</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/guru/status" class="nav-link">
+                <a href="/backend/guru/status" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Status Guru</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/guru/pendidikan" class="nav-link">
+                <a href="/backend/guru/pendidikan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Pendidikan Guru</p>
                 </a>

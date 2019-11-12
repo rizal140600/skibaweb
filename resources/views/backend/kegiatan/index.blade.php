@@ -59,7 +59,7 @@
                             </button>
                             </div>
                             <div class="modal-body">
-                                <form action="/kegiatan/create" enctype="multipart/form-data"  method="post">
+                                <form action="/backend/kegiatan/create" enctype="multipart/form-data"  method="post">
                                     {{csrf_field()}}
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Foto Kegiatan</label>
@@ -155,12 +155,12 @@
                       <td>{{$kegiatan->kegiatan_tahun}}</td>
                       <td>{{$kegiatan->kegiatan_waktu}}</td>
                       <td style="min-width: 105px">
-                          <a class="" href="/kegiatan/{{$kegiatan->id}}/edit">
+                          <a class="" href="/backend/kegiatan/{{$kegiatan->id}}/edit">
                               <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
                               <i class="far fa-edit"></i>
                               </button>
                           </a>
-                          <a class="" href="/kegiatan/{{$kegiatan->id}}/delete">
+                          <a class="" href="/backend/kegiatan/{{$kegiatan->id}}/delete">
                               <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
                                 'apakah anda yakin mau menghapus file ini ?')">
                                 <i class="far fa-trash-alt"></i>

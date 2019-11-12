@@ -12,7 +12,7 @@ class KepalaController extends Controller
     public function index()
     {
         $kepala = \App\Kepala::all();
-        return view(' backend/profil/kepala/index', ['kepala' => $kepala]);
+        return view(' /backend/profil/kepala/index', ['kepala' => $kepala]);
     }
     public function create(Request $request)
     {
@@ -31,7 +31,7 @@ class KepalaController extends Controller
         // \App\kepala::create(
         //     $request->all()
         // );
-        return redirect('/profil/kepala')->with('success', 'Tambah data berhasil');
+        return redirect('/backend/profil/kepala')->with('success', 'Tambah data berhasil');
     }
     public function update(Request $request, $id)
     {
@@ -55,6 +55,6 @@ class KepalaController extends Controller
         // \App\kepala::create(
         //     $request->all()
         // );
-        return redirect('/profil/kepala')->with('update', 'Data Berhasil di edit');
+        return redirect('/backend/profil/kepala')->with('update', 'Data Berhasil di edit');
     }
 }

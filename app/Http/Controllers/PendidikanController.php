@@ -14,23 +14,23 @@ class PendidikanController extends Controller
     public function create(Request $resquest)
     {
         \App\Pendidikan::create($resquest->all());
-        return redirect('guru/pendidikan')->with('success', 'Tambah data berhasil');
+        return redirect('/backend/guru/pendidikan')->with('success', 'Tambah data berhasil');
     }
     public function edit($id)
     {
         $pendidikan = \App\Pendidikan::find($id);
-        return view(' backend/guru/pendidikan/edit', ['pendidikan' => $pendidikan]);
+        return view(' /backend/guru/pendidikan/edit', ['pendidikan' => $pendidikan]);
     }
     public function update(Request $resquest, $id)
     {
         $pendidikan = \App\Pendidikan::find($id);
         $pendidikan->update($resquest->all());
-        return redirect('/guru/pendidikan')->with('update', 'Data Berhasil di edit');
+        return redirect('/backend/guru/pendidikan')->with('update', 'Data Berhasil di edit');
     }
     public function delete($id)
     {
         $pendidikan = \App\Pendidikan::find($id);
         $pendidikan->delete();
-        return redirect('/guru/pendidikan')->with('delete', 'Data Berhasil di hapus');
+        return redirect('/backend/guru/pendidikan')->with('delete', 'Data Berhasil di hapus');
     }
 }

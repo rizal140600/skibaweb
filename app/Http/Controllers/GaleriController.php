@@ -38,13 +38,13 @@ class GaleriController extends Controller
         // \App\Galeri::create(
         //     $request->all()
         // );
-        return redirect('galeri')->with('success', 'Tambah data berhasil');
+        return redirect('/backend/galeri')->with('success', 'Tambah data berhasil');
     }
     public function edit($id)
     {
         $galeri = \App\Galeri::find($id);
         $data_kategori = \App\Kategori::all();
-        return view(' backend/galeri/edit', [
+        return view(' /backend/galeri/edit', [
             'galeri' => $galeri,
             'data_kategori' => $data_kategori,
             ]);
@@ -73,12 +73,12 @@ class GaleriController extends Controller
         // \App\Galeri::create(
         //     $request->all()
         // );
-        return redirect('/galeri')->with('update', 'Data Berhasil di edit');
+        return redirect('/backend/galeri')->with('update', 'Data Berhasil di edit');
     }
     public function delete($id)
     {
         $galeri = \App\Galeri::find($id);
         $galeri->delete();
-        return redirect('/galeri')->with('delete', 'Data Berhasil di hapus');
+        return redirect('/backend/galeri')->with('delete', 'Data Berhasil di hapus');
     }
 }

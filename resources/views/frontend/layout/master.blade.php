@@ -54,7 +54,7 @@
                 <li class="nav-item submenu dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Guru</a>
                   <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="nav-link" href="/guru">Guru</a>
+                    <li class="nav-item"><a class="nav-link" href="/backend/guru">Guru</a>
                     <li class="nav-item"><a class="nav-link" href="courses.html">Status Guru</a>
                       <li class="nav-item"><a class="nav-link" href="course-details.html">Pendidikan Guru</a></li>
                             </ul>

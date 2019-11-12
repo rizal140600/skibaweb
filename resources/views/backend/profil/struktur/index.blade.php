@@ -27,7 +27,7 @@
                 <!-- /.card-header -->
             <div class="card-body">
                     @if ($struktur->isNotEmpty())
-                        <form role="form" action="/profil/struktur/{{$struktur->first()->id}}/update" enctype="multipart/form-data" method="POST">
+                        <form role="form" action="/backend/profil/struktur/{{$struktur->first()->id}}/update" enctype="multipart/form-data" method="POST">
                         {{csrf_field()}}
                         <div class="row">
                             <div class="col-sm-12">
@@ -37,7 +37,7 @@
                             <input class="note-image-input form-control-file note-form-control note-input"  type="file" name="struktur_organisasi" >
                             </div>
                         <div class="modal-footer justify-content-between">
-                            <a href="/profil/struktur">
+                            <a href="/backend/profil/struktur">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </a>
                         <button type="submit" class="btn text-white btn-warning">
@@ -45,14 +45,14 @@
                         </button>
                     </form>
                     @else
-                        <form action="/profil/struktur/create" enctype="multipart/form-data"  method="post">
+                        <form action="/backend/profil/struktur/create" enctype="multipart/form-data"  method="post">
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Gambar</label>
                             <input class="note-image-input form-control-file note-form-control note-input" type="file" name="struktur_organisasi" >
                         </div>
                     <div class="modal-footer justify-content-between">
-                    <a href="/profil/struktur">
+                    <a href="/backend/profil/struktur">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </a>
                     <button type="submit" class="btn btn-success">Tambah</button>

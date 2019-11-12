@@ -59,7 +59,7 @@
                         </button>
                         </div>
                         <div class="modal-body">
-                            <form action="/guru/pendidikan/create" method="post">
+                            <form action="/backend/guru/pendidikan/create" method="post">
                                 {{csrf_field()}}
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Pendidikan</label>
@@ -94,12 +94,12 @@
                     <td>{{$index +1}}</td>
                     <td>{{$pendidikan->pendidikan}}</td>
                     <td>
-                    <a href="/guru/pendidikan/{{$pendidikan->id}}/edit">
+                    <a href="/backend/guru/pendidikan/{{$pendidikan->id}}/edit">
                     <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
                     <i class="far fa-edit"></i>
                     </button>
                     </a>
-                    <a class="ml-2" href="/guru/pendidikan/{{$pendidikan->id}}/delete">
+                    <a class="ml-2" href="/backend/guru/pendidikan/{{$pendidikan->id}}/delete">
                     <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
                         'apakah anda yakin mau menghapus file ini ?')">
                         <i class="far fa-trash-alt"></i>

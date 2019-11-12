@@ -22,7 +22,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-            <form role="form" action="/profil/sarana/{{$sarana->id}}/update" method="POST">
+            <form role="form" action="/backend/profil/sarana/{{$sarana->id}}/update" method="POST">
             {{csrf_field()}}
                 <div class="form-group">
                         <label for="exampleInputEmail1">Ruang Area</label>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
             <div class="modal-footer justify-content-between">
-                <a href="/profil/sarana">
+                <a href="/backend/profil/sarana">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </a>
                 <button type="submit" class="btn text-white btn-warning">

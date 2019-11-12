@@ -14,23 +14,23 @@ class StatusController extends Controller
     public function create(Request $resquest)
     {
         \App\Status::create($resquest->all());
-        return redirect('guru/status')->with('success', 'Tambah data berhasil');
+        return redirect('/backend/guru/status')->with('success', 'Tambah data berhasil');
     }
     public function edit($id)
     {
         $status = \App\Status::find($id);
-        return view(' backend/guru/status/edit', ['status' => $status]);
+        return view(' /backend/guru/status/edit', ['status' => $status]);
     }
     public function update(Request $resquest, $id)
     {
         $status = \App\Status::find($id);
         $status->update($resquest->all());
-        return redirect('/guru/status')->with('update', 'Data Berhasil di edit');
+        return redirect('/backend/guru/status')->with('update', 'Data Berhasil di edit');
     }
     public function delete($id)
     {
         $status = \App\Status::find($id);
         $status->delete();
-        return redirect('/guru/status')->with('delete', 'Data Berhasil di hapus');
+        return redirect('/backend/guru/status')->with('delete', 'Data Berhasil di hapus');
     }
 }

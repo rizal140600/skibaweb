@@ -12,7 +12,7 @@ class TentangController extends Controller
     public function index()
     {
         $tentang = \App\Tentang::all();
-        return view(' backend/profil/tentang/index', ['tentang' => $tentang]);
+        return view(' /backend/profil/tentang/index', ['tentang' => $tentang]);
     }
     public function create(Request $request)
     {
@@ -30,7 +30,7 @@ class TentangController extends Controller
         // \App\tentang::create(
         //     $request->all()
         // );
-        return redirect('/profil/tentang')->with('success', 'Tambah data berhasil');
+        return redirect('/backend/profil/tentang')->with('success', 'Tambah data berhasil');
     }
     public function update(Request $request, $id)
     {
@@ -53,6 +53,6 @@ class TentangController extends Controller
         // \App\tentang::create(
         //     $request->all()
         // );
-        return redirect('/profil/tentang')->with('update', 'Data Berhasil di edit');
+        return redirect('/backend/profil/tentang')->with('update', 'Data Berhasil di edit');
     }
 }

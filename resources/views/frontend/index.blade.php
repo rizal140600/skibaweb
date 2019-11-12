@@ -24,8 +24,10 @@
 							<div class="col-md-3">
 								<img src="{{ asset("/storage/" . $kepala_sekolah->first()->kepala_gambar) }}" alt="" class="img-fluid">
 							</div>
-							<div class="col-md-9 mt-sm-20 left-align-p" style="font-family: -apple-system, BlinkMacSystemFont, 'Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important">
-								{!!$kepala_sekolah->first()->kepala_sambutan!!}
+							<div class="col-md-12 mt-sm-20 left-align-p">
+                                <p>
+                                    {!!$kepala_sekolah->first()->kepala_sambutan!!}
+                                </p>
 							</div>
 						</div>
 					</div>

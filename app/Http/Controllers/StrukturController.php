@@ -12,7 +12,7 @@ class StrukturController extends Controller
     public function index()
     {
         $struktur = \App\Struktur::all();
-        return view(' backend/profil/struktur/index', [
+        return view(' /backend/profil/struktur/index', [
             'struktur' => $struktur,
             ]);
     }
@@ -33,7 +33,7 @@ class StrukturController extends Controller
         // \App\struktur::create(
         //     $request->all()
         // );
-        return redirect('/profil/struktur')->with('success', 'Tambah data berhasil');
+        return redirect('/backend/profil/struktur')->with('success', 'Tambah data berhasil');
     }
     public function update(Request $request, $id)
     {
@@ -54,6 +54,6 @@ class StrukturController extends Controller
         // \App\struktur::create(
         //     $request->all()
         // );
-        return redirect('/profil/struktur')->with('update', 'Data Berhasil di edit');
+        return redirect('/backend/profil/struktur')->with('update', 'Data Berhasil di edit');
     }
 }

@@ -22,7 +22,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <form role="form" action="/kegiatan/{{$kegiatan->id}}/update" enctype="multipart/form-data" method="POST">
+                <form role="form" action="/backend/kegiatan/{{$kegiatan->id}}/update" enctype="multipart/form-data" method="POST">
                   {{csrf_field()}}
                   <div class="form-group">
                     <img class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/' . $kegiatan->kegiatan_foto) }}" />
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <a href="/kegiatan">
+                    <a href="/backend/kegiatan">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </a>
                   <button type="submit" class="btn text-white btn-warning">

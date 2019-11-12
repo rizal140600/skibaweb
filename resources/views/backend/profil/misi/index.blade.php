@@ -48,7 +48,7 @@
                 <!-- /.card-header -->
             <div class="card-body">
                     @if ($misi->isNotEmpty())
-                        <form role="form" action="/profil/misi/{{$misi->first()->id}}/update" enctype="multipart/form-data" method="POST">
+                        <form role="form" action="/backend/profil/misi/{{$misi->first()->id}}/update" enctype="multipart/form-data" method="POST">
                         {{csrf_field()}}
                         <div class="row">
                             <div class="col-sm-12">
@@ -73,7 +73,7 @@
                             </div>
                             </div>
                         <div class="modal-footer justify-content-between">
-                            <a href="/profil/misi">
+                            <a href="/backend/profil/misi">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </a>
                         <button type="submit" class="btn text-white btn-warning">
@@ -81,7 +81,7 @@
                         </button>
                     </form>
                     @else
-                        <form action="/profil/misi/create" enctype="multipart/form-data"  method="post">
+                        <form action="/backend/profil/misi/create" enctype="multipart/form-data"  method="post">
                         {{csrf_field()}}
                         <div class="form-group">
                         <label>Visi</label>
@@ -98,7 +98,7 @@
                         </div>
                             </div>
                     <div class="modal-footer justify-content-between">
-                    <a href="/profil/misi">
+                    <a href="/backend/profil/misi">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </a>
                     <button type="submit" class="btn btn-success">Tambah</button>

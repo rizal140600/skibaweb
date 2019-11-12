@@ -38,12 +38,12 @@ class KegiatanController extends Controller
         // \App\Kegiatan::create(
         //     $request->all()
         // );
-        return redirect('/kegiatan')->with('success', 'Tambah data berhasil');
+        return redirect('/backend/kegiatan')->with('success', 'Tambah data berhasil');
     }
     public function edit($id)
     {
         $kegiatan = \App\Kegiatan::find($id);
-        return view(' backend/kegiatan/edit', [
+        return view(' /backend/kegiatan/edit', [
             'kegiatan' => $kegiatan,
             ]);
     }
@@ -74,12 +74,12 @@ class KegiatanController extends Controller
         // \App\Kegiatan::create(
         //     $request->all()
         // );
-        return redirect('/kegiatan')->with('update', 'Data Berhasil di edit');
+        return redirect('/backend/kegiatan')->with('update', 'Data Berhasil di edit');
     }
     public function delete($id)
     {
         $kegiatan = \App\Kegiatan::find($id);
         $kegiatan->delete();
-        return redirect('/kegiatan')->with('delete', 'Data Berhasil di hapus');
+        return redirect('/backend/kegiatan')->with('delete', 'Data Berhasil di hapus');
     }
 }

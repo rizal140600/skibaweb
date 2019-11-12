@@ -59,7 +59,7 @@
                             </button>
                             </div>
                             <div class="modal-body">
-                                <form action="/galeri/create" enctype="multipart/form-data"  method="post">
+                                <form action="/backend/galeri/create" enctype="multipart/form-data"  method="post">
                                     {{csrf_field()}}
                                     <div class="form-group">
                                     <label>Kategori</label>
@@ -125,12 +125,12 @@
                         </div>
                       </th>
                       <td style="min-width: 105px">
-                          <a class="" href="/galeri/{{$galeri->id}}/edit">
+                          <a class="" href="/backend/galeri/{{$galeri->id}}/edit">
                               <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
                               <i class="far fa-edit"></i>
                               </button>
                           </a>
-                          <a class="" href="/galeri/{{$galeri->id}}/delete">
+                          <a class="" href="/backend/galeri/{{$galeri->id}}/delete">
                               <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
                                 'apakah anda yakin mau menghapus file ini ?')">
                                 <i class="far fa-trash-alt"></i>

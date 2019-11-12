@@ -59,7 +59,7 @@
                             </button>
                             </div>
                             <div class="modal-body">
-                                <form action="/pembelajaran/create" method="post">
+                                <form action="/backend/pembelajaran/create" method="post">
                                     {{csrf_field()}}
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Nama File</label>
@@ -110,12 +110,12 @@
                       <td>{{$pembelajaran->guru->nama_guru}}</td>
                       <td style="max-width:500px"><a href="{{$pembelajaran->link}}">{{$pembelajaran->link}}</a></td>
                       <td style="min-width: 105px">
-                          <a class="" href="/pembelajaran/{{$pembelajaran->id}}/edit">
+                          <a class="" href="/backend/pembelajaran/{{$pembelajaran->id}}/edit">
                               <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
                               <i class="far fa-edit"></i>
                               </button>
                           </a>
-                          <a class="" href="/pembelajaran/{{$pembelajaran->id}}/delete">
+                          <a class="" href="/backend/pembelajaran/{{$pembelajaran->id}}/delete">
                               <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
                                 'apakah anda yakin mau menghapus file ini ?')">
                                 <i class="far fa-trash-alt"></i>

@@ -22,7 +22,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-            <form role="form" action="/pengumuman/{{$pengumuman->id}}/update" method="POST">
+            <form role="form" action="/backend/pengumuman/{{$pengumuman->id}}/update" method="POST">
             {{csrf_field()}}
                 <div class="row">
                 <div class="col-sm-12">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="modal-footer justify-content-between">
-                <a href="/pengumuman">
+                <a href="/backend/pengumuman">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </a>
                 <button type="submit" class="btn text-white btn-warning">

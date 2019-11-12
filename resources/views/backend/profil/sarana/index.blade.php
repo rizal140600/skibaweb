@@ -59,7 +59,7 @@
                         </button>
                         </div>
                         <div class="modal-body">
-                            <form action="/profil/sarana/create" method="post">
+                            <form action="/backend/profil/sarana/create" method="post">
                                 {{csrf_field()}}
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Ruang Area</label>
@@ -112,12 +112,12 @@
                     <td>{{$sarana->luas}}</td>
                     <td>{{$sarana->total_luas}}</td>
                     <td style="min-width: 105px">
-                        <a class="" href="/profil/sarana/{{$sarana->id}}/edit">
+                        <a class="" href="/backend/profil/sarana/{{$sarana->id}}/edit">
                             <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
                             <i class="far fa-edit"></i>
                             </button>
                         </a>
-                        <a class="" href="/profil/sarana/{{$sarana->id}}/delete">
+                        <a class="" href="/backend/profil/sarana/{{$sarana->id}}/delete">
                             <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
                             'apakah anda yakin mau menghapus file ini ?')">
                             <i class="far fa-trash-alt"></i>
