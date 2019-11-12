@@ -27,13 +27,12 @@
            		<div class="container">
 					<div class="float-left">
 						<ul class="list header_social">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/pages/category/School/SMKN-1-Badegan-205739802796926/"><i class="fa fa-facebook"></i></a></li>
 						</ul>
 					</div>
 					<div class="float-right">
-						<a class="dn_btn" href="tel:+4400123654896">+440 012 3654 896</a>
-						<a class="dn_btn" href="mailto:support@colorlib.com">smkn1badegan@yahoo.com</a>
+						<a class="dn_btn" >+440 012 3654 896</a>
+						<a class="dn_btn" >smkn1badegan@yahoo.com</a>
 					</div>
            		</div>	
            	</div>	
@@ -41,7 +40,7 @@
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand logo_h" href="index.html"><img src="/frontend/img/skiba.png" style="max-width: 114px; max-height: 40px" alt=""> <span class="align-middle">SMKN 1 BADEGAN</span></a>
+						<a class="navbar-brand logo_h" href="/"><img src="/frontend/img/skiba.png" style="max-width: 114px; max-height: 40px" alt=""> <span class="align-middle">SMKN 1 BADEGAN</span></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -75,6 +74,7 @@
                           <li class="nav-item "><a class="nav-link" href="index.html">Galeri</a></li> 
                           <li class="nav-item "><a class="nav-link" href="index.html">Kontak</a></li> 
                           <li class="nav-item "><a class="nav-link" href="index.html">Bidang Studi</a></li> 
+                          <li class="nav-item "><a class="nav-link" href="/login">Login</a></li> 
               </ul>
 						</div> 
 					</div>
@@ -128,8 +128,7 @@
                     <p class="col-lg-8 col-md-8 footer-text m-0">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script><a href="https://colorlib.com" target="_blank"> SMKN 1 BADEGAN</a></p>
                     <div class="col-lg-4 col-md-4 footer-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/pages/category/School/SMKN-1-Badegan-205739802796926/"><i class="fa fa-facebook"></i></a>
                     </div>
                 </div>
             </div>

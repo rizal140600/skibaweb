@@ -33,10 +33,10 @@
                 </div>
             </div>
         </div>
-				<section class="blog_area pt-5">
+				<section class="blog_area pt-5 pb-5">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-8">
+                            <div class="col-lg-8 pt-5" style="background-color: #f9f9ff">
                                 <div class="blog_left_sidebar">
                                     <?php $count = 0; ?>
                                     @foreach ($data_kegiatan as $kegiatan)
@@ -48,11 +48,12 @@
                                                 <div class="blog_details">
                                                     <a href="single-blog.html"><h2>{{$kegiatan->kegiatan_judul}}</h2></a>
                                                     <p>{!!$kegiatan->kegiatan_isi!!}</p>
-                                                    <a href="single-blog.html" class="white_bg_btn">View More</a>
+                                                    <a href="single-blog.html" class="text-white white_bg_btn" style="background-color: #ff7209">View More</a>
                                                 </div>
                                             </div>
                                         </div>
-                                    </article>   
+                                    </article> 
+                                    <hr class="pb-5">  
                                     <?php $count++; ?>
                                     @endforeach
                                 </div>
@@ -94,7 +95,7 @@
                         </div>
                     </div>
                 </section> 
-                <div style="background-color: #f9f9ff" class="pt-5">
+                <div style="background-color: #f9f9ff">
                     <div class="container">
                         <div class="section-top-border">
                             <h3 class="title_color">Galeri</h3>

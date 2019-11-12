@@ -89,9 +89,6 @@ Route::get('/backend/profil/struktur', 'StrukturController@index');
 Route::post('/backend/profil/struktur/{id}/update', 'StrukturController@update');
 Route::post('/backend/profil/struktur/create', 'StrukturController@create');
 
-Auth::routes();
-
-Route::get('/dashboard', 'HomeController@index')->name('home');
 
 
 Route::get('/guru', 'Frontend\GuruController@index');
