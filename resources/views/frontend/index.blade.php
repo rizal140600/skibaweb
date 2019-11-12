@@ -24,7 +24,7 @@
 							<div class="col-md-3">
 								<img src="{{ asset("/storage/" . $kepala_sekolah->first()->kepala_gambar) }}" alt="" class="img-fluid">
 							</div>
-							<div class="col-md-12 mt-sm-20 left-align-p">
+							<div class="col-md-9 mt-sm-20 left-align-p">
                                 <p>
                                     {!!$kepala_sekolah->first()->kepala_sambutan!!}
                                 </p>
