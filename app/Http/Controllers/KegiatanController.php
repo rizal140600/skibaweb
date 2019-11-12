@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use App\Kegiatan;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
@@ -12,9 +14,25 @@ class KegiatanController extends Controller
     public function index()
     {
         $data_kegiatan = \App\Kegiatan::all();
-        return view('backend.kegiatan.index', [
-            'data_kegiatan' => $data_kegiatan, 
-            ]);
+        $data = \App\ModelUser::first();
+        if($data){ //apakah email tersebut ada atau tidak
+            if($data->name == 'admin'){
+                Session::put('name',$data->name);
+                Session::put('email',$data->email);
+                Session::put('login',TRUE);
+                return view('backend.kegiatan.index', [
+                    'data_kegiatan' => $data_kegiatan, 
+                    'data' => $data
+                    ]);
+                
+            }
+            else{
+                return redirect('login')->with('alert','Password atau Email, Salah !');
+            }
+        }
+        else{
+            return redirect('login')->with('alert','Password atau Email, Salah!');
+        }
     }
     public function create(Request $request)
     {

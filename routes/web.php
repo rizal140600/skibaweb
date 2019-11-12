@@ -85,10 +85,18 @@ Route::get('/backend/profil/misi', 'MisiController@index');
 Route::post('/backend/profil/misi/{id}/update', 'MisiController@update');
 Route::post('/backend/profil/misi/create', 'MisiController@create');
 
-Route::get('/backend/profil/struktur', 'StrukturController@index');
-Route::post('/backend/profil/struktur/{id}/update', 'StrukturController@update');
-Route::post('/backend/profil/struktur/create', 'StrukturController@create');
+Route::group(['middleware' => 'App\Http\Middleware\SuperAdminMiddleware'], function()
+{
+  Route::get('/backend/profil/struktur', 'StrukturController@index');
+  Route::post('/backend/profil/struktur/{id}/update', 'StrukturController@update');
+  Route::post('/backend/profil/struktur/create', 'StrukturController@create');
+});
 
-
+Route::get('/home_user', 'User@index');
+Route::get('/login', 'User@login');
+Route::post('/dashboard', 'User@loginPost');
+Route::get('/register', 'User@register');
+Route::post('/registerPost', 'User@registerPost');
+Route::get('/logout', 'User@logout');
 
 Route::get('/guru', 'Frontend\GuruController@index');

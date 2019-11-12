@@ -3,13 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class PendidikanController extends Controller
 {
     public function index()
     {
         $data_pendidikan = \App\Pendidikan::all();
-        return view('backend.guru.pendidikan.index', ['data_pendidikan' => $data_pendidikan]);
+        $data = \App\ModelUser::first();
+        if($data){ //apakah email tersebut ada atau tidak
+            if($data->name == 'admin'){
+                Session::put('name',$data->name);
+                Session::put('email',$data->email);
+                Session::put('login',TRUE);
+                return view('backend.guru.pendidikan.index', [
+                    'data_pendidikan' => $data_pendidikan,
+                    'data' =>  $data
+                    ]);
+            }
+            else{
+                return redirect('login')->with('alert','Password atau Email, Salah !');
+            }
+        }
+        else{
+            return redirect('login')->with('alert','Password atau Email, Salah!');
+        }
     }
     public function create(Request $resquest)
     {

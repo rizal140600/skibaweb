@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+<link rel="icon" href="/frontend/img/skiba.png" type="image/png">
     <title>Login</title>
 
     <!-- Scripts -->

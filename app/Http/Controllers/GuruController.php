@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use App\Guru;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
@@ -16,14 +18,29 @@ class GuruController extends Controller
         $data_pendidikan = \App\Pendidikan::all();
         $data_status = \App\Status::all();
         $data_studi = \App\Studi::all();
-        
-        return view('backend.guru.index', [
-            'data_guru' => $data_guru, 
-            'data_kelamin' => $data_kelamin, 
-            'data_pendidikan' => $data_pendidikan,
-            'data_status' => $data_status,
-            'data_studi' => $data_studi 
-            ]);
+        $data = \App\ModelUser::first();
+        if($data){ //apakah email tersebut ada atau tidak
+            if($data->name == 'admin'){
+                Session::put('name',$data->name);
+                Session::put('email',$data->email);
+                Session::put('login',TRUE);
+                return view('backend.guru.index', [
+                    'data_guru' => $data_guru, 
+                    'data_kelamin' => $data_kelamin, 
+                    'data_pendidikan' => $data_pendidikan,
+                    'data_status' => $data_status,
+                    'data_studi' => $data_studi ,
+                    'data' => $data
+                    ]);
+                
+            }
+            else{
+                return redirect('login')->with('alert','Password atau Email, Salah !');
+            }
+        }
+        else{
+            return redirect('login')->with('alert','Password atau Email, Salah!');
+        }
     }
     public function create(Request $request)
     {
