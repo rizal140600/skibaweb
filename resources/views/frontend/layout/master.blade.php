@@ -7,6 +7,7 @@
         <link rel="icon" href="/frontend/img/skiba.png" type="image/png">
         <title>SMKN 1 Badegan</title>
         <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" href="/frontend/css/bootstrap.css">
         <link rel="stylesheet" href="/frontend/vendors/linericon/style.css">
         <link rel="stylesheet" href="/frontend/css/font-awesome.min.css">
@@ -49,12 +50,12 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav ml-auto">
-								<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+								<li class="nav-item"><a class="nav-link" href="/">Home</a></li> 
                 <li class="nav-item submenu dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Guru</a>
                   <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="nav-link" href="/backend/guru">Guru</a>
-                    <li class="nav-item"><a class="nav-link" href="courses.html">Status Guru</a>
+                    <li class="nav-item"><a class="nav-link" href="/guru">Guru</a>
+                    <li class="nav-item"><a class="nav-link" href="/guru/status">Status Guru</a>
                       <li class="nav-item"><a class="nav-link" href="course-details.html">Pendidikan Guru</a></li>
                             </ul>
                           </li> 
@@ -86,7 +87,7 @@
         <!--================End Impress Area =================-->
         
         <!--================ start footer Area  =================-->	
-        <footer class="footer-area p_120">
+        <footer class="footer-area p_120 mt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3  col-md-6 col-sm-6">

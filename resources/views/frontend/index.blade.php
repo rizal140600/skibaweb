@@ -3,11 +3,11 @@
 <!--================Home Banner Area =================-->
         <section class="home_banner_area">
 					<div onclick="playPause()" class="banner_inner d-flex align-items-center">
-							<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
-							<div class="position-absolute mid-center text-white" id="buttonPlay">
-								<i class="fa fa-play-circle fa-5x"></i>
-							</div>
-								<video id="videoSMK"  class="video-js" controls preload="auto"  width="100%" height="100%" data-setup="{}">
+							<div class="overlay bg-parallax h-100" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
+                                <div class="position-absolute mid-center text-white" id="buttonPlay">
+                                    <i class="fa fa-play-circle fa-5x"></i>
+                                </div>
+                                <video id="videoSMK"  class="video-js" controls preload="auto"  width="100%" height="75%" data-setup="{}">
                     <source src="/frontend/video/VideoProfileSMKN1BadeganPonorogo.mp4" type='video/mp4'>
                 </video>
                 {{-- <iframe src="/frontend/video/VideoProfileSMKN1BadeganPonorogo.mp4" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe> --}}
@@ -106,9 +106,9 @@
                                 <div class="">
                                     <a href="{{ asset("/storage/" . $galeri->gambar) }}">
                                         <div class="hovereffect">
-                                            <img class="single-gallery-image" src="{{ asset("/storage/" . $galeri->gambar) }}" alt="">
+                                            <img class="single-gallery-image px-2 galeri" src="{{ asset("/storage/" . $galeri->gambar) }}" alt="">
                                             <div class="overlay">
-                                                <h2>{{$galeri->judul_gambar}}</h2>
+                                                <h2 style="font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{$galeri->judul_gambar}}</h2>
                                                 <p>
                                                     {{$galeri->kategori->kategori}}
                                                 </p>
@@ -122,7 +122,7 @@
                         </div> 
                     </div> 
                 </div>
-                <div class="pt-5">
+                <div class="pt-5" style="min-height: 500px; max-height: 500px;">
                     <div class="container" style="min-height: 250px">
                         <div class="main_title">
         			<h2>Tenaga Pendidikan</h2>
@@ -137,22 +137,25 @@
                         <div class="carousel-inner">
                             @foreach ($data_guru as $key => $guru)
                             <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                                <div class="row team_inner container">
-                                    <div class="item w-100">
-                                    <div class="testi_item w-100 text-center ">
-                                        <img style="max-width: 250px" src="{{ asset("/storage/" . $guru->gambar_guru) }}" alt="">
-                                        <h4>{{$guru->nama_guru}}</h4>
-                                        <p>{{$guru->studi->nama_bidang}}</p>
-                                        <span>{{$guru->pendidikan->pendidikan}}</span>
+                                    <div class="row team_inner ">
+                                        <div class="item w-100">
+                                            <div class="testi_item w-100 text-center ">
+                                                    <a href="/guru/detail/{{$guru->id}}" class="text-dark">
+                                            <div class="mx-auto mb-5 w-25" style="background-color: #f9f9ff">
+                                                <img class=" pt-5 " style="max-width: 250px;max-height:250px" src="{{ asset("/storage/" . $guru->gambar_guru) }}" alt="">
+                                                <h4 style="font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{$guru->nama_guru}}</h4>
+                                                <p class="pb-3">{{$guru->studi->nama_bidang}}</p>
+                                            </div>
+                                        </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                            <span class="sr-only text-dark">Previous</span>
                         </a>
                         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
