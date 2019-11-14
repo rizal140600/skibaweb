@@ -37,11 +37,11 @@
 					</div>
            		</div>	
            	</div>	
-            <div class="main_menu">
+            <div class="main_menu" style="background-color: #04091e">
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand logo_h" href="/"><img src="/frontend/img/skiba.png" style="max-width: 114px; max-height: 40px" alt=""> <span class="align-middle">SMKN 1 BADEGAN</span></a>
+						<a class="navbar-brand logo_h" href="/"><img src="/frontend/img/skiba.png" style="max-width: 114px; max-height: 40px" alt=""> <span class="align-middle  " style="color: #ff9117">SMKN 1 BADEGAN</span></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -56,7 +56,7 @@
                   <ul class="dropdown-menu">
                     <li class="nav-item"><a class="nav-link" href="/guru">Guru</a>
                     <li class="nav-item"><a class="nav-link" href="/guru/status">Status Guru</a>
-                      <li class="nav-item"><a class="nav-link" href="course-details.html">Pendidikan Guru</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/guru/pendidikan">Pendidikan Guru</a></li>
                             </ul>
                           </li> 
 								<li class="nav-item "><a class="nav-link" href="index.html">Pembelajaran</a></li> 

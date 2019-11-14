@@ -102,3 +102,4 @@ Route::get('/logout', 'User@logout');
 Route::get('/guru', 'Frontend\GuruController@index');
 Route::get('/guru/detail/{id}', 'Frontend\GuruController@detail');
 Route::get('/guru/status', 'Frontend\GuruController@status');
+Route::get('/guru/pendidikan', 'Frontend\GuruController@pendidikan');

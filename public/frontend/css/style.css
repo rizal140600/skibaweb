@@ -132,7 +132,7 @@ button:focus {
       .header_area .navbar .nav .nav-item .nav-link {
         font: 500 12px/80px "Roboto", sans-serif;
         text-transform: uppercase;
-        color: #222222;
+        color: #ffffff;
         padding: 0px;
         display: inline-block; }
         .header_area .navbar .nav .nav-item .nav-link:after {
@@ -381,7 +381,7 @@ button:focus {
     background: #04091e;
     z-index: 1; }
     .banner_area .banner_inner .overlay {
-      background: url(../img/banner/banner.jpg) no-repeat scroll center center;
+      
       position: absolute;
       left: 0;
       right: 0;
@@ -3137,6 +3137,12 @@ h6 {
   }
   .galeri{
     max-width: 350px;
+  }
+  .gambar_guru{
+    max-width: 250px !important;
+  }
+  .width100{
+    width: 100% !important;
   }
 }
 

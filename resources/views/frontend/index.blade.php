@@ -141,8 +141,8 @@
                                         <div class="item w-100">
                                             <div class="testi_item w-100 text-center ">
                                                     <a href="/guru/detail/{{$guru->id}}" class="text-dark">
-                                            <div class="mx-auto mb-5 w-25" style="background-color: #f9f9ff">
-                                                <img class=" pt-5 " style="max-width: 250px;max-height:250px" src="{{ asset("/storage/" . $guru->gambar_guru) }}" alt="">
+                                            <div class="mx-auto mb-5 w-25 width100" style="background-color: #f9f9ff">
+                                                <img class="gambar_guru pt-5 " style="max-width: 250px;max-height:250px" src="{{ asset("/storage/" . $guru->gambar_guru) }}" alt="">
                                                 <h4 style="font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{$guru->nama_guru}}</h4>
                                                 <p class="pb-3">{{$guru->studi->nama_bidang}}</p>
                                             </div>

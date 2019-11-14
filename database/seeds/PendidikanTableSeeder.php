@@ -21,6 +21,21 @@ class PendidikanTableSeeder extends Seeder
             [
                 'pendidikan'  => 'S3',
             ],
+            [
+                'pendidikan'  => 'D4',
+            ],
+            [
+                'pendidikan'  => 'D3',
+            ],
+            [
+                'pendidikan'  => 'D2',
+            ],
+            [
+                'pendidikan'  => 'D1',
+            ],
+            [
+                'pendidikan'  => 'SMA/SMK',
+            ],
         ]);
     }
 }

@@ -17,7 +17,7 @@
         </section>
 <div class="container">
   <div class="section-top-border">
-    <h3 class="mb-30 title_color">Tabel Status Guru</h3>
+    <h3 class="mb-30 title_color">Tabel Pendidikan Guru</h3>
     <table class="table table-hover">
     <thead>
       <tr>
@@ -27,26 +27,16 @@
       </tr>
     </thead>
     <tbody>
-      @foreach ($data_status as $index => $status)
+      @foreach ($data_pendidikan as $index => $pendidikan)
       <tr>
         <th scope="row">{{$index +1}}</th>
-        <td>{{$status->status}}</td>
+        <td>{{$pendidikan->pendidikan}}</td>
         @if ($index == 0)
-        <td>{{$pns_kemendikbud}}</td>
+        <td>{{$s1}}</td>
         @elseif($index == 1)
-        <td>{{$pns_kemenag}}</td>
+        <td>{{$s2}}</td>
         @elseif($index == 2)
-        <td>{{$honorer}}</td>
-        @elseif($index == 3)
-        <td>{{$tetap}}</td>
-        @elseif($index == 4)
-        <td>{{$tidak_tetap}}</td>
-        @elseif($index == 5)
-        <td>{{$pns_swasta}}</td>
-        @elseif($index == 6)
-        <td>{{$pemda}}</td>
-        @elseif($index == 7)
-        <td>{{$sm3t}}</td>
+        <td>{{$s3}}</td>
         @endif
       </tr>
       @endforeach
