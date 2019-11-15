@@ -13,6 +13,10 @@
 
 Route::get('/', 'Frontend\IndexController@index');
 
+Route::get('/masuk', 'AuthController@login');
+Route::get('/postlogin', 'AuthController@postlogin');
+Route::get('/logout', 'AuthController@logout');
+
 Route::get('/dashboard','AdminController@dashboard');
 
 Route::get('/backend/pembelajaran', 'PembelajaranController@index');
@@ -103,3 +107,7 @@ Route::get('/profil/organisasi', 'Frontend\ProfilController@organisasi');
 Route::get('/profil/sarana', 'Frontend\ProfilController@sarana');
 Route::get('/pengumuman', 'Frontend\PengumumanController@pengumuman');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
