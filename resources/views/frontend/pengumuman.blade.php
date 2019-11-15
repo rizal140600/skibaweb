@@ -18,32 +18,35 @@
 <div class="container">
   <div class="section-top-border">
     <h3 class="mb-30 title_color">Tabel Pengumuman</h3>
-    <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">NO.</th>
-        <th scope="col">Judul Pengumuman</th>
-        <th scope="col" style="max-width: 50px">Isi Pengumuman</th>
-        <th scope="col">Aksi</th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach ($data_pengumuman as $index => $pengumuman)
-      <tr>
-        <th scope="row">{{$index +1}}</th>
-        <td>{{$pengumuman->judul_pengumuman}}</td>
-        <td>{!! str_limit(strip_tags($pengumuman->isi_pengumuman), $limit = 250, $end = '...') !!}</td>
-        <td>
-        <a class="" href="/pengumuman/detail/{{$pengumuman->id}}">
-                <button type="button" class="btn btn-primary text-white  btn-sm" title="Edit">
-                <i class="fa fa-eye" aria-hidden="true"></i>
-                </button>
-            </a>
-        </td>
-      </tr>
-      @endforeach
-    </tbody>
-  </table>
+    <div class="card-body table-responsive p-0">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>NO.</th>
+                    <th>Judul</th>
+                    <th>Isi</th>
+                    <th>Aksi</th>
+                </tr>
+                </thead>
+                <tbody>
+                    @foreach($data_pengumuman as $index => $pengumuman)
+                <tr>
+                    <td>{{ $index +1}}</td>
+                    <td>{{$pengumuman->judul_pengumuman}}</td>
+                    <td>{!! str_limit(strip_tags($pengumuman->isi_pengumuman), $limit = 150, $end = '...') !!}</td>
+                    <td style="min-width: 105px">
+                        <a class="" href="/pengumuman/detail/{{$pengumuman->id}}">
+                          <button type="button" class="btn btn-primary text-white  btn-sm" title="Edit">
+                          <i class="fa fa-eye" aria-hidden="true"></i>
+                          </button>
+                        </a>
+                    </div>
+                    </td>
+                </tr>
+                @endforeach
+                </tbody>
+            </table>
+            </div>
   </div>
 </div>
 @endsection

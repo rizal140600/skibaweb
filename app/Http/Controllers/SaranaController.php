@@ -11,24 +11,12 @@ class SaranaController extends Controller
     public function index()
     {
         $data_sarana = \App\Sarana::all();
-        $data = \App\ModelUser::first();
-        if($data){ //apakah email tersebut ada atau tidak
-            if($data->name == 'admin'){
-                Session::put('name',$data->name);
-                Session::put('email',$data->email);
-                Session::put('login',TRUE);
+        //
                 return view('backend.profil.sarana.index', [
                     'data_sarana' => $data_sarana,
-                    'data' => $data
+                    //
                     ]);
-            }
-            else{
-                return redirect('login')->with('alert','Password atau Email, Salah !');
-            }
-        }
-        else{
-            return redirect('login')->with('alert','Password atau Email, Salah!');
-        }
+            //
     }
     public function create(Request $resquest)
     {
@@ -38,7 +26,12 @@ class SaranaController extends Controller
     public function edit($id)
     {
         $sarana = \App\Sarana::find($id);
-        return view(' /backend/profil/sarana/edit', ['sarana' => $sarana]);
+        //
+                    return view(' /backend/profil/sarana/edit', [
+                        'sarana' => $sarana,
+                        //
+                    ]);
+            //
     }
     public function update(Request $resquest, $id)
     {

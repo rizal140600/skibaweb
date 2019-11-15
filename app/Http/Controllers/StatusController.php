@@ -11,24 +11,12 @@ class StatusController extends Controller
     public function index()
     {
         $data_status = \App\Status::all();
-        $data = \App\ModelUser::first();
-        if($data){ //apakah email tersebut ada atau tidak
-            if($data->name == 'admin'){
-                Session::put('name',$data->name);
-                Session::put('email',$data->email);
-                Session::put('login',TRUE);
+        //
                 return view('backend.guru.status.index', [
                     'data_status' => $data_status,
-                    'data' => $data
+                    //
                     ]);
-            }
-            else{
-                return redirect('login')->with('alert','Password atau Email, Salah !');
-            }
-        }
-        else{
-            return redirect('login')->with('alert','Password atau Email, Salah!');
-        }
+            //
     }
     public function create(Request $resquest)
     {
@@ -38,7 +26,12 @@ class StatusController extends Controller
     public function edit($id)
     {
         $status = \App\Status::find($id);
-        return view(' /backend/guru/status/edit', ['status' => $status]);
+        //
+                    return view(' /backend/guru/status/edit', [
+                        'status' => $status,
+                        //
+                        ]);
+            //
     }
     public function update(Request $resquest, $id)
     {

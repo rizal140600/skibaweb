@@ -18,28 +18,31 @@
 <div class="container">
   <div class="section-top-border">
     <h3 class="mb-30 title_color">Tabel Pembelajaran</h3>
-    <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">NO.</th>
-        <th scope="col">Nama File</th>
-        <th scope="col">Guru</th>
-        <th scope="col">Link</th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach ($data_pembelajaran as $index => $pembelajaran)
-      <tr>
-        <th scope="row">{{$index +1}}</th>
-        <td>{{$pembelajaran->nama_file}}</td>
-        <td>{{$pembelajaran->guru->nama_guru}}</td>
-        <td>
-          <a href="{{$pembelajaran->link}}" class="genric-btn info circle arrow">Kunjungi<span class="lnr lnr-arrow-right"></span></a>
-        </td>
-      </tr>
-      @endforeach
-    </tbody>
-  </table>
+  <div class="card-body table-responsive p-0">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>NO.</th>
+                      <th>Nama File</th>
+                      <th>Guru</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      @foreach($data_pembelajaran as $index => $pembelajaran)
+                    <tr>
+                      <td>{{ $index +1}}</td>
+                      <td>{{$pembelajaran->nama_file}}</td>
+                      <td>{{$pembelajaran->guru->nama_guru}}</td>
+                      <td style="min-width: 105px">
+                          <a href="{{$pembelajaran->link}}" class="genric-btn info circle arrow">Kunjungi<span class="lnr lnr-arrow-right"></span></a>
+                        </div>
+                      </td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
   </div>
 </div>
 @endsection

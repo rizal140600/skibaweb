@@ -12,25 +12,13 @@ class PembelajaranController extends Controller
     {
         $data_pembelajaran = \App\Pembelajaran::all();
         $data_guru = \App\Guru::all();
-        $data = \App\ModelUser::first();
-        if($data){ //apakah email tersebut ada atau tidak
-            if($data->name == 'admin'){
-                Session::put('name',$data->name);
-                Session::put('email',$data->email);
-                Session::put('login',TRUE);
+        //
                 return view('backend.pembelajaran.index', [
                     'data_pembelajaran' => $data_pembelajaran,
                     'data_guru' => $data_guru,
-                    'data' => $data
+                    //
                     ]);
-            }
-            else{
-                return redirect('login')->with('alert','Password atau Email, Salah !');
-            }
-        }
-        else{
-            return redirect('login')->with('alert','Password atau Email, Salah!');
-        }
+            //
     }
     public function create(Request $resquest)
     {
@@ -41,7 +29,13 @@ class PembelajaranController extends Controller
     {
         $pembelajaran = \App\Pembelajaran::find($id);
         $data_guru = \App\Guru::all();
-        return view(' /backend/pembelajaran/edit', ['pembelajaran' => $pembelajaran, 'data_guru' => $data_guru]);
+        //
+                    return view(' /backend/pembelajaran/edit', [
+                        'pembelajaran' => $pembelajaran, 
+                        'data_guru' => $data_guru,
+                        //
+                    ]);
+            //
     }
     public function update(Request $resquest, $id)
     {

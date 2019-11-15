@@ -14,25 +14,13 @@ class KegiatanController extends Controller
     public function index()
     {
         $data_kegiatan = \App\Kegiatan::all();
-        $data = \App\ModelUser::first();
-        if($data){ //apakah email tersebut ada atau tidak
-            if($data->name == 'admin'){
-                Session::put('name',$data->name);
-                Session::put('email',$data->email);
-                Session::put('login',TRUE);
+        //
                 return view('backend.kegiatan.index', [
                     'data_kegiatan' => $data_kegiatan, 
-                    'data' => $data
+                    //
                     ]);
                 
-            }
-            else{
-                return redirect('login')->with('alert','Password atau Email, Salah !');
-            }
-        }
-        else{
-            return redirect('login')->with('alert','Password atau Email, Salah!');
-        }
+            //
     }
     public function create(Request $request)
     {
@@ -61,14 +49,16 @@ class KegiatanController extends Controller
     public function edit($id)
     {
         $kegiatan = \App\Kegiatan::find($id);
-        return view(' /backend/kegiatan/edit', [
-            'kegiatan' => $kegiatan,
-            ]);
+        //
+                    return view(' /backend/kegiatan/edit', [
+                        'kegiatan' => $kegiatan,
+                        //
+                        ]);
+            //
     }
     public function update(Request $request, $id)
     {
         $kegiatan = \App\Kegiatan::find($id);
-        $kegiatan->delete($request->all());
         $cover = $request->file('kegiatan_foto');
         $kegiatan = new Kegiatan();
         if ($request->hasFile('kegiatan_foto')) {
@@ -88,7 +78,7 @@ class KegiatanController extends Controller
         // $kegiatan->mime = $cover->getClientMimeType();
         // $kegiatan->original_filename = $cover->getClientOriginalName();
         // $kegiatan->filename = $cover->getFilename().'.'.$extension;
-        $kegiatan->save();
+        $kegiatan->update();
         // \App\Kegiatan::create(
         //     $request->all()
         // );

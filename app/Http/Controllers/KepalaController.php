@@ -14,24 +14,12 @@ class KepalaController extends Controller
     public function index()
     {
         $kepala = \App\Kepala::all();
-        $data = \App\ModelUser::first();
-        if($data){ //apakah email tersebut ada atau tidak
-            if($data->name == 'admin'){
-                Session::put('name',$data->name);
-                Session::put('email',$data->email);
-                Session::put('login',TRUE);
+        //
                 return view(' /backend/profil/kepala/index', [
                     'kepala' => $kepala,
-                    'data' => $data
+                    //
                     ]);
-            }
-            else{
-                return redirect('login')->with('alert','Password atau Email, Salah !');
-            }
-        }
-        else{
-            return redirect('login')->with('alert','Password atau Email, Salah!');
-        }
+            //
     }
     public function create(Request $request)
     {

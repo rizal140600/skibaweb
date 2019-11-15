@@ -18,29 +18,17 @@ class GuruController extends Controller
         $data_pendidikan = \App\Pendidikan::all();
         $data_status = \App\Status::all();
         $data_studi = \App\Studi::all();
-        $data = \App\ModelUser::first();
-        if($data){ //apakah email tersebut ada atau tidak
-            if($data->name == 'admin'){
-                Session::put('name',$data->name);
-                Session::put('email',$data->email);
-                Session::put('login',TRUE);
+        //
                 return view('backend.guru.index', [
                     'data_guru' => $data_guru, 
                     'data_kelamin' => $data_kelamin, 
                     'data_pendidikan' => $data_pendidikan,
                     'data_status' => $data_status,
                     'data_studi' => $data_studi ,
-                    'data' => $data
+                    //
                     ]);
                 
-            }
-            else{
-                return redirect('login')->with('alert','Password atau Email, Salah !');
-            }
-        }
-        else{
-            return redirect('login')->with('alert','Password atau Email, Salah!');
-        }
+            //
     }
     public function create(Request $request)
     {
@@ -75,18 +63,22 @@ class GuruController extends Controller
         $data_pendidikan = \App\Pendidikan::all();
         $data_status = \App\Status::all();
         $data_studi = \App\Studi::all();
-        return view(' /backend/guru/edit', [
-            'guru' => $guru,
-            'data_kelamin' => $data_kelamin,
-            'data_pendidikan' => $data_pendidikan,
-            'data_status' => $data_status,
-            'data_studi' => $data_studi
-            ]);
+        //
+                return view(' /backend/guru/edit', [
+                    'guru' => $guru,
+                    'data_kelamin' => $data_kelamin,
+                    'data_pendidikan' => $data_pendidikan,
+                    'data_status' => $data_status,
+                    'data_studi' => $data_studi,
+                    //
+                    ]);
+                
+            //
+        
     }
     public function update(Request $request, $id)
     {
         $guru = \App\Guru::find($id);
-        $guru->delete($request->all());
         $cover = $request->file('gambar_guru');
         $guru = new Guru();
         if ($request->hasFile('gambar_guru')) {
@@ -108,7 +100,7 @@ class GuruController extends Controller
         // $guru->mime = $cover->getClientMimeType();
         // $guru->original_filename = $cover->getClientOriginalName();
         // $guru->filename = $cover->getFilename().'.'.$extension;
-        $guru->save();
+        $guru->update();
         // \App\Guru::create(
         //     $request->all()
         // );

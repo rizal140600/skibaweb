@@ -15,26 +15,11 @@ class GaleriController extends Controller
     {
         $data_galeri = \App\Galeri::all();
         $data_kategori = \App\Kategori::all();
-        $data = \App\ModelUser::first();
-        if($data){ //apakah email tersebut ada atau tidak
-            if($data->name == 'admin'){
-                Session::put('name',$data->name);
-                Session::put('email',$data->email);
-                Session::put('login',TRUE);
-                return view('backend.galeri.index', [
-                    'data_galeri' => $data_galeri, 
-                    'data_kategori' => $data_kategori, 
-                    'data' => $data
-                    ]);
+        return view('backend.galeri.index', [
+            'data_galeri' => $data_galeri, 
+            'data_kategori' => $data_kategori, 
+            ]);
             
-            }
-            else{
-                return redirect('login')->with('alert','Password atau Email, Salah !');
-            }
-        }
-        else{
-            return redirect('login')->with('alert','Password atau Email, Salah!');
-        }
     }
     public function create(Request $request)
     {
@@ -61,15 +46,18 @@ class GaleriController extends Controller
     {
         $galeri = \App\Galeri::find($id);
         $data_kategori = \App\Kategori::all();
-        return view(' /backend/galeri/edit', [
-            'galeri' => $galeri,
-            'data_kategori' => $data_kategori,
+        //
+                    return view(' /backend/galeri/edit', [
+                        'galeri' => $galeri,
+                        'data_kategori' => $data_kategori,
+                        //
             ]);
+            //
+        
     }
     public function update(Request $request, $id)
     {
         $galeri = \App\Galeri::find($id);
-        $galeri->delete($request->all());
         $cover = $request->file('gambar');
         $galeri = new galeri();
         if ($request->hasFile('gambar')) {
@@ -86,7 +74,7 @@ class GaleriController extends Controller
         // $galeri->mime = $cover->getClientMimeType();
         // $galeri->original_filename = $cover->getClientOriginalName();
         // $galeri->filename = $cover->getFilename().'.'.$extension;
-        $galeri->save();
+        $galeri->update();
         // \App\Galeri::create(
         //     $request->all()
         // );

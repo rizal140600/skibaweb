@@ -62,7 +62,7 @@
         <div class="image">
         </div>
         <div class="info pl-5">
-          <a class="d-block text-uppercase">{{$data->name}}</a>
+          <a class="d-block " style="color: #ffa41c"></a>
         </div>
       </div>
 

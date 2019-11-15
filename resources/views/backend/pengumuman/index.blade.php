@@ -95,18 +95,34 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach($data_pengumuman as $index => $Pengumuman)
+                    @foreach($data_pengumuman as $index => $pengumuman)
                 <tr>
                     <td>{{ $index +1}}</td>
-                    <td>{{$Pengumuman->judul_pengumuman}}</td>
-                    <td>{!!$Pengumuman->isi_pengumuman!!}</td>
+                    <td>{{$pengumuman->judul_pengumuman}}</td>
+                    <td>
+                        
+                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#isi{{$pengumuman->id}}">
+                          <i class="fa fa-eye" aria-hidden="true"></i>
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="isi{{$pengumuman->id}}" tabindex="-1" role="dialog" aria-labelledby="isi{{$pengumuman->id}}Label" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <textarea class="textarea" name="kegiatan_isi" placeholder="isi kegiatan"
+                            style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$pengumuman->isi_pengumuman}}</textarea>
+                              <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                    </td>
                     <td style="min-width: 105px">
-                        <a class="" href="/backend/pengumuman/{{$Pengumuman->id}}/edit">
+                        <a class="" href="/backend/pengumuman/{{$pengumuman->id}}/edit">
                             <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
                             <i class="far fa-edit"></i>
                             </button>
                         </a>
-                        <a class="" href="/backend/pengumuman/{{$Pengumuman->id}}/delete">
+                        <a class="" href="/backend/pengumuman/{{$pengumuman->id}}/delete">
                             <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
                             'apakah anda yakin mau menghapus file ini ?')">
                             <i class="far fa-trash-alt"></i>
