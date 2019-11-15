@@ -59,19 +59,19 @@
                       <li class="nav-item"><a class="nav-link" href="/guru/pendidikan">Pendidikan Guru</a></li>
                             </ul>
                           </li> 
-								<li class="nav-item "><a class="nav-link" href="index.html">Pembelajaran</a></li> 
+								<li class="nav-item "><a class="nav-link" href="/pembelajaran">Pembelajaran</a></li> 
 								<li class="nav-item submenu dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil</a>
 									<ul class="dropdown-menu">
-                    <li class="nav-item"><a class="nav-link" href="courses.html">Kepala Sekolah</a>
-                      <li class="nav-item"><a class="nav-link" href="course-details.html">Tentang Sekolah</a></li>
-                      <li class="nav-item"><a class="nav-link" href="courses.html">Visi Misi</a>
-                        <li class="nav-item"><a class="nav-link" href="courses.html">Identitas Sekolah</a>
-                          <li class="nav-item"><a class="nav-link" href="courses.html">Struktur Organisasi</a>
-                            <li class="nav-item"><a class="nav-link" href="courses.html">Sarana Prasarana</a>
+                    <li class="nav-item"><a class="nav-link" href="/profil/sambutan">Kepala Sekolah</a>
+                      <li class="nav-item"><a class="nav-link" href="/profil/tentang">Tentang Sekolah</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/profil/misi">Visi Misi</a>
+                        <li class="nav-item"><a class="nav-link" href="/profil/identitas">Identitas Sekolah</a>
+                          <li class="nav-item"><a class="nav-link" href="/profil/organisasi">Organisasi</a>
+                            <li class="nav-item"><a class="nav-link" href="/profil/sarana">Sarana Prasarana</a>
                             </ul>
                           </li> 
-                          <li class="nav-item "><a class="nav-link" href="index.html">Pengumuman</a></li> 
+                          <li class="nav-item "><a class="nav-link" href="/pengumuman">Pengumuman</a></li> 
                           <li class="nav-item "><a class="nav-link" href="index.html">Galeri</a></li> 
                           <li class="nav-item "><a class="nav-link" href="index.html">Kontak</a></li> 
                           <li class="nav-item "><a class="nav-link" href="index.html">Bidang Studi</a></li> 

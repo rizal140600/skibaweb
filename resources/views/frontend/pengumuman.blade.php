@@ -7,7 +7,7 @@
               </div>
 				<div class="container">
 					<div class="banner_content text-center">
-						<h2>Status Guru</h2>
+						<h2>Pengumuman</h2>
 						<div class="page_link">
 							<a>SMKN 1 BADEGAN</a>
 						</div>
@@ -17,27 +17,29 @@
         </section>
 <div class="container">
   <div class="section-top-border">
-    <h3 class="mb-30 title_color">Tabel Pendidikan Guru</h3>
+    <h3 class="mb-30 title_color">Tabel Pengumuman</h3>
     <table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">NO.</th>
-        <th scope="col">Status</th>
-        <th scope="col">Jumlah</th>
+        <th scope="col">Judul Pengumuman</th>
+        <th scope="col" style="max-width: 50px">Isi Pengumuman</th>
+        <th scope="col">Aksi</th>
       </tr>
     </thead>
     <tbody>
-      @foreach ($data_pendidikan as $index => $pendidikan)
+      @foreach ($data_pengumuman as $index => $pengumuman)
       <tr>
         <th scope="row">{{$index +1}}</th>
-        <td>{{$pendidikan->pendidikan}}</td>
-        @if ($index == 0)
-        <td>{{$s1}}</td>
-        @elseif($index == 1)
-        <td>{{$s2}}</td>
-        @elseif($index == 2)
-        <td>{{$s3}}</td>
-        @endif
+        <td>{{$pengumuman->judul_pengumuman}}</td>
+        <td>{!! str_limit(strip_tags($pengumuman->isi_pengumuman), $limit = 250, $end = '...') !!}</td>
+        <td>
+        <a class="" href="/pengumuman/detail/{{$pengumuman->id}}">
+                <button type="button" class="btn btn-primary text-white  btn-sm" title="Edit">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                </button>
+            </a>
+        </td>
       </tr>
       @endforeach
     </tbody>

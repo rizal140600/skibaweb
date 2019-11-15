@@ -7,7 +7,7 @@
               </div>
 				<div class="container">
 					<div class="banner_content text-center">
-						<h2>Status Guru</h2>
+						<h2>Pembelajaran</h2>
 						<div class="page_link">
 							<a>SMKN 1 BADEGAN</a>
 						</div>
@@ -17,27 +17,25 @@
         </section>
 <div class="container">
   <div class="section-top-border">
-    <h3 class="mb-30 title_color">Tabel Pendidikan Guru</h3>
+    <h3 class="mb-30 title_color">Tabel Pembelajaran</h3>
     <table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">NO.</th>
-        <th scope="col">Status</th>
-        <th scope="col">Jumlah</th>
+        <th scope="col">Nama File</th>
+        <th scope="col">Guru</th>
+        <th scope="col">Link</th>
       </tr>
     </thead>
     <tbody>
-      @foreach ($data_pendidikan as $index => $pendidikan)
+      @foreach ($data_pembelajaran as $index => $pembelajaran)
       <tr>
         <th scope="row">{{$index +1}}</th>
-        <td>{{$pendidikan->pendidikan}}</td>
-        @if ($index == 0)
-        <td>{{$s1}}</td>
-        @elseif($index == 1)
-        <td>{{$s2}}</td>
-        @elseif($index == 2)
-        <td>{{$s3}}</td>
-        @endif
+        <td>{{$pembelajaran->nama_file}}</td>
+        <td>{{$pembelajaran->guru->nama_guru}}</td>
+        <td>
+          <a href="{{$pembelajaran->link}}" class="genric-btn info circle arrow">Kunjungi<span class="lnr lnr-arrow-right"></span></a>
+        </td>
       </tr>
       @endforeach
     </tbody>

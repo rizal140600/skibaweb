@@ -1648,7 +1648,7 @@ h6 {
 .generic-blockquote {
   padding: 30px 50px 30px 30px;
   background: #fff;
-  border-left: 2px solid #f8b600; }
+  border-left: 2px solid #f8a100; }
 
 @media (max-width: 991px) {
   .progress-table-wrap {
@@ -3129,6 +3129,9 @@ h6 {
       top: 40%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
+  }
+  .background-kecil{
+      width:100%
   }
 }
 @media(max-width:500px){

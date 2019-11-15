@@ -47,7 +47,7 @@
                                                 <img src="{{ asset("/storage/" . $kegiatan->kegiatan_foto) }}" alt="">
                                                 <div class="blog_details">
                                                     <a href="single-blog.html"><h2>{{$kegiatan->kegiatan_judul}}</h2></a>
-                                                    <p>{!!$kegiatan->kegiatan_isi!!}</p>
+                                                    <p>{!! str_limit(strip_tags($kegiatan->kegiatan_isi), $limit = 250, $end = '...') !!}</p>
                                                     <a href="single-blog.html" class="text-white white_bg_btn" style="background-color: #ff7209">View More</a>
                                                 </div>
                                             </div>
