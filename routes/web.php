@@ -118,6 +118,7 @@ Route::get('/profil/organisasi', 'Frontend\ProfilController@organisasi');
 Route::get('/profil/sarana', 'Frontend\ProfilController@sarana');
 Route::get('/pengumuman', 'Frontend\PengumumanController@pengumuman');
 Route::get('/pengumuman/detail/{id}', 'Frontend\PengumumanController@detail');
+Route::get('/galeri', 'Frontend\GaleriController@galeri');
 
 
 
