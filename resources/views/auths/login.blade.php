@@ -38,12 +38,12 @@
         <form action="/postlogin" method="POST" class="login100-form validate-form p-b-33 p-t-5">
           @csrf
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input name="username" class="input100" type="text" name="username" placeholder="User name">
+						<input name="email" class="input100" type="text"  placeholder="Email">
 						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input name="password" class="input100" type="password" name="pass" placeholder="Password">
+						<input name="password" class="input100" type="password"  placeholder="Password">
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 

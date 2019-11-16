@@ -62,7 +62,7 @@
         <div class="image">
         </div>
         <div class="info pl-5">
-          <a class="d-block " style="color: #ffa41c"></a>
+        <a class="d-block " style="color: #ffa41c">{{auth()->user()->name}}</a>
         </div>
       </div>
 
@@ -203,6 +203,16 @@
               </li>
             </ul>
           </li>
+          @if (auth()->user()->role->role_user == 'admin')
+          <li class="nav-item">
+            <a href="/user" class="nav-link">
+              <i class="far fa-user nav-icon" aria-hidden="true"></i>
+              <p>
+                User
+              </p>
+            </a>
+          </li>
+          @endif
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

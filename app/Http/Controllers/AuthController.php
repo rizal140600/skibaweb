@@ -14,13 +14,15 @@ class AuthController extends Controller
     }
     public function postlogin(Request $request)
     {
-        if (Auth::attempt($request->only('username', 'password'))) {
+        if (Auth::attempt($request->only('email', 'password'))) {
             return redirect('/dashboard');
+        } else {
+            return redirect('/masuk');
         }
-        return redirect('/masuk');
     }
     public function logout()
     {
         Auth::logout();
+        return redirect('/masuk');
     }
 }
