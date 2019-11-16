@@ -121,6 +121,8 @@ Route::get('/pengumuman/detail/{id}', 'Frontend\PengumumanController@detail');
 Route::get('/galeri', 'Frontend\GaleriController@galeri');
 Route::get('/studi', 'Frontend\StudiController@studi');
 Route::get('/kontak', 'Frontend\KontakController@kontak');
+Route::get('/kegiatan', 'Frontend\KegiatanController@kegiatan');
+Route::get('/kegiatan/detail/{id}', 'Frontend\KegiatanController@detail');
 
 
 
