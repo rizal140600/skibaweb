@@ -30,7 +30,7 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100"  style="background: url(http://localhost:8000/login/images/background.jpg)">
+		<div class="container-login100"  style="background: url('/login/images/background.jpg')">
 			<div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
 					Login

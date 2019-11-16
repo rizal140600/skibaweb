@@ -75,7 +75,7 @@
                           <li class="nav-item "><a class="nav-link" href="index.html">Galeri</a></li> 
                           <li class="nav-item "><a class="nav-link" href="index.html">Kontak</a></li> 
                           <li class="nav-item "><a class="nav-link" href="index.html">Bidang Studi</a></li> 
-                          <li class="nav-item "><a class="nav-link" href="/login">Login</a></li> 
+                          <li class="nav-item "><a class="nav-link" href="/masuk">Login</a></li> 
               </ul>
 						</div> 
 					</div>

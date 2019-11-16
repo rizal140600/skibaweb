@@ -11,9 +11,19 @@ class PengumumanController extends Controller
     {
         $identitas = \App\Identitas::first();
         $data_pengumuman = \App\Pengumuman::all();
-        return view('frontend.pengumuman',[
+        return view('frontend.pengumuman.pengumuman',[
             'identitas' => $identitas,
             'data_pengumuman' => $data_pengumuman
         ]);
     }
+    public function detail($id)
+    {
+        $identitas = \App\Identitas::first();
+        $data_pengumuman = \App\Pengumuman::find($id);
+        return view('frontend.pengumuman.detail',[
+            'identitas' => $identitas,
+            'data_pengumuman' => $data_pengumuman
+        ]);
+    }
+
 }

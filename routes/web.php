@@ -103,20 +103,21 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,guru']], function () {
   Route::post('/backend/profil/struktur/create', 'StrukturController@create');
   
   
-  Route::get('/guru', 'Frontend\GuruController@index');
-  Route::get('/guru/detail/{id}', 'Frontend\GuruController@detail');
-  Route::get('/guru/status', 'Frontend\GuruController@status');
-  Route::get('/guru/pendidikan', 'Frontend\GuruController@pendidikan');
-  Route::get('/pembelajaran', 'Frontend\PembelajaranController@pembelajaran');
-  Route::get('/profil/sambutan', 'Frontend\ProfilController@sambutan');
-  Route::get('/profil/tentang', 'Frontend\ProfilController@tentang');
-  Route::get('/profil/misi', 'Frontend\ProfilController@misi');
-  Route::get('/profil/identitas', 'Frontend\ProfilController@identitas');
-  Route::get('/profil/identitas', 'Frontend\ProfilController@identitas');
-  Route::get('/profil/organisasi', 'Frontend\ProfilController@organisasi');
-  Route::get('/profil/sarana', 'Frontend\ProfilController@sarana');
-  Route::get('/pengumuman', 'Frontend\PengumumanController@pengumuman');
 });
+Route::get('/guru', 'Frontend\GuruController@index');
+Route::get('/guru/detail/{id}', 'Frontend\GuruController@detail');
+Route::get('/guru/status', 'Frontend\GuruController@status');
+Route::get('/guru/pendidikan', 'Frontend\GuruController@pendidikan');
+Route::get('/pembelajaran', 'Frontend\PembelajaranController@pembelajaran');
+Route::get('/profil/sambutan', 'Frontend\ProfilController@sambutan');
+Route::get('/profil/tentang', 'Frontend\ProfilController@tentang');
+Route::get('/profil/misi', 'Frontend\ProfilController@misi');
+Route::get('/profil/identitas', 'Frontend\ProfilController@identitas');
+Route::get('/profil/identitas', 'Frontend\ProfilController@identitas');
+Route::get('/profil/organisasi', 'Frontend\ProfilController@organisasi');
+Route::get('/profil/sarana', 'Frontend\ProfilController@sarana');
+Route::get('/pengumuman', 'Frontend\PengumumanController@pengumuman');
+Route::get('/pengumuman/detail/{id}', 'Frontend\PengumumanController@detail');
 
 
 
