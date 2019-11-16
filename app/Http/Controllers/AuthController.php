@@ -17,12 +17,12 @@ class AuthController extends Controller
         if (Auth::attempt($request->only('email', 'password'))) {
             return redirect('/dashboard');
         } else {
-            return redirect('/masuk');
+            return redirect('/');
         }
     }
     public function logout()
     {
         Auth::logout();
-        return redirect('/masuk');
+        return redirect('/');
     }
 }
