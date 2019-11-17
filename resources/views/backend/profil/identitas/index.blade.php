@@ -158,7 +158,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal SK Pendirian</label>
-                                    <input id="datepicker" name="tgl_sk_pendirian" type="text" class="form-control date" placeholder="Tanggal Surat Keputusan...">
+                                    <input id="datepicker-1" name="tgl_sk_pendirian" type="text" class="form-control date" placeholder="Tanggal Surat Keputusan...">
                                 </div>
                                 <div class="form-group">
                                     <label>Nomer Penyelenggaraan</label>
