@@ -53,12 +53,12 @@
                           </div>
                         </div>
                       </th>
-                      <td>{{$guru->nama_guru}}</td>
+                      <td style="min-width: 250px">{{$guru->nama_guru}}</td>
                       <td>{{$guru->kelamin->kelamin}}</td>
                       <td>{{$guru->studi->nama_bidang}}</td>
                       <td>{{$guru->pendidikan->pendidikan}}</td>
-                      <td>{{$guru->status->status}}</td>
-                      <td>{{$guru->alamat_guru}}</td>
+                      <td style="min-width: 250px">{{$guru->status->status}}</td>
+                      <td style="min-width: 300px">{{$guru->alamat_guru}}</td>
                       <td>{{$guru->telepon_guru}}</td>
                       <td style="min-width: 105px">
                           <a class="" href="/guru/detail/{{$guru->id}}">

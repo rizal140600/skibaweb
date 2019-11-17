@@ -102,7 +102,7 @@
                             <div class="row gallery-item">
                                 <?php $count = 0; ?>
                                 @foreach ($data_galeri as $galeri)
-                                <?php if($count == 6) break; ?>
+                                <?php if($count == 10) break; ?>
                                 <div class="">
                                     <a href="{{ asset("/storage/" . $galeri->gambar) }}">
                                         <div class="hovereffect">
@@ -154,11 +154,11 @@
                         @endforeach
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-prev-icon p-3 rounded mr-2" style="background-color: black" aria-hidden="true"></span>
                             <span class="sr-only text-dark">Previous</span>
                         </a>
                         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-next-icon p-3 rounded ml-2" style="background-color: black" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
                         </div>

@@ -43,6 +43,8 @@ class KepalaController extends Controller
     public function update(Request $request, $id)
     {
         $kepala = \App\Kepala::find($id);
+        $kepala_cover = $kepala->kepala_gambar;
+        Storage::disk('public')->delete($kepala_cover);
         $kepala->delete();
         $cover = $request->file('kepala_gambar');
         $kepala = new Kepala();

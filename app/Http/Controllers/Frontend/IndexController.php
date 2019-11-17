@@ -12,11 +12,11 @@ class IndexController extends Controller
     public function index()
     {
         $kepala_sekolah = \App\Kepala::first();
-        $data_pengumuman = \App\Pengumuman::all();
-        $data_kegiatan = \App\Kegiatan::all();
-        $data_pembelajaran = \App\Pembelajaran::all();
-        $data_galeri = \App\Galeri::all();
-        $data_guru = \App\Guru::all();
+        $data_pengumuman = \App\Pengumuman::all()->sortByDesc('updated_at');
+        $data_kegiatan = \App\Kegiatan::all()->sortByDesc('updated_at');
+        $data_pembelajaran = \App\Pembelajaran::all()->sortByDesc('updated_at');
+        $data_galeri = \App\Galeri::all()->sortByDesc('updated_at');
+        $data_guru = \App\Guru::paginate(3);
         $identitas = \App\Identitas::all();
         return view('frontend.index',[
             'kepala_sekolah' => $kepala_sekolah,

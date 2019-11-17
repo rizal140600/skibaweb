@@ -23,8 +23,8 @@
                   <thead>
                     <tr>
                       <th>NO.</th>
-                      <th>Nama File</th>
-                      <th>Guru</th>
+                      <th style="min-width: 250px">Nama File</th>
+                      <th style="min-width: 250px">Guru</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
@@ -35,7 +35,7 @@
                       <td>{{$pembelajaran->nama_file}}</td>
                       <td>{{$pembelajaran->guru->nama_guru}}</td>
                       <td style="min-width: 105px">
-                          <a href="{{$pembelajaran->link}}" class="genric-btn info circle arrow">Kunjungi<span class="lnr lnr-arrow-right"></span></a>
+                          <a href="{{$pembelajaran->link}}" class="genric-btn info circle arrow small">Kunjungi</a>
                         </div>
                       </td>
                     </tr>

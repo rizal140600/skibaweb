@@ -58,6 +58,8 @@ class GaleriController extends Controller
     public function update(Request $request, $id)
     {
         $galeri = \App\Galeri::find($id);
+        $galeri_cover = $galeri->gambar;
+        Storage::disk('public')->delete($galeri_cover);
         $cover = $request->file('gambar');
         $galeri = new galeri();
         if ($request->hasFile('gambar')) {
@@ -83,6 +85,8 @@ class GaleriController extends Controller
     public function delete($id)
     {
         $galeri = \App\Galeri::find($id);
+        $galeri_cover = $galeri->gambar;
+        Storage::disk('public')->delete($galeri_cover);
         $galeri->delete();
         return redirect('/backend/galeri')->with('delete', 'Data Berhasil di hapus');
     }

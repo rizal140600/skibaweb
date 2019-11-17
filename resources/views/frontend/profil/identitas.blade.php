@@ -18,75 +18,78 @@
 <div class="container">
   <div class="section-top-border">
     <h3 class="mb-30 title_color">Identitas Sekolah</h3>
-    <table class="table table-hover">
-    <tbody>
-      <tr>
-        <td>Nama Sekolah</td>
-        <td>:</td>
-        <td>{{$identitas->nama_sekolah}}</td>
-      </tr>
-      <tr>
-        <td>Status</td>
-        <td>:</td>
-        <td>{{$identitas->status}}</td>
-      </tr>
-      <tr>
-        <td>Alamat</td>
-        <td>:</td>
-        <td>{{$identitas->alamat}}</td>
-      </tr>
-      <tr>
-        <td>Telepon/Fax</td>
-        <td>:</td>
-        <td>{{$identitas->telepon_fax}}</td>
-      </tr>
-      <tr>
-        <td>Email</td>
-        <td>:</td>
-        <td>{{$identitas->website_email}}</td>
-      </tr>
-      <tr>
-        <td>Kepala Sekolah</td>
-        <td>:</td>
-        <td>{{$identitas->kepala_sekolah}}</td>
-      </tr>
-      <tr>
-        <td>Nomer Sekolah</td>
-        <td>:</td>
-        <td>{{$identitas->nomer_sekolah}}</td>
-      </tr>
-      <tr>
-        <td>NPSN</td>
-        <td>:</td>
-        <td>{{$identitas->npsn}}</td>
-      </tr>
-      <tr>
-        <td>Nomer SK Pendirian</td>
-        <td>:</td>
-        <td>{{$identitas->no_sk_pendirian}}</td>
-      </tr>
-      <tr>
-        <td>Tanggal SK Pendirian</td>
-        <td>:</td>
-        <td>{{$identitas->tgl_sk_pendirian}}</td>
-      </tr>
-      <tr>
-        <td>Nomer Penyelenggaraan</td>
-        <td>:</td>
-        <td>{{$identitas->no_penyelenggaraan}}</td>
-      </tr>
-      <tr>
-        <td>Penyelenggara</td>
-        <td>:</td>
-        <td>{{$identitas->penyelenggara}}</td>
-      </tr>
-      <tr>
-        <td>Akreditasi</td>
-        <td>:</td>
-        <td>{{$identitas->akreditasi}}</td>
-      </tr>
-    </tbody>
-  </table>
+    <div class="card-body table-responsive p-0">
+                <table class="table table-hover">
+                  <tbody>
+                    <tr>
+                      <td>Nama Sekolah</td>
+                      <td>:</td>
+                      <td>{{$identitas->nama_sekolah}}</td>
+                    </tr>
+                    <tr>
+                      <td>Status</td>
+                      <td>:</td>
+                      <td>{{$identitas->status}}</td>
+                    </tr>
+                    <tr>
+                      <td>Alamat</td>
+                      <td>:</td>
+                      <td>{{$identitas->alamat}}</td>
+                    </tr>
+                    <tr>
+                      <td>Telepon/Fax</td>
+                      <td>:</td>
+                      <td>{{$identitas->telepon_fax}}</td>
+                    </tr>
+                    <tr>
+                      <td>Email</td>
+                      <td>:</td>
+                      <td>{{$identitas->website_email}}</td>
+                    </tr>
+                    <tr>
+                      <td>Kepala Sekolah</td>
+                      <td>:</td>
+                      <td>{{$identitas->kepala_sekolah}}</td>
+                    </tr>
+                    <tr>
+                      <td>Nomer Sekolah</td>
+                      <td>:</td>
+                      <td>{{$identitas->nomer_sekolah}}</td>
+                    </tr>
+                    <tr>
+                      <td>NPSN</td>
+                      <td>:</td>
+                      <td>{{$identitas->npsn}}</td>
+                    </tr>
+                    <tr>
+                      <td>Nomer SK Pendirian</td>
+                      <td>:</td>
+                      <td>{{$identitas->no_sk_pendirian}}</td>
+                    </tr>
+                    <tr>
+                      <td>Tanggal SK Pendirian</td>
+                      <td>:</td>
+                      <td>{{$identitas->tgl_sk_pendirian}}</td>
+                    </tr>
+                    <tr>
+                      <td>Nomer Penyelenggaraan</td>
+                      <td>:</td>
+                      <td>{{$identitas->no_penyelenggaraan}}</td>
+                    </tr>
+                    <tr>
+                      <td>Penyelenggara</td>
+                      <td>:</td>
+                      <td>{{$identitas->penyelenggara}}</td>
+                    </tr>
+                    <tr>
+                      <td>Akreditasi</td>
+                      <td>:</td>
+                      <td>{{$identitas->akreditasi}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
   </div>
 </div>
 @endsection

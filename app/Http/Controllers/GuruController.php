@@ -79,6 +79,8 @@ class GuruController extends Controller
     public function update(Request $request, $id)
     {
         $guru = \App\Guru::find($id);
+        $guru_cover = $guru->gambar_guru;
+        Storage::disk('public')->delete($guru_cover);
         $cover = $request->file('gambar_guru');
         $guru = new Guru();
         if ($request->hasFile('gambar_guru')) {
@@ -109,6 +111,8 @@ class GuruController extends Controller
     public function delete($id)
     {
         $guru = \App\Guru::find($id);
+        $guru_cover = $guru->gambar_guru;
+        Storage::disk('public')->delete($guru_cover);
         $guru->delete();
         return redirect('/backend/guru')->with('delete', 'Data Berhasil di hapus');
     }

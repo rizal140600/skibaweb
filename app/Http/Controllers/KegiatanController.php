@@ -59,6 +59,8 @@ class KegiatanController extends Controller
     public function update(Request $request, $id)
     {
         $kegiatan = \App\Kegiatan::find($id);
+        $kegiatan_cover = $kegiatan->kegiatan_foto;
+        Storage::disk('public')->delete($kegiatan_cover);
         $cover = $request->file('kegiatan_foto');
         $kegiatan = new Kegiatan();
         if ($request->hasFile('kegiatan_foto')) {
@@ -87,6 +89,8 @@ class KegiatanController extends Controller
     public function delete($id)
     {
         $kegiatan = \App\Kegiatan::find($id);
+        $kegiatan_cover = $kegiatan->kegiatan_foto;
+        Storage::disk('public')->delete($kegiatan_cover);
         $kegiatan->delete();
         return redirect('/backend/kegiatan')->with('delete', 'Data Berhasil di hapus');
     }

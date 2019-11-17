@@ -34,7 +34,7 @@ class StrukturController extends Controller
         // $struktur->mime = $cover->getClientMimeType();
         // $struktur->original_filename = $cover->getClientOriginalName();
         // $struktur->filename = $cover->getFilename().'.'.$extension;
-        $struktur->update();
+        $struktur->save();
         // \App\struktur::create(
         //     $request->all()
         // );
@@ -44,6 +44,8 @@ class StrukturController extends Controller
     {
 
         $struktur = \App\Struktur::find($id);
+        $struktur_cover = $struktur->struktur_organisasi;
+        Storage::disk('public')->delete($struktur_cover);
         $struktur->delete();
         $cover = $request->file('struktur_organisasi');
         $extension = $cover->getClientOriginalExtension();

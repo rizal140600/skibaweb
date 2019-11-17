@@ -42,6 +42,8 @@ class TentangController extends Controller
     public function update(Request $request, $id)
     {
         $tentang = \App\Tentang::find($id);
+        $tentang_cover = $tentang->sekolah_gambar;
+        Storage::disk('public')->delete($tentang_cover);
         $tentang->delete();
         $cover = $request->file('sekolah_gambar');
         $tentang = new Tentang();

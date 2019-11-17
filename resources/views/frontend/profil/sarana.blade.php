@@ -18,28 +18,31 @@
 <div class="container">
   <div class="section-top-border">
     <h3 class="mb-30 title_color">Tabel Sarana Prasarana</h3>
-    <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">NO.</th>
-        <th scope="col">Ruang Area</th>
-        <th scope="col">Jumlah Ruang</th>
-        <th scope="col">Luas</th>
-        <th scope="col">Total Luas</th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach ($data_sarana as $index => $sarana)
-      <tr>
-        <th scope="row">{{$index +1}}</th>
-        <td>{{$sarana->ruang_area}}</td>
-        <td>{{$sarana->jumlah_ruang}}</td>
-        <td>{{$sarana->luas}}</td>
-        <td>{{$sarana->total_luas}}</td>
-      </tr>
-      @endforeach
-    </tbody>
-  </table>
+    <div class="card-body table-responsive p-0">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">NO.</th>
+                      <th scope="col" style="min-width: 150px">Ruang Area</th>
+                      <th scope="col" style="min-width: 125px">Jumlah Ruang</th>
+                      <th scope="col">Luas</th>
+                      <th scope="col" style="min-width: 100px">Total Luas</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach ($data_sarana as $index => $sarana)
+                    <tr>
+                      <th scope="row">{{$index +1}}</th>
+                      <td>{{$sarana->ruang_area}}</td>
+                      <td>{{$sarana->jumlah_ruang}}</td>
+                      <td>{{$sarana->luas}}</td>
+                      <td>{{$sarana->total_luas}}</td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+  </div>
   </div>
 </div>
 @endsection
