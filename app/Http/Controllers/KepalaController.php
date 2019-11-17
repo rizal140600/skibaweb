@@ -44,12 +44,12 @@ class KepalaController extends Controller
     {
         $kepala = \App\Kepala::find($id);
         $kepala_cover = $kepala->kepala_gambar;
-        Storage::disk('public')->delete($kepala_cover);
-        $kepala->delete();
+        // $kepala->delete();
         $cover = $request->file('kepala_gambar');
-        $kepala = new Kepala();
+        // $kepala = new Kepala();
         if ($request->hasFile('kepala_gambar')) {
             $extension = $cover->getClientOriginalExtension();
+            Storage::disk('public')->delete($kepala_cover);
             Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
             $kepala->kepala_gambar = $cover->getFileName().'.'.$extension;
         }else {

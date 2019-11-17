@@ -59,11 +59,11 @@ class GaleriController extends Controller
     {
         $galeri = \App\Galeri::find($id);
         $galeri_cover = $galeri->gambar;
-        Storage::disk('public')->delete($galeri_cover);
         $cover = $request->file('gambar');
-        $galeri = new galeri();
+        // $galeri = new galeri();
         if ($request->hasFile('gambar')) {
             $extension = $cover->getClientOriginalExtension();
+            Storage::disk('public')->delete($galeri_cover);
             Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
             $galeri->gambar = $cover->getFileName().'.'.$extension;
         }else {
@@ -76,7 +76,7 @@ class GaleriController extends Controller
         // $galeri->mime = $cover->getClientMimeType();
         // $galeri->original_filename = $cover->getClientOriginalName();
         // $galeri->filename = $cover->getFilename().'.'.$extension;
-        $galeri->update();
+        $galeri->save();
         // \App\Galeri::create(
         //     $request->all()
         // );

@@ -60,11 +60,11 @@ class KegiatanController extends Controller
     {
         $kegiatan = \App\Kegiatan::find($id);
         $kegiatan_cover = $kegiatan->kegiatan_foto;
-        Storage::disk('public')->delete($kegiatan_cover);
         $cover = $request->file('kegiatan_foto');
-        $kegiatan = new Kegiatan();
+        // $kegiatan = new Kegiatan();
         if ($request->hasFile('kegiatan_foto')) {
             $extension = $cover->getClientOriginalExtension();
+            Storage::disk('public')->delete($kegiatan_cover);
             Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
             $kegiatan->kegiatan_foto = $cover->getFileName().'.'.$extension;
         }else {
@@ -80,7 +80,7 @@ class KegiatanController extends Controller
         // $kegiatan->mime = $cover->getClientMimeType();
         // $kegiatan->original_filename = $cover->getClientOriginalName();
         // $kegiatan->filename = $cover->getFilename().'.'.$extension;
-        $kegiatan->update();
+        $kegiatan->save();
         // \App\Kegiatan::create(
         //     $request->all()
         // );

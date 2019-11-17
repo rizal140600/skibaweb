@@ -15,7 +15,8 @@ class Guru extends Model
         'bidang_id', 
         'pendidikan_id', 
         'alamat_guru', 
-        'telepon_guru'
+        'telepon_guru',
+        '_token'
     ];
     public function pembelajaran()
     {

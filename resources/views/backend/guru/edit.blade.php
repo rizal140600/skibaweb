@@ -30,7 +30,7 @@
                         <label>Gambar</label>
                       <div class="input-group mb-3">
                       <input type="hidden" name="gambar_guru" value="{{$guru->gambar_guru}}">
-                      <input class="note-image-input form-control-file note-form-control note-input" value="{{$guru->gambar_guru}}" type="file" name="gambar_guru" >
+                      <input class="note-image-input form-control-file note-form-control note-input" type="file" name="gambar_guru" >
                       </div>
                       <!-- text input -->
                       <div class="form-group">

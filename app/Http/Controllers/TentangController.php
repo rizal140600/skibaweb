@@ -43,12 +43,12 @@ class TentangController extends Controller
     {
         $tentang = \App\Tentang::find($id);
         $tentang_cover = $tentang->sekolah_gambar;
-        Storage::disk('public')->delete($tentang_cover);
-        $tentang->delete();
+        // $tentang->delete();
         $cover = $request->file('sekolah_gambar');
-        $tentang = new Tentang();
+        // $tentang = new Tentang();
         if ($request->hasFile('sekolah_gambar')) {
             $extension = $cover->getClientOriginalExtension();
+            Storage::disk('public')->delete($tentang_cover);
             Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
             $tentang->sekolah_gambar = $cover->getFileName().'.'.$extension;
         }else {

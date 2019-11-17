@@ -80,11 +80,11 @@ class GuruController extends Controller
     {
         $guru = \App\Guru::find($id);
         $guru_cover = $guru->gambar_guru;
-        Storage::disk('public')->delete($guru_cover);
         $cover = $request->file('gambar_guru');
-        $guru = new Guru();
+        // $guru = new Guru();
         if ($request->hasFile('gambar_guru')) {
             $extension = $cover->getClientOriginalExtension();
+            Storage::disk('public')->delete($guru_cover);
             Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
             $guru->gambar_guru = $cover->getFileName().'.'.$extension;
         }else {
@@ -102,7 +102,7 @@ class GuruController extends Controller
         // $guru->mime = $cover->getClientMimeType();
         // $guru->original_filename = $cover->getClientOriginalName();
         // $guru->filename = $cover->getFilename().'.'.$extension;
-        $guru->update();
+        $guru->save();
         // \App\Guru::create(
         //     $request->all()
         // );
