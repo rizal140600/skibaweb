@@ -25,6 +25,24 @@
         </button>
       </div>
       @endif
+      @if (count($errors) > 0)
+      <div class="alert text-white alert-danger alert-dismissible fade show" role="alert">
+        <strong>Maaf!</strong> Ada Kesalahan
+        <ul>
+
+            @foreach ($errors->all() as $error)
+
+                <li>{{ $error }}</li>
+
+            @endforeach
+
+        </ul>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+        @endif
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1>Guru</h1>
@@ -108,7 +126,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Nomor Telepon</label>
                                         <div class="input-group mb-3">
-                                          <input type="text" name="telepon_guru" class="form-control" placeholder="Telepon...">
+                                          <input type="tel" name="telepon_guru" class="form-control" placeholder="format: xxxxxxxxxx">
                                         </div>
                                     </div>
                                 </div>

@@ -23,7 +23,11 @@ class GaleriController extends Controller
     }
     public function create(Request $request)
     {
-        
+        request()->validate([
+
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'judul_gambar' => 'required',
+        ]);
         $cover = $request->file('gambar');
         $extension = $cover->getClientOriginalExtension();
         Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));

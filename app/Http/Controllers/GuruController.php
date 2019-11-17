@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Session;
 use App\Guru;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
 
 class GuruController extends Controller
 {
@@ -32,7 +33,13 @@ class GuruController extends Controller
     }
     public function create(Request $request)
     {
-        
+        request()->validate([
+
+            'gambar_guru' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'nama_guru' => 'required',
+            'alamat_guru' => 'required',
+            'telepon_guru' => 'required|numeric|digits_between:10,12'
+        ]);
         $cover = $request->file('gambar_guru');
         $extension = $cover->getClientOriginalExtension();
         Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
@@ -78,6 +85,10 @@ class GuruController extends Controller
     }
     public function update(Request $request, $id)
     {
+        request()->validate([
+
+            'telepon_guru' => 'numeric|digits_between:10,12'
+        ]);
         $guru = \App\Guru::find($id);
         $guru_cover = $guru->gambar_guru;
         $cover = $request->file('gambar_guru');

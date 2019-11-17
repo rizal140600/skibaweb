@@ -53,9 +53,6 @@
                             </div>
                             </div>
                         <div class="modal-footer justify-content-between">
-                            <a href="/backend/profil/kepala">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </a>
                         <button type="submit" class="btn text-white btn-warning">
                             Edit
                         </button>
@@ -79,9 +76,6 @@
                         </div>
                             </div>
                     <div class="modal-footer justify-content-between">
-                    <a href="/backend/profil/kepala">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </a>
                     <button type="submit" class="btn btn-success">Tambah</button>
                     </div>
                     </form>

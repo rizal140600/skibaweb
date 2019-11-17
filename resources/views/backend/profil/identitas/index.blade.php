@@ -78,7 +78,7 @@
                                 <input name="kepala_sekolah" type="text" value="{{$identitas->first()->kepala_sekolah}}" class="form-control" placeholder="Kepala Sekolah...">
                                 </div>
                             <div class="form-group">
-                                <label>Nomer Sekolah</label>
+                                <label>Nomer Statistik Sekolah</label>
                                 <input name="nomer_sekolah" type="text" value="{{$identitas->first()->nomer_sekolah}}" class="form-control" placeholder="Pendidikan...">
                                 </div>
                                 <div class="form-group">
@@ -91,7 +91,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal SK Pendirian</label>
-                                    <input name="tgl_sk_pendirian" type="text" value="{{$identitas->first()->tgl_sk_pendirian}}" class="form-control" placeholder="Pendidikan...">
+                                    <input name="tgl_sk_pendirian" id="datepicker" type="text" value="{{$identitas->first()->tgl_sk_pendirian}}" class="form-control" placeholder="Pendidikan...">
                                 </div>
                                 <div class="form-group">
                                     <label>Nomer Penyelenggaraan</label>
@@ -109,9 +109,6 @@
                         
                     </div>
                     <div class="modal-footer justify-content-between">
-                        <a href="/backend/profil/identitas">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </a>
                         <button type="submit" class="btn text-white btn-warning">
                         Edit
                         </button>
@@ -137,7 +134,7 @@
                             </div>
                             <div class="form-group">
                                 <label>telepon/fax</label>
-                                <input name="telepon_fax" type="text" class="form-control" placeholder="Telepon/Fax...">
+                                <input name="telepon_fax" type="text" class="form-control" placeholder="format: xxxxxxxxxx">
                                 </div>
                             <div class="form-group">
                                 <label>Website Email</label>
@@ -148,8 +145,8 @@
                                 <input name="kepala_sekolah" type="text" class="form-control" placeholder="Kepala Sekolah...">
                                 </div>
                             <div class="form-group">
-                                <label>Nomer Sekolah</label>
-                                <input name="nomer_sekolah" type="text" class="form-control" placeholder="Nomer...">
+                                <label>Nomer Statistik Sekolah</label>
+                                <input name="nomer_sekolah" type="text" class="form-control" placeholder="Nomer Statistik Sekolah...">
                                 </div>
                                 <div class="form-group">
                                 <label>NPSN</label>
@@ -161,7 +158,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal SK Pendirian</label>
-                                    <input name="tgl_sk_pendirian" type="text" class="form-control" placeholder="Tanggal Surat Keputusan...">
+                                    <input id="datepicker" name="tgl_sk_pendirian" type="text" class="form-control date" placeholder="Tanggal Surat Keputusan...">
                                 </div>
                                 <div class="form-group">
                                     <label>Nomer Penyelenggaraan</label>
@@ -179,9 +176,6 @@
                         
                     </div>
                     <div class="modal-footer justify-content-between">
-                        <a href="/backend/profil/identitas">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </a>
                         <button type="submit" class="btn text-white btn-success">
                         Tambah
                         </button>

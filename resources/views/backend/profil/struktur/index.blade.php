@@ -37,9 +37,6 @@
                             <input class="note-image-input form-control-file note-form-control note-input"  type="file" name="struktur_organisasi" >
                             </div>
                         <div class="modal-footer justify-content-between">
-                            <a href="/backend/profil/struktur">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </a>
                         <button type="submit" class="btn text-white btn-warning">
                             Edit
                         </button>
@@ -52,9 +49,6 @@
                             <input class="note-image-input form-control-file note-form-control note-input" type="file" name="struktur_organisasi" >
                         </div>
                     <div class="modal-footer justify-content-between">
-                    <a href="/backend/profil/struktur">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </a>
                     <button type="submit" class="btn btn-success">Tambah</button>
                     </div>
                     </form>
