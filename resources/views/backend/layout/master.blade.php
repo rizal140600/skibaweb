@@ -23,12 +23,48 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
       <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
          rel = "stylesheet">
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 
       <!-- Javascript -->
       <script>
          $(function() {
-            $( "#datepicker-1" ).datepicker();
+            $( "#tanggal" ).datepicker({
+              beforeShow: function(input, inst)
+                {
+                  var rect = input.getBoundingClientRect();
+                    inst.dpDiv.css({top: rect.top + 200, left: rect.left + 200});
+                },
+              locale:'id',
+              dateFormat : "dd-mm-yy",
+            });
          });
+         $(function() { 
+              $('#tahun').datepicker( {
+                beforeShow: function (input, inst) {
+                    var rect = input.getBoundingClientRect();
+                    setTimeout(function () {
+                      inst.dpDiv.css({ top: rect.top + 25, left: rect.left + 200 });
+                    }, 0);
+                },
+                    changeMonth: false,
+                    changeYear: true,
+                    showButtonPanel: false,
+                    dateFormat: 'yy',
+                    viewMode: "years", 
+                    minViewMode: "years",
+                    yearRange: '1950:2025',
+                    onClose: function(dateText, inst) { 
+                    var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                        $(this).datepicker('setDate', new Date(year, 1));
+                    }
+                }).focus(function () {
+                            $(".ui-datepicker-month").hide();
+                            $(".ui-datepicker-calendar").hide();
+                            $(".ui-datepicker-prev").hide();
+                            $(".ui-datepicker-next").hide();
+                        });
+            });
       </script>
 </head>
 <body class="hold-transition sidebar-mini">

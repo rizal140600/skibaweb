@@ -80,7 +80,8 @@
                                       </div>
                                       <div class="form-group">
                                         <label>Tahun</label>
-                                        <input name="kegiatan_tahun" type="text" class="form-control" id="exampleInputEmail1" placeholder="Tahun...">
+                                        <input name="kegiatan_tahun" type="text" class="form-control" id="tahun" placeholder="format : YYYY">
+                                        {{-- <input name="startYear" id="tahun" class="date-picker-year" />   --}}
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Waktu</label>

@@ -25,6 +25,24 @@
             </button>
         </div>
         @endif
+        @if (count($errors) > 0)
+      <div class="alert text-white alert-danger alert-dismissible fade show" role="alert">
+        <strong>Maaf!</strong> Ada Kesalahan
+        <ul>
+
+            @foreach ($errors->all() as $error)
+
+                <li>{{ $error }}</li>
+
+            @endforeach
+
+        </ul>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+        @endif
     <div class="row mb-2">
         <div class="col-sm-6">
         <h1>Identitas Sekolah</h1>
@@ -91,7 +109,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal SK Pendirian</label>
-                                    <input name="tgl_sk_pendirian" id="datepicker" type="text" value="{{$identitas->first()->tgl_sk_pendirian}}" class="form-control" placeholder="Pendidikan...">
+                                    <input name="tgl_sk_pendirian" id="tanggal" type="text" value="{{$identitas->first()->tgl_sk_pendirian}}" class="form-control" placeholder="Pendidikan...">
                                 </div>
                                 <div class="form-group">
                                     <label>Nomer Penyelenggaraan</label>
@@ -158,7 +176,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal SK Pendirian</label>
-                                    <input id="datepicker-1" name="tgl_sk_pendirian" type="text" class="form-control date" placeholder="Tanggal Surat Keputusan...">
+                                    <input id="tanggal" name="tgl_sk_pendirian" type="text" class="form-control " placeholder="format : HH-BB-TTTT">
+                                    {{-- <input class="datepicker" name="tahun" id="tanggal" type="text"> --}}
                                 </div>
                                 <div class="form-group">
                                     <label>Nomer Penyelenggaraan</label>

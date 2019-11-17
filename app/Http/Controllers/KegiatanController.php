@@ -22,9 +22,17 @@ class KegiatanController extends Controller
                 
             //
     }
+    
     public function create(Request $request)
     {
-        
+        request()->validate([
+
+            'kegiatan_foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'kegiatan_judul' => 'required',
+            'kegiatan_isi' => 'required',
+            'kegiatan_lokasi' => 'required',
+            'telepon_guru' => 'required|numeric|digits_between:10,12'
+        ]);
         $cover = $request->file('kegiatan_foto');
         $extension = $cover->getClientOriginalExtension();
         Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
