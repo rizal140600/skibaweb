@@ -23,7 +23,6 @@ class KepalaController extends Controller
     }
     public function create(Request $request)
     {
-        
         $cover = $request->file('kepala_gambar');
         $extension = $cover->getClientOriginalExtension();
         Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
