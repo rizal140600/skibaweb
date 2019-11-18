@@ -80,8 +80,9 @@
                                 <form action="/backend/kegiatan/create" enctype="multipart/form-data"  method="post">
                                     {{csrf_field()}}
                                     <div class="form-group">
+                                      <img class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px"  id="gambar" />
                                         <label for="exampleInputEmail1">Foto Kegiatan</label>
-                                        <input class="note-image-input form-control-file note-form-control note-input" type="file" name="kegiatan_foto" >
+                                        <input class="note-image-input form-control-file note-form-control note-input" type="file" name="kegiatan_foto" id="gambarUpload">
                                       </div>
                                       <div class="form-group">
                                         <label for="exampleInputEmail1">Judul</label>
@@ -202,4 +203,22 @@
       </div>
       <!-- /.row -->
     </section>
+@endsection
+@section('script')
+<script>
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function(e) {
+        $('#gambar').attr('src', e.target.result);
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#gambarUpload").change(function() {
+  readURL(this);
+});
+</script>
 @endsection

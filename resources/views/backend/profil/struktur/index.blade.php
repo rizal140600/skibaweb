@@ -49,10 +49,10 @@
                         {{csrf_field()}}
                         <div class="row">
                             <div class="col-sm-12">
-                                <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/" . $struktur->first()->struktur_organisasi) }}" />
+                                <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/" . $struktur->first()->struktur_organisasi) }}" id="gambar" />
                                 <label>Gambar</label>
                             <div class="input-group mb-3">
-                            <input type="hidden" name="struktur_organisasi" value="{{ asset("/storage/" . $struktur->first()->struktur_organisasi) }}">
+                            <input type="hidden" name="struktur_organisasi" id="gambarUpload" value="{{ asset("/storage/" . $struktur->first()->struktur_organisasi) }}">
                             <input class="note-image-input form-control-file note-form-control note-input"  type="file" name="struktur_organisasi" >
                             </div>
                         <div class="modal-footer justify-content-between">
@@ -64,8 +64,9 @@
                         <form action="/backend/profil/struktur/create" enctype="multipart/form-data"  method="post">
                         {{csrf_field()}}
                         <div class="form-group">
+                            <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" id="gambar" />
                             <label for="exampleInputEmail1">Gambar</label>
-                            <input class="note-image-input form-control-file note-form-control note-input" type="file" name="struktur_organisasi" >
+                            <input class="note-image-input form-control-file note-form-control note-input" id="gambarUpload" type="file" name="struktur_organisasi" >
                         </div>
                     <div class="modal-footer justify-content-between">
                     <button type="submit" class="btn btn-success">Tambah</button>
@@ -84,4 +85,22 @@
 </section>
 
     <!-- Main content -->
+@endsection
+@section('script')
+<script>
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function(e) {
+        $('#gambar').attr('src', e.target.result);
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#gambarUpload").change(function() {
+  readURL(this);
+});
+</script>
 @endsection

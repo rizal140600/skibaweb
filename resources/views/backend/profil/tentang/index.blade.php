@@ -70,11 +70,11 @@
                         {{csrf_field()}}
                         <div class="row">
                             <div class="col-sm-12">
-                                <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/" . $tentang->first()->sekolah_gambar) }}" />
+                                <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/" . $tentang->first()->sekolah_gambar) }}" id="gambar"/>
                                 <label>Gambar</label>
                             <div class="input-group mb-3">
                             <input type="hidden" name="sekolah_gambar" value="{{$tentang->first()->sekolah_gambar}}">
-                            <input class="note-image-input form-control-file note-form-control note-input" type="file" name="sekolah_gambar" >
+                            <input class="note-image-input form-control-file note-form-control note-input" type="file" id="gambarUpload" name="sekolah_gambar" >
                             </div>
                             <div class="form-group">
                             <label>Tentang Sekolah</label>
@@ -96,8 +96,9 @@
                         <form action="/backend/profil/tentang/create" enctype="multipart/form-data"  method="post">
                         {{csrf_field()}}
                         <div class="form-group">
+                            <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px"  id="gambar"/>
                             <label for="exampleInputEmail1">Gambar</label>
-                            <input class="note-image-input form-control-file note-form-control note-input" type="file" name="sekolah_gambar" >
+                            <input class="note-image-input form-control-file note-form-control note-input" id="gambarUpload"type="file" name="sekolah_gambar" >
                         </div>
                         <div class="form-group">
                         <label>Tentang Sekolah</label>
@@ -120,4 +121,22 @@
     </section>
 
     <!-- Main content -->
+@endsection
+@section('script')
+<script>
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function(e) {
+        $('#gambar').attr('src', e.target.result);
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#gambarUpload").change(function() {
+  readURL(this);
+});
+</script>
 @endsection

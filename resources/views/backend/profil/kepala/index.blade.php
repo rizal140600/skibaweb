@@ -79,8 +79,9 @@
                         <form action="/backend/profil/kepala/create" enctype="multipart/form-data"  method="post">
                         {{csrf_field()}}
                         <div class="form-group">
+                            <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="" id="gambar" />
                             <label for="exampleInputEmail1">Gambar</label>
-                            <input class="note-image-input form-control-file note-form-control note-input" type="file" name="kepala_gambar" >
+                            <input class="note-image-input form-control-file note-form-control note-input" type="file" id="gambarUpload" name="kepala_gambar" >
                         </div>
                         <div class="form-group">
                             <label>Kepala Sekolah</label>
@@ -108,6 +109,8 @@
         </div>
     </div><!-- /.container-fluid -->
 </section>
+@endsection
+@section('script')
 <script>
     function readURL(input) {
     if (input.files && input.files[0]) {
@@ -124,6 +127,4 @@ $("#gambarUpload").change(function() {
   readURL(this);
 });
 </script>
-
-    <!-- Main content -->
 @endsection

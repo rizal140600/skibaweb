@@ -269,7 +269,7 @@
 t/jquery.min.js"></script> --}}
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
+@yield('script')
 <script>
   $(function() { 
     $('#range-waktu').daterangepicker({
@@ -283,35 +283,7 @@ t/jquery.min.js"></script> --}}
         }).on('show.daterangepicker', function (ev, picker) {
             picker.container.find(".calendar-table").hide();
         });
-    // $('#tahun').datepicker( {
-    //    onSelect: function(dateText, inst) {
-    //     var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-    //           $(this).datepicker('setDate', new Date(year, 1));
-    // },
-    //   beforeShow: function (input, inst) {
-    //       var rect = input.getBoundingClientRect();
-    //       setTimeout(function () {
-    //         inst.dpDiv.css({ top: rect.top + 35, left: rect.left + 170 });
-    //       }, 0);
-    //   },
-    //       changeMonth: false,
-    //       changeYear: true,
-    //       showButtonPanel: false,
-    //       dateFormat: 'yy',
-    //       viewMode: "years", 
-    //       minViewMode: "years",
-    //       yearRange: '1950:2025',
-    //       onClose: function(dateText, inst) { 
-    //       var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-    //           $(this).datepicker('setDate', new Date(year, 1));
-    //       }
-    //   }).focus(function () {
-    //               $(".ui-datepicker-month").hide();
-    //               $(".ui-datepicker-calendar").hide();
-    //               $(".ui-datepicker-prev").hide();
-    //               $(".ui-datepicker-next").hide();
-    //           });
-     $('#tahun').datepicker( {
+    $('#tahun').datepicker( {
     yearRange: "c-100:c",
     changeMonth: false,
     changeYear: true,

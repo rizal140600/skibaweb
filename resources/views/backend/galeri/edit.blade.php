@@ -26,11 +26,11 @@
                   {{csrf_field()}}
                   <div class="row">
                     <div class="col-sm-12">
-                          <img class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/' . $galeri->gambar) }}" />
+                          <img class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/' . $galeri->gambar) }}" id="gambar" />
                         <label>Gambar</label>
                       <div class="input-group mb-3">
                       <input type="hidden" name="gambar" value="{{$galeri->gambar}}">
-                      <input class="note-image-input form-control-file note-form-control note-input" value="{{$galeri->gambar}}" type="file" name="gambar" >
+                      <input id="gambarUpload" class="note-image-input form-control-file note-form-control note-input" value="{{$galeri->gambar}}" type="file" name="gambar" >
                       </div>
                       <!-- text input -->
                     </div>
@@ -76,4 +76,22 @@
     </section>
 
     <!-- Main content -->
+@endsection
+@section('script')
+<script>
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function(e) {
+        $('#gambar').attr('src', e.target.result);
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#gambarUpload").change(function() {
+  readURL(this);
+});
+</script>
 @endsection
