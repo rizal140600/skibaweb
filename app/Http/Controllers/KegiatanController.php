@@ -52,8 +52,8 @@ class KegiatanController extends Controller
         // \App\Kegiatan::create(
         //     $request->all()
         // );
-        dd($kegiatan);
-        return redirect('/backend/pembelajaran')->with('success', 'Tambah data berhasil');
+        // dd($kegiatan);
+        return redirect('/backend/kegiatan')->with('success', 'Tambah data berhasil');
     }
     public function edit($id)
     {

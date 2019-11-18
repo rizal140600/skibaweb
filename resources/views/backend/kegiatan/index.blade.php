@@ -88,23 +88,23 @@
                                         <input name="kegiatan_judul" type="text" class="form-control" id="exampleInputEmail1" placeholder="Judul...">
                                       </div>
                                       <div class="form-group">
+                                          <label for="exampleInputEmail1">Waktu</label>
+                                          <input name="kegiatan_waktu" type="text" class="form-control" id="range-waktu" placeholder="Waktu...">
+                                      </div>
+                                      <div class="form-group">
                                         <label>Isi</label>
                                         <textarea class="textarea" name="kegiatan_isi" placeholder="isi kegiatan"
                                         style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                                      </div>
-                                      <div class="form-group">
-                                        <label>Lokasi</label>
-                                        <input name="kegiatan_lokasi" type="text" class="form-control" id="exampleInputEmail1" placeholder="Lokasi...">
                                       </div>
                                       <div class="form-group">
                                         <label>Tahun</label>
                                         <input name="kegiatan_tahun" type="text" class="form-control" id="tahun" placeholder="format : YYYY">
                                         {{-- <input name="startYear" id="tahun" class="date-picker-year" />   --}}
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Waktu</label>
-                                        <input name="kegiatan_waktu" type="text" class="form-control" id="exampleInputEmail1" placeholder="Waktu...">
-                                    </div>
+                                      <div class="form-group">
+                                        <label>Lokasi</label>
+                                        <input name="kegiatan_lokasi" type="text" class="form-control" id="exampleInputEmail1" placeholder="Lokasi...">
+                                      </div>
                                 </div>
                                 <div class="modal-footer justify-content-between">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

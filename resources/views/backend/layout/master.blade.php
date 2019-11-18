@@ -21,53 +21,15 @@
   <!-- Theme style -->
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
       <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
          rel = "stylesheet">
       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<link rel="stylesheet" href="/admin/year/yearpicker.css">
 
-      <!-- Javascript -->
-      <script>
-         $(function() {
-            $( "#tanggal" ).datepicker({
-              beforeShow: function(input, inst)
-    {
-        inst.dpDiv.css({marginTop: 5, marginLeft: 250});
-    },
-    onSelect : function(text, values){
-                 /*Handle Select*/
-    },
-              locale:'id',
-              dateFormat : "dd-mm-yy",
-            });
-         });
-         $(function() { 
-              $('#tahun').datepicker( {
-                beforeShow: function (input, inst) {
-                    var rect = input.getBoundingClientRect();
-                    setTimeout(function () {
-                      inst.dpDiv.css({ top: rect.top + 25, left: rect.left + 200 });
-                    }, 0);
-                },
-                    changeMonth: false,
-                    changeYear: true,
-                    showButtonPanel: false,
-                    dateFormat: 'yy',
-                    viewMode: "years", 
-                    minViewMode: "years",
-                    yearRange: '1950:2025',
-                    onClose: function(dateText, inst) { 
-                    var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-                        $(this).datepicker('setDate', new Date(year, 1));
-                    }
-                }).focus(function () {
-                            $(".ui-datepicker-month").hide();
-                            $(".ui-datepicker-calendar").hide();
-                            $(".ui-datepicker-prev").hide();
-                            $(".ui-datepicker-next").hide();
-                        });
-            });
-      </script>
+
+
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -303,6 +265,67 @@
 <script src="/admin/plugins/toastr/toastr.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+{{-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/lates
+t/jquery.min.js"></script> --}}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<script>
+  $(function() { 
+    $('#range-waktu').daterangepicker({
+            timePicker: true,
+            timePicker24Hour: true,
+            timePickerIncrement: 1,
+            timePickerSeconds: true,
+            locale: {
+                format: 'HH:mm:ss'
+            }
+        }).on('show.daterangepicker', function (ev, picker) {
+            picker.container.find(".calendar-table").hide();
+        });
+    $('#tahun').datepicker( {
+       onSelect: function(dateText, inst) {
+        var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+              $(this).datepicker('setDate', new Date(year, 1));
+    },
+      beforeShow: function (input, inst) {
+          var rect = input.getBoundingClientRect();
+          setTimeout(function () {
+            inst.dpDiv.css({ top: rect.top + 35, left: rect.left + 170 });
+          }, 0);
+      },
+          changeMonth: false,
+          changeYear: true,
+          showButtonPanel: false,
+          dateFormat: 'yy',
+          viewMode: "years", 
+          minViewMode: "years",
+          yearRange: '1950:2025',
+          onClose: function(dateText, inst) { 
+          var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+              $(this).datepicker('setDate', new Date(year, 1));
+          }
+      }).focus(function () {
+                  $(".ui-datepicker-month").hide();
+                  $(".ui-datepicker-calendar").hide();
+                  $(".ui-datepicker-prev").hide();
+                  $(".ui-datepicker-next").hide();
+              });
+  });
+$(function() {
+  $('input[name="tgl_sk_pendirian"]').daterangepicker({
+    locale: {
+      format: 'DD-MM-YYYY',
+    },
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
+  });
+});
+</script>
 <script type="text/javascript">
   $(function() {
     const Toast = Swal.mixin({
