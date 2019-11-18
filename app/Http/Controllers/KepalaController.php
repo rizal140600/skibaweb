@@ -23,6 +23,12 @@ class KepalaController extends Controller
     }
     public function create(Request $request)
     {
+        request()->validate([
+
+            'kepala_gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'kepala' => 'required',
+            'kepala_sambutan' => 'required',
+        ]);
         $cover = $request->file('kepala_gambar');
         $extension = $cover->getClientOriginalExtension();
         Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
@@ -41,6 +47,10 @@ class KepalaController extends Controller
     }
     public function update(Request $request, $id)
     {
+        request()->validate([
+
+            'kepala_gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
         $kepala = \App\Kepala::find($id);
         $kepala_cover = $kepala->kepala_gambar;
         // $kepala->delete();

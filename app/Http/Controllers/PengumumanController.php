@@ -20,6 +20,11 @@ class PengumumanController extends Controller
     }
     public function create(Request $resquest)
     {
+        request()->validate([
+
+            'judul_pengumuman' => 'required',
+            'isi_pengumuman' => 'required',
+        ]);
         \App\Pengumuman::create($resquest->all());
         return redirect('/backend/pengumuman')->with('success', 'Tambah data Berhasil');
     }

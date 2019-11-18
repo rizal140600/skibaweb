@@ -20,6 +20,11 @@ class MisiController extends Controller
     }
     public function create(Request $resquest)
     {
+        request()->validate([
+
+            'visi' => 'required',
+            'misi' => 'required',
+        ]);
         \App\Misi::create($resquest->all());
         return redirect('/backend/profil/misi')->with('success', 'Tambah data Berhasil');
     }

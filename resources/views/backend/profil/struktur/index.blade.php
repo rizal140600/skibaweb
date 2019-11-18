@@ -3,6 +3,24 @@
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
+        @if (count($errors) > 0)
+      <div class="alert text-white alert-danger alert-dismissible fade show" role="alert">
+        <strong>Maaf!</strong> Ada Kesalahan
+        <ul>
+
+            @foreach ($errors->all() as $error)
+
+                <li>{{ $error }}</li>
+
+            @endforeach
+
+        </ul>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+        @endif
         <div class="row mb-2">
             <div class="col-sm-6">
             <h1>Struktur Organisasi</h1>
@@ -34,6 +52,7 @@
                                 <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/" . $struktur->first()->struktur_organisasi) }}" />
                                 <label>Gambar</label>
                             <div class="input-group mb-3">
+                            <input type="hidden" name="struktur_organisasi" value="{{ asset("/storage/" . $struktur->first()->struktur_organisasi) }}">
                             <input class="note-image-input form-control-file note-form-control note-input"  type="file" name="struktur_organisasi" >
                             </div>
                         <div class="modal-footer justify-content-between">

@@ -20,6 +20,13 @@ class SaranaController extends Controller
     }
     public function create(Request $resquest)
     {
+        request()->validate([
+
+            'ruang_area' => 'required',
+            'jumlah_ruang' => 'required|numeric',
+            'luas' => 'required|numeric',
+            'total_luas' => 'required|numeric',
+        ]);
         \App\Sarana::create($resquest->all());
         return redirect('/backend/profil/sarana')->with('success', 'Tambah data Berhasil');
     }
@@ -35,6 +42,13 @@ class SaranaController extends Controller
     }
     public function update(Request $resquest, $id)
     {
+        request()->validate([
+
+            'ruang_area' => '',
+            'jumlah_ruang' => 'numeric',
+            'luas' => 'numeric',
+            'total_luas' => 'numeric',
+        ]);
         $sarana = \App\Sarana::find($id);
         $sarana->update($resquest->all());
         return redirect('/backend/profil/sarana')->with('update', 'Data Berhasil di edit');

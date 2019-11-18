@@ -22,6 +22,11 @@ class PembelajaranController extends Controller
     }
     public function create(Request $resquest)
     {
+        request()->validate([
+
+            'nama_file' => 'required',
+            'link' => 'required',
+        ]);
         \App\Pembelajaran::create($resquest->all());
         return redirect('/backend/pembelajaran')->with('success', 'Tambah data Berhasil');
     }

@@ -23,6 +23,11 @@ class TentangController extends Controller
     }
     public function create(Request $request)
     {
+        request()->validate([
+
+            'sekolah_gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'tentang' => 'required',
+        ]);
         
         $cover = $request->file('sekolah_gambar');
         $extension = $cover->getClientOriginalExtension();
@@ -41,6 +46,10 @@ class TentangController extends Controller
     }
     public function update(Request $request, $id)
     {
+        request()->validate([
+
+            'sekolah_gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
         $tentang = \App\Tentang::find($id);
         $tentang_cover = $tentang->sekolah_gambar;
         // $tentang->delete();

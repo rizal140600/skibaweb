@@ -25,6 +25,24 @@
     </button>
     </div>
     @endif
+    @if (count($errors) > 0)
+      <div class="alert text-white alert-danger alert-dismissible fade show" role="alert">
+        <strong>Maaf!</strong> Ada Kesalahan
+        <ul>
+
+            @foreach ($errors->all() as $error)
+
+                <li>{{ $error }}</li>
+
+            @endforeach
+
+        </ul>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+        @endif
     <div class="row mb-2">
         <div class="col-sm-6">
         <h1>Sarana Prasarana</h1>
@@ -70,11 +88,11 @@
                                 <input name="jumlah_ruang" type="text" class="form-control" id="exampleInputEmail1" placeholder="Jumlah Ruang...">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Luas</label>
+                                    <label for="exampleInputEmail1">Luas(m<sup>2</sup>)</label>
                                     <input type="text" name="luas" class="form-control" id="exampleInputEmail1" placeholder="luas...">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Total Luas</label>
+                                    <label for="exampleInputEmail1">Total Luas(m<sup>2</sup>)</label>
                                     <input type="text" name="total_luas" class="form-control" id="exampleInputEmail1" placeholder="total luas...">
                                 </div>
                             </div>

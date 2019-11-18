@@ -20,6 +20,10 @@ class StudiController extends Controller
     }
     public function create(Request $resquest)
     {
+        request()->validate([
+
+            'nama_bidang' => 'required',
+        ]);
         \App\Studi::create($resquest->all());
         return redirect('/backend/studi')->with('success', 'Tambah data berhasil');
     }

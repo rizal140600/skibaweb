@@ -19,6 +19,16 @@ class UserController extends Controller
     }
     public function create(Request $request)
     {
+        request()->validate([
+
+            'name' => 'required',
+            'email' => 'required',
+            'password' => [
+            'required',
+            'string',
+            'min:8',             // must be at least 10 characters in length
+        ],
+        ]);
         $user = new \App\User;
         $user->role_id = $request->role_id;
         $user->name = $request->name;

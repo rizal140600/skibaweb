@@ -21,6 +21,24 @@
             @else
             <div class="card card-success">
             @endif
+            @if (count($errors) > 0)
+      <div class="alert text-white alert-danger alert-dismissible fade show" role="alert">
+        <strong>Maaf!</strong> Ada Kesalahan
+        <ul>
+
+            @foreach ($errors->all() as $error)
+
+                <li>{{ $error }}</li>
+
+            @endforeach
+
+        </ul>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+        @endif
                 <div class="card-header text-white">
                 <h3 class="card-title">Form</h3>
                 </div>

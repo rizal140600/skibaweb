@@ -23,7 +23,10 @@ class StrukturController extends Controller
     }
     public function create(Request $request)
     {
-        
+        request()->validate([
+
+            'struktur_organisasi' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
         $cover = $request->file('struktur_organisasi');
         $extension = $cover->getClientOriginalExtension();
         Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
@@ -42,7 +45,10 @@ class StrukturController extends Controller
     }
     public function update(Request $request, $id)
     {
+        request()->validate([
 
+            'struktur_organisasi' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
         $struktur = \App\Struktur::find($id);
         $struktur_cover = $struktur->struktur_organisasi;
         // $struktur->delete();
