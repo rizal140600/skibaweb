@@ -283,35 +283,59 @@ t/jquery.min.js"></script> --}}
         }).on('show.daterangepicker', function (ev, picker) {
             picker.container.find(".calendar-table").hide();
         });
-    $('#tahun').datepicker( {
-       onSelect: function(dateText, inst) {
-        var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-              $(this).datepicker('setDate', new Date(year, 1));
-    },
-      beforeShow: function (input, inst) {
-          var rect = input.getBoundingClientRect();
-          setTimeout(function () {
-            inst.dpDiv.css({ top: rect.top + 35, left: rect.left + 170 });
-          }, 0);
-      },
-          changeMonth: false,
-          changeYear: true,
-          showButtonPanel: false,
-          dateFormat: 'yy',
-          viewMode: "years", 
-          minViewMode: "years",
-          yearRange: '1950:2025',
-          onClose: function(dateText, inst) { 
-          var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-              $(this).datepicker('setDate', new Date(year, 1));
-          }
-      }).focus(function () {
-                  $(".ui-datepicker-month").hide();
-                  $(".ui-datepicker-calendar").hide();
-                  $(".ui-datepicker-prev").hide();
-                  $(".ui-datepicker-next").hide();
-              });
+    // $('#tahun').datepicker( {
+    //    onSelect: function(dateText, inst) {
+    //     var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+    //           $(this).datepicker('setDate', new Date(year, 1));
+    // },
+    //   beforeShow: function (input, inst) {
+    //       var rect = input.getBoundingClientRect();
+    //       setTimeout(function () {
+    //         inst.dpDiv.css({ top: rect.top + 35, left: rect.left + 170 });
+    //       }, 0);
+    //   },
+    //       changeMonth: false,
+    //       changeYear: true,
+    //       showButtonPanel: false,
+    //       dateFormat: 'yy',
+    //       viewMode: "years", 
+    //       minViewMode: "years",
+    //       yearRange: '1950:2025',
+    //       onClose: function(dateText, inst) { 
+    //       var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+    //           $(this).datepicker('setDate', new Date(year, 1));
+    //       }
+    //   }).focus(function () {
+    //               $(".ui-datepicker-month").hide();
+    //               $(".ui-datepicker-calendar").hide();
+    //               $(".ui-datepicker-prev").hide();
+    //               $(".ui-datepicker-next").hide();
+    //           });
+     $('#tahun').datepicker( {
+    yearRange: "c-100:c",
+    changeMonth: false,
+    changeYear: true,
+    showButtonPanel: true,
+    closeText:'Select',
+    currentText: 'This year',
+    onClose: function(dateText, inst) {
+      var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+      $(this).val($.datepicker.formatDate('yy', new Date(year, 1, 1)));
+    }
+  }).focus(function () {
+    $(".ui-datepicker-month").hide();
+    $(".ui-datepicker-calendar").hide();
+    $(".ui-datepicker-current").hide();
+    $(".ui-datepicker-prev").hide();
+    $(".ui-datepicker-next").hide();
+    $("#ui-datepicker-div").position({
+      my: "left top",
+      at: "left bottom",
+      of: $(this)
+    });
+  }).attr("readonly", false);
   });
+  
 $(function() {
   $('input[name="tgl_sk_pendirian"]').daterangepicker({
     locale: {
