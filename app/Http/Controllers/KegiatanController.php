@@ -31,7 +31,7 @@ class KegiatanController extends Controller
             'kegiatan_judul' => 'required',
             'kegiatan_isi' => 'required',
             'kegiatan_lokasi' => 'required',
-            'telepon_guru' => 'required|numeric|digits_between:10,12'
+            // 'telepon_guru' => 'required|numeric|digits_between:10,12'
         ]);
         $cover = $request->file('kegiatan_foto');
         $extension = $cover->getClientOriginalExtension();
@@ -48,11 +48,12 @@ class KegiatanController extends Controller
         // $kegiatan->mime = $cover->getClientMimeType();
         // $kegiatan->original_filename = $cover->getClientOriginalName();
         // $kegiatan->filename = $cover->getFilename().'.'.$extension;
-        $kegiatan->save();
+        $kegiatan->save($request->all());
         // \App\Kegiatan::create(
         //     $request->all()
         // );
-        return redirect('/backend/kegiatan')->with('success', 'Tambah data berhasil');
+        dd($kegiatan);
+        return redirect('/backend/pembelajaran')->with('success', 'Tambah data berhasil');
     }
     public function edit($id)
     {
@@ -88,7 +89,7 @@ class KegiatanController extends Controller
         // $kegiatan->mime = $cover->getClientMimeType();
         // $kegiatan->original_filename = $cover->getClientOriginalName();
         // $kegiatan->filename = $cover->getFilename().'.'.$extension;
-        $kegiatan->save();
+        $kegiatan->save($request->all());
         // \App\Kegiatan::create(
         //     $request->all()
         // );

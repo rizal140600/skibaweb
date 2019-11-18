@@ -31,10 +31,12 @@
          $(function() {
             $( "#tanggal" ).datepicker({
               beforeShow: function(input, inst)
-                {
-                  var rect = input.getBoundingClientRect();
-                    inst.dpDiv.css({top: rect.top + 200, left: rect.left + 200});
-                },
+    {
+        inst.dpDiv.css({marginTop: 5, marginLeft: 250});
+    },
+    onSelect : function(text, values){
+                 /*Handle Select*/
+    },
               locale:'id',
               dateFormat : "dd-mm-yy",
             });
