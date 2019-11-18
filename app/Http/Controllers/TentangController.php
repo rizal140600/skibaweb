@@ -31,7 +31,7 @@ class TentangController extends Controller
         
         $cover = $request->file('sekolah_gambar');
         $extension = $cover->getClientOriginalExtension();
-        Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+        Storage::disk('public')->put('sekolah/' . $cover->getFilename().'.'.$extension,  File::get($cover));
 
         $tentang = new Tentang();
         $tentang->sekolah_gambar = $cover->getFileName().'.'.$extension;
@@ -57,8 +57,8 @@ class TentangController extends Controller
         // $tentang = new Tentang();
         if ($request->hasFile('sekolah_gambar')) {
             $extension = $cover->getClientOriginalExtension();
-            Storage::disk('public')->delete($tentang_cover);
-            Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+            Storage::disk('public')->delete('sekolah/' . $tentang_cover);
+            Storage::disk('public')->put('sekolah/' . $cover->getFilename().'.'.$extension,  File::get($cover));
             $tentang->sekolah_gambar = $cover->getFileName().'.'.$extension;
         }else {
             $tentang->sekolah_gambar = $request->sekolah_gambar;

@@ -25,7 +25,7 @@
                 <form role="form" action="/backend/kegiatan/{{$kegiatan->id}}/update" enctype="multipart/form-data" method="POST">
                   {{csrf_field()}}
                   <div class="form-group">
-                    <img class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/' . $kegiatan->kegiatan_foto) }}" id="gambar" />
+                    <img class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/kegiatan/' . $kegiatan->kegiatan_foto) }}" id="gambar" />
                         <label for="exampleInputEmail1">Foto Kegiatan</label>
                         <input type="hidden" name="kegiatan_foto" value="{{$kegiatan->kegiatan_foto}}">
                         <input class="note-image-input form-control-file note-form-control note-input" type="file" id="gambarUpload" name="kegiatan_foto" >

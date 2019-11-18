@@ -44,7 +44,7 @@
                   {{csrf_field()}}
                   <div class="row">
                     <div class="col-sm-12">
-                          <img class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/' . $guru->gambar_guru) }}" id="gambar" />
+                          <img class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/guru/' . $guru->gambar_guru) }}" id="gambar" />
                         <label>Gambar</label>
                       <div class="input-group mb-3">
                       <input type="hidden" name="gambar_guru" value="{{$guru->gambar_guru}}">

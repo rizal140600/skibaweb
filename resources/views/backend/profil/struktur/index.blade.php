@@ -49,11 +49,11 @@
                         {{csrf_field()}}
                         <div class="row">
                             <div class="col-sm-12">
-                                <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/" . $struktur->first()->struktur_organisasi) }}" id="gambar" />
+                                <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/struktur sekolah/" . $struktur->first()->struktur_organisasi) }}" id="gambar" />
                                 <label>Gambar</label>
                             <div class="input-group mb-3">
-                            <input type="hidden" name="struktur_organisasi" id="gambarUpload" value="{{ asset("/storage/" . $struktur->first()->struktur_organisasi) }}">
-                            <input class="note-image-input form-control-file note-form-control note-input"  type="file" name="struktur_organisasi" >
+                            <input type="hidden" name="struktur_organisasi" value="{{ asset("/storage/struktur sekolah/" . $struktur->first()->struktur_organisasi) }}">
+                            <input class="note-image-input form-control-file note-form-control note-input"  type="file" name="struktur_organisasi" id="gambarUpload" >
                             </div>
                         <div class="modal-footer justify-content-between">
                         <button type="submit" class="btn text-white btn-warning">

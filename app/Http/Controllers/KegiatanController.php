@@ -35,7 +35,7 @@ class KegiatanController extends Controller
         ]);
         $cover = $request->file('kegiatan_foto');
         $extension = $cover->getClientOriginalExtension();
-        Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+        Storage::disk('public')->put('kegiatan/' . $cover->getFilename().'.'.$extension,  File::get($cover));
 
         $kegiatan = new Kegiatan();
         $kegiatan->kegiatan_judul = $request->kegiatan_judul;
@@ -73,8 +73,8 @@ class KegiatanController extends Controller
         // $kegiatan = new Kegiatan();
         if ($request->hasFile('kegiatan_foto')) {
             $extension = $cover->getClientOriginalExtension();
-            Storage::disk('public')->delete($kegiatan_cover);
-            Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+            Storage::disk('public')->delete('kegiatan/' . $kegiatan_cover);
+            Storage::disk('public')->put('kegiatan/' . $cover->getFilename().'.'.$extension,  File::get($cover));
             $kegiatan->kegiatan_foto = $cover->getFileName().'.'.$extension;
         }else {
             $kegiatan->kegiatan_foto = $request->kegiatan_foto;
@@ -99,7 +99,7 @@ class KegiatanController extends Controller
     {
         $kegiatan = \App\Kegiatan::find($id);
         $kegiatan_cover = $kegiatan->kegiatan_foto;
-        Storage::disk('public')->delete($kegiatan_cover);
+        Storage::disk('public')->delete('kegiatan/' . $kegiatan_cover);
         $kegiatan->delete();
         return redirect('/backend/kegiatan')->with('delete', 'Data Berhasil di hapus');
     }

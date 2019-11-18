@@ -42,7 +42,7 @@ class GuruController extends Controller
         ]);
         $cover = $request->file('gambar_guru');
         $extension = $cover->getClientOriginalExtension();
-        Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+        Storage::disk('public')->put('guru/' .  $cover->getFilename().'.'.$extension,  File::get($cover));
 
         $guru = new Guru();
         $guru->nama_guru = $request->nama_guru;
@@ -95,8 +95,8 @@ class GuruController extends Controller
         // $guru = new Guru();
         if ($request->hasFile('gambar_guru')) {
             $extension = $cover->getClientOriginalExtension();
-            Storage::disk('public')->delete($guru_cover);
-            Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+            Storage::disk('public')->delete('guru/' .$guru_cover);
+            Storage::disk('public')->put('guru/' .$cover->getFilename().'.'.$extension,  File::get($cover));
             $guru->gambar_guru = $cover->getFileName().'.'.$extension;
         }else {
             $guru->gambar_guru = $request->gambar_guru;
@@ -123,7 +123,7 @@ class GuruController extends Controller
     {
         $guru = \App\Guru::find($id);
         $guru_cover = $guru->gambar_guru;
-        Storage::disk('public')->delete($guru_cover);
+        Storage::disk('public')->delete('guru/' .$guru_cover);
         $guru->delete();
         return redirect('/backend/guru')->with('delete', 'Data Berhasil di hapus');
     }

@@ -29,7 +29,7 @@ class StrukturController extends Controller
         ]);
         $cover = $request->file('struktur_organisasi');
         $extension = $cover->getClientOriginalExtension();
-        Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+        Storage::disk('public')->put('struktur sekolah/' . $cover->getFilename().'.'.$extension,  File::get($cover));
 
         $struktur = new Struktur();
         $struktur->struktur_organisasi = $cover->getFileName().'.'.$extension;
@@ -55,8 +55,8 @@ class StrukturController extends Controller
         $cover = $request->file('struktur_organisasi');
         if ($request->hasFile('struktur_organisasi')) {
             $extension = $cover->getClientOriginalExtension();
-            Storage::disk('public')->delete($struktur_cover);
-            Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+            Storage::disk('public')->delete('struktur sekolah/' . $struktur_cover);
+            Storage::disk('public')->put('struktur sekolah/' . $cover->getFilename().'.'.$extension,  File::get($cover));
             $struktur->struktur_organisasi = $cover->getFileName().'.'.$extension;
         }else {
             $struktur->struktur_organisasi = $request->struktur_organisasi;

@@ -30,7 +30,7 @@ class GaleriController extends Controller
         ]);
         $cover = $request->file('gambar');
         $extension = $cover->getClientOriginalExtension();
-        Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+        Storage::disk('public')->put('galeri/' . $cover->getFilename().'.'.$extension,  File::get($cover));
 
         $galeri = new Galeri();
         $galeri->judul_gambar = $request->judul_gambar;
@@ -67,8 +67,8 @@ class GaleriController extends Controller
         // $galeri = new galeri();
         if ($request->hasFile('gambar')) {
             $extension = $cover->getClientOriginalExtension();
-            Storage::disk('public')->delete($galeri_cover);
-            Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+            Storage::disk('public')->delete('galeri/' . $galeri_cover);
+            Storage::disk('public')->put('galeri/' . $cover->getFilename().'.'.$extension,  File::get($cover));
             $galeri->gambar = $cover->getFileName().'.'.$extension;
         }else {
             $galeri->gambar = $request->gambar;
@@ -90,7 +90,7 @@ class GaleriController extends Controller
     {
         $galeri = \App\Galeri::find($id);
         $galeri_cover = $galeri->gambar;
-        Storage::disk('public')->delete($galeri_cover);
+        Storage::disk('public')->delete('galeri/' . $galeri_cover);
         $galeri->delete();
         return redirect('/backend/galeri')->with('delete', 'Data Berhasil di hapus');
     }
