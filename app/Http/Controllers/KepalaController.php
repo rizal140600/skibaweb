@@ -31,7 +31,7 @@ class KepalaController extends Controller
         ]);
         $cover = $request->file('kepala_gambar');
         $extension = $cover->getClientOriginalExtension();
-        Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+        Storage::disk('public')->put('kepala/' . $cover->getFilename().'.'.$extension,  File::get($cover));
 
         $kepala = new Kepala();
         $kepala->kepala_gambar = $cover->getFileName().'.'.$extension;
@@ -58,8 +58,8 @@ class KepalaController extends Controller
         // $kepala = new Kepala();
         if ($request->hasFile('kepala_gambar')) {
             $extension = $cover->getClientOriginalExtension();
-            Storage::disk('public')->delete($kepala_cover);
-            Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+            Storage::disk('public')->delete('kepala/' . $kepala_cover);
+            Storage::disk('public')->put('kepala/' . $cover->getFilename().'.'.$extension,  File::get($cover));
             $kepala->kepala_gambar = $cover->getFileName().'.'.$extension;
         }else {
             $kepala->kepala_gambar = $request->kepala_gambar;

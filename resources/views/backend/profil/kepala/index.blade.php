@@ -49,7 +49,7 @@
                         {{csrf_field()}}
                         <div class="row">
                             <div class="col-sm-12">
-                                <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/" . $kepala->first()->kepala_gambar) }}" id="gambar" />
+                                <img class="rounded mx-auto d-block" style="max-height: 250px; max-width: 250px" src="{{ asset("/storage/kepala/" . $kepala->first()->kepala_gambar) }}" id="gambar" />
                                 <label>Gambar</label>
                             <div class="input-group mb-3">
                             <input type="hidden" name="kepala_gambar" value="{{$kepala->first()->kepala_gambar}}">
