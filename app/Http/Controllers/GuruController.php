@@ -14,7 +14,7 @@ class GuruController extends Controller
 {
     public function index()
     {
-        $data_guru = \App\Guru::all();
+        $data_guru = \App\Guru::paginate(10);
         $data_kelamin = \App\Kelamin::all();
         $data_pendidikan = \App\Pendidikan::all();
         $data_status = \App\Status::all();

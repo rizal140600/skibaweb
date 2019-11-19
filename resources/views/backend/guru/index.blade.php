@@ -145,7 +145,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover">
+                <table class="table table-hover mb-5">
                   <thead>
                     <tr>
                       <th>NO.</th>
@@ -155,7 +155,7 @@
                       <th style="min-width: 150px">Bidang Studi</th>
                       <th>Pendidikan</th>
                       <th>Status</th>
-                      <th>Alamat</th>
+                      <th style="min-width: 250px">Alamat</th>
                       <th>Telepon</th>
                       <th>Aksi</th>
                     </tr>
@@ -163,7 +163,7 @@
                   <tbody>
                       @foreach($data_guru as $index => $guru)
                     <tr>
-                      <td>{{$index +1}}</td>
+                      <td>{{ $data_guru->firstItem() + $index }}</td>
                       <th>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#guru{{$guru->id}}">
@@ -205,6 +205,9 @@
                     @endforeach
                   </tbody>
                 </table>
+                <div class="container ml-3">
+                  {{$data_guru->links()}}
+                </div>
               </div>
               <!-- /.card-body -->
             </div>

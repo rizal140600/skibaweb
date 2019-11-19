@@ -184,34 +184,13 @@
               </p>
             </a>
           </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+          <li class="nav-item">
+            <a href="/backend/guru" class="nav-link">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>
               <p>
                 Guru
-                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/backend/guru" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Data Guru</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/backend/guru/status" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Status Guru</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/backend/guru/pendidikan" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Pendidikan Guru</p>
-                </a>
-              </li>
-            </ul>
           </li>
           @if (auth()->user()->role->role_user == 'admin')
           <li class="nav-item">

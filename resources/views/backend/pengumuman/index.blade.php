@@ -103,7 +103,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body table-responsive p-0">
-            <table class="table table-hover">
+            <table class="table table-hover mb-5">
                 <thead>
                 <tr>
                     <th>NO.</th>
@@ -152,10 +152,12 @@
                 @endforeach
                 </tbody>
             </table>
+            <div class="container ml-3">
+                {{$data_pengumuman->links()}}
+            </div>
         </div>
         <!-- /.card-body -->
     </div>
-    {{$data_pengumuman->links()}}
         <!-- /.card -->
 
         <!-- /.card -->
