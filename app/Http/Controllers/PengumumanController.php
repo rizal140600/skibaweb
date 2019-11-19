@@ -10,7 +10,7 @@ class PengumumanController extends Controller
 {
     public function index()
     {
-        $data_pengumuman = \App\Pengumuman::all();
+        $data_pengumuman = \App\Pengumuman::paginate(10);
         //
                 return view('backend.pengumuman.index', [
                     'data_pengumuman' => $data_pengumuman,

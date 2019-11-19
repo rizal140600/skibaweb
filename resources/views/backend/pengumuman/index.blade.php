@@ -115,7 +115,7 @@
                 <tbody>
                     @foreach($data_pengumuman as $index => $pengumuman)
                 <tr>
-                    <td>{{ $index +1}}</td>
+                    <td>{{ $data_pengumuman->firstItem() + $index }}</td>
                     <td>{{$pengumuman->judul_pengumuman}}</td>
                     <td>
                         
@@ -152,9 +152,10 @@
                 @endforeach
                 </tbody>
             </table>
-            </div>
-            <!-- /.card-body -->
         </div>
+        <!-- /.card-body -->
+    </div>
+    {{$data_pengumuman->links()}}
         <!-- /.card -->
 
         <!-- /.card -->
