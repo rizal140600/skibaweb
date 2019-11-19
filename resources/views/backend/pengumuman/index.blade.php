@@ -107,7 +107,7 @@
                 <thead>
                 <tr>
                     <th>NO.</th>
-                    <th>Judul</th>
+                    <th style="min-width: 250px">Judul</th>
                     <th>Isi</th>
                     <th>Aksi</th>
                 </tr>
