@@ -58,22 +58,12 @@ class GuruController extends Controller
         $s1 = \App\Guru::where('pendidikan_id', '=','1')->count();
         $s2 = \App\Guru::where('pendidikan_id', '=','2')->count();
         $s3 = \App\Guru::where('pendidikan_id', '=','3')->count();
-        $d4 = \App\Guru::where('pendidikan_id', '=','4')->count();
-        $d3 = \App\Guru::where('pendidikan_id', '=','5')->count();
-        $d2 = \App\Guru::where('pendidikan_id', '=','6')->count();
-        $d1 = \App\Guru::where('pendidikan_id', '=','7')->count();
-        $smk_sma = \App\Guru::where('pendidikan_id', '=','8')->count();
         $identitas = \App\Identitas::first();
         return view('frontend.guru.pendidikan',[
             'data_pendidikan' => $data_pendidikan,
             's1' => $s1,
             's2' => $s2,
             's3' => $s3,
-            'd4' => $d4,
-            'd3' => $d3,
-            'd2' => $d2,
-            'd1' => $d1,
-            'smk_sma' => $smk_sma,
             'identitas' => $identitas
         ]);
     }

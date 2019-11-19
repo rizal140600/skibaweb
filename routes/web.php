@@ -65,18 +65,6 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,guru']], function () {
   Route::post('/backend/guru/{id}/update', 'GuruController@update');
   Route::get('/backend/guru/{id}/delete', 'GuruController@delete');
   
-  Route::get('/backend/guru/pendidikan', 'PendidikanController@index');
-  Route::post('/backend/guru/pendidikan/create', 'PendidikanController@create');
-  Route::get('/backend/guru/pendidikan/{id}/edit', 'PendidikanController@edit');
-  Route::post('/backend/guru/pendidikan/{id}/update', 'PendidikanController@update');
-  Route::get('/backend/guru/pendidikan/{id}/delete', 'PendidikanController@delete');
-  
-  Route::get('/backend/guru/status', 'StatusController@index');
-  Route::post('/backend/guru/status/create', 'StatusController@create');
-  Route::get('/backend/guru/status/{id}/edit', 'StatusController@edit');
-  Route::post('/backend/guru/status/{id}/update', 'StatusController@update');
-  Route::get('/backend/guru/status/{id}/delete', 'StatusController@delete');
-  
   Route::get('/backend/studi', 'StudiController@index');
   Route::post('/backend/studi/create', 'StudiController@create');
   Route::get('/backend/studi/{id}/edit', 'StudiController@edit');

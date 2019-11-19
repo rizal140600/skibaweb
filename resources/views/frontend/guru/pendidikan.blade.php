@@ -38,16 +38,6 @@
                       <td>{{$s2}}</td>
                       @elseif($index == 2)
                       <td>{{$s3}}</td>
-                      @elseif($index == 3)
-                      <td>{{$d4}}</td>
-                      @elseif($index == 4)
-                      <td>{{$d3}}</td>
-                      @elseif($index == 5)
-                      <td>{{$d2}}</td>
-                      @elseif($index == 6)
-                      <td>{{$d1}}</td>
-                      @elseif($index == 7)
-                      <td>{{$smk_sma}}</td>
                       @endif
                     </tr>
                     @endforeach
