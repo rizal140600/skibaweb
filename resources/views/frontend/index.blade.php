@@ -44,7 +44,7 @@
                                     <article class="row blog_item">
                                         <div class="col-md-12">
                                             <div class="blog_post">
-                                                <img src="{{ asset("/storage/kegiatan" . $kegiatan->kegiatan_foto) }}" alt="">
+                                                <img src="{{ asset("/storage/kegiatan/" . $kegiatan->kegiatan_foto) }}" alt="">
                                                 <div class="blog_details">
                                                     <a href="single-blog.html"><h2>{{$kegiatan->kegiatan_judul}}</h2></a>
                                                     <p>{!! str_limit(strip_tags($kegiatan->kegiatan_isi), $limit = 250, $end = '...') !!}</p>
@@ -104,9 +104,9 @@
                                 @foreach ($data_galeri as $galeri)
                                 <?php if($count == 10) break; ?>
                                 <div class="">
-                                    <a href="{{ asset("/storage/galeri" . $galeri->gambar) }}">
+                                    <a href="{{ asset("/storage/galeri/" . $galeri->gambar) }}">
                                         <div class="hovereffect">
-                                            <img class="single-gallery-image px-2 galeri" src="{{ asset("/storage/" . $galeri->gambar) }}" alt="">
+                                            <img class="single-gallery-image px-2 galeri" src="{{ asset("/storage/galeri/" . $galeri->gambar) }}" alt="">
                                             <div class="overlay">
                                                 <h2 style="font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{$galeri->judul_gambar}}</h2>
                                                 <p>
@@ -142,7 +142,7 @@
                                             <div class="testi_item w-100 text-center ">
                                                     <a href="/guru/detail/{{$guru->id}}" class="text-dark">
                                             <div class="mx-auto mb-5 w-25 width100" style="background-color: #f9f9ff">
-                                                <img class="gambar_guru pt-5 " style="max-width: 250px;max-height:250px" src="{{ asset("/storage/" . $guru->gambar_guru) }}" alt="">
+                                                <img class="gambar_guru pt-5 " style="max-width: 250px;max-height:250px" src="{{ asset("/storage/guru/" . $guru->gambar_guru) }}" alt="">
                                                 <h4 style="font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{$guru->nama_guru}}</h4>
                                                 <p class="pb-3">{{$guru->studi->nama_bidang}}</p>
                                             </div>
