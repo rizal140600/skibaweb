@@ -10,7 +10,7 @@ class PengumumanController extends Controller
     public function pengumuman()
     {
         $identitas = \App\Identitas::first();
-        $data_pengumuman = \App\Pengumuman::all();
+        $data_pengumuman = \App\Pengumuman::paginate(10);
         return view('frontend.pengumuman.pengumuman',[
             'identitas' => $identitas,
             'data_pengumuman' => $data_pengumuman

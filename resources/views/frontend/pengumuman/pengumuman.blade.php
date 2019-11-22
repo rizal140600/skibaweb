@@ -19,7 +19,7 @@
   <div class="section-top-border">
     <h3 class="mb-30 title_color">Tabel Pengumuman</h3>
     <div class="card-body table-responsive p-0">
-            <table class="table table-hover">
+            <table class="table table-hover mb-5">
                 <thead>
                 <tr>
                     <th>NO.</th>
@@ -31,7 +31,7 @@
                 <tbody>
                     @foreach($data_pengumuman as $index => $pengumuman)
                 <tr>
-                    <td>{{ $index +1}}</td>
+                    <td>{{ $data_pengumuman->firstItem() + $index}}</td>
                     <td>{{$pengumuman->judul_pengumuman}}</td>
                     <td>{!! str_limit(strip_tags($pengumuman->isi_pengumuman), $limit = 150, $end = '...') !!}</td>
                     <td style="min-width: 105px">
@@ -46,6 +46,9 @@
                 @endforeach
                 </tbody>
             </table>
+            <div class="container ml-3">
+                  {{$data_pengumuman->links()}}
+                </div>
             </div>
   </div>
 </div>
