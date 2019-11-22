@@ -13,7 +13,7 @@ class GaleriController extends Controller
 {
     public function index()
     {
-        $data_galeri = \App\Galeri::all();
+        $data_galeri = \App\Galeri::paginate(10);
         $data_kategori = \App\Kategori::all();
         return view('backend.galeri.index', [
             'data_galeri' => $data_galeri, 
