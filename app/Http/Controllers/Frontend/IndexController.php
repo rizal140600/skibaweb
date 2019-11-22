@@ -18,14 +18,18 @@ class IndexController extends Controller
         $data_galeri = \App\Galeri::all()->sortByDesc('updated_at');
         $data_guru = \App\Guru::paginate(3);
         $identitas = \App\Identitas::all();
-        return view('frontend.index',[
-            'kepala_sekolah' => $kepala_sekolah,
-            'data_pengumuman' => $data_pengumuman,
-            'data_kegiatan' => $data_kegiatan,
-            'data_pembelajaran' => $data_pembelajaran,
-            'data_galeri' => $data_galeri,
-            'data_guru' => $data_guru,
-            'identitas' => $identitas
-        ]);
+        if ($identitas->isNotEmpty()) {
+            return view('frontend.index',[
+                'kepala_sekolah' => $kepala_sekolah,
+                'data_pengumuman' => $data_pengumuman,
+                'data_kegiatan' => $data_kegiatan,
+                'data_pembelajaran' => $data_pembelajaran,
+                'data_galeri' => $data_galeri,
+                'data_guru' => $data_guru,
+                'identitas' => $identitas
+            ]);
+        }else{
+            return redirect('/masuk');
+        };
     }
 }

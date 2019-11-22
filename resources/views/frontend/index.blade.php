@@ -22,7 +22,7 @@
                     <h3 class="mb-30 title_color">Sambutan Kepala Sekolah</h3>
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="{{ asset("/storage/" . $kepala_sekolah->first()->kepala_gambar) }}" alt="" class="img-fluid">
+                            <img src="{{ asset("/storage/kepala/" . $kepala_sekolah->first()->kepala_gambar) }}" alt="" class="img-fluid">
                         </div>
                         <div class="col-md-9 mt-sm-20 left-align-p">
                             <p>
@@ -44,7 +44,7 @@
                                     <article class="row blog_item">
                                         <div class="col-md-12">
                                             <div class="blog_post">
-                                                <img src="{{ asset("/storage/" . $kegiatan->kegiatan_foto) }}" alt="">
+                                                <img src="{{ asset("/storage/kegiatan" . $kegiatan->kegiatan_foto) }}" alt="">
                                                 <div class="blog_details">
                                                     <a href="single-blog.html"><h2>{{$kegiatan->kegiatan_judul}}</h2></a>
                                                     <p>{!! str_limit(strip_tags($kegiatan->kegiatan_isi), $limit = 250, $end = '...') !!}</p>
@@ -104,7 +104,7 @@
                                 @foreach ($data_galeri as $galeri)
                                 <?php if($count == 10) break; ?>
                                 <div class="">
-                                    <a href="{{ asset("/storage/" . $galeri->gambar) }}">
+                                    <a href="{{ asset("/storage/galeri" . $galeri->gambar) }}">
                                         <div class="hovereffect">
                                             <img class="single-gallery-image px-2 galeri" src="{{ asset("/storage/" . $galeri->gambar) }}" alt="">
                                             <div class="overlay">
