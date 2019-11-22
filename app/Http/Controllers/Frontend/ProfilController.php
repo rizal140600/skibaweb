@@ -53,7 +53,7 @@ class ProfilController extends Controller
     public function sarana()
     {
         $identitas = \App\Identitas::first();
-        $data_sarana = \App\Sarana::all();
+        $data_sarana = \App\Sarana::paginate(10);
         return view('frontend.profil.sarana',[
             'identitas' => $identitas,
             'data_sarana' => $data_sarana

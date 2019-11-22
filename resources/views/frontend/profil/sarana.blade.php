@@ -19,7 +19,7 @@
   <div class="section-top-border">
     <h3 class="mb-30 title_color">Tabel Sarana Prasarana</h3>
     <div class="card-body table-responsive p-0">
-                <table class="table table-hover">
+                <table class="table table-hover mb-5">
                   <thead>
                     <tr>
                       <th scope="col">NO.</th>
@@ -32,7 +32,7 @@
                   <tbody>
                     @foreach ($data_sarana as $index => $sarana)
                     <tr>
-                      <th scope="row">{{$index +1}}</th>
+                      <th scope="row">{{$data_sarana->firstItem() + $index}}</th>
                       <td>{{$sarana->ruang_area}}</td>
                       <td>{{$sarana->jumlah_ruang}}</td>
                       <td>{{$sarana->luas}}</td>
@@ -41,6 +41,9 @@
                     @endforeach
                   </tbody>
                 </table>
+                <div class="container ml-3">
+                  {{$data_sarana->links()}}
+                </div>
               </div>
   </div>
   </div>
