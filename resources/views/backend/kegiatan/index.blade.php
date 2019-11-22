@@ -121,7 +121,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover">
+                <table class="table table-hover mb-5">
                   <thead>
                     <tr>
                       <th>NO.</th>
@@ -137,7 +137,7 @@
                   <tbody>
                       @foreach($data_kegiatan as $index => $kegiatan)
                     <tr>
-                      <td>{{$index +1}}</td>
+                      <td>{{ $data_kegiatan->firstItem() + $index }}</td>
                       <th >
                         <!-- Button trigger modal -->
                         <button type="button" class="m-0 p-0" data-toggle="modal" data-target="#kegiatan{{$kegiatan->id}}">
@@ -192,6 +192,10 @@
                     @endforeach
                   </tbody>
                 </table>
+                <div class="container ml-3">
+                  {{$data_kegiatan->links()}}
+                </div>
+            </div>
               </div>
               <!-- /.card-body -->
             </div>

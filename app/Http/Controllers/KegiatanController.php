@@ -13,7 +13,7 @@ class KegiatanController extends Controller
 {
     public function index()
     {
-        $data_kegiatan = \App\Kegiatan::all();
+        $data_kegiatan = \App\Kegiatan::paginate(10);
         //
                 return view('backend.kegiatan.index', [
                     'data_kegiatan' => $data_kegiatan, 
