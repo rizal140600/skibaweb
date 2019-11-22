@@ -19,12 +19,12 @@
                     <div class="container">
                         <div class="section-top-border">
                             <h3 class="title_color">Galeri</h3>
-                            <div class="row gallery-item">
+                            {{-- <div class="row gallery-item">
                                 @foreach ($data_galeri as $galeri)
                                 <div class="">
                                     <a href="{{ asset("/storage/galeri/" . $galeri->gambar) }}">
                                         <div class="hovereffect">
-                                            <img class="single-gallery-image px-2 galeri" src="{{ asset("/storage/galeri" . $galeri->gambar) }}" alt="">
+                                            <img class="single-gallery-image px-2 galeri" src="{{ asset("/storage/galeri/" . $galeri->gambar) }}" alt="">
                                             <div class="overlay">
                                                 <h2 style="font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{$galeri->judul_gambar}}</h2>
                                                 <p>
@@ -35,7 +35,8 @@
                                     </a>
                                 </div>
                                 @endforeach
-                            </div>
+                            </div> --}}
+                            
                         </div> 
                     </div> 
                 </div>

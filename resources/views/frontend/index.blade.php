@@ -102,7 +102,7 @@
                             <div class="row gallery-item">
                                 <?php $count = 0; ?>
                                 @foreach ($data_galeri as $galeri)
-                                <?php if($count == 10) break; ?>
+                                <?php if($count == 9) break; ?>
                                 <div class="">
                                     <a href="{{ asset("/storage/galeri/" . $galeri->gambar) }}">
                                         <div class="hovereffect">

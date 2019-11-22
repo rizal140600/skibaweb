@@ -16,7 +16,7 @@ class IndexController extends Controller
         $data_kegiatan = \App\Kegiatan::all()->sortByDesc('updated_at');
         $data_pembelajaran = \App\Pembelajaran::all()->sortByDesc('updated_at');
         $data_galeri = \App\Galeri::all()->sortByDesc('updated_at');
-        $data_guru = \App\Guru::paginate(3);
+        $data_guru = \App\Guru::all();
         $identitas = \App\Identitas::all();
         if ($identitas->isNotEmpty()) {
             return view('frontend.index',[
