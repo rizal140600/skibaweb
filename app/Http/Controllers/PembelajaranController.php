@@ -10,7 +10,7 @@ class PembelajaranController extends Controller
 {
     public function index()
     {
-        $data_pembelajaran = \App\Pembelajaran::all();
+        $data_pembelajaran = \App\Pembelajaran::paginate(10);
         $data_guru = \App\Guru::all();
         //
                 return view('backend.pembelajaran.index', [
