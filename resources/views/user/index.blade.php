@@ -118,7 +118,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover">
+                <table class="table table-hover mb-5">
                   <thead>
                     <tr>
                       <th>NO.</th>
@@ -131,7 +131,7 @@
                   <tbody>
                       @foreach($data_user as $index => $user)
                     <tr>
-                      <td>{{$index +1}}</td>
+                      <td>{{ $data_user->firstItem() + $index }}</td>
                       <td>{{$user->role->role_user}}</td>
                       <td>{{$user->name}}</td>
                       <td>{{$user->email}}</td>
@@ -153,6 +153,9 @@
                     @endforeach
                   </tbody>
                 </table>
+                <div class="container ml-3">
+                  {{$data_user->links()}}
+                </div>
               </div>
               <!-- /.card-body -->
             </div>

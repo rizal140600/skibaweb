@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $data_user = \App\User::all();
+        $data_user = \App\User::paginate(10);
         $data_role = \App\Role::all();
         return view('user.index', 
         [
