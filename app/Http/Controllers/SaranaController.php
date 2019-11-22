@@ -10,7 +10,7 @@ class SaranaController extends Controller
 {
     public function index()
     {
-        $data_sarana = \App\Sarana::all();
+        $data_sarana = \App\Sarana::paginate(10);
         //
                 return view('backend.profil.sarana.index', [
                     'data_sarana' => $data_sarana,

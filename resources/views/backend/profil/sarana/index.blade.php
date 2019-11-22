@@ -110,7 +110,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body table-responsive p-0">
-            <table class="table table-hover">
+            <table class="table table-hover mb-5">
                 <thead>
                 <tr>
                     <th>NO.</th>
@@ -124,7 +124,7 @@
                 <tbody>
                     @foreach($data_sarana as $index => $sarana)
                 <tr>
-                    <td>{{ $index +1}}</td>
+                    <td>{{ $data_sarana->firstItem() + $index }}</td>
                     <td>{{$sarana->ruang_area}}</td>
                     <td>{{$sarana->jumlah_ruang}}</td>
                     <td>{{$sarana->luas}}</td>
@@ -147,6 +147,9 @@
                 @endforeach
                 </tbody>
             </table>
+            <div class="container ml-3">
+                  {{$data_sarana->links()}}
+                </div>
             </div>
             <!-- /.card-body -->
         </div>
