@@ -12,7 +12,7 @@ class GuruController extends Controller
     public function index()
     {
         $identitas = \App\Identitas::first();
-        $data_guru = \App\Guru::all();
+        $data_guru = \App\Guru::paginate(10);
         return view('frontend.guru.guru',[
             'identitas' => $identitas,
             'data_guru' => $data_guru

@@ -19,7 +19,7 @@
   <div class="section-top-border">
     <h3 class="mb-30 title_color">Tabel Guru</h3>
   <div class="card-body table-responsive p-0">
-                <table class="table table-hover">
+                <table class="table table-hover mb-5">
                   <thead>
                     <tr>
                       <th>NO.</th>
@@ -37,7 +37,7 @@
                   <tbody>
                       @foreach($data_guru as $index => $guru)
                     <tr>
-                      <td>{{$index +1}}</td>
+                      <td>{{ $data_guru->firstItem() + $index }}</td>
                       <th>
                         <button type="button" class="m-0 p-0" data-toggle="modal" data-target="#kegiatan{{$guru->id}}">
                           <img style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
@@ -72,6 +72,9 @@
                     @endforeach
                   </tbody>
                 </table>
+                <div class="container ml-3">
+                  {{$data_guru->links()}}
+                </div>
               </div>
   </div>
 </div>
