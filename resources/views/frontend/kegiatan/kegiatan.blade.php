@@ -35,6 +35,9 @@
                                     </article> 
                                     <hr class="pb-5">  
                                     @endforeach
+                                        <div class="container ml-3">
+                                            {{$data_kegiatan->links()}}
+                                        </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">

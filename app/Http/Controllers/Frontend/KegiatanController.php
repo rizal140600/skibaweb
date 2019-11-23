@@ -10,7 +10,7 @@ class KegiatanController extends Controller
     public function kegiatan()
     {
         $identitas = \App\Identitas::first();
-        $data_kegiatan = \App\Kegiatan::all();
+        $data_kegiatan = \App\Kegiatan::paginate(5);
         $data_pembelajaran = \App\Pembelajaran::all();
         $data_pengumuman = \App\Pengumuman::all();
         return view('frontend.kegiatan.kegiatan', [
