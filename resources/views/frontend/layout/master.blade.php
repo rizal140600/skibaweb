@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -57,6 +56,7 @@
                     <li class="nav-item"><a class="nav-link" href="/guru">Guru</a>
                     <li class="nav-item"><a class="nav-link" href="/guru/status">Status Guru</a>
                       <li class="nav-item"><a class="nav-link" href="/guru/pendidikan">Pendidikan Guru</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/guru/studi">Bidang Studi</a></li>
                             </ul>
                           </li> 
 								<li class="nav-item "><a class="nav-link" href="/pembelajaran">Pembelajaran</a></li> 
@@ -79,7 +79,7 @@
                       <li class="nav-item"><a class="nav-link" href="/galeri/kegiatan">Prestasi</a></li>
                             </ul>
                           </li> 
-                          <li class="nav-item "><a class="nav-link" href="/studi">Bidang Studi</a></li> 
+                          <li class="nav-item "><a class="nav-link" href="/jurusan">Jurusan</a></li> 
                           <li class="nav-item "><a class="nav-link" href="/kegiatan">Kegiatan</a></li> 
                           <li class="nav-item "><a class="nav-link" href="/kontak">Kontak</a></li> 
                           <li class="nav-item "><a class="nav-link" href="/masuk">Login</a></li> 
