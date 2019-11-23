@@ -63,7 +63,7 @@ class JurusanController extends Controller
     public function update(Request $request, $id)
     {
         request()->validate([
-            'jurusan_gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'jurusan_gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $jurusan = \App\Jurusan::find($id);
         $jurusan_cover = $jurusan->jurusan_gambar;
