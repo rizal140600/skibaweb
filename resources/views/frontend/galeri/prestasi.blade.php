@@ -7,7 +7,7 @@
               </div>
 				<div class="container">
 					<div class="banner_content text-center">
-						<h2>Galeri</h2>
+						<h2>Galeri Prestasi</h2>
 						<div class="page_link">
 							<a>SMKN 1 BADEGAN</a>
 						</div>
@@ -18,9 +18,9 @@
 <div style="background-color: #f9f9ff">
                     <div class="container">
                         <div class="section-top-border">
-                            <h3 class="title_color">Galeri Kegiatan</h3>
+                            <h3 class="title_color">Galeri</h3>
                             <div class="row gallery-item">
-                                @foreach ($kegiatan_galeri as $galeri)
+                                @foreach ($prestasi_galeri as $galeri)
                                 <div class="">
                                     <a href="{{ asset("/storage/galeri/" . $galeri->gambar) }}">
                                         <div class="hovereffect">

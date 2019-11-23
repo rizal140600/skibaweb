@@ -16,4 +16,13 @@ class GaleriController extends Controller
             'identitas' => $identitas
             ]);
     }
+    public function prestasi()
+    {
+        $identitas = \App\Identitas::first();
+        $prestasi_galeri = \App\Galeri::all()->where('kategori_id', 1);
+        return view('frontend.galeri.prestasi', [
+            'prestasi_galeri' => $prestasi_galeri,
+            'identitas' => $identitas
+            ]);
+    }
 }
