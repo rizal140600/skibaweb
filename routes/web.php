@@ -106,7 +106,7 @@ Route::get('/profil/organisasi', 'Frontend\ProfilController@organisasi');
 Route::get('/profil/sarana', 'Frontend\ProfilController@sarana');
 Route::get('/pengumuman', 'Frontend\PengumumanController@pengumuman');
 Route::get('/pengumuman/detail/{id}', 'Frontend\PengumumanController@detail');
-Route::get('/galeri', 'Frontend\GaleriController@galeri');
+Route::get('/galeri/kegiatan', 'Frontend\GaleriController@kegiatan');
 Route::get('/studi', 'Frontend\StudiController@studi');
 Route::get('/kontak', 'Frontend\KontakController@kontak');
 Route::get('/kegiatan', 'Frontend\KegiatanController@kegiatan');

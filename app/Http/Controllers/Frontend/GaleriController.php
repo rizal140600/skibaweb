@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 
 class GaleriController extends Controller
 {
-    public function galeri()
+    public function kegiatan()
     {
         $identitas = \App\Identitas::first();
-        $data_galeri = \App\Galeri::all();
-        return view('frontend.galeri', [
-            'data_galeri' => $data_galeri,
+        $kegiatan_galeri = \App\Galeri::all()->where('kategori_id', 2);
+        return view('frontend.galeri.kegiatan', [
+            'kegiatan_galeri' => $kegiatan_galeri,
             'identitas' => $identitas
             ]);
     }

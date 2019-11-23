@@ -72,7 +72,13 @@
                             </ul>
                           </li> 
                           <li class="nav-item "><a class="nav-link" href="/pengumuman">Pengumuman</a></li> 
-                          <li class="nav-item "><a class="nav-link" href="/galeri">Galeri</a></li> 
+                          <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galeri</a>
+									<ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link" href="/galeri/prestasi">Kegiatan</a>
+                      <li class="nav-item"><a class="nav-link" href="/galeri/kegiatan">Prestasi</a></li>
+                            </ul>
+                          </li> 
                           <li class="nav-item "><a class="nav-link" href="/studi">Bidang Studi</a></li> 
                           <li class="nav-item "><a class="nav-link" href="/kegiatan">Kegiatan</a></li> 
                           <li class="nav-item "><a class="nav-link" href="/kontak">Kontak</a></li> 

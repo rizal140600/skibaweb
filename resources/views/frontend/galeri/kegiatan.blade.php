@@ -19,8 +19,8 @@
                     <div class="container">
                         <div class="section-top-border">
                             <h3 class="title_color">Galeri</h3>
-                            {{-- <div class="row gallery-item">
-                                @foreach ($data_galeri as $galeri)
+                            <div class="row gallery-item">
+                                @foreach ($kegiatan_galeri as $galeri)
                                 <div class="">
                                     <a href="{{ asset("/storage/galeri/" . $galeri->gambar) }}">
                                         <div class="hovereffect">
@@ -35,8 +35,7 @@
                                     </a>
                                 </div>
                                 @endforeach
-                            </div> --}}
-                            
+                            </div>
                         </div> 
                     </div> 
                 </div>
