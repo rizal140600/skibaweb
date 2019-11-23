@@ -65,6 +65,12 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,guru']], function () {
   Route::post('/backend/guru/{id}/update', 'GuruController@update');
   Route::get('/backend/guru/{id}/delete', 'GuruController@delete');
   
+  Route::get('/backend/jurusan', 'JurusanController@index');
+  Route::post('/backend/jurusan/create', 'JurusanController@create');
+  Route::get('/backend/jurusan/{id}/edit', 'JurusanController@edit');
+  Route::post('/backend/jurusan/{id}/update', 'JurusanController@update');
+  Route::get('/backend/jurusan/{id}/delete', 'JurusanController@delete');
+
   Route::get('/backend/studi', 'StudiController@index');
   Route::post('/backend/studi/create', 'StudiController@create');
   Route::get('/backend/studi/{id}/edit', 'StudiController@edit');

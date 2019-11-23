@@ -192,6 +192,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/backend/jurusan" class="nav-link">
+              <i class="nav-icon fas fa-code-branch"></i>
+              <p>
+                Jurusan
+              </p>
+            </a>
+          </li>
           @if (auth()->user()->role->role_user == 'admin')
           <li class="nav-item">
             <a href="/user" class="nav-link">

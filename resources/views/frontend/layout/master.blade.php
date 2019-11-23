@@ -100,18 +100,18 @@
                     <div class="col-lg-3  col-md-6 col-sm-6">
                         <div class="single-footer-widget tp_widgets">
                             <ul class="list">
-                            	<li><a href="#">Tentang Sekolah</a></li>
-                            	<li><a href="#">Visi dan Misi</a></li>
-                            	<li><a href="#">Struktur Organisasi</a></li>
-                            	<li><a href="#">Sarana Prasarana</a></li>
+                            	<li><a href="/profil/tentang">Tentang Sekolah</a></li>
+                            	<li><a href="/profil/misi">Visi dan Misi</a></li>
+                            	<li><a href="/profil/struktur">Struktur Organisasi</a></li>
+                            	<li><a href="/profil/sarana">Sarana Prasarana</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3  col-md-6 col-sm-6">
                         <div class="single-footer-widget tp_widgets">
                             <ul class="list">
-                            	<li><a href="#">E-POIN</a></li>
-                            	<li><a href="#">E-JURNAL</a></li>
+                            	<li><a href="#"></a></li>
+                            	<li><a href="#"></a></li>
                             </ul>
                         </div>
                     </div>
