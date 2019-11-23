@@ -118,6 +118,7 @@ Route::get('/studi', 'Frontend\StudiController@studi');
 Route::get('/kontak', 'Frontend\KontakController@kontak');
 Route::get('/kegiatan', 'Frontend\KegiatanController@kegiatan');
 Route::get('/kegiatan/detail/{id}', 'Frontend\KegiatanController@detail');
+Route::get('/jurusan', 'Frontend\JurusanController@jurusan');
 
 
 
