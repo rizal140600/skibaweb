@@ -2620,8 +2620,8 @@ h6 {
   overflow: hidden;
   margin-bottom: -30px; }
   .courses_inner .courses_item {
-    padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 15px;
     position: relative;
     overflow: hidden; }
   .courses_inner .course_item {
@@ -3246,4 +3246,43 @@ h6 {
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif!important;
 }
 /*# sourceMappingURL=style.css.map */
+.roww {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.kolom {
+    -ms-flex: 50%;
+    /* IE10 */
+    flex: 50%;
+    width: 50%;
+    padding: 0 4px;
+}
 
+.kolom img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two kolom-layout instead of four koloms */
+@media screen and (max-width: 800px) {
+    .kolom {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two koloms stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .kolom {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}

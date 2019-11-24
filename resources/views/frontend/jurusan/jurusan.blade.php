@@ -7,7 +7,7 @@
               </div>
 				<div class="container">
 					<div class="banner_content text-center">
-						<h2>Kegiatan</h2>
+						<h2>Jurusan</h2>
 						<div class="page_link">
 							<a>SMKN 1 BADEGAN</a>
 						</div>
@@ -15,75 +15,33 @@
 				</div>
             </div>
         </section>
-        <section class="courses_area p_120">
+        <section class="courses_area p_120 pt-0">
         	<div class="container">
         		<div class="main_title">
-        			<h2>Popular Free Courses</h2>
-        			<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
         		</div>
         		<div class="row courses_inner">
         			<div class="col-lg-12">
-						<div class="grid_inner">
-							<div class="grid_item wd55">
-								<div class="courses_item">
-									<img src="/frontend/img/courses/course-1.jpg" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
+						<div class="grid_inner roww">
+							@foreach ($data_jurusan as $jurusan)
+								<div class="kolom grid_item">
+									<div class="courses_item">
+										<img src="{{ asset("/storage/jurusan/" . $jurusan->jurusan_gambar) }}" style="width:100%">
+										<div class="hover_text">
+											<a class="cat" href="#">JURUSAN</a>
+											<a href="#"><h4>{{$jurusan->jurusan_judul}}</h4></a>
+											{{-- <ul class="list">
+												<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
+												<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
+												<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
+											</ul> --}}
+										</div>
 									</div>
-								</div>
-							</div>
-							<div class="grid_item wd44">
-								<div class="courses_item">
-									<img src="/frontend/img/courses/course-2.jpg" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="grid_item wd44">
-								<div class="courses_item">
-									<img src="/frontend/img/courses/course-4.jpg" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="grid_item wd55">
-								<div class="courses_item">
-									<img src="/frontend/img/courses/course-5.jpg" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
 						</div>
-        			</div>
-        			</div>
+							@endforeach
+						</div>
+					</div>
+				</div>
         		</div>
         	</div>
         </section>
-@endsection
+				@endsection
