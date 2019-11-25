@@ -16,4 +16,13 @@ class JurusanController extends Controller
             'identitas' => $identitas
             ]);
     }
+    public function detail($id)
+    {
+        $jurusan = \App\Jurusan::find($id);
+        $identitas = \App\Identitas::all();
+        return view('frontend.jurusan.detail', [
+            'jurusan' => $jurusan,
+            'identitas' => $identitas
+        ]);
+    }
 }

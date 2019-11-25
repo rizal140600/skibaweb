@@ -27,8 +27,8 @@
 									<div class="courses_item">
 										<img src="{{ asset("/storage/jurusan/" . $jurusan->jurusan_gambar) }}" style="width:100%">
 										<div class="hover_text">
-											<a class="cat" href="#">JURUSAN</a>
-											<a href="#"><h4>{{$jurusan->jurusan_judul}}</h4></a>
+											<a class="cat" href="/jurusan">JURUSAN</a>
+											<a href="/jurusan/{{$jurusan->id}}"><h4>{{$jurusan->jurusan_judul}}</h4></a>
 											{{-- <ul class="list">
 												<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
 												<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
