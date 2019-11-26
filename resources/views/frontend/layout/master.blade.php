@@ -27,7 +27,7 @@
            		<div class="container">
 					<div class="float-left">
 						<ul class="list header_social">
-							<li><a href="https://www.facebook.com/pages/category/School/SMKN-1-Badegan-205739802796926/"><i class="fa fa-facebook"></i></a></li>
+							<li class="pt-3"><a href="https://www.facebook.com/pages/category/School/SMKN-1-Badegan-205739802796926/"><i class="fa fa-facebook"></i></a></li>
 						</ul>
 					</div>
 					<div class="float-right">
@@ -136,7 +136,7 @@
                     <p class="col-lg-8 col-md-8 footer-text m-0">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script><a href="/" target="_blank"> SMKN 1 BADEGAN</a></p>
                     <div class="col-lg-4 col-md-4 footer-social">
-                        <a href="https://www.facebook.com/pages/category/School/SMKN-1-Badegan-205739802796926/"><i class="fa fa-facebook"></i></a>
+                        <a class="pt-2" href="https://www.facebook.com/pages/category/School/SMKN-1-Badegan-205739802796926/"><i class="fa fa-facebook"></i></a>
                     </div>
                 </div>
             </div>

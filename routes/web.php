@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Cornford\Googlmapper\Facades\MapperFacade;
 
 Route::get('/', 'Frontend\IndexController@index');
 
@@ -116,6 +117,7 @@ Route::get('/pengumuman/detail/{id}', 'Frontend\PengumumanController@detail');
 Route::get('/galeri/kegiatan', 'Frontend\GaleriController@kegiatan');
 Route::get('/galeri/prestasi', 'Frontend\GaleriController@prestasi');
 Route::get('/kontak', 'Frontend\KontakController@kontak');
+Route::get('/kontak/create', 'Frontend\KontakController@create');
 Route::get('/kegiatan', 'Frontend\KegiatanController@kegiatan');
 Route::get('/kegiatan/detail/{id}', 'Frontend\KegiatanController@detail');
 Route::get('/jurusan', 'Frontend\JurusanController@jurusan');

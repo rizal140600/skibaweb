@@ -17,6 +17,7 @@
         </section>
 <section class="contact_area p_120">
             <div class="container">
+                {{-- {!!$mapper!!} --}}
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="contact_info">
@@ -38,7 +39,7 @@
                         </div>
                     </div>
                     <div class="col-lg-9">
-                        <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="row contact_form" action="/kontak/create" method="post" id="contactForm" novalidate="novalidate">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
