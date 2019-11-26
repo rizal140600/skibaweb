@@ -10,7 +10,7 @@
                                 <video id="videoSMK"  class="video-js" controls preload="auto"  width="100%" height="75%" data-setup="{}">
                     <source src="/frontend/video/VideoProfileSMKN1BadeganPonorogo.mp4" type='video/mp4'>
                 </video>
-                {{-- <iframe src="/frontend/video/VideoProfileSMKN1BadeganPonorogo.mp4" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe> --}}
+                {{-- <iframe src="https://www.youtube.com/embed/watch?v=uuFTCLGS8Pg?autoplay=1" width="100%" height="100%"></iframe> --}}
               </div>
             </div>
         </section>

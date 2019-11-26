@@ -31,7 +31,7 @@
 						</ul>
 					</div>
 					<div class="float-right">
-						<a class="dn_btn" >+440 012 3654 896</a>
+						<a class="dn_btn" href="tel:{{$identitas->first()->telepon_fax}}">{{$identitas->first()->telepon_fax}}</a>
 						<a class="dn_btn" >smkn1badegan@yahoo.com</a>
 					</div>
            		</div>	
@@ -127,8 +127,10 @@
                         <aside class="f_widget news_widget">
         					<div class="f_title">
         						<h3 class="footer_title">CALL US ON</h3>
-        					</div>
-        					<p>{{$identitas->first()->telepon_fax}}</p>
+                            </div>
+                            <a href="tel:{{$identitas->first()->telepon_fax}}">
+                                <p>{{$identitas->first()->telepon_fax}}</p>
+                            </a>
         				</aside>
                     </div>
                 </div>
