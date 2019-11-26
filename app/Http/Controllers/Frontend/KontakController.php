@@ -34,10 +34,11 @@ class KontakController extends Controller
     {
         request()->validate([
 
-            'nama_file' => 'required',
-            'link' => 'required',
+            'nama_saran' => 'required',
+            'email_saran' => 'required|email',
+            'isi_saran' => 'required',
         ]);
-        \App\Kontak::create($resquest->all());
+        \App\Kontak::create($request->all());
         return redirect('/kontak')->with('success', 'Tambah data Berhasil');
     }
 }

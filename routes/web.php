@@ -97,6 +97,9 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,guru']], function () {
   Route::post('/backend/profil/struktur/{id}/update', 'StrukturController@update');
   Route::post('/backend/profil/struktur/create', 'StrukturController@create');
   
+  Route::get('/backend/saran', 'SaranController@index');
+  Route::get('/backend/saran/{id}/lihat', 'SaranController@lihat');
+  Route::get('/backend/saran/{id}/delete', 'SaranController@delete');
   
 });
 Route::get('/guru', 'Frontend\GuruController@index');
@@ -117,7 +120,7 @@ Route::get('/pengumuman/detail/{id}', 'Frontend\PengumumanController@detail');
 Route::get('/galeri/kegiatan', 'Frontend\GaleriController@kegiatan');
 Route::get('/galeri/prestasi', 'Frontend\GaleriController@prestasi');
 Route::get('/kontak', 'Frontend\KontakController@kontak');
-Route::get('/kontak/create', 'Frontend\KontakController@create');
+Route::post('/kontak/create', 'Frontend\KontakController@create');
 Route::get('/kegiatan', 'Frontend\KegiatanController@kegiatan');
 Route::get('/kegiatan/detail/{id}', 'Frontend\KegiatanController@detail');
 Route::get('/jurusan', 'Frontend\JurusanController@jurusan');

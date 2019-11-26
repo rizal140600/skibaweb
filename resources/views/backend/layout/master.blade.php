@@ -168,10 +168,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="/backend/saran" class="nav-link">
               <i class="nav-icon fas fa-address-book"></i>
               <p>
-                Kontak
+                Kritik Dan Saran
               </p>
             </a>
           </li>

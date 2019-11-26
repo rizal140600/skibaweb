@@ -88,8 +88,8 @@
                                 <input name="telepon_fax" type="text" value="{{$identitas->first()->telepon_fax}}" class="form-control" placeholder="Pendidikan...">
                                 </div>
                             <div class="form-group">
-                                <label>Website Email</label>
-                                <input name="website_email" type="text" value="{{$identitas->first()->website_email}}" class="form-control" placeholder="Pendidikan...">
+                                <label>Website/Email</label>
+                                <input name="website_email" type="text" value="{{$identitas->first()->website_email}}" class="form-control" placeholder="Website/Email...">
                             </div>
                             <div class="form-group">
                                 <label>Kepala Sekolah</label>
@@ -155,8 +155,8 @@
                                 <input name="telepon_fax" type="text" class="form-control" placeholder="format: xxxxxxxxxx">
                                 </div>
                             <div class="form-group">
-                                <label>Website Email</label>
-                                <input name="website_email" type="text"  class="form-control" placeholder="Website Email...">
+                                <label>Website/Email</label>
+                                <input name="website_email" type="text"  class="form-control" placeholder="Website/Email...">
                             </div>
                             <div class="form-group">
                                 <label>Kepala Sekolah</label>

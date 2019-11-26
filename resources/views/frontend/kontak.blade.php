@@ -17,6 +17,24 @@
         </section>
 <section class="contact_area p_120">
             <div class="container">
+                @if (count($errors) > 0)
+      <div class="alert  alert-danger alert-dismissible fade show" role="alert">
+        <strong>Maaf!</strong> Ada Kesalahan
+        <ul>
+
+            @foreach ($errors->all() as $error)
+
+                <li>{{ $error }}</li>
+
+            @endforeach
+
+        </ul>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+        @endif
                 {{-- {!!$mapper!!} --}}
                 <div class="row">
                     <div class="col-lg-3">
@@ -40,24 +58,22 @@
                     </div>
                     <div class="col-lg-9">
                         <form class="row contact_form" action="/kontak/create" method="post" id="contactForm" novalidate="novalidate">
+                            @csrf
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                                    <input type="text" class="form-control" id="name" name="nama_saran" placeholder="Masukkan Nama...">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+                                    <input type="email" class="form-control" id="email" name="email_saran" placeholder="Masukkan Alamat Email...">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
+                                    <textarea class="form-control" name="isi_saran" id="message" rows="1" placeholder="Enter Message"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12 text-right">
-                                <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
+                                <button type="submit" value="submit" class="btn submit_btn">Kirim</button>
                             </div>
                         </form>
                     </div>
