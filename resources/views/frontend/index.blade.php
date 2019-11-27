@@ -12,27 +12,14 @@
                 </video>
                 <div class="slides-frame">
             <div class="slides">
+                @foreach ($data_pengumuman as $pengumuman)
                 <div class="slide-1 slide" style="background-color: #04091E"> 
-                    <a href="">
-                        <p class="d-inline-block bg-danger text-white px-2 py-2">PENGUMUMAN</p>
-                        <p class="d-inline-block text-white ml-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, nesciunt?</p>
+                    <a href="/pengumuman/detail/{{$pengumuman->id}}">
+                        <p class="d-inline-block text-white px-2 py-2" style="background-color: #FB8F17">PENGUMUMAN</p>
+                        <p class="d-inline-block text-white ml-2">{{$pengumuman->judul_pengumuman}}</p>
                     </a>
                 </div>
-                <div class="slide-1 slide" style="background-color: #04091E"> 
-                    <a href="">
-                        <p class="d-inline-block bg-danger text-white px-2 py-2">PENGUMUMAN</p>
-                        <p class="d-inline-block text-white ml-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, nesciunt?</p>
-                    </a>
-                </div>
-                <div class="slide-1 slide" style="background-color: #04091E"> 
-                    <a href="">
-                        <p class="d-inline-block bg-danger text-white px-2 py-2">PENGUMUMAN</p>
-                        <p class="d-inline-block text-white ml-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, nesciunt?</p>
-                    </a>
-                </div>
-                {{-- <div class="slide-2 slide">Daenery Targaryen and her horse</div>
-                <div class="slide-3 slide">Winer is comming, Stark</div>
-                <div class="slide-4 slide">The Iron Throne</div> --}}
+                @endforeach
             </div>
         </div>
                 {{-- <iframe src="https://www.youtube.com/embed/watch?v=uuFTCLGS8Pg?autoplay=1" width="100%" height="100%"></iframe> --}}

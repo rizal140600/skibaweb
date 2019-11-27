@@ -85,12 +85,12 @@
                     <td>{{$saran->email_saran}}</td>
                     <td style="min-width: 105px">
                         <a class="" href="/backend/saran/{{$saran->id}}/lihat">
-                            <button type="button" class="btn btn-primary text-white  btn-sm" title="Lihat">
+                            <button title="Lihat" type="button" class="btn btn-primary text-white  btn-sm">
                             <i class="far fa-eye"></i>
                             </button>
                         </a>
                         <a class="" href="/backend/saran/{{$saran->id}}/delete">
-                            <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
+                            <button title="Delete" type="button" class="btn btn-danger text-white  btn-sm"  onclick="return confirm(
                             'apakah anda yakin mau menghapus file ini ?')">
                             <i class="far fa-trash-alt"></i>
                             </button>

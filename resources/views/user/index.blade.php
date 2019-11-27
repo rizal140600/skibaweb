@@ -137,12 +137,12 @@
                       <td>{{$user->email}}</td>
                       <td style="min-width: 105px">
                           <a class="" href="/user/{{$user->id}}/edit">
-                              <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
+                              <button title="Edit" type="button" class="btn btn-warning text-white  btn-sm" >
                               <i class="far fa-edit"></i>
                               </button>
                           </a>
                           <a class="" href="/user/{{$user->id}}/delete">
-                              <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
+                              <button title="Delete" type="button" class="btn btn-danger text-white  btn-sm"  onclick="return confirm(
                                 'apakah anda yakin mau menghapus file ini ?')">
                                 <i class="far fa-trash-alt"></i>
                               </button>

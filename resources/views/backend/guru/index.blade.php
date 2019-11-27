@@ -166,7 +166,7 @@
                       <td>{{ $data_guru->firstItem() + $index }}</td>
                       <th>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#guru{{$guru->id}}">
+                        <button title="Lihat" type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#guru{{$guru->id}}">
                           <i class="far fa-eye"></i>
                         </button>
                         
@@ -189,12 +189,12 @@
                       <td>{{$guru->telepon_guru}}</td>
                       <td style="min-width: 105px">
                           <a class="" href="/backend/guru/{{$guru->id}}/edit">
-                              <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
+                              <button title="Edit" type="button" class="btn btn-warning text-white  btn-sm" >
                               <i class="far fa-edit"></i>
                               </button>
                           </a>
                           <a class="" href="/backend/guru/{{$guru->id}}/delete">
-                              <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
+                              <button title="Delete" type="button" class="btn btn-danger text-white  btn-sm"  onclick="return confirm(
                                 'apakah anda yakin mau menghapus file ini ?')">
                                 <i class="far fa-trash-alt"></i>
                               </button>

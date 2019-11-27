@@ -140,7 +140,7 @@
                       </th>
                       <td>{{$jurusan->jurusan_judul}}</td>
                       <td>
-                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#isi{{$jurusan->id}}">
+                        <button title="Lihat" type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#isi{{$jurusan->id}}">
                           <i class="fa fa-eye" aria-hidden="true"></i>
                         </button>
                         
@@ -157,12 +157,12 @@
                       </td>
                       <td style="min-width: 105px">
                           <a class="" href="/backend/jurusan/{{$jurusan->id}}/edit">
-                              <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
+                              <button title="Edit" type="button" class="btn btn-warning text-white  btn-sm" >
                               <i class="far fa-edit"></i>
                               </button>
                           </a>
                           <a class="" href="/backend/jurusan/{{$jurusan->id}}/delete">
-                              <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
+                              <button title="Delete" type="button" class="btn btn-danger text-white  btn-sm"  onclick="return confirm(
                                 'apakah anda yakin mau menghapus file ini ?')">
                                 <i class="far fa-trash-alt"></i>
                               </button>

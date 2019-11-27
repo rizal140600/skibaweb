@@ -36,7 +36,7 @@
                     <td>{!! str_limit(strip_tags($pengumuman->isi_pengumuman), $limit = 150, $end = '...') !!}</td>
                     <td style="min-width: 105px">
                         <a class="" href="/pengumuman/detail/{{$pengumuman->id}}">
-                          <button type="button" class="btn btn-primary text-white  btn-sm" title="Edit">
+                          <button title="Lihat" type="button" class="btn btn-primary text-white  btn-sm" >
                           <i class="fa fa-eye" aria-hidden="true"></i>
                           </button>
                         </a>

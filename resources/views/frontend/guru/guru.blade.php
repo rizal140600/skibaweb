@@ -62,7 +62,7 @@
                       <td>{{$guru->telepon_guru}}</td>
                       <td style="min-width: 105px">
                           <a class="" href="/guru/detail/{{$guru->id}}">
-                <button type="button" class="btn btn-primary text-white  btn-sm" title="Edit">
+                <button type="button" title="Lihat" class="btn btn-primary text-white  btn-sm" >
                 <i class="fa fa-eye" aria-hidden="true"></i>
                 </button>
             </a>

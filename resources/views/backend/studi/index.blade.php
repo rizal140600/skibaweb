@@ -113,12 +113,12 @@
                     <td>{{$studi->nama_bidang}}</td>
                     <td>
                     <a href="/backend/studi/{{$studi->id}}/edit">
-                    <button type="button" class="btn btn-warning text-white  btn-sm" title="Edit">
+                    <button title="Edit" type="button" class="btn btn-warning text-white  btn-sm" >
                     <i class="far fa-edit"></i>
                     </button>
                     </a>
                     <a class="ml-2" href="/backend/studi/{{$studi->id}}/delete">
-                    <button type="button" class="btn btn-danger text-white  btn-sm" title="Delete" onclick="return confirm(
+                    <button title="Delete" type="button" class="btn btn-danger text-white  btn-sm"  onclick="return confirm(
                         'apakah anda yakin mau menghapus file ini ?')">
                         <i class="far fa-trash-alt"></i>
                     </button>
