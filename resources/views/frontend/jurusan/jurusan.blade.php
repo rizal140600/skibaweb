@@ -3,7 +3,7 @@
 <section class="banner_area">
             <div class="banner_inner d-flex align-items-center">
               <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
-              <img src="/frontend/img/background.jpg" class="background-kecil" alt="">
+              <img src="/frontend/img/background.jpg" class="background-kecil" title"">
               </div>
 				<div class="container">
 					<div class="banner_content text-center">
@@ -25,7 +25,7 @@
 							@foreach ($data_jurusan as $jurusan)
 								<div class="kolom grid_item">
 									<div class="courses_item">
-										<img alt="{{$jurusan->jurusan_judul}}" src="{{ asset("/storage/jurusan/" . $jurusan->jurusan_gambar) }}" style="width:100%">
+										<img title"{{$jurusan->jurusan_judul}}" src="{{ asset("/storage/jurusan/" . $jurusan->jurusan_gambar) }}" style="width:100%">
 										<div class="hover_text">
 											<a class="cat" href="/jurusan">JURUSAN</a>
 											<a href="/jurusan/{{$jurusan->id}}"><h4>{{$jurusan->jurusan_judul}}</h4></a>

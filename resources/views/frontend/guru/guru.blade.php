@@ -3,7 +3,7 @@
 <section class="banner_area">
             <div class="banner_inner d-flex align-items-center">
               <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
-              <img src="/frontend/img/background.jpg" class="background-kecil" alt="">
+              <img src="/frontend/img/background.jpg" class="background-kecil" title"">
               </div>
 				<div class="container">
 					<div class="banner_content text-center">
@@ -40,14 +40,14 @@
                       <td>{{ $data_guru->firstItem() + $index }}</td>
                       <th>
                         <button type="button" class="m-0 p-0" data-toggle="modal" data-target="#kegiatan{{$guru->id}}">
-                          <img alt="{{$guru->nama_guru}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
+                          <img title"{{$guru->nama_guru}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
                         </button>
                         
                         <!-- Modal -->
                         <div class="modal fade" id="kegiatan{{$guru->id}}" tabindex="-1" role="dialog" aria-labelledby="kegiatan{{$guru->id}}Label" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                              <img alt="{{$guru->nama_guru}}" class="img-fluid" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
+                              <img title"{{$guru->nama_guru}}" class="img-fluid" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
                                 <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                           </div>

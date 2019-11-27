@@ -141,14 +141,14 @@
                       <th >
                         <!-- Button trigger modal -->
                         <button type="button" class="m-0 p-0" data-toggle="modal" data-target="#kegiatan{{$kegiatan->id}}">
-                          <img alt="{{$kegiatan->kegiatan_judul}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/kegiatan/' . $kegiatan->kegiatan_foto) }}" />
+                          <img title"{{$kegiatan->kegiatan_judul}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/kegiatan/' . $kegiatan->kegiatan_foto) }}" />
                         </button>
                         
                         <!-- Modal -->
                         <div class="modal fade" id="kegiatan{{$kegiatan->id}}" tabindex="-1" role="dialog" aria-labelledby="kegiatan{{$kegiatan->id}}Label" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                              <img alt="{{$kegitan->kegiatan_judul}}" class="img-fluid" src="{{ asset('/storage/kegiatan/' . $kegiatan->kegiatan_foto) }}" />
+                              <img title"{{$kegiatan->kegiatan_judul}}" class="img-fluid" src="{{ asset('/storage/kegiatan/' . $kegiatan->kegiatan_foto) }}" />
                                 <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                           </div>

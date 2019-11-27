@@ -40,7 +40,7 @@
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand logo_h" href="/"><img alt="SMKN 1 BADEGAN" src="/frontend/img/skiba.png" style="max-width: 114px; max-height: 40px" alt=""> <span class="align-middle  " style="color: #ff9117">SMKN 1 BADEGAN</span></a>
+						<a class="navbar-brand logo_h" href="/"><img title"SMKN 1 BADEGAN" src="/frontend/img/skiba.png" style="max-width: 114px; max-height: 40px" title""> <span class="align-middle  " style="color: #ff9117">SMKN 1 BADEGAN</span></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>

@@ -125,14 +125,14 @@
                       <th >
                         <!-- Button trigger modal -->
                         <button type="button" class="m-0 p-0" data-toggle="modal" data-target="#jurusan{{$jurusan->id}}">
-                          <img alt="{{$jurusan->jurusan_judul}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/jurusan/' . $jurusan->jurusan_gambar) }}" />
+                          <img title"{{$jurusan->jurusan_judul}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/jurusan/' . $jurusan->jurusan_gambar) }}" />
                         </button>
                         
                         <!-- Modal -->
                         <div class="modal fade" id="jurusan{{$jurusan->id}}" tabindex="-1" role="dialog" aria-labelledby="jurusan{{$jurusan->id}}Label" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                              <img alt="{{$jurusan->jurusan_judul}}" class="img-fluid" src="{{ asset('/storage/jurusan/' . $jurusan->jurusan_gambar) }}" />
+                              <img title"{{$jurusan->jurusan_judul}}" class="img-fluid" src="{{ asset('/storage/jurusan/' . $jurusan->jurusan_gambar) }}" />
                                 <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                           </div>

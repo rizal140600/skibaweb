@@ -3,7 +3,7 @@
 <section class="banner_area">
             <div class="banner_inner d-flex align-items-center">
               <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
-              <img src="/frontend/img/background.jpg" class="background-kecil" alt="">
+              <img src="/frontend/img/background.jpg" class="background-kecil" title"">
               </div>
 				<div class="container">
 					<div class="banner_content text-center">
@@ -21,7 +21,7 @@
                     <h3 class="mb-30 title_color">Tentang Sekolah</h3>
                     <div class="row">
                         <div class="col-md-3">
-                            <img alt="Gambar Sekolah" src="{{ asset("/storage/sekolah/" . $tentang_sekolah->first()->sekolah_gambar) }}" alt="" class="img-fluid">
+                            <img title"Gambar Sekolah" src="{{ asset("/storage/sekolah/" . $tentang_sekolah->first()->sekolah_gambar) }}" title"" class="img-fluid">
                         </div>
                         <div class="col-md-9 mt-sm-20 left-align-p">
                             <p>
