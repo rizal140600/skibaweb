@@ -13,7 +13,7 @@ class GaleriTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        for ($i=0; $i < 50; $i++) { 
+        for ($i=0; $i < 20; $i++) { 
             \App\Galeri::create([
                 'kategori_id' => $faker->randomElement($array = array (1,2)),
                 'judul_gambar' => $faker->sentence($nbWords = 5, $variableNbWords = true),

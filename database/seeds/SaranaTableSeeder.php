@@ -13,7 +13,7 @@ class SaranaTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        for ($i=0; $i < 50; $i++) { 
+        for ($i=0; $i < 20; $i++) { 
             \App\Sarana::create([
                 'ruang_area' => $faker->sentence($nbWords = 3, $variableNbWords = true),
                 'jumlah_ruang' => $faker->randomDigit,

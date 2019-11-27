@@ -13,7 +13,7 @@ class PengumumanTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        for ($i=0; $i < 50; $i++) { 
+        for ($i=0; $i < 20; $i++) { 
             \App\Pengumuman::create([
                 'judul_pengumuman' => $faker->sentence($nbWords = 6, $variableNbWords = true),
                 'isi_pengumuman' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
