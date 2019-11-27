@@ -6456,7 +6456,7 @@ a.disabled.mailbox-attachment-close {
 
 @media (min-width: 576px) {
     .modal-dialog {
-        max-width: 500px;
+        max-width: 50%;
         margin: 1.75rem auto;
     }
 
@@ -34507,3 +34507,8 @@ a.text-muted:hover {
 }
 
 /*# sourceMappingURL=adminlte.css.map */
+@media (max-width:500px){
+    .modal-dialog{
+        max-width:100%!important;
+    }
+}

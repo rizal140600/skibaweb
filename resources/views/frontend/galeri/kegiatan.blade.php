@@ -24,7 +24,7 @@
                                 <div class="">
                                     <a href="{{ asset("/storage/galeri/" . $galeri->gambar) }}">
                                         <div class="hovereffect">
-                                            <img title"{{$galeri->judul_gambar}}" class="single-gallery-image px-2 galeri" src="{{ asset("/storage/galeri/" . $galeri->gambar) }}" title"">
+                                            <img title="{{$galeri->judul_gambar}}" class="single-gallery-image px-2 galeri" src="{{ asset("/storage/galeri/" . $galeri->gambar) }}" title"">
                                             <div class="overlay">
                                                 <h2 style="font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{$galeri->judul_gambar}}</h2>
                                                 <p>

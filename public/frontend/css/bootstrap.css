@@ -5948,7 +5948,7 @@ button.close {
 
 @media (min-width:576px) {
     .modal-dialog {
-        max-width: 500px;
+        max-width: 50%;
         margin: 1.75rem auto
     }
 
@@ -6426,7 +6426,7 @@ button.close {
 .carousel-control-next,
 .carousel-control-prev {
     position: absolute;
-    top: 0;
+    top: 150px;
     bottom: 0;
     display: -ms-flexbox;
     display: flex;

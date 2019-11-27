@@ -68,7 +68,7 @@
                 <i class="fas fa-plus"></i>
                 </button>
                 <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog" >
                     <div class="modal-content">
                         <div class="modal-header">
                         <h4 class="modal-title">Tambah Bidang Studi</h4>

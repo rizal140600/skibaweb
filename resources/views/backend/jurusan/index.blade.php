@@ -68,7 +68,7 @@
                       <i class="fas fa-plus"></i>
                       </button>
                     <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog" >
                         <div class="modal-content">
                             <div class="modal-header">
                             <h4 class="modal-title">Tambah Jurusan</h4>
@@ -125,14 +125,14 @@
                       <th >
                         <!-- Button trigger modal -->
                         <button type="button" class="m-0 p-0" data-toggle="modal" data-target="#jurusan{{$jurusan->id}}">
-                          <img title"{{$jurusan->jurusan_judul}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/jurusan/' . $jurusan->jurusan_gambar) }}" />
+                          <img title="{{$jurusan->jurusan_judul}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/jurusan/' . $jurusan->jurusan_gambar) }}" />
                         </button>
                         
                         <!-- Modal -->
                         <div class="modal fade" id="jurusan{{$jurusan->id}}" tabindex="-1" role="dialog" aria-labelledby="jurusan{{$jurusan->id}}Label" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
+                          <div class="modal-dialog"  role="document">
                             <div class="modal-content">
-                              <img title"{{$jurusan->jurusan_judul}}" class="img-fluid" src="{{ asset('/storage/jurusan/' . $jurusan->jurusan_gambar) }}" />
+                              <img title="{{$jurusan->jurusan_judul}}" class="img-fluid" src="{{ asset('/storage/jurusan/' . $jurusan->jurusan_gambar) }}" />
                                 <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                           </div>
@@ -146,7 +146,7 @@
                         
                         <!-- Modal -->
                         <div class="modal fade" id="isi{{$jurusan->id}}" tabindex="-1" role="dialog" aria-labelledby="isi{{$jurusan->id}}Label" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
+                          <div class="modal-dialog"  role="document">
                             <div class="modal-content">
                               <textarea class="textarea" name="jurusan_isi" placeholder="isi jurusan"
                             style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$jurusan->jurusan_isi}}</textarea>

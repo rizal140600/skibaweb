@@ -68,7 +68,7 @@
                       <i class="fas fa-plus"></i>
                       </button>
                     <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog" >
                         <div class="modal-content">
                             <div class="modal-header">
                             <h4 class="modal-title">Tambah Kegiatan</h4>
@@ -141,14 +141,14 @@
                       <th >
                         <!-- Button trigger modal -->
                         <button type="button" class="m-0 p-0" data-toggle="modal" data-target="#kegiatan{{$kegiatan->id}}">
-                          <img title"{{$kegiatan->kegiatan_judul}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/kegiatan/' . $kegiatan->kegiatan_foto) }}" />
+                          <img title="{{$kegiatan->kegiatan_judul}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/kegiatan/' . $kegiatan->kegiatan_foto) }}" />
                         </button>
                         
                         <!-- Modal -->
                         <div class="modal fade" id="kegiatan{{$kegiatan->id}}" tabindex="-1" role="dialog" aria-labelledby="kegiatan{{$kegiatan->id}}Label" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
+                          <div class="modal-dialog"  role="document">
                             <div class="modal-content">
-                              <img title"{{$kegiatan->kegiatan_judul}}" class="img-fluid" src="{{ asset('/storage/kegiatan/' . $kegiatan->kegiatan_foto) }}" />
+                              <img title="{{$kegiatan->kegiatan_judul}}" class="img-fluid" src="{{ asset('/storage/kegiatan/' . $kegiatan->kegiatan_foto) }}" />
                                 <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                           </div>
@@ -162,7 +162,7 @@
                         
                         <!-- Modal -->
                         <div class="modal fade" id="isi{{$kegiatan->id}}" tabindex="-1" role="dialog" aria-labelledby="isi{{$kegiatan->id}}Label" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
+                          <div class="modal-dialog"  role="document">
                             <div class="modal-content">
                               <textarea class="textarea" name="kegiatan_isi" placeholder="isi kegiatan"
                             style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$kegiatan->kegiatan_isi}}</textarea>

@@ -23,7 +23,7 @@
                                     <article class="row blog_item">
                                         <div class="col-md-12">
                                             <div class="blog_post">
-                                                <img title"{{$kegiatan->kegiatan_judul}}" src="{{ asset("/storage/kegiatan/" . $kegiatan->kegiatan_foto) }}" class="img-fluid mx-auto d-block" title"">
+                                                <img title="{{$kegiatan->kegiatan_judul}}" src="{{ asset("/storage/kegiatan/" . $kegiatan->kegiatan_foto) }}" class="img-fluid mx-auto d-block" title"">
                                                 <div class="blog_details">
                                                     <h1 style="color: black;" class="text-center mb-5">{{$kegiatan->kegiatan_judul}}</h1>
                                                     <p>{!!$kegiatan->kegiatan_isi!!}</p>

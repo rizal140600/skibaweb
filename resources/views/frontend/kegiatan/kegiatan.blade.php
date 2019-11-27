@@ -24,7 +24,7 @@
                                     <article class="row blog_item">
                                         <div class="col-md-12">
                                             <div class="blog_post">
-                                                <img title"{{$kegiatan->kegiatan_judul}}" src="{{ asset("/storage/kegiatan/" . $kegiatan->kegiatan_foto) }}" title"">
+                                                <img title="{{$kegiatan->kegiatan_judul}}" src="{{ asset("/storage/kegiatan/" . $kegiatan->kegiatan_foto) }}" title"">
                                                 <div class="blog_details">
                                                     <a href="/kegiatan/detail/{{$kegiatan->id}}"><h2>{{$kegiatan->kegiatan_judul}}</h2></a>
                                                     <p>{!! str_limit(strip_tags($kegiatan->kegiatan_isi), $limit = 250, $end = '...') !!}</p>

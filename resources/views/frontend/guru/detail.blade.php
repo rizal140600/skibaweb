@@ -21,7 +21,7 @@
         		<div class="row course_details_inner">
         			<div class="col-lg-4">
         				<div class="c_details_img">
-        					<img title"{{$guru->nama_guru}}" class="img-fluid w-100" src="{{ asset('/storage/' . $guru->gambar_guru) }}" title"">
+        					<img title="{{$guru->nama_guru}}" class="img-fluid w-100" src="{{ asset('/storage/guru/' . $guru->gambar_guru) }}" title"">
         				</div>
         			</div>
         			<div class="col-lg-8">

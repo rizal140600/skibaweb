@@ -26,7 +26,7 @@
                   {{csrf_field()}}
                   <div class="row">
                     <div class="col-sm-12">
-                      <img title"{{$galeri->judul_gambar}}"class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" id="gambar" />
+                      <img title="{{$galeri->judul_gambar}}"class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" id="gambar" />
                         <label>Gambar</label>
                       <div class="input-group mb-3">
                       <input type="hidden" name="gambar" value="{{$galeri->judul_gambar}}">

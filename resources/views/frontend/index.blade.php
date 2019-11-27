@@ -10,23 +10,22 @@
                                 <video id="videoSMK"  class="video-js" controls preload="auto"  width="100%" height="75%" data-setup="{}">
                     <source src="/frontend/video/VideoProfileSMKN1BadeganPonorogo.mp4" type='video/mp4'>
                 </video>
-                <div class="slides-frame">
-            <div class="slides">
-                @foreach ($data_pengumuman as $pengumuman)
-                <div class="slide-1 slide" style="background-color: #04091E"> 
-                    <a href="/pengumuman/detail/{{$pengumuman->id}}">
-                        <p class="d-inline-block text-white px-2 py-2" style="background-color: #FB8F17">PENGUMUMAN</p>
-                        <p class="d-inline-block text-white ml-2">{{$pengumuman->judul_pengumuman}}</p>
-                    </a>
-                </div>
-                @endforeach
-            </div>
-        </div>
                 {{-- <iframe src="https://www.youtube.com/embed/watch?v=uuFTCLGS8Pg?autoplay=1" width="100%" height="100%"></iframe> --}}
               </div>
             </div>
+            <div class="slides-frame">
+                    <div class="slides">
+                        @foreach ($data_pengumuman as $pengumuman)
+                        <div class="slide-1 slide" style="background-color: #04091E"> 
+                            <a href="/pengumuman/detail/{{$pengumuman->id}}">
+                                <p class="d-inline-block text-white px-2 py-2" style="background-color: #FB8F17">PENGUMUMAN</p>
+                                <p class="d-inline-block text-white ml-2">{{$pengumuman->judul_pengumuman}}</p>
+                            </a>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
         </section>
-        <!--================End Home Banner Area =================-->
         
 		<div style="background-color: #f9f9ff">
             <div class="container" >
@@ -34,7 +33,7 @@
                     <h3 class="mb-30 title_color">Sambutan Kepala Sekolah</h3>
                     <div class="row">
                         <div class="col-md-3">
-                            <img title"{{$kepala_sekolah->first()->kepala}}" src="{{ asset("/storage/kepala/" . $kepala_sekolah->first()->kepala_gambar) }}" title"" class="img-fluid">
+                            <img title="{{$kepala_sekolah->first()->kepala}}" src="{{ asset("/storage/kepala/" . $kepala_sekolah->first()->kepala_gambar) }}" title"" class="img-fluid">
                         </div>
                         <div class="col-md-9 mt-sm-20 left-align-p">
                             <p>
@@ -57,7 +56,7 @@
                                     <article class="row blog_item">
                                         <div class="col-md-12">
                                             <div class="blog_post">
-                                                <img title"{{$kegiatan->kegiatan_judul}}" src="{{ asset("/storage/kegiatan/" . $kegiatan->kegiatan_foto) }}" title"">
+                                                <img title="{{$kegiatan->kegiatan_judul}}" src="{{ asset("/storage/kegiatan/" . $kegiatan->kegiatan_foto) }}" title"">
                                                 <div class="blog_details">
                                                     <a href="/kegiatan/detail/{{$kegiatan->id}}"><h2>{{$kegiatan->kegiatan_judul}}</h2></a>
                                                     <p>{!! str_limit(strip_tags($kegiatan->kegiatan_isi), $limit = 250, $end = '...') !!}</p>
@@ -119,7 +118,7 @@
                                 <div class="">
                                     <a href="{{ asset("/storage/galeri/" . $galeri->gambar) }}">
                                         <div class="hovereffect">
-                                            <img title"{{$galeri->judul_gambar}}" class="single-gallery-image px-2 galeri" src="{{ asset("/storage/galeri/" . $galeri->gambar) }}" title"">
+                                            <img title="{{$galeri->judul_gambar}}" class="single-gallery-image px-2 galeri" src="{{ asset("/storage/galeri/" . $galeri->gambar) }}" title"">
                                             <div class="overlay">
                                                 <h2 style="font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{$galeri->judul_gambar}}</h2>
                                                 <p>
@@ -135,7 +134,7 @@
                         </div> 
                     </div> 
                 </div>
-                <div class="pt-5" style="min-height: 500px; max-height: 500px;">
+                <div class="pt-5" style="min-height: 500px; max-height: 500px; margin-bottom: 100px">
                     <div class="container" style="min-height: 250px">
                         <div class="main_title">
         			<h2>Tenaga Pendidikan</h2>
@@ -155,7 +154,7 @@
                                             <div class="testi_item w-100 text-center ">
                                                     <a href="/guru/detail/{{$guru->id}}" class="text-dark">
                                             <div class="mx-auto mb-5 w-25 width100" style="background-color: #f9f9ff">
-                                                <img title"{{$guru->nama_guru}}" class="gambar_guru pt-5 " style="max-width: 250px;max-height:250px" src="{{ asset("/storage/guru/" . $guru->gambar_guru) }}" title"">
+                                                <img title="{{$guru->nama_guru}}" class="gambar_guru pt-5 " style="max-width: 250px;max-height:250px" src="{{ asset("/storage/guru/" . $guru->gambar_guru) }}" title"">
                                                 <h4 style="font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{$guru->nama_guru}}</h4>
                                                 <p class="pb-3">{{$guru->studi->nama_bidang}}</p>
                                             </div>
@@ -189,7 +188,7 @@
 				@foreach ($data_jurusan as $jurusan)
 				<div class="kolom grid_item">
 					<div class="courses_item">
-						<img title"{{$jurusan->jurusan_judul}}" src="{{ asset("/storage/jurusan/" . $jurusan->jurusan_gambar) }}" style="width:100%">
+						<img title="{{$jurusan->jurusan_judul}}" src="{{ asset("/storage/jurusan/" . $jurusan->jurusan_gambar) }}" style="width:100%">
 							<div class="hover_text">
 							<a class="cat" href="/jurusan">JURUSAN</a>
 							<a href="/jurusan/{{$jurusan->id}}"><h4>{{$jurusan->jurusan_judul}}</h4></a>

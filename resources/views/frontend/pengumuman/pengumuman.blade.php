@@ -53,7 +53,7 @@
 <section class="blog_area pt-5 pb-5">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-8 pt-5" style="background-color: #f9f9ff">
+                            <div class="col-lg-8 pt-4" style="background-color: #f9f9ff">
                                 <div class="blog_left_sidebar">
                                   <div id="accordion">
                                     @foreach ($data_pengumuman as $pengumuman)
@@ -101,16 +101,16 @@
                                         <div class="br"></div>
                                     </aside>
                                     <aside class="single_sidebar_widget post_category_widget">
-                                        <h4 class="widget_title">Pengumuman</h4>
+                                        <h4 class="widget_title">Galeri</h4>
                                         <div class="row courses_inner">
                                         <div class="col-lg-12">
                                           <div class="grid_inner roww">
                                             <?php $count = 0; ?>
                                             @foreach ($data_galeri as $galeri)
                                             <?php if($count == 10) break; ?>
-                                            <div class="kolom grid_item">
+                                            <div class="kolom grid_item p-0">
                                               <div class="courses_item">
-                                                <img title"{{$galeri->judul_gambar}}" src="{{ asset("/storage/galeri/" . $galeri->gambar) }}" style="width:100%">
+                                                <img title="{{$galeri->judul_gambar}}" src="{{ asset("/storage/galeri/" . $galeri->gambar) }}" style="width:100%">
                                                   </div>
                                                 </div>
                                                 <?php $count++; ?>

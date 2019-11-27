@@ -67,7 +67,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img title"{{auth()->user()->name}}" src="/admin/img/avatarr.png" class="img-circle elevation-2" title"">
+          <img title="{{auth()->user()->name}}" src="/admin/img/avatarr.png" class="img-circle elevation-2" title"">
         </div>
         <div class="info">
         <a class="d-block " style="color: #ffa41c">{{auth()->user()->name}}</a>

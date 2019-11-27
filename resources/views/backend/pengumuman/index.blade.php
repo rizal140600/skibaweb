@@ -68,7 +68,7 @@
                     <i class="fa fa-plus"></i>
                 </button>
                 <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog" >
                     <div class="modal-content">
                         <div class="modal-header">
                         <h4 class="modal-title">Tambah Pengumuman</h4>
@@ -125,7 +125,7 @@
                         
                         <!-- Modal -->
                         <div class="modal fade" id="isi{{$pengumuman->id}}" tabindex="-1" role="dialog" aria-labelledby="isi{{$pengumuman->id}}Label" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
+                          <div class="modal-dialog"  role="document">
                             <div class="modal-content">
                               <textarea class="textarea" name="kegiatan_isi" placeholder="isi kegiatan"
                             style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$pengumuman->isi_pengumuman}}</textarea>

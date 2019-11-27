@@ -50,7 +50,7 @@
                       <i class="fas fa-plus"></i>
                       </button>
                     <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog" >
                         <div class="modal-content">
                             <div class="modal-header">
                             <h4 class="modal-title">Tambah Galeri</h4>
@@ -112,14 +112,14 @@
                       <th >
                         <!-- Button trigger modal -->
                         <button type="button" class="m-0 p-0" data-toggle="modal" data-target="#galeri{{$galeri->id}}">
-                          <img title"{{$galeri->judul_gambar}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" />
+                          <img title="{{$galeri->judul_gambar}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" />
                         </button>
                         
                         <!-- Modal -->
                         <div class="modal fade" id="galeri{{$galeri->id}}" tabindex="-1" role="dialog" aria-labelledby="galeri{{$galeri->id}}Label" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
+                          <div class="modal-dialog"  role="document">
                             <div class="modal-content">
-                              <img title"{{$galeri->judul_gambar}}" class="img-fluid" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" />
+                              <img title="{{$galeri->judul_gambar}}" class="img-fluid" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" />
                                 <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                           </div>

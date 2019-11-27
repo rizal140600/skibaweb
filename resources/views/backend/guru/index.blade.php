@@ -68,7 +68,7 @@
                       <i class="fas fa-plus"></i>
                       </button>
                     <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog" >
                         <div class="modal-content">
                             <div class="modal-header">
                             <h4 class="modal-title">Tambah Guru</h4>
@@ -172,9 +172,9 @@
                         
                         <!-- Modal -->
                         <div class="modal fade" id="guru{{$guru->id}}" tabindex="-1" role="dialog" aria-labelledby="guru{{$guru->id}}Label" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
+                          <div class="modal-dialog"  role="document">
                             <div class="modal-content">
-                              <img title"{{$guru->nama_guru}}" class="img-fluid" src="{{ asset('/storage/guru/' . $guru->gambar_guru) }}" />
+                              <img title="{{$guru->nama_guru}}" class="img-fluid" src="{{ asset('/storage/guru/' . $guru->gambar_guru) }}" />
                                 <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                           </div>
