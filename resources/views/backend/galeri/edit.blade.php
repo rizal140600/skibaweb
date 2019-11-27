@@ -26,11 +26,11 @@
                   {{csrf_field()}}
                   <div class="row">
                     <div class="col-sm-12">
-                          <img class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" id="gambar" />
+                      <img alt="{{$galeri->judul_gambar}}"class="rounded mx-auto d-block" style="max-height: 250px;max-width: 250px" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" id="gambar" />
                         <label>Gambar</label>
                       <div class="input-group mb-3">
-                      <input type="hidden" name="gambar" value="{{$galeri->gambar}}">
-                      <input id="gambarUpload" class="note-image-input form-control-file note-form-control note-input" value="{{$galeri->gambar}}" type="file" name="gambar" >
+                      <input type="hidden" name="gambar" value="{{$galeri->judul_gambar}}">
+                      <input id="gambarUpload" class="note-image-input form-control-file note-form-control note-input" value="{{$galeri->judul_gambar}}" type="file" name="gambar" >
                       </div>
                       <!-- text input -->
                     </div>

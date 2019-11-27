@@ -112,14 +112,14 @@
                       <th >
                         <!-- Button trigger modal -->
                         <button type="button" class="m-0 p-0" data-toggle="modal" data-target="#galeri{{$galeri->id}}">
-                          <img style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" />
+                          <img alt="{{$galeri->judul_gambar}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" />
                         </button>
                         
                         <!-- Modal -->
                         <div class="modal fade" id="galeri{{$galeri->id}}" tabindex="-1" role="dialog" aria-labelledby="galeri{{$galeri->id}}Label" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                              <img class="img-fluid" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" />
+                              <img alt="{{$galeri->judul_gambar}}" class="img-fluid" src="{{ asset('/storage/galeri/' . $galeri->gambar) }}" />
                                 <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                           </div>

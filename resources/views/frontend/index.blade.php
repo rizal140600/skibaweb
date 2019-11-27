@@ -22,7 +22,7 @@
                     <h3 class="mb-30 title_color">Sambutan Kepala Sekolah</h3>
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="{{ asset("/storage/kepala/" . $kepala_sekolah->first()->kepala_gambar) }}" alt="" class="img-fluid">
+                            <img alt="{{$kepala_sekolah->first()->kepala}}" src="{{ asset("/storage/kepala/" . $kepala_sekolah->first()->kepala_gambar) }}" alt="" class="img-fluid">
                         </div>
                         <div class="col-md-9 mt-sm-20 left-align-p">
                             <p>
@@ -44,7 +44,7 @@
                                     <article class="row blog_item">
                                         <div class="col-md-12">
                                             <div class="blog_post">
-                                                <img src="{{ asset("/storage/kegiatan/" . $kegiatan->kegiatan_foto) }}" alt="">
+                                                <img alt="{{$kegitan->kegitan_judul}}" src="{{ asset("/storage/kegiatan/" . $kegiatan->kegiatan_foto) }}" alt="">
                                                 <div class="blog_details">
                                                     <a href="single-blog.html"><h2>{{$kegiatan->kegiatan_judul}}</h2></a>
                                                     <p>{!! str_limit(strip_tags($kegiatan->kegiatan_isi), $limit = 250, $end = '...') !!}</p>
@@ -106,7 +106,7 @@
                                 <div class="">
                                     <a href="{{ asset("/storage/galeri/" . $galeri->gambar) }}">
                                         <div class="hovereffect">
-                                            <img class="single-gallery-image px-2 galeri" src="{{ asset("/storage/galeri/" . $galeri->gambar) }}" alt="">
+                                            <img alt="{{$galeri->judul_gambar}}" class="single-gallery-image px-2 galeri" src="{{ asset("/storage/galeri/" . $galeri->gambar) }}" alt="">
                                             <div class="overlay">
                                                 <h2 style="font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{$galeri->judul_gambar}}</h2>
                                                 <p>
@@ -142,7 +142,7 @@
                                             <div class="testi_item w-100 text-center ">
                                                     <a href="/guru/detail/{{$guru->id}}" class="text-dark">
                                             <div class="mx-auto mb-5 w-25 width100" style="background-color: #f9f9ff">
-                                                <img class="gambar_guru pt-5 " style="max-width: 250px;max-height:250px" src="{{ asset("/storage/guru/" . $guru->gambar_guru) }}" alt="">
+                                                <img alt="{{$guru->nama_guru}}" class="gambar_guru pt-5 " style="max-width: 250px;max-height:250px" src="{{ asset("/storage/guru/" . $guru->gambar_guru) }}" alt="">
                                                 <h4 style="font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{$guru->nama_guru}}</h4>
                                                 <p class="pb-3">{{$guru->studi->nama_bidang}}</p>
                                             </div>

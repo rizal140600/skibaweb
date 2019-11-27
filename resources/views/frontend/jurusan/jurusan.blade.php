@@ -25,7 +25,7 @@
 							@foreach ($data_jurusan as $jurusan)
 								<div class="kolom grid_item">
 									<div class="courses_item">
-										<img src="{{ asset("/storage/jurusan/" . $jurusan->jurusan_gambar) }}" style="width:100%">
+										<img alt="{{$jurusan->jurusan_judul}}" src="{{ asset("/storage/jurusan/" . $jurusan->jurusan_gambar) }}" style="width:100%">
 										<div class="hover_text">
 											<a class="cat" href="/jurusan">JURUSAN</a>
 											<a href="/jurusan/{{$jurusan->id}}"><h4>{{$jurusan->jurusan_judul}}</h4></a>

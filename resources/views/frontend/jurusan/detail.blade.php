@@ -23,7 +23,7 @@
                                     <article class="row blog_item">
                                         <div class="col-md-12">
                                             <div class="blog_post">
-                                                <img src="{{ asset("/storage/jurusan/" . $jurusan->jurusan_gambar) }}" class="img-fluid mx-auto d-block" alt="">
+                                                <img alt="{{$jurusan->jurusan_judul}}" src="{{ asset("/storage/jurusan/" . $jurusan->jurusan_gambar) }}" class="img-fluid mx-auto d-block" alt="">
                                                 <div class="blog_details">
                                                     <h1 style="color: black;" class="text-center mb-5">{{$jurusan->jurusan_judul}}</h1>
                                                     <p>{!!$jurusan->jurusan_isi!!}</p>

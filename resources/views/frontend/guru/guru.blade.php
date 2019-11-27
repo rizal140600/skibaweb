@@ -40,14 +40,14 @@
                       <td>{{ $data_guru->firstItem() + $index }}</td>
                       <th>
                         <button type="button" class="m-0 p-0" data-toggle="modal" data-target="#kegiatan{{$guru->id}}">
-                          <img style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
+                          <img alt="{{$guru->nama_guru}}" style="max-width: 100px" class="img-fluid" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
                         </button>
                         
                         <!-- Modal -->
                         <div class="modal fade" id="kegiatan{{$guru->id}}" tabindex="-1" role="dialog" aria-labelledby="kegiatan{{$guru->id}}Label" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                              <img class="img-fluid" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
+                              <img alt="{{$guru->nama_guru}}" class="img-fluid" src="{{ asset('/storage/' . $guru->gambar_guru) }}" />
                                 <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                           </div>

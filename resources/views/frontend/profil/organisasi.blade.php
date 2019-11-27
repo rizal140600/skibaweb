@@ -17,7 +17,7 @@
         </section>
 <div style="background-color: #f9f9ff">
             <div class="container" >
-                <img src="{{ asset("/storage/struktur sekolah/" . $organisasi->first()->struktur_organisasi) }}" alt="" class="w-100 mt-5 mb-5">
+                <img alt="Struktur Organisasi" src="{{ asset("/storage/struktur sekolah/" . $organisasi->first()->struktur_organisasi) }}" alt="" class="w-100 mt-5 mb-5">
             </div>
         </div>
 @endsection

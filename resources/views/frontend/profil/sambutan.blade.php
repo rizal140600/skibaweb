@@ -21,7 +21,7 @@
                     <h3 class="mb-30 title_color">Sambutan Kepala Sekolah</h3>
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="{{ asset("/storage/kepala/" . $kepala_sekolah->first()->kepala_gambar) }}" alt="" class="img-fluid">
+                            <img alt="{{$kepala_sekolah->first()->kepala}}" src="{{ asset("/storage/kepala/" . $kepala_sekolah->first()->kepala_gambar) }}" alt="" class="img-fluid">
                         </div>
                         <div class="col-md-9 mt-sm-20 left-align-p">
                             <p>
