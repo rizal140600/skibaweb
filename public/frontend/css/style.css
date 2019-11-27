@@ -3470,3 +3470,9 @@ lesshat-selector {
     zoom: 1;
 }
 
+.collapse-link{
+  color: black;
+}
+.collapse-link:hover{
+  color: orange;
+}
