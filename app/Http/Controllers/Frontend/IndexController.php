@@ -18,6 +18,7 @@ class IndexController extends Controller
         $data_galeri = \App\Galeri::all()->sortByDesc('updated_at');
         $data_guru = \App\Guru::all();
         $identitas = \App\Identitas::all();
+        $data_jurusan = \App\Jurusan::all();
         if ($identitas->isNotEmpty()) {
             return view('frontend.index',[
                 'kepala_sekolah' => $kepala_sekolah,
@@ -26,6 +27,7 @@ class IndexController extends Controller
                 'data_pembelajaran' => $data_pembelajaran,
                 'data_galeri' => $data_galeri,
                 'data_guru' => $data_guru,
+                'data_jurusan' => $data_jurusan,
                 'identitas' => $identitas
             ]);
         }else{

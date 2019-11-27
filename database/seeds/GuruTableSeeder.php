@@ -13,7 +13,7 @@ class GuruTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        for ($i=0; $i < 100; $i++) { 
+        for ($i=0; $i < 50; $i++) { 
             \App\Guru::create([
                 'gambar_guru' => $faker->word,
                 'nama_guru' => $faker->word,

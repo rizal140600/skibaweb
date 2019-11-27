@@ -13,7 +13,7 @@ class KegiatanTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        for ($i=0; $i < 100; $i++) { 
+        for ($i=0; $i < 50; $i++) { 
             \App\Kegiatan::create([
                 'kegiatan_foto' => $faker->sentence($nbWords = 1, $variableNbWords = true),
                 'kegiatan_judul' => $faker->sentence($nbWords = 5, $variableNbWords = true),

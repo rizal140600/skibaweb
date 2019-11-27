@@ -33,6 +33,7 @@
                 </div>
             </div>
         </div>
+        
 				<section class="blog_area pt-5 pb-5">
                     <div class="container">
                         <div class="row">
@@ -164,4 +165,34 @@
                         </div>
                     </div>
                 </div>
+<section class="courses_area p_120 " style="background-color: #f9f9ff">
+	<div class="container">
+		<div class="main_title">
+            <h2>Jurusan</h2>
+            <p>SMK NEGERI 1 BADEGAN</p>
+	</div>
+	<div class="row courses_inner">
+		<div class="col-lg-12">
+			<div class="grid_inner roww">
+				@foreach ($data_jurusan as $jurusan)
+				<div class="kolom grid_item">
+					<div class="courses_item">
+						<img title"{{$jurusan->jurusan_judul}}" src="{{ asset("/storage/jurusan/" . $jurusan->jurusan_gambar) }}" style="width:100%">
+							<div class="hover_text">
+							<a class="cat" href="/jurusan">JURUSAN</a>
+							<a href="/jurusan/{{$jurusan->id}}"><h4>{{$jurusan->jurusan_judul}}</h4></a>
+							{{-- <ul class="list">
+							<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
+							<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
+							<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
+							</ul> --}}
+								</div>
+							</div>
+						</div>
+					@endforeach
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
 @endsection
