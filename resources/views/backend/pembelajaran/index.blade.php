@@ -50,7 +50,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item active">
-                <form action="/backend/pembelajaran/cari" method="get" class="sidebar-form">
+                <form action="/backend/pembelajaran" method="get" class="sidebar-form">
                   <div class="input-group">
                     <input type="text" name="cari" class="form-control" value="{{ $cari}}" placeholder="Search...">
                         <span class="input-group-btn">

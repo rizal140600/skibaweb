@@ -8,14 +8,20 @@ use Illuminate\Support\Facades\Session;
 use DB;
 class PembelajaranController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data_pembelajaran = \App\Pembelajaran::paginate(10);
+        $cari = $request->cari;
+        if (!$cari) {
+            $data_pembelajaran = \App\Pembelajaran::paginate(10);
+        } else {
+            $data_pembelajaran = \App\Pembelajaran::where('nama_file','LIKE',"%".$cari."%")
+            ->paginate(10);
+        }
         $data_guru = \App\Guru::all();
-        //
                 return view('backend.pembelajaran.index', [
                     'data_pembelajaran' => $data_pembelajaran,
                     'data_guru' => $data_guru,
+                    'cari' => $cari,
                     //
                     ]);
             //
@@ -54,22 +60,4 @@ class PembelajaranController extends Controller
         $pembelajaran->delete();
         return redirect('/backend/pembelajaran')->with('delete', 'Data Berhasil di hapus');
     }
-    public function cari(Request $request)
-	{
-		// menangkap data pencarian
-		$cari = $request->cari;
-        // mengambil data dari table pegawai sesuai pencarian data
-        $data_guru = \App\Guru::all();
-        $data_pembelajaran = \App\Pembelajaran::where('nama_file','LIKE',"%".$cari."%")
-        ->paginate(10);
-        // dd($data_pembelajaran);
-
-            // mengirim data pegawai ke view index
-        return view('backend.pembelajaran.index',[
-            'data_pembelajaran' => $data_pembelajaran,
-            'data_guru' => $data_guru,
-            'cari' => $cari
-            ]);
-
-	}
 }
