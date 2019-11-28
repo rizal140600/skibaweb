@@ -11,13 +11,20 @@ use Illuminate\Support\Facades\File;
 
 class KegiatanController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data_kegiatan = \App\Kegiatan::paginate(10);
+        $cari = $request->cari;
+        if (!$cari) {
+            $data_kegiatan = \App\Kegiatan::paginate(10);
+        } else {
+            $data_kegiatan = \App\Kegiatan::where('kegiatan_judul','LIKE',"%".$cari."%")
+            ->paginate(10);
+        }
+        
         //
                 return view('backend.kegiatan.index', [
                     'data_kegiatan' => $data_kegiatan, 
-                    //
+                    'cari' => $cari
                     ]);
                 
             //

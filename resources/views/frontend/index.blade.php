@@ -60,7 +60,7 @@
                                                 <div class="blog_details">
                                                     <a href="/kegiatan/detail/{{$kegiatan->id}}"><h2>{{$kegiatan->kegiatan_judul}}</h2></a>
                                                     <p>{!! str_limit(strip_tags($kegiatan->kegiatan_isi), $limit = 250, $end = '...') !!}</p>
-                                                <a href="/kegiatan/detail/{{$kegiatan->id}}" class="text-white white_bg_btn" style="background-color: #ff7209">View More</a>
+                                                <a href="/kegiatan/detail/{{$kegiatan->id}}" class="text-white white_bg_btn" style="background-color: #ff7209">Lihat Selengkapnya</a>
                                                 </div>
                                             </div>
                                         </div>
