@@ -11,13 +11,21 @@ use Illuminate\Support\Facades\File;
 
 class GaleriController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data_galeri = \App\Galeri::paginate(10);
+        $cari = $request->cari;
+        if (!$cari) {
+            $data_galeri = \App\Galeri::paginate(10);
+        } else {
+            $data_galeri = \App\Galeri::where('judul_gambar','LIKE',"%".$cari."%")
+            ->paginate(10);
+        }
+        
         $data_kategori = \App\Kategori::all();
         return view('backend.galeri.index', [
             'data_galeri' => $data_galeri, 
             'data_kategori' => $data_kategori, 
+            'cari' => $cari, 
             ]);
             
     }
