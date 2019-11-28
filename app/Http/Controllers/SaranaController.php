@@ -8,12 +8,20 @@ use Illuminate\Support\Facades\Session;
 
 class SaranaController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data_sarana = \App\Sarana::paginate(10);
+        $cari = $request->cari;
+        if (!$cari) {
+            $data_sarana = \App\Sarana::paginate(10);
+        } else {
+            $data_sarana = \App\Sarana::where('ruang_area','LIKE',"%".$cari."%")
+            ->paginate(10);
+        }
+        // dd($data_sarana);
         //
                 return view('backend.profil.sarana.index', [
                     'data_sarana' => $data_sarana,
+                    'cari' => $cari,
                     //
                     ]);
             //

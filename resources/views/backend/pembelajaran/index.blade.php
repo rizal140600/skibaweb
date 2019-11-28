@@ -1,7 +1,7 @@
 @extends('backend.layout.master')
 @section('title', 'Pembelajaran')
 @section('content')
-<section class="content-header">
+<section class="content-header pb-0 mb-0">
       <div class="container-fluid">
 @if(session('success'))
       <div class="alert text-white alert-success alert-dismissible fade show" role="alert">
@@ -44,13 +44,13 @@
 
         @endif
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Pembelajaran</h1>
+          <div class="col-sm-6 mt-2">
+            <h1 class="">Pembelajaran</h1>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6 mt-2">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item active">
-                <form action="/backend/pembelajaran" method="get" class="sidebar-form">
+                <form action="/backend/pembelajaran" method="get" class="sidebar-form ">
                   <div class="input-group">
                     <input type="text" name="cari" class="form-control" value="{{ $cari}}" placeholder="Search...">
                         <span class="input-group-btn">
