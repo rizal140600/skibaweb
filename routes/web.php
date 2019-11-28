@@ -35,6 +35,7 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,guru']], function () {
   Route::get('/backend/pembelajaran/{id}/edit', 'PembelajaranController@edit');
   Route::post('/backend/pembelajaran/{id}/update', 'PembelajaranController@update');
   Route::get('/backend/pembelajaran/{id}/delete', 'PembelajaranController@delete');
+  Route::get('/backend/pembelajaran/cari', 'PembelajaranController@cari');
   
   Route::get('/backend/pengumuman', 'PengumumanController@index');
   Route::post('/backend/pengumuman/create', 'PengumumanController@create');

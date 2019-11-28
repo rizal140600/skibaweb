@@ -49,7 +49,17 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item active">Data Pembelajaran</li>
+              <li class="breadcrumb-item active">
+                <form action="/backend/pembelajaran/cari" method="get" class="sidebar-form">
+                  <div class="input-group">
+                    <input type="text" name="cari" class="form-control" value="{{ $cari}}" placeholder="Search...">
+                        <span class="input-group-btn">
+                          <button type="submit" value="CARI" name="search" id="search-btn" class="btn btn-flat btn-info btn-lg btn-block"><i class="fa fa-search"></i>
+                          </button>
+                        </span>
+                  </div>
+                </form>
+              </li>
             </ol>
           </div>
         </div>
