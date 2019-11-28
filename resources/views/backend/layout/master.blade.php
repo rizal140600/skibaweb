@@ -56,7 +56,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/dashboard" class="brand-link">
-      <img title"SMKN 1 BADEGAN" src="/admin/img/skiba.png"
+      <img title="SMKN 1 BADEGAN" src="/admin/img/skiba.png"
           class="brand-image img-circle elevation-3"
           style="opacity: .8">
       <span class="brand-text font-weight-light">SKIBA</span>
@@ -67,7 +67,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img title="{{auth()->user()->name}}" src="/admin/img/avatarr.png" class="img-circle elevation-2" title"">
+          <img title="{{auth()->user()->name}}" src="/admin/img/avatarr.png" class="img-circle elevation-2" title="">
         </div>
         <div class="info">
         <a class="d-block " style="color: #ffa41c">{{auth()->user()->name}}</a>
@@ -225,7 +225,7 @@
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
     </div>
-    <strong>Copyright &copy; 2019 <a href="">SMKN 1 BADEGAN</a>.</strong>
+    <strong>Copyright &copy; 2019 <a href="/">SMKN 1 BADEGAN</a>.</strong>
   </footer>
 
   <!-- Control Sidebar -->

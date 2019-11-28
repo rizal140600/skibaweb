@@ -19,7 +19,7 @@ class CreateIdentitasTable extends Migration
             $table->string('status');
             $table->text('alamat');
             $table->integer('telepon_fax');
-            $table->string('website_email');
+            $table->string('email_sekolah');
             $table->string('kepala_sekolah');
             $table->string('nomer_sekolah');
             $table->integer('npsn');

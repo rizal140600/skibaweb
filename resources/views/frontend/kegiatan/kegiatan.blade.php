@@ -3,7 +3,7 @@
 <section class="banner_area">
             <div class="banner_inner d-flex align-items-center">
               <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
-              <img src="/frontend/img/background.jpg" class="background-kecil" title"">
+              <img src="/frontend/img/background.jpg" class="background-kecil" title="">
               </div>
 				<div class="container">
 					<div class="banner_content text-center">
@@ -24,7 +24,7 @@
                                     <article class="row blog_item">
                                         <div class="col-md-12">
                                             <div class="blog_post">
-                                                <img title="{{$kegiatan->kegiatan_judul}}" src="{{ asset("/storage/kegiatan/" . $kegiatan->kegiatan_foto) }}" title"">
+                                                <img title="{{$kegiatan->kegiatan_judul}}" src="{{ asset("/storage/kegiatan/" . $kegiatan->kegiatan_foto) }}" title="">
                                                 <div class="blog_details">
                                                     <a href="/kegiatan/detail/{{$kegiatan->id}}"><h2>{{$kegiatan->kegiatan_judul}}</h2></a>
                                                     <p>{!! str_limit(strip_tags($kegiatan->kegiatan_isi), $limit = 250, $end = '...') !!}</p>

@@ -13,7 +13,7 @@ class Identitas extends Model
         'status', 
         'alamat', 
         'telepon_fax', 
-        'website_email', 
+        'email_sekolah', 
         'kepala_sekolah',
         'nomer_sekolah',
         'npsn',

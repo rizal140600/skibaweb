@@ -3,7 +3,7 @@
 <section class="banner_area">
             <div class="banner_inner d-flex align-items-center">
               <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
-              <img src="/frontend/img/background.jpg" class="background-kecil" title"">
+              <img src="/frontend/img/background.jpg" class="background-kecil" title="">
               </div>
 				<div class="container">
 					<div class="banner_content text-center">
@@ -52,7 +52,7 @@
                             <div class="info_item">
                                 <i class="lnr lnr-envelope"></i>
                                 <h6>Email</h6>
-                                <p>{{$identitas->website_email}}</p>
+                                <p>{{$identitas->email_sekolah}}</p>
                             </div>
                         </div>
                     </div>

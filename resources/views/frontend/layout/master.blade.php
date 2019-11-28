@@ -41,7 +41,7 @@
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand logo_h" href="/"><img title"SMKN 1 BADEGAN" src="/frontend/img/skiba.png" style="max-width: 114px; max-height: 40px" title""> <span class="align-middle  " style="color: #ff9117">SMKN 1 BADEGAN</span></a>
+						<a class="navbar-brand logo_h" href="/"><img title="SMKN 1 BADEGAN" src="/frontend/img/skiba.png" style="max-width: 114px; max-height: 40px" title=""> <span class="align-middle  " style="color: #ff9117">SMKN 1 BADEGAN</span></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -99,20 +99,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="single-footer-widget text-center tp_widgets">
+                            <img title="SMKN 1 BADEGAN" src="/frontend/img/skiba.png"  title="">
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-6 col-sm-6">
                         <div class="single-footer-widget tp_widgets">
                             <ul class="list">
                             	<li><a href="/profil/tentang">Tentang Sekolah</a></li>
                             	<li><a href="/profil/misi">Visi dan Misi</a></li>
                             	<li><a href="/profil/struktur">Struktur Organisasi</a></li>
                             	<li><a href="/profil/sarana">Sarana Prasarana</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3  col-md-6 col-sm-6">
-                        <div class="single-footer-widget tp_widgets">
-                            <ul class="list">
-                            	<li><a href="#"></a></li>
-                            	<li><a href="#"></a></li>
                             </ul>
                         </div>
                     </div>
