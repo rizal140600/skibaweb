@@ -57,7 +57,7 @@
                                 <div class="blog_left_sidebar">
                                   <div id="accordion">
                                     @foreach ($data_pengumuman as $pengumuman)
-                                    <div class="card">
+                                    <div class="card mb-5">
                                       <div class="card-header" id="headingOne">
                                         <h5 class="mb-0">
                                           <a class="d-inline-block h4 collapse-link" href="/pengumuman/detail/{{$pengumuman->id}}">
