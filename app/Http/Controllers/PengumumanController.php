@@ -8,12 +8,20 @@ use Illuminate\Support\Facades\Session;
 
 class PengumumanController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data_pengumuman = \App\Pengumuman::paginate(10);
+        $cari = $request->cari;
+        if (!$cari) {
+            $data_pengumuman = \App\Pengumuman::paginate(10);
+        } else {
+            $data_pengumuman = \App\Pengumuman::where('judul_pengumuman','LIKE',"%".$cari."%")
+            ->paginate(10);
+        }
+        
         //
                 return view('backend.pengumuman.index', [
                     'data_pengumuman' => $data_pengumuman,
+                    'cari' => $cari,
                     //
                     ]);
             //

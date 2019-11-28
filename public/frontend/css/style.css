@@ -3137,6 +3137,9 @@ h6 {
   .mid-center{
     display: none;
   }
+  .fa-play-circle{
+    display: none;
+  }
   .galeri{
     max-width: 350px;
   }
