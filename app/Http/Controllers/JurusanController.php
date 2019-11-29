@@ -11,12 +11,21 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 class JurusanController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data_jurusan = \App\Jurusan::paginate(10);
+        $cari = $request->cari;
+        if (!$cari) {
+            $data_jurusan = \App\Jurusan::paginate(10);
+        } else {
+            # code...
+            $data_jurusan = \App\Jurusan::where('jurusan_judul','LIKE',"%".$cari."%")
+            ->paginate(10);
+        }
+        
         //
                 return view('backend.jurusan.index', [
                     'data_jurusan' => $data_jurusan, 
+                    'cari' => $cari, 
                     //
                     ]);
                 

@@ -39,6 +39,6 @@ class KontakController extends Controller
             'isi_saran' => 'required',
         ]);
         \App\Kontak::create($request->all());
-        return redirect('/kontak')->with('success', 'Tambah data Berhasil');
+        return redirect('/kontak')->with('success', 'Pesan Sudah Dikirim');
     }
 }

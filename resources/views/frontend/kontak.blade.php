@@ -17,8 +17,30 @@
         </section>
 <section class="contact_area p_120">
             <div class="container">
-                @if (count($errors) > 0)
-      <div class="alert  alert-danger alert-dismissible fade show" role="alert">
+                @if(session('success'))
+    <div class="alert text-white alert-info alert-dismissible fade show" role="alert">
+    {{session('success')}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    @elseif(session('update'))
+    <div class="alert text-white alert-warning alert-dismissible fade show" role="alert">
+    {{session('update')}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    @elseif(session('delete'))
+    <div class="alert text-white alert-danger alert-dismissible fade show" role="alert">
+    {{session('delete')}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    @endif
+    @if (count($errors) > 0)
+      <div class="alert text-white alert-danger alert-dismissible fade show" role="alert">
         <strong>Maaf!</strong> Ada Kesalahan
         <ul>
 

@@ -12,15 +12,23 @@ use Illuminate\Support\Facades\Validator;
 
 class GuruController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data_guru = \App\Guru::paginate(10);
+        $cari = $request->cari;
+        if (!$cari) {
+            $data_guru = \App\Guru::paginate(10);
+        } else {
+            $data_guru = \App\Guru::where('nama_guru','LIKE',"%".$cari."%")
+            ->paginate(10);
+        }
+        
         $data_kelamin = \App\Kelamin::all();
         $data_pendidikan = \App\Pendidikan::all();
         $data_status = \App\Status::all();
         $data_studi = \App\Studi::all();
         //
                 return view('backend.guru.index', [
+                    'cari' => $cari, 
                     'data_guru' => $data_guru, 
                     'data_kelamin' => $data_kelamin, 
                     'data_pendidikan' => $data_pendidikan,

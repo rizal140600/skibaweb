@@ -6,11 +6,19 @@ use Illuminate\Http\Request;
 
 class SaranController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data_saran = \App\Kontak::paginate(10);
+        $cari = $request->cari;
+        if (!$cari) {
+            $data_saran = \App\Kontak::paginate(10);
+        } else {
+            $data_saran = \App\Kontak::where('nama_saran','LIKE',"%".$cari."%")
+            ->paginate(10);
+        }
+        
         return view('backend.saran.index', [
-            'data_saran' => $data_saran
+            'data_saran' => $data_saran,
+            'cari' => $cari
         ]);
     }
     public function lihat($id)
