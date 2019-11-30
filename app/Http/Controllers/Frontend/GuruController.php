@@ -9,13 +9,21 @@ use Illuminate\Support\Facades\Session;
 
 class GuruController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $cari = $request->cari;
+        if (!$cari) {
+            $data_guru = \App\Guru::paginate(10);
+        } else {
+            $data_guru = \App\Guru::where('nama_guru','LIKE',"%".$cari."%")
+            ->paginate(10);
+        }
+        
         $identitas = \App\Identitas::first();
-        $data_guru = \App\Guru::paginate(10);
         return view('frontend.guru.guru',[
             'identitas' => $identitas,
-            'data_guru' => $data_guru
+            'data_guru' => $data_guru,
+            'cari' => $cari
         ]);
     }
     public function detail($id)

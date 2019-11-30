@@ -99,10 +99,6 @@
                                     <label for="exampleInputEmail1">Luas(m<sup>2</sup>)</label>
                                     <input type="text" name="luas" class="form-control" id="exampleInputEmail1" placeholder="luas...">
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Total Luas(m<sup>2</sup>)</label>
-                                    <input type="text" name="total_luas" class="form-control" id="exampleInputEmail1" placeholder="total luas...">
-                                </div>
                             </div>
                             <div class="modal-footer justify-content-between">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -124,8 +120,8 @@
                     <th>NO.</th>
                     <th>Ruang Area</th>
                     <th>Jumlah Ruang</th>
-                    <th>Luas</th>
-                    <th>Total Luas</th>
+                    <th>Luas(m<sup>2</sup>)</th>
+                    <th>Total Luas(m<sup>2</sup>)</th>
                     <th>Aksi</th>
                 </tr>
                 </thead>

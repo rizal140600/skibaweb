@@ -17,7 +17,22 @@
         </section>
 <div class="container">
   <div class="section-top-border">
-    <h3 class="mb-30 title_color">Tabel Pembelajaran</h3>
+    <div class="row">
+      <div class="col-6">
+        <h3 class="mb-30 title_color">Tabel Pembelajaran</h3>
+      </div>
+      <div class="col-6">
+        <form action="/pembelajaran" method="get" class="sidebar-form float-right">
+          <div class="input-group">
+            <input type="text" name="cari" class="form-control" value="{{ $cari}}" placeholder="Search...">
+                <span class="input-group-btn">
+                  <button type="submit" value="CARI" name="search" id="search-btn" class="btn btn-flat btn-info btn-lg btn-block"><i class="fa fa-search"></i>
+                  </button>
+                </span>
+          </div>
+        </form>
+      </div>
+    </div>
   <div class="card-body table-responsive p-0">
                 <table class="table table-hover mb-5">
                   <thead>

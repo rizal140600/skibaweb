@@ -36,10 +36,6 @@
                         <label for="exampleInputEmail1">Luas</label>
                         <input type="text" name="luas" value="{{$sarana->luas}}" class="form-control" id="exampleInputEmail1" placeholder="luas...">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Total Luas</label>
-                    <input type="text" name="total_luas" value="{{$sarana->total_luas}}"  class="form-control" id="exampleInputEmail1" placeholder="total luas...">
-                    </div>
                 </div>
             <div class="modal-footer justify-content-between">
                 <a href="/backend/profil/sarana">

@@ -18,7 +18,6 @@ class CreateSaranaPrasaranaTable extends Migration
             $table->string('ruang_area');
             $table->integer('jumlah_ruang');
             $table->integer('luas');
-            $table->integer('total_luas');
             $table->timestamps();
         });
     }

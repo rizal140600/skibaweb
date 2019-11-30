@@ -11,6 +11,5 @@ class Sarana extends Model
         'ruang_area',
         'jumlah_ruang',
         'luas',
-        'total_luas',
     ];
 }

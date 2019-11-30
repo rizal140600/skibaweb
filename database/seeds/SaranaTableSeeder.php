@@ -18,7 +18,6 @@ class SaranaTableSeeder extends Seeder
                 'ruang_area' => $faker->sentence($nbWords = 3, $variableNbWords = true),
                 'jumlah_ruang' => $faker->randomDigit,
                 'luas' => $faker->randomDigit,
-                'total_luas' => $faker->randomDigit,
             ]);
         }
     }

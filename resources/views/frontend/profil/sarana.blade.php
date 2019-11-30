@@ -25,8 +25,8 @@
                       <th scope="col">NO.</th>
                       <th scope="col" style="min-width: 150px">Ruang Area</th>
                       <th scope="col" style="min-width: 125px">Jumlah Ruang</th>
-                      <th scope="col">Luas</th>
-                      <th scope="col" style="min-width: 100px">Total Luas</th>
+                      <th scope="col">Luas (m<sup style="color: #777777">2</sup>)</th>
+                      <th scope="col" style="min-width: 100px">Total Luas(m<sup style="color: #777777">2</sup>)</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -36,7 +36,7 @@
                       <td>{{$sarana->ruang_area}}</td>
                       <td>{{$sarana->jumlah_ruang}}</td>
                       <td>{{$sarana->luas}}</td>
-                      <td>{{$sarana->total_luas}}</td>
+                      <td>{{number_format($sarana->jumlah_ruang * $sarana->luas)}}</td>
                     </tr>
                     @endforeach
                   </tbody>
