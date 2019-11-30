@@ -132,7 +132,7 @@
                     <td>{{$sarana->ruang_area}}</td>
                     <td>{{$sarana->jumlah_ruang}}</td>
                     <td>{{$sarana->luas}}</td>
-                    <td>{{$sarana->total_luas}}</td>
+                    <td>{{number_format($sarana->jumlah_ruang * $sarana->luas)}}</td>
                     <td style="min-width: 105px">
                         <a class="" href="/backend/profil/sarana/{{$sarana->id}}/edit">
                             <button title="Edit" type="button" class="btn btn-warning text-white  btn-sm" >
