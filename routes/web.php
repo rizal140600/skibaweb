@@ -28,7 +28,7 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function () {
 
 Route::group(['middleware' => ['auth', 'checkRole:admin,guru']], function () {
   
-  Route::get('/dashboard','AdminController@dashboard');
+  Route::get('/dashboard','DashboardController@dashboard');
   
   Route::get('/backend/pembelajaran', 'PembelajaranController@index');
   Route::post('/backend/pembelajaran/create', 'PembelajaranController@create');
