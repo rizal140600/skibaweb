@@ -88,14 +88,14 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+                <h3>{{$jumlah_saran}}</h3>
 
-                <p>New Orders</p>
+                <p>Kritik dan Saran</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="nav-icon fas fa-address-book"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/backend/saran" class="small-box-footer">Selanjutnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
