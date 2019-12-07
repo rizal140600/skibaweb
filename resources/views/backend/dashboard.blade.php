@@ -48,22 +48,22 @@
               <div class="icon">
                 <i class="nav-icon far fa-bookmark"></i>
               </div>
-              <a href="#" class="small-box-footer">Selanjutnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/backend/pengumuman" class="small-box-footer">Selanjutnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-warning" style="color: white!important">
               <div class="inner">
-                <h3>44</h3>
+                <h3>{{$jumlah_kegiatan}}</h3>
 
-                <p>User Registrations</p>
+                <p>Kegiatan</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="nav-icon fas fa-chart-line"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/backend/kegiatan" style="color: white!important" class="small-box-footer">Selanjutnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
