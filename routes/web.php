@@ -22,6 +22,7 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function () {
 
   Route::get('/user','UserController@index');
   Route::post('/user/create','UserController@create');
+  Route::post('/user/{id}/delete','UserController@delete');
   
   
 });
