@@ -46,4 +46,10 @@ class UserController extends Controller
         $user->save(); 
         return redirect('/user')->with('success', 'Data Berhasil Ditambah!!');
     }
+    public function delete($id)
+    {
+        $user = \App\User::find($id);
+        $user->delete();
+        return redirect('/user')->with('delete', 'Data Berhasil di hapus');
+    }
 }
