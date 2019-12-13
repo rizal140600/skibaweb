@@ -152,7 +152,7 @@
             <!-- AREA CHART -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Area Chart</h3>
+                <h3 class="card-title">Statistik Pembelajaran</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -210,7 +210,20 @@
           pointStrokeColor    : 'rgba(60,141,188,1)',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(60,141,188,1)',
-          data                : [{{$pembelajaran_januari}}, 48, 40, 19, 86, 27, 90, 75, 25, 26, 97, 62]
+          data                : [
+                                  {{$pembelajaran_c1}}, 
+                                  {{$pembelajaran_c2}}, 
+                                  {{$pembelajaran_c3}}, 
+                                  {{$pembelajaran_c4}}, 
+                                  {{$pembelajaran_c5}}, 
+                                  {{$pembelajaran_c6}}, 
+                                  {{$pembelajaran_c7}}, 
+                                  {{$pembelajaran_c8}}, 
+                                  {{$pembelajaran_c9}}, 
+                                  {{$pembelajaran_c10}}, 
+                                  {{$pembelajaran_c11}}, 
+                                  {{$pembelajaran_c12}}, 
+                                ]
         },
         {
           label               : 'Electronics',
@@ -221,7 +234,20 @@
           pointStrokeColor    : '#c1c7d1',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(220,220,220,1)',
-          data                : [65, 59, 80, 81, 56, 55, 40, 36, 96, 36, 52, 74]
+          data                : [
+                                  {{$pembelajaran_u1}}, 
+                                  {{$pembelajaran_u2}}, 
+                                  {{$pembelajaran_u3}}, 
+                                  {{$pembelajaran_u4}}, 
+                                  {{$pembelajaran_u5}}, 
+                                  {{$pembelajaran_u6}}, 
+                                  {{$pembelajaran_u7}}, 
+                                  {{$pembelajaran_u8}}, 
+                                  {{$pembelajaran_u9}}, 
+                                  {{$pembelajaran_u10}}, 
+                                  {{$pembelajaran_u11}}, 
+                                  {{$pembelajaran_u12}}, 
+                                ]
         },
       ]
     }
