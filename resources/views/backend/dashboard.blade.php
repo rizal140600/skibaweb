@@ -148,7 +148,7 @@
         <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-6">
             <!-- AREA CHART -->
             <div class="card card-primary">
               <div class="card-header">
@@ -162,7 +162,24 @@
               </div>
               <div class="card-body">
                 <div class="chart">
-                  <canvas id="areaChart" style="height:250px; min-height:250px"></canvas>
+                  <canvas id="pembelajaran" style="height:250px; min-height:250px"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <div class="card card-success">
+              <div class="card-header">
+                <h3 class="card-title">Statistik Pengumuman</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="pengumuman" style="height:250px; min-height:250px"></canvas>
                 </div>
               </div>
               <!-- /.card-body -->
@@ -196,16 +213,16 @@
     //--------------
 
     // Get context with jQuery - using jQuery's .get() method.
-    var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
+    var areaChartCanvas = $('#pembelajaran').get(0).getContext('2d')
 
     var areaChartData = {
       labels  : ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
       datasets: [
         {
-          label               : 'Digital Goods',
+          label               : 'Pembuatan',
           backgroundColor     : 'rgba(60,141,188,0.9)',
           borderColor         : 'rgba(60,141,188,0.8)',
-          pointRadius          : false,
+          pointRadius         : true,
           pointColor          : '#3b8bba',
           pointStrokeColor    : 'rgba(60,141,188,1)',
           pointHighlightFill  : '#fff',
@@ -226,10 +243,10 @@
                                 ]
         },
         {
-          label               : 'Electronics',
+          label               : 'Pembaruan',
           backgroundColor     : 'rgba(210, 214, 222, 1)',
           borderColor         : 'rgba(210, 214, 222, 1)',
-          pointRadius         : false,
+          pointRadius         : true,
           pointColor          : 'rgba(210, 214, 222, 1)',
           pointStrokeColor    : '#c1c7d1',
           pointHighlightFill  : '#fff',
@@ -278,119 +295,99 @@
       data: areaChartData, 
       options: areaChartOptions
     })
+  })
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
 
-    //-------------
-    //- LINE CHART -
     //--------------
-    var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
-    var lineChartOptions = jQuery.extend(true, {}, areaChartOptions)
-    var lineChartData = jQuery.extend(true, {}, areaChartData)
-    lineChartData.datasets[0].fill = false;
-    lineChartData.datasets[1].fill = false;
-    lineChartOptions.datasetFill = false
+    //- AREA CHART -
+    //--------------
 
-    var lineChart = new Chart(lineChartCanvas, { 
-      type: 'line',
-      data: lineChartData, 
-      options: lineChartOptions
-    })
-
-    //-------------
-    //- DONUT CHART -
-    //-------------
     // Get context with jQuery - using jQuery's .get() method.
-    var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
-    var donutData        = {
-      labels: [
-          'Chrome', 
-          'IE',
-          'FireFox', 
-          'Safari', 
-          'Opera', 
-          'Navigator', 
-      ],
+    var areaChartCanvas = $('#pengumuman').get(0).getContext('2d')
+
+    var areaChartData = {
+      labels  : ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
       datasets: [
         {
-          data: [700,500,400,600,300,100],
-          backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
-        }
+          label               : 'Pembuatan',
+          backgroundColor     : 'rgba(0,189,35,0.9)',
+          borderColor         : 'rgba(0,189,35,0.8)',
+          pointRadius         : true,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(0,189,35,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(0,189,35,1)',
+          data                : [
+                                  {{$pengumuman_c1}}, 
+                                  {{$pengumuman_c2}}, 
+                                  {{$pengumuman_c3}}, 
+                                  {{$pengumuman_c4}}, 
+                                  {{$pengumuman_c5}}, 
+                                  {{$pengumuman_c6}}, 
+                                  {{$pengumuman_c7}}, 
+                                  {{$pengumuman_c8}}, 
+                                  {{$pengumuman_c9}}, 
+                                  {{$pengumuman_c10}}, 
+                                  {{$pengumuman_c11}}, 
+                                  {{$pengumuman_c12}}, 
+                                ]
+        },
+        {
+          label               : 'Pembaruan',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : true,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [
+                                  {{$pengumuman_u1}}, 
+                                  {{$pengumuman_u2}}, 
+                                  {{$pengumuman_u3}}, 
+                                  {{$pengumuman_u4}}, 
+                                  {{$pengumuman_u5}}, 
+                                  {{$pengumuman_u6}}, 
+                                  {{$pengumuman_u7}}, 
+                                  {{$pengumuman_u8}}, 
+                                  {{$pengumuman_u9}}, 
+                                  {{$pengumuman_u10}}, 
+                                  {{$pengumuman_u11}}, 
+                                  {{$pengumuman_u12}}, 
+                                ]
+        },
       ]
     }
-    var donutOptions     = {
+
+    var areaChartOptions = {
       maintainAspectRatio : false,
       responsive : true,
-    }
-    //Create pie or douhnut chart
-    // You can switch between pie and douhnut using the method below.
-    var donutChart = new Chart(donutChartCanvas, {
-      type: 'doughnut',
-      data: donutData,
-      options: donutOptions      
-    })
-
-    //-------------
-    //- PIE CHART -
-    //-------------
-    // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
-    var pieData        = donutData;
-    var pieOptions     = {
-      maintainAspectRatio : false,
-      responsive : true,
-    }
-    //Create pie or douhnut chart
-    // You can switch between pie and douhnut using the method below.
-    var pieChart = new Chart(pieChartCanvas, {
-      type: 'pie',
-      data: pieData,
-      options: pieOptions      
-    })
-
-    //-------------
-    //- BAR CHART -
-    //-------------
-    var barChartCanvas = $('#barChart').get(0).getContext('2d')
-    var barChartData = jQuery.extend(true, {}, areaChartData)
-    var temp0 = areaChartData.datasets[0]
-    var temp1 = areaChartData.datasets[1]
-    barChartData.datasets[0] = temp1
-    barChartData.datasets[1] = temp0
-
-    var barChartOptions = {
-      responsive              : true,
-      maintainAspectRatio     : false,
-      datasetFill             : false
-    }
-
-    var barChart = new Chart(barChartCanvas, {
-      type: 'bar', 
-      data: barChartData,
-      options: barChartOptions
-    })
-
-    //---------------------
-    //- STACKED BAR CHART -
-    //---------------------
-    var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
-    var stackedBarChartData = jQuery.extend(true, {}, barChartData)
-
-    var stackedBarChartOptions = {
-      responsive              : true,
-      maintainAspectRatio     : false,
+      legend: {
+        display: false
+      },
       scales: {
         xAxes: [{
-          stacked: true,
+          gridLines : {
+            display : false,
+          }
         }],
         yAxes: [{
-          stacked: true
+          gridLines : {
+            display : false,
+          }
         }]
       }
     }
 
-    var stackedBarChart = new Chart(stackedBarChartCanvas, {
-      type: 'bar', 
-      data: stackedBarChartData,
-      options: stackedBarChartOptions
+    // This will get the first returned node in the jQuery collection.
+    var areaChart       = new Chart(areaChartCanvas, { 
+      type: 'line',
+      data: areaChartData, 
+      options: areaChartOptions
     })
   })
 </script>
