@@ -7,7 +7,7 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1>Blank Page</h1>
+        <h1>Dashboard</h1>
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
@@ -186,7 +186,7 @@
             </div>
             <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title text-white">Statistik Pengumuman</h3>
+                <h3 class="card-title text-white">Statistik Kegiatan</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool text-white" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -197,6 +197,23 @@
               <div class="card-body">
                 <div class="chart">
                   <canvas id="kegiatan" style="height:250px; min-height:250px"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <div class="card card-danger">
+              <div class="card-header">
+                <h3 class="card-title text-white">Statistik Galeri</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool text-white" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool text-white" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="galeri" style="height:250px; min-height:250px"></canvas>
                 </div>
               </div>
               <!-- /.card-body -->
@@ -472,6 +489,100 @@
                                   {{$pengumuman_u10}}, 
                                   {{$pengumuman_u11}}, 
                                   {{$pengumuman_u12}}, 
+                                ]
+        },
+      ]
+    }
+
+    var areaChartOptions = {
+      maintainAspectRatio : false,
+      responsive : true,
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }],
+        yAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }]
+      }
+    }
+
+    // This will get the first returned node in the jQuery collection.
+    var areaChart       = new Chart(areaChartCanvas, { 
+      type: 'line',
+      data: areaChartData, 
+      options: areaChartOptions
+    })
+  })
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+    var areaChartCanvas = $('#galeri').get(0).getContext('2d')
+
+    var areaChartData = {
+      labels  : ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+      datasets: [
+        {
+          label               : 'Pembuatan',
+          backgroundColor     : 'rgba(222,32,24,0.9)',
+          borderColor         : 'rgba(222,32,24,0.8)',
+          pointRadius         : true,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(222,32,24,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(222,32,24,1)',
+          data                : [
+                                  {{$galeri_c1}}, 
+                                  {{$galeri_c2}}, 
+                                  {{$galeri_c3}}, 
+                                  {{$galeri_c4}}, 
+                                  {{$galeri_c5}}, 
+                                  {{$galeri_c6}}, 
+                                  {{$galeri_c7}}, 
+                                  {{$galeri_c8}}, 
+                                  {{$galeri_c9}}, 
+                                  {{$galeri_c10}}, 
+                                  {{$galeri_c11}}, 
+                                  {{$galeri_c12}}, 
+                                ]
+        },
+        {
+          label               : 'Pembaruan',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : true,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [
+                                  {{$galeri_u1}}, 
+                                  {{$galeri_u2}}, 
+                                  {{$galeri_u3}}, 
+                                  {{$galeri_u4}}, 
+                                  {{$galeri_u5}}, 
+                                  {{$galeri_u6}}, 
+                                  {{$galeri_u7}}, 
+                                  {{$galeri_u8}}, 
+                                  {{$galeri_u9}}, 
+                                  {{$galeri_u10}}, 
+                                  {{$galeri_u11}}, 
+                                  {{$galeri_u12}}, 
                                 ]
         },
       ]
