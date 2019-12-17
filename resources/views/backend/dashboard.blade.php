@@ -184,6 +184,23 @@
               </div>
               <!-- /.card-body -->
             </div>
+            <div class="card card-warning">
+              <div class="card-header">
+                <h3 class="card-title text-white">Statistik Pengumuman</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool text-white" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool text-white" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="kegiatan" style="height:250px; min-height:250px"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
             <!-- /.card -->
             
           </div>
@@ -202,6 +219,7 @@
 @section('script')
 <script src="/admin/plugins/chart.js/Chart.min.js"></script>
     <script>
+      // pembelajaran chart
   $(function () {
     /* ChartJS
      * -------
@@ -296,6 +314,7 @@
       options: areaChartOptions
     })
   })
+  // pengumuman chart
   $(function () {
     /* ChartJS
      * -------
@@ -321,6 +340,101 @@
           pointStrokeColor    : 'rgba(0,189,35,1)',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(0,189,35,1)',
+          data                : [
+                                  {{$pengumuman_c1}}, 
+                                  {{$pengumuman_c2}}, 
+                                  {{$pengumuman_c3}}, 
+                                  {{$pengumuman_c4}}, 
+                                  {{$pengumuman_c5}}, 
+                                  {{$pengumuman_c6}}, 
+                                  {{$pengumuman_c7}}, 
+                                  {{$pengumuman_c8}}, 
+                                  {{$pengumuman_c9}}, 
+                                  {{$pengumuman_c10}}, 
+                                  {{$pengumuman_c11}}, 
+                                  {{$pengumuman_c12}}, 
+                                ]
+        },
+        {
+          label               : 'Pembaruan',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : true,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [
+                                  {{$pengumuman_u1}}, 
+                                  {{$pengumuman_u2}}, 
+                                  {{$pengumuman_u3}}, 
+                                  {{$pengumuman_u4}}, 
+                                  {{$pengumuman_u5}}, 
+                                  {{$pengumuman_u6}}, 
+                                  {{$pengumuman_u7}}, 
+                                  {{$pengumuman_u8}}, 
+                                  {{$pengumuman_u9}}, 
+                                  {{$pengumuman_u10}}, 
+                                  {{$pengumuman_u11}}, 
+                                  {{$pengumuman_u12}}, 
+                                ]
+        },
+      ]
+    }
+
+    var areaChartOptions = {
+      maintainAspectRatio : false,
+      responsive : true,
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }],
+        yAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }]
+      }
+    }
+
+    // This will get the first returned node in the jQuery collection.
+    var areaChart       = new Chart(areaChartCanvas, { 
+      type: 'line',
+      data: areaChartData, 
+      options: areaChartOptions
+    })
+  })
+  // kegiatan chart
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+    var areaChartCanvas = $('#kegiatan').get(0).getContext('2d')
+
+    var areaChartData = {
+      labels  : ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+      datasets: [
+        {
+          label               : 'Pembuatan',
+          backgroundColor     : 'rgba(255,186,0,0.9)',
+          borderColor         : 'rgba(255,186,0,0.8)',
+          pointRadius         : true,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(255,186,0,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(255,186,0,1)',
           data                : [
                                   {{$pengumuman_c1}}, 
                                   {{$pengumuman_c2}}, 
