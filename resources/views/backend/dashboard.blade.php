@@ -221,6 +221,79 @@
             <!-- /.card -->
             
           </div>
+          <div class="col-md-6">
+            <!-- AREA CHART -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Statistik Kritik dan Saran</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="saran" style="height:250px; min-height:250px"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <div class="card card-success">
+              <div class="card-header">
+                <h3 class="card-title">Statistik Bidang Studi</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="studi" style="height:250px; min-height:250px"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <div class="card card-warning">
+              <div class="card-header">
+                <h3 class="card-title text-white">Statistik Guru</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool text-white" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool text-white" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="guru" style="height:250px; min-height:250px"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <div class="card card-danger">
+              <div class="card-header">
+                <h3 class="card-title text-white">Statistik Jurusan</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool text-white" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool text-white" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="jurusan" style="height:250px; min-height:250px"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            
+          </div>
           <!-- /.col (LEFT) -->
           <!-- /.col (RIGHT) -->
         </div>
@@ -521,6 +594,7 @@
       options: areaChartOptions
     })
   })
+  // galeri chart
   $(function () {
     /* ChartJS
      * -------
@@ -583,6 +657,387 @@
                                   {{$galeri_u10}}, 
                                   {{$galeri_u11}}, 
                                   {{$galeri_u12}}, 
+                                ]
+        },
+      ]
+    }
+
+    var areaChartOptions = {
+      maintainAspectRatio : false,
+      responsive : true,
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }],
+        yAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }]
+      }
+    }
+
+    // This will get the first returned node in the jQuery collection.
+    var areaChart       = new Chart(areaChartCanvas, { 
+      type: 'line',
+      data: areaChartData, 
+      options: areaChartOptions
+    })
+  })
+
+  // Kritik dan Saran chart
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+    var areaChartCanvas = $('#saran').get(0).getContext('2d')
+
+    var areaChartData = {
+      labels  : ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+      datasets: [
+        {
+          label               : 'Pembuatan',
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius         : true,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [
+                                  {{$saran_c1}}, 
+                                  {{$saran_c2}}, 
+                                  {{$saran_c3}}, 
+                                  {{$saran_c4}}, 
+                                  {{$saran_c5}}, 
+                                  {{$saran_c6}}, 
+                                  {{$saran_c7}}, 
+                                  {{$saran_c8}}, 
+                                  {{$saran_c9}}, 
+                                  {{$saran_c10}}, 
+                                  {{$saran_c11}}, 
+                                  {{$saran_c12}}, 
+                                ]
+        },
+        {
+          label               : 'Pembaruan',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : true,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [
+                                  {{$saran_u1}}, 
+                                  {{$saran_u2}}, 
+                                  {{$saran_u3}}, 
+                                  {{$saran_u4}}, 
+                                  {{$saran_u5}}, 
+                                  {{$saran_u6}}, 
+                                  {{$saran_u7}}, 
+                                  {{$saran_u8}}, 
+                                  {{$saran_u9}}, 
+                                  {{$saran_u10}}, 
+                                  {{$saran_u11}}, 
+                                  {{$saran_u12}}, 
+                                ]
+        },
+      ]
+    }
+
+    var areaChartOptions = {
+      maintainAspectRatio : false,
+      responsive : true,
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }],
+        yAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }]
+      }
+    }
+
+    // This will get the first returned node in the jQuery collection.
+    var areaChart       = new Chart(areaChartCanvas, { 
+      type: 'line',
+      data: areaChartData, 
+      options: areaChartOptions
+    })
+  })
+  // Bidang Studi chart
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+    var areaChartCanvas = $('#studi').get(0).getContext('2d')
+
+    var areaChartData = {
+      labels  : ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+      datasets: [
+        {
+          label               : 'Pembuatan',
+          backgroundColor     : 'rgba(0,189,35,0.9)',
+          borderColor         : 'rgba(0,189,35,0.8)',
+          pointRadius         : true,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(0,189,35,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(0,189,35,1)',
+          data                : [
+                                  {{$studi_c1}}, 
+                                  {{$studi_c2}}, 
+                                  {{$studi_c3}}, 
+                                  {{$studi_c4}}, 
+                                  {{$studi_c5}}, 
+                                  {{$studi_c6}}, 
+                                  {{$studi_c7}}, 
+                                  {{$studi_c8}}, 
+                                  {{$studi_c9}}, 
+                                  {{$studi_c10}}, 
+                                  {{$studi_c11}}, 
+                                  {{$studi_c12}}, 
+                                ]
+        },
+        {
+          label               : 'Pembaruan',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : true,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [
+                                  {{$studi_u1}}, 
+                                  {{$studi_u2}}, 
+                                  {{$studi_u3}}, 
+                                  {{$studi_u4}}, 
+                                  {{$studi_u5}}, 
+                                  {{$studi_u6}}, 
+                                  {{$studi_u7}}, 
+                                  {{$studi_u8}}, 
+                                  {{$studi_u9}}, 
+                                  {{$studi_u10}}, 
+                                  {{$studi_u11}}, 
+                                  {{$studi_u12}}, 
+                                ]
+        },
+      ]
+    }
+
+    var areaChartOptions = {
+      maintainAspectRatio : false,
+      responsive : true,
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }],
+        yAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }]
+      }
+    }
+
+    // This will get the first returned node in the jQuery collection.
+    var areaChart       = new Chart(areaChartCanvas, { 
+      type: 'line',
+      data: areaChartData, 
+      options: areaChartOptions
+    })
+  })
+  // guru chart
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+    var areaChartCanvas = $('#guru').get(0).getContext('2d')
+
+    var areaChartData = {
+      labels  : ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+      datasets: [
+        {
+          label               : 'Pembuatan',
+          backgroundColor     : 'rgba(255,186,0,0.9)',
+          borderColor         : 'rgba(255,186,0,0.8)',
+          pointRadius         : true,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(255,186,0,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(255,186,0,1)',
+          data                : [
+                                  {{$guru_c1}}, 
+                                  {{$guru_c2}}, 
+                                  {{$guru_c3}}, 
+                                  {{$guru_c4}}, 
+                                  {{$guru_c5}}, 
+                                  {{$guru_c6}}, 
+                                  {{$guru_c7}}, 
+                                  {{$guru_c8}}, 
+                                  {{$guru_c9}}, 
+                                  {{$guru_c10}}, 
+                                  {{$guru_c11}}, 
+                                  {{$guru_c12}}, 
+                                ]
+        },
+        {
+          label               : 'Pembaruan',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : true,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [
+                                  {{$guru_u1}}, 
+                                  {{$guru_u2}}, 
+                                  {{$guru_u3}}, 
+                                  {{$guru_u4}}, 
+                                  {{$guru_u5}}, 
+                                  {{$guru_u6}}, 
+                                  {{$guru_u7}}, 
+                                  {{$guru_u8}}, 
+                                  {{$guru_u9}}, 
+                                  {{$guru_u10}}, 
+                                  {{$guru_u11}}, 
+                                  {{$guru_u12}}, 
+                                ]
+        },
+      ]
+    }
+
+    var areaChartOptions = {
+      maintainAspectRatio : false,
+      responsive : true,
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }],
+        yAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }]
+      }
+    }
+
+    // This will get the first returned node in the jQuery collection.
+    var areaChart       = new Chart(areaChartCanvas, { 
+      type: 'line',
+      data: areaChartData, 
+      options: areaChartOptions
+    })
+  })
+  // jurusan chart
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+    var areaChartCanvas = $('#jurusan').get(0).getContext('2d')
+
+    var areaChartData = {
+      labels  : ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+      datasets: [
+        {
+          label               : 'Pembuatan',
+          backgroundColor     : 'rgba(222,32,24,0.9)',
+          borderColor         : 'rgba(222,32,24,0.8)',
+          pointRadius         : true,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(222,32,24,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(222,32,24,1)',
+          data                : [
+                                  {{$jurusan_c1}}, 
+                                  {{$jurusan_c2}}, 
+                                  {{$jurusan_c3}}, 
+                                  {{$jurusan_c4}}, 
+                                  {{$jurusan_c5}}, 
+                                  {{$jurusan_c6}}, 
+                                  {{$jurusan_c7}}, 
+                                  {{$jurusan_c8}}, 
+                                  {{$jurusan_c9}}, 
+                                  {{$jurusan_c10}}, 
+                                  {{$jurusan_c11}}, 
+                                  {{$jurusan_c12}}, 
+                                ]
+        },
+        {
+          label               : 'Pembaruan',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : true,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [
+                                  {{$jurusan_u1}}, 
+                                  {{$jurusan_u2}}, 
+                                  {{$jurusan_u3}}, 
+                                  {{$jurusan_u4}}, 
+                                  {{$jurusan_u5}}, 
+                                  {{$jurusan_u6}}, 
+                                  {{$jurusan_u7}}, 
+                                  {{$jurusan_u8}}, 
+                                  {{$jurusan_u9}}, 
+                                  {{$jurusan_u10}}, 
+                                  {{$jurusan_u11}}, 
+                                  {{$jurusan_u12}}, 
                                 ]
         },
       ]

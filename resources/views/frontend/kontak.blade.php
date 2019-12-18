@@ -15,7 +15,7 @@
 				</div>
             </div>
         </section>
-<section class="contact_area p_120">
+<section class="contact_area p_120 mb-0 pb-0">
             <div class="container">
                 @if(session('success'))
     <div class="alert text-white alert-info alert-dismissible fade show" role="alert">
@@ -91,7 +91,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" name="isi_saran" id="message" rows="1" placeholder="Enter Message"></textarea>
+                                    <textarea class="form-control" name="isi_saran" id="message" rows="1" placeholder="Masukkan Kritik dan Saran"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12 text-right">

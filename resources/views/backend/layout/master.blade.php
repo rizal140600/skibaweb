@@ -26,11 +26,12 @@
       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 <link rel="stylesheet" href="/admin/year/yearpicker.css">
-
+@yield('head')
+  <link rel="stylesheet" href="/admin/plugins/pace-progress/themes/black/pace-theme-flat-top.css">
 
 
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini pace-info">
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
@@ -238,6 +239,7 @@
 
 <!-- jQuery -->
 <script src="/admin/plugins/jquery/jquery.min.js"></script>
+<script src="/admin/plugins/pace-progress/pace.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
